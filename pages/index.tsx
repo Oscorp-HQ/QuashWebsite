@@ -6,6 +6,8 @@ import Footer from "@/components/footer";
 import SectionOne from "@/components/section_1";
 import SectionSeven from "@/components/section_7";
 import SectionThree from "@/components/section_3";
+import SectionFour from "@/components/section_4";
+import SectionFive from "@/components/section_5";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +20,8 @@ export default function Home() {
         <SectionOne />
         <SectionSeven />
         <SectionThree />
+        <SectionFour />
+        <SectionFive />
       </main>
       <Footer />
     </>
