@@ -3,40 +3,28 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="h-[928px] w-full relative overflow-x-hidden">
-      <div className="absolute top-[274px] left-[126px] w-[636px] h-[402px] flex flex-col justify-between">
-        <div className="flex flex-col">
+    <div className="h-[600px] md:h-[928px] w-full relative overflow-x-hidden">
+      <div className="flex flex-col gap-[32px] items-center md:items-start mt-[195px] md:mt-0  md:absolute md:top-[274px] md:left-[126px] md:w-[667px] md:h-[402px] md:gap-[78px]">
+        <div className="hero-text-container">
           <div className="flex flex-col">
-            <span className="text-7xl font-['Roboto_Serif'] font-semibold italic text-[#418A30]">
-              find bugs faster
-            </span>
-            <span className="text-7xl font-['Roboto_Serif'] font-semibold italic">
-              fix them smarter
-            </span>
+            <span className="hero-text text-[#418A30]">find bugs faster</span>
+            <span className="hero-text">fix them smarter</span>
           </div>
-          <p
-            className="mt-6 font-['Roboto_Serif'] font-thin text-2xl"
-            style={{
-              fontSize: "24px",
-              lineHeight: "100%",
-            }}
-          >
-            Cut down your development costs by 30% with quick and easy bug
-            reporting and resolution assistance
-          </p>
+          <span className="hero-sub">
+            Create tickets directly from mobile device while testing, and get
+            all the important information auto-captured.
+          </span>
         </div>
-
-        {/* <Image src="/Copy.svg" alt="request" height="264" width="636" /> */}
 
         <Image
           src="/request.svg"
           alt="request"
           height="60"
           width="170"
-          className="hover:cursor-pointer"
+          className=" hover:cursor-pointer"
         />
       </div>
-      <div className="absolute right-[-364px] top-[130px] -z-10">
+      <div className="hidden md:inline-block absolute right-[-364px] top-[130px] -z-10">
         <Image
           src="/Illustration.svg"
           alt="illustration"

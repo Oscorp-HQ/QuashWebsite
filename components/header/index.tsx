@@ -105,24 +105,32 @@ const Header = () => {
       </div>
 
       <div className="sm:flex hidden gap-8 font-medium">
-        <button className={`${selected === "Home" && "text-[#418A30]"}`}>
+        <button
+          className={`header-text ${selected === "Home" && "text-[#418A30]"}`}
+        >
           Home
         </button>
         <button
-          className={`${selected === "Product" && "text-[#418A30]"}`}
+          className={`header-text ${
+            selected === "Product" && "text-[#418A30]"
+          }`}
           onClick={() => setSelected("Product")}
         >
           Product
         </button>
 
         <button
-          className={`${selected === "Contact" && "text-[#418A30]"}`}
+          className={` header-text ${
+            selected === "Contact" && "text-[#418A30]"
+          }`}
           onClick={() => setSelected("Contact")}
         >
           Contact
         </button>
         <button
-          className={`${selected === "Documentation" && "text-[#418A30]"}`}
+          className={`header-text ${
+            selected === "Documentation" && "text-[#418A30]"
+          }`}
           onClick={() => setSelected("Documentation")}
         >
           Documentation
