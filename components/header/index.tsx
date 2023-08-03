@@ -6,7 +6,7 @@ const Header = () => {
   //   useEffect(() => {}, []);
 
   return (
-    <div className="flex px-[18px] py-[20px] items-center justify-between md:px-[126px] md:my-[40px]">
+    <div className="flex px-[18px] py-[20px] h-[64px] items-center justify-between md:px-[126px] md:my-[40px]">
       <div className="sm:hidden">
         <svg
           width="88"
@@ -107,6 +107,7 @@ const Header = () => {
       <div className="sm:flex hidden gap-8 font-medium">
         <button
           className={`header-text ${selected === "Home" && "text-[#418A30]"}`}
+          onClick={() => setSelected("Home")}
         >
           Home
         </button>

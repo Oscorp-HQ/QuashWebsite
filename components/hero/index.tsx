@@ -15,23 +15,59 @@ const Hero = () => {
             all the important information auto-captured.
           </span>
         </div>
-
         <Image
           src="/request.svg"
           alt="request"
           height="60"
           width="170"
-          className=" hover:cursor-pointer"
+          className="hidden md:inline-flex hover:cursor-pointer"
         />
-      </div>
-      <div className="hidden md:inline-block absolute right-[-364px] top-[130px] -z-10">
         <Image
-          src="/Illustration.svg"
-          alt="illustration"
-          height="773"
-          width="1145"
+          src="/request-button-mob.svg"
+          alt="request"
+          height="49"
+          width="140"
+          className=" md:hidden hover:cursor-pointer"
         />
       </div>
+
+      <Image
+        src="/Illustration.svg"
+        alt="illustration"
+        height="773"
+        width="1145"
+        className="hidden md:inline-block absolute right-[-364px] top-[130px] -z-10"
+      />
+
+      <Image
+        src="/group-3.svg"
+        alt="group-3"
+        height="177"
+        width="168"
+        className="md:hidden absolute top-[60px] -z-10"
+      />
+      <Image
+        src="/group-4.svg"
+        alt="group-4"
+        height="176"
+        width="168"
+        className="md:hidden absolute top-[305px] right-0 -z-10"
+      />
+      {/* <Image
+        src="/group-2.svg"
+        alt="group-2"
+        height="176"
+        width="75"
+        className="md:hidden absolute top-[60px] right-[-28px] -z-10"
+      /> */}
+
+      <Image
+        src="/group-1.svg"
+        alt="group-1"
+        height="80"
+        width="75"
+        className="md:hidden absolute top-[301px]  -z-10"
+      />
     </div>
   );
 };
