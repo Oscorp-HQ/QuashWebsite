@@ -1,8 +1,19 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "../ui/button";
 
 const Header = () => {
   const [selected, setSelected] = useState("Home");
+  const [open, setOpen] = useState(false);
+  console.log("open is", open);
   //   useEffect(() => {}, []);
 
   return (
@@ -137,27 +148,90 @@ const Header = () => {
           Documentation
         </button>
       </div>
-      <div className="sm:hidden">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clip-path="url(#clip0_38_1252)">
-            <path
-              d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"
-              fill="#0E0E1A"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_38_1252">
-              <rect width="24" height="24" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
+
+      <div className="md:hidden">
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            {!open ? (
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="hover:cursor-pointer"
+                onClick={() => {
+                  setOpen(true);
+                }}
+              >
+                <g clip-path="url(#clip0_38_1252)">
+                  <path
+                    d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"
+                    fill="#0E0E1A"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_38_1252">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            ) : (
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="hover:cursor-pointer"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <path
+                  d="M14.9999 13.2325L21.1874 7.045L22.9549 8.8125L16.7674 15L22.9549 21.1875L21.1874 22.955L14.9999 16.7675L8.81242 22.955L7.04492 21.1875L13.2324 15L7.04492 8.8125L8.81242 7.045L14.9999 13.2325Z"
+                  fill="#0E0E1A"
+                />
+              </svg>
+            )}
+          </DropdownMenuTrigger>
+          <div className="w-full">
+            <DropdownMenuContent className="w-[418px] bg-[#FAF5EA] border-none h-[400px] mt-[32px] pb-[50px]">
+              {/* <DropdownMenuSeparator /> */}
+              <div className="flex flex-col gap-[60px]">
+                <div className="">
+                  <span>Home</span>
+                  <span>Product</span>
+                  <span>Contact</span>
+                  <span>Documentation</span>
+                </div>
+                <Button>
+                  <>
+                    Get started free
+                    <svg
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.672 11H4.5V13H16.672L11.308 18.364L12.722 19.778L20.5 12L12.722 4.222L11.308 5.636L16.672 11Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </>
+                </Button>
+              </div>
+            </DropdownMenuContent>
+          </div>
+        </DropdownMenu>
       </div>
+
       <div className="hidden md:flex hover:cursor-pointer">
         <svg
           width="164"

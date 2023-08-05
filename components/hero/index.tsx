@@ -20,11 +20,11 @@ const Hero = () => {
     <div className="h-[600px] md:h-[928px] w-full relative overflow-x-hidden">
       <div className="flex flex-col gap-[32px] items-center md:items-start mt-[195px] md:mt-0  md:absolute md:top-[274px] md:left-[126px] md:w-[667px] md:h-[402px] md:gap-[78px]">
         <div className="hero-text-container">
-          <div className="flex flex-col">
-            <span className="hero-text text-[#418A30]">find bugs faster</span>
-            <span className="hero-text">fix them smarter</span>
+          <div className="flex flex-col" id="hero-text">
+            <span className="text-[#418A30]">find bugs faster</span>
+            <span>fix them smarter</span>
           </div>
-          <span className="hero-sub">
+          <span id="hero-sub" className="flex font-normal">
             Create tickets directly from mobile device while testing, and get
             all the important information auto-captured.
           </span>
@@ -47,6 +47,9 @@ const Hero = () => {
               height="49"
               width="140"
               className=" md:hidden hover:cursor-pointer"
+              onClick={() => {
+                setFormOpen(true);
+              }}
             />
             {/* {formOpen && (
           <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 flex justify-center items-center">
@@ -57,7 +60,7 @@ const Hero = () => {
         )} */}
           </AlertDialogTrigger>
           <AlertDialogContent className="demo-container bg-[#E0EED5] ">
-            <AlertDialogHeader>
+            <AlertDialogHeader className="w-full gap-6 md:gap-[34px]">
               <AlertDialogTitle className="demo-title">
                 Request Demo
               </AlertDialogTitle>
