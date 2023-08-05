@@ -391,6 +391,38 @@ body {
     letter-spacing: 0.1px;
   }
 
+    .demo-container{
+      display: flex;
+        width: 320px !important;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px !important;
+        border-radius: 16px;
+        background: #E0EED5;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+    }
+
+  .demo-title{
+    color: #000;
+      font-family: var(--roboto);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.09px;
+  }
+
+    .demo-input{
+      color: #000;
+        font-family: var(--roboto);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.07px;
+    }
+
   .footer p {
     font-size: 12px;
     letter-spacing: 0.06px;
@@ -400,4 +432,5 @@ body {
     font-size: 12px;
     letter-spacing: 0.06px;
   }
+
 }

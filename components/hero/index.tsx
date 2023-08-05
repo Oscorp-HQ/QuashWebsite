@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -11,8 +11,11 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { DemoRequestForm } from "../demo_form";
+import { Card } from "../ui/card";
 
 const Hero = () => {
+  const [formOpen, setFormOpen] = useState(false);
   return (
     <div className="h-[600px] md:h-[928px] w-full relative overflow-x-hidden">
       <div className="flex flex-col gap-[32px] items-center md:items-start mt-[195px] md:mt-0  md:absolute md:top-[274px] md:left-[126px] md:w-[667px] md:h-[402px] md:gap-[78px]">
@@ -26,7 +29,7 @@ const Hero = () => {
             all the important information auto-captured.
           </span>
         </div>
-        <AlertDialog>
+        <AlertDialog open={formOpen}>
           <AlertDialogTrigger>
             <Image
               src="/request.svg"
@@ -34,6 +37,9 @@ const Hero = () => {
               height="60"
               width="170"
               className="hidden md:inline-flex hover:cursor-pointer"
+              onClick={() => {
+                setFormOpen(true);
+              }}
             />
             <Image
               src="/request-button-mob.svg"
@@ -42,19 +48,27 @@ const Hero = () => {
               width="140"
               className=" md:hidden hover:cursor-pointer"
             />
+            {/* {formOpen && (
+          <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 flex justify-center items-center">
+            <Card>
+              <DemoRequestForm />
+            </Card>
+          </div>
+        )} */}
           </AlertDialogTrigger>
-          <AlertDialogContent>
+          <AlertDialogContent className="demo-container bg-[#E0EED5] ">
             <AlertDialogHeader>
-              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogTitle className="demo-title">
+                Request Demo
+              </AlertDialogTitle>
               <AlertDialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
+                <DemoRequestForm setFormOpen={setFormOpen} />
               </AlertDialogDescription>
             </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction>Continue</AlertDialogAction>
-            </AlertDialogFooter>
+            {/* <AlertDialogFooter> */}
+            {/* <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction>Continue</AlertDialogAction> */}
+            {/* </AlertDialogFooter> */}
           </AlertDialogContent>
         </AlertDialog>
       </div>

@@ -68,8 +68,13 @@ const Footer = () => {
               fill="white"
             />
           </svg>
-
-          <span>Linkedin</span>
+          <a
+            href="https://www.linkedin.com/company/quash-bugs/"
+            target="_blank"
+          >
+            {" "}
+            <span>Linkedin</span>
+          </a>
         </div>
       </div>
     </div>
