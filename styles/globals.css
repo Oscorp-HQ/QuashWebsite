@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto&family=Roboto+Serif:opsz@8..144&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -352,6 +353,7 @@ body {
     letter-spacing: 0.07px;
     text-align: center;
   }
+
   .section-four-container {
     display: flex;
     padding: 72px 16px;
@@ -364,6 +366,7 @@ body {
     font-size: 28px;
     gap: 5px;
   }
+
   .section-four-container .title {
     font-size: 20px;
     letter-spacing: 0.1px;
@@ -373,6 +376,7 @@ body {
     font-size: 14px;
     width: 185px;
   }
+
   .section-five-container {
     display: flex;
     padding: 88px 16px;

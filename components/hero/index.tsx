@@ -1,5 +1,16 @@
 import Image from "next/image";
 import React from "react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 const Hero = () => {
   return (
@@ -15,20 +26,37 @@ const Hero = () => {
             all the important information auto-captured.
           </span>
         </div>
-        <Image
-          src="/request.svg"
-          alt="request"
-          height="60"
-          width="170"
-          className="hidden md:inline-flex hover:cursor-pointer"
-        />
-        <Image
-          src="/request-button-mob.svg"
-          alt="request"
-          height="49"
-          width="140"
-          className=" md:hidden hover:cursor-pointer"
-        />
+        <AlertDialog>
+          <AlertDialogTrigger>
+            <Image
+              src="/request.svg"
+              alt="request"
+              height="60"
+              width="170"
+              className="hidden md:inline-flex hover:cursor-pointer"
+            />
+            <Image
+              src="/request-button-mob.svg"
+              alt="request"
+              height="49"
+              width="140"
+              className=" md:hidden hover:cursor-pointer"
+            />
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction>Continue</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </div>
 
       <Image
