@@ -285,7 +285,13 @@ const Header = ({ handleScroll, setFormOpen }: any) => {
                   Documentation
                 </span>
               </div>
-              <button className="get-started w-full">
+              <button
+                className="get-started w-full"
+                onClick={() => {
+                  setFormOpen(true);
+                  setOpen(false);
+                }}
+              >
                 <>
                   Get started free
                   <svg

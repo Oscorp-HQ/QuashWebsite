@@ -55,7 +55,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
   }, [name, company, email]);
 
   //Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<any>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
