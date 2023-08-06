@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const SectionFive = () => {
+const SectionFive = ({ setFormOpen }: any) => {
   return (
     <div className="section-five-container md:w-[1440px]">
       <Image
@@ -21,6 +21,9 @@ const SectionFive = () => {
         height="49"
         width="140"
         className="hover:cursor-pointer"
+        onClick={() => {
+          setFormOpen(true);
+        }}
       />{" "}
     </div>
   );

@@ -312,12 +312,47 @@ body {
   gap: 8px;
   align-self: stretch !important;
   border-radius: 8px;
-  background: #bdddab;
+  /* background: #bdddab; */
   color: #fff;
   font-family: var(--roboto);
   font-size: 24px !important;
   font-style: normal;
   font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.12px;
+}
+
+.submitted {
+  display: flex;
+  width: 620px !important;
+  height: 356px;
+  padding: 42px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  border-radius: 16px !important;
+background: #193613;
+box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+}
+
+.req-submitted {
+  color: #faf5ea;
+  font-family: var(--roboto);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+
+.req-desc {
+  color: #faf5ea;
+  font-family: var(--roboto);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: 0.12px;
 }
@@ -501,7 +536,7 @@ body {
     align-items: center;
     gap: 8px;
     border-radius: 8px;
-    background: #bdddab;
+    /* background: #bdddab; */
     color: #fff;
     font-family: var(--roboto);
     font-size: 20px;
@@ -520,4 +555,76 @@ body {
     font-size: 12px;
     letter-spacing: 0.06px;
   }
+
+  .get-started {
+    display: flex;
+    padding: 8px 50px !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+    height: 40px !important;
+    border-radius: 8px !important;
+    background: #418a30 !important;
+    color: #fff;
+    font-family: var(--roboto);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.1px;
+  }
+
+  .drop{
+    animation: fadeInDown 0.3s ease-in-out forwards;
+  }
+
+  .drop-item span {
+    font-family: var(--roboto);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.08px;
+  }
+
+  .drop-item span:hover {
+    cursor: pointer !important;
+  }
+
+  .submitted {
+    display: flex;
+    height: auto !important;
+    width: 320px !important;
+    padding: 24px 24px 40px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 16px;
+    background: #193613;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .req-submitted {
+    font-size: 24px;
+    letter-spacing: 0.12px;
+  }
+  .req-desc {
+    font-size: 16px;
+    letter-spacing: 0.08px;
+  }
+
+    /* Animation keyframes */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+  
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 }
