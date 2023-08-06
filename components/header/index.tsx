@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 
-const Header = ({ handleScroll, formOpen, setFormOpen }: any) => {
+const Header = ({ handleScroll, setFormOpen }: any) => {
   const [selected, setSelected] = useState("Home");
   const [open, setOpen] = useState(false);
 

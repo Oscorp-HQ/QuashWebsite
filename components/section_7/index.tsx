@@ -19,13 +19,6 @@ const SectionSeven = () => {
         className="absolute bottom-0 right-0 -z-10 md:hidden"
       />
 
-      {/* <Image
-        width="160"
-        height="169"
-        alt="group-8"
-        src="/group-8.svg"
-        className="absolute hidden top-0 left-0 -z-10 md:inline-flex"
-      /> */}
       <div className="sec-seven-container">
         <div className="text mb-5 md:mb-[10px] md:flex flex-col">
           <div className="md:flex md:gap-3">
@@ -88,10 +81,10 @@ const SectionSeven = () => {
           height="58"
           alt="copy-paste"
           src="/copy-paste.svg"
-          className="mt-[16px] md:hidden"
+          className=" md:hidden"
         />
         <Image
-          width="380"
+          width="318"
           height="90"
           alt="copy-paste"
           src="/copy-paste.svg"

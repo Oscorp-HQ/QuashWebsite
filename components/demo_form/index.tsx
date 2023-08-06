@@ -181,8 +181,8 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
             // setFormOpen(false);
           }}
           className={`demo-submit ${
-            !isEmpty ? "bg-[#418A30]" : "bg-[#bdddab]"
-          }`}
+            !isEmpty ? "bg-[#418A30] hover:bg-[#418A30]" : "bg-[#bdddab]"
+          } `}
         >
           Submit
         </Button>

@@ -40,7 +40,7 @@ const SectionThree = () => {
           >
             <div className={`flex flex-col gap-3 md:items-start`}>
               <p className="title">{section.head}</p>
-              <p className="description md:w-[584px]">{section.descr}</p>
+              <p className="description md:w-[565px]">{section.descr}</p>
             </div>
             <Image
               width="170"

@@ -97,9 +97,9 @@ body {
 
 .sec-seven-container .sdk {
   color: #000;
-  font-family: var(--roboto);
+  font-family: var(--roboto-serif);
   font-size: 24px;
-  font-style: italic;
+  font-style: italic !important;
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.12px;
@@ -180,7 +180,7 @@ body {
   color: #231f20;
   font-family: var(--roboto-serif);
   font-size: 24px;
-  font-style: normal;
+  font-style: normal !important;
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.12px;
@@ -234,7 +234,7 @@ body {
 }
 
 .section-five-container p {
-  font-family: var(--roboto);
+  font-family: var(--roboto-serif);
   font-size: 50px;
   font-style: italic;
   font-weight: 700;
@@ -404,7 +404,6 @@ box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
 
   .sec-seven-container .sdk {
     font-size: 14px;
-    font-style: italic;
     letter-spacing: 0.07px;
   }
 
