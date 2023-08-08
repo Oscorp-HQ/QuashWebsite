@@ -59,6 +59,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
       const { success } = response;
       if (success) setFormSubmitted(true);
     } catch (e) {
+      // what to do in case of api call failure??
       console.log(e);
     }
   };
@@ -66,7 +67,6 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
   useEffect(() => {
     if (name && email && company && number) {
       setIsEmpty(false);
-      console.log(name, company, email);
     }
   }, [name, company, email, number]);
 
