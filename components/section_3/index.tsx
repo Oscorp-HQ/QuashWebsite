@@ -33,6 +33,7 @@ const SectionThree = () => {
       {sectionArray &&
         sectionArray.map((section, index) => (
           <div
+          key={index}
             className={`flex flex-col gap-[24px] w-[237px] items-center 
             ${
               index % 2 !== 0 ? "md:flex-row" : "md:flex-row-reverse"

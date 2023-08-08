@@ -26,7 +26,7 @@ const SectionFour = () => {
         <div className="flex flex-col items-start gap-10 md:gap-16">
           {sectionData &&
             sectionData.map((section, index) => (
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3" key={index}>
                 <div className="title">{section.title}</div>
                 <div className="sub md:w-[480px]">{section.sub}</div>
               </div>
