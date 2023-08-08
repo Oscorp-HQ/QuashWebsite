@@ -1,14 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-
+import { ReloadIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -18,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { PostContact } from "@/services";
+import { useToast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   username: z.string().min(1, {
@@ -45,8 +44,11 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [isEmpty, setIsEmpty] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
+  const { toast } = useToast();
 
   const SendUserData = async () => {
+    setShowLoader(true);
     const data = {
       name: name,
       email: email,
@@ -58,16 +60,23 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
       const response = await PostContact(data);
       const { success } = response;
       if (success) setFormSubmitted(true);
+      setShowLoader(false);
     } catch (e) {
       // what to do in case of api call failure??
-      console.log(e);
+      toast({
+        description: "Something went wrong.",
+      });
+      setShowLoader(false);
     }
   };
 
   useEffect(() => {
     if (name && email && company && number) {
       setIsEmpty(false);
+    } else {
+      setIsEmpty(true);
     }
+    console.log("states are", name, company, email, number);
   }, [name, company, email, number]);
 
   //Define your form.
@@ -199,6 +208,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
             !isEmpty ? "bg-[#418A30] hover:bg-[#418A30]" : "bg-[#bdddab]"
           } `}
         >
+          {showLoader && <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />}
           Submit
         </Button>
       </form>

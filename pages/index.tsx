@@ -19,14 +19,13 @@ import {
 } from "@/components/ui/alert-dialog";
 import { DemoRequestForm } from "@/components/demo_form";
 import { PostContact } from "@/services";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-
 
   const handleScroll = (targetId: any) => {
     const targetElement = document.getElementById(targetId);
@@ -49,6 +48,7 @@ export default function Home() {
 
         <SectionFour />
         <SectionFive setFormOpen={setFormOpen} />
+        <Toaster />
       </main>
       <section id="footer">
         <Footer />
