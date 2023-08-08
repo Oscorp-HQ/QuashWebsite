@@ -18,12 +18,15 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { DemoRequestForm } from "@/components/demo_form";
+import { PostContact } from "@/services";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+
 
   const handleScroll = (targetId: any) => {
     const targetElement = document.getElementById(targetId);

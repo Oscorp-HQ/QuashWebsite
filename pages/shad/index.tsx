@@ -1,40 +1,29 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+import React, { useState } from "react";
 
-const Shad = () => {
+const CodeBlock = () => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const data = "navigator.clipboard.writeText(data)";
+
+  const handleCopyClick = () => {
+    navigator.clipboard.writeText(data);
+    setIsCopied(true);
+  };
+
   return (
-    <div className="h-[100vh] w-full flex justify-center items-center">
-      <AlertDialog>
-        <AlertDialogTrigger>
-          <Button>Click me</Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-            <AlertDialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+    <div className="code-block">
+      <code>
+        {
+          <>
+            <p>{data}</p>
+          </>
+        }
+      </code>
+      <button onClick={handleCopyClick} disabled={isCopied}>
+        {isCopied ? "Copied!" : "Copy"}
+      </button>
     </div>
   );
 };
 
-export default Shad;
+export default CodeBlock;
