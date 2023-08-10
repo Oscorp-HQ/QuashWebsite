@@ -18,5 +18,6 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
+    
   );
 }
