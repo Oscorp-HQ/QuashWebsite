@@ -151,9 +151,15 @@ const Header = ({ handleScroll, setFormOpen }: any) => {
             className={`header-text ${
               selected === "Documentation" && "text-[#418A30]"
             }`}
-            onClick={() => setSelected("Documentation")}
+            // onClick={() => setSelected("Documentation")}
           >
-            Documentation
+            <a
+              href="https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
+              target="_blank"
+            >
+              {" "}
+              Documentation
+            </a>
           </button>
         </div>
 
@@ -278,11 +284,17 @@ const Header = ({ handleScroll, setFormOpen }: any) => {
                   //   selected === "Documentation" && "text-[#418A30]"
                   // }`}
                   onClick={() => {
-                    setSelected("Documentation");
+                    // setSelected("Documentation");
                     setOpen(false);
                   }}
                 >
-                  Documentation
+                  <a
+                    href="https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
+                    target="_blank"
+                  >
+                    {" "}
+                    Documentation
+                  </a>
                 </span>
               </div>
               <button
