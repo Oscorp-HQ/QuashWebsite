@@ -110,7 +110,7 @@ const SectionSeven = () => {
                   </div>
                   <div className="flex">
                     <p className="key">{`triggerType`}</p>
-                    <p className="value">=Quash.TRIPLE_TAPS</p>
+                    <p className="value">{`=[Quash.FAB, Quash.SHAKE]`}</p>
                   </div>
                 </div>
                 <p className="quick">{`)`}</p>

@@ -52,8 +52,9 @@ const Footer = () => {
               fill="white"
             />
           </svg>
-
-          <span>hello@quashbugs.com</span>
+          <a href="mailto:hello@quashbugs.com">
+            <span>hello@quashbugs.com</span>
+          </a>
         </div>
         <div className="flex gap-2 py-2 md:py-0">
           <svg
