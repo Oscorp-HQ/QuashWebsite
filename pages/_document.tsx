@@ -4,8 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta charSet="UTF-8"></meta>
-        <title>Quash - Streamlining QA Processes</title>
+        <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link
@@ -18,6 +17,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-    
   );
 }
