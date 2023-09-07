@@ -1,6 +1,8 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <div
       className="footer md:px-[204px] md:py-[58px] bg-[#193613] w-full flex  justify-between md:items-center pl-[37px] pr-[37px]
@@ -47,11 +49,15 @@ const Footer = () => {
             <span>Integration Doc</span>
           </a>
         </div>
-        <div className="flex gap-2 py-2 md:py-0 items-center">
-          <a href="/privacy" target="_blank">
-            {" "}
-            <span>Privacy Policy</span>
-          </a>
+        <div
+          className="flex gap-2 py-2 md:py-0 items-center hover:cursor-pointer"
+          onClick={() => {
+            router.push("/privacy");
+          }}
+        >
+          {/* <a href="/privacy" target="_blank"> */}{" "}
+          <span>Privacy Policy</span>
+          {/* </a> */}
         </div>
       </div>
 

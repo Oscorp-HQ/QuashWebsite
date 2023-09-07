@@ -3,6 +3,7 @@
 import React from "react";
 
 const PrivacyPolicy = () => {
+  console.log("inside privacy");
   return (
     <div className="bg-gray-100 p-4">
       <div className="max-w-3xl mx-auto">
