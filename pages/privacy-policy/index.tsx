@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
 
         {/* Introduction */}
         <p className="mb-4">
-          Quash ("Quash", “we”, “us”, and/or “our”) knows that you care about
+          Quash (&quot;Quash&quot;, “we”, “us”, and/or “our”) knows that you care about
           how your personal data is used and shared, and we take your privacy
           seriously. Please read the following to learn more about our treatment
           of your personal data.
@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
           <p>
             By using the www.quashbugs.com or www.app.quashbugs.com website
             (“Site”), and any related services and/or features (together with
-            the Site, the "Service") you acknowledge that you accept the
+            the Site, the &quot;Service&quot;) you acknowledge that you accept the
             practices and policies outlined in this Privacy Policy. If you have
             any questions or comments about this Privacy Policy or our use of
             your data, please contact us at{" "}
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
           <h2 className="text-xl font-semibold">Scope</h2>
           <p>
             This Privacy Policy covers Quash’s treatment of personal data
-            ("Personal Data") that Quash gathers when you access or otherwise
+            (&quot;Personal Data&quot;) that Quash gathers when you access or otherwise
             use the Service. It explains what data we collect, why we collect
             the data, how it is used and your rights and choices. Our use of
             this information is governed by our agreement with the applicable
@@ -213,7 +213,7 @@ const PrivacyPolicy = () => {
               tell you about services we believe will be of interest to you,
               upcoming events or other promotions. If we do so, each marketing
               communication we send you will contain instructions permitting you
-              to "opt-out" of receiving future marketing communications. Note
+              to &quot;opt-out&quot; of receiving future marketing communications. Note
               however that as a user of our services you cannot opt-out of some
               administrative communications that are reasonably necessary to the
               Service, such as billing or service notifications. Moreover, if at
@@ -263,7 +263,7 @@ const PrivacyPolicy = () => {
           </p>
           <ul className="list-disc pl-4">
             <li>
-              Feedback: You've shared your information as a result of giving
+              Feedback: You&apos;ve shared your information as a result of giving
               feedback within an application using the Service. We only share
               this information with the developer of the application, in order
               to assist you and the developer in communicating.
