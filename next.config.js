@@ -7,7 +7,8 @@ const nextConfig = {
   },
   exportPathMap: function() {
     return {
-      '/': { page: '/' }
+      '/': { page: '/' },
+      '/privacy': { page: '/privacy' }
       // Add more routes here if needed
     };
   }
