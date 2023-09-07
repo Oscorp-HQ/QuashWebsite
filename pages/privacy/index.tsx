@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 const PrivacyPolicy = () => {
@@ -9,20 +11,20 @@ const PrivacyPolicy = () => {
 
         {/* Introduction */}
         <p className="mb-4">
-          Quash (&quot;Quash&quot;, “we”, “us”, and/or “our”) knows that you care about
-          how your personal data is used and shared, and we take your privacy
-          seriously. Please read the following to learn more about our treatment
-          of your personal data.
+          Quash (&quot;Quash&quot;, “we”, “us”, and/or “our”) knows that you
+          care about how your personal data is used and shared, and we take your
+          privacy seriously. Please read the following to learn more about our
+          treatment of your personal data.
         </p>
         <section className="mb-8">
           <h2 className="text-xl font-semibold">Introduction</h2>
           <p>
             By using the www.quashbugs.com or www.app.quashbugs.com website
             (“Site”), and any related services and/or features (together with
-            the Site, the &quot;Service&quot;) you acknowledge that you accept the
-            practices and policies outlined in this Privacy Policy. If you have
-            any questions or comments about this Privacy Policy or our use of
-            your data, please contact us at{" "}
+            the Site, the &quot;Service&quot;) you acknowledge that you accept
+            the practices and policies outlined in this Privacy Policy. If you
+            have any questions or comments about this Privacy Policy or our use
+            of your data, please contact us at{" "}
             <a href="mailto:hello@quashbugs.com" className="text-blue-500">
               hello@quashbugs.com
             </a>
@@ -35,14 +37,15 @@ const PrivacyPolicy = () => {
           <h2 className="text-xl font-semibold">Scope</h2>
           <p>
             This Privacy Policy covers Quash’s treatment of personal data
-            (&quot;Personal Data&quot;) that Quash gathers when you access or otherwise
-            use the Service. It explains what data we collect, why we collect
-            the data, how it is used and your rights and choices. Our use of
-            this information is governed by our agreement with the applicable
-            customer and the customer’s privacy policies. We do not control and
-            are not responsible for the privacy policies or privacy practices of
-            our customers or any other third parties. We encourage you to review
-            any such policies or practices that apply to you carefully.
+            (&quot;Personal Data&quot;) that Quash gathers when you access or
+            otherwise use the Service. It explains what data we collect, why we
+            collect the data, how it is used and your rights and choices. Our
+            use of this information is governed by our agreement with the
+            applicable customer and the customer’s privacy policies. We do not
+            control and are not responsible for the privacy policies or privacy
+            practices of our customers or any other third parties. We encourage
+            you to review any such policies or practices that apply to you
+            carefully.
           </p>
         </section>
 
@@ -213,13 +216,14 @@ const PrivacyPolicy = () => {
               tell you about services we believe will be of interest to you,
               upcoming events or other promotions. If we do so, each marketing
               communication we send you will contain instructions permitting you
-              to &quot;opt-out&quot; of receiving future marketing communications. Note
-              however that as a user of our services you cannot opt-out of some
-              administrative communications that are reasonably necessary to the
-              Service, such as billing or service notifications. Moreover, if at
-              any time you wish not to receive any future marketing
-              communications or you wish to have your name deleted from our
-              mailing lists, please contact us as indicated below.
+              to &quot;opt-out&quot; of receiving future marketing
+              communications. Note however that as a user of our services you
+              cannot opt-out of some administrative communications that are
+              reasonably necessary to the Service, such as billing or service
+              notifications. Moreover, if at any time you wish not to receive
+              any future marketing communications or you wish to have your name
+              deleted from our mailing lists, please contact us as indicated
+              below.
             </li>
           </ul>
           <p>
@@ -263,10 +267,10 @@ const PrivacyPolicy = () => {
           </p>
           <ul className="list-disc pl-4">
             <li>
-              Feedback: You&apos;ve shared your information as a result of giving
-              feedback within an application using the Service. We only share
-              this information with the developer of the application, in order
-              to assist you and the developer in communicating.
+              Feedback: You&apos;ve shared your information as a result of
+              giving feedback within an application using the Service. We only
+              share this information with the developer of the application, in
+              order to assist you and the developer in communicating.
             </li>
             <li>
               Vendors, Consultants and Other Third-Party Service Providers:
@@ -431,7 +435,10 @@ const PrivacyPolicy = () => {
               <strong>Delete your content or close your account:</strong> You
               can choose to delete certain content through your account. If you
               wish to request to close your account, please contact us at{" "}
-              <a href="mailto:hello@quashbugs.com" className="text-blue-500">hello@quashbugs.com</a>.
+              <a href="mailto:hello@quashbugs.com" className="text-blue-500">
+                hello@quashbugs.com
+              </a>
+              .
             </li>
           </ul>
         </section>
@@ -446,7 +453,9 @@ const PrivacyPolicy = () => {
           </p>
           <p>
             Contact:{" "}
-            <a href="mailto:hello@quashbugs.com" className="text-blue-500">hello@quashbugs.com</a>
+            <a href="mailto:hello@quashbugs.com" className="text-blue-500">
+              hello@quashbugs.com
+            </a>
           </p>
         </section>
       </div>
