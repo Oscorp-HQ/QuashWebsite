@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
         <section className="mb-8">
           <h2 className="text-xl font-semibold">1. Introduction</h2>
           <p>
-            Welcome to Quash, a software development kit designed to enhance developers' ability to monitor and manage bugs
+            Welcome to Quash, a software development kit designed to enhance developers ability to monitor and manage bugs
             and crashes within their applications. At Quash, we prioritize the privacy of our users. This privacy policy outlines
             our practices concerning the collection, use, and sharing of your information. By using Quash and its services, you
             signify your acceptance of this privacy policy.
@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
           <ul className="list-disc pl-4">
             <li>Email address</li>
             <li>Full Name</li>
-            <li>Organization's name and address</li>
+            <li>Organization&apos;s name and address</li>
           </ul>
           <p>b) Automatic Information</p>
           <p>Upon integration with your application, Quash collects information such as:</p>
@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
 
         {/* Section 9 */}
         <section className="mb-8">
-          <h2 className="text-xl font-semibold">9. Children's Privacy</h2>
+          <h2 className="text-xl font-semibold">9. Children&apos;s Privacy</h2>
           <p>Quash services are tailored for professionals and are not intended for children under the age of 13. We take stringent measures
             to ensure we do not inadvertently collect data from this demographic.
           </p>
