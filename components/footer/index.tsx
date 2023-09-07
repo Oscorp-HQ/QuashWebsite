@@ -3,10 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <div
-      className="footer md:px-[204px] md:py-[58px] bg-[#193613] w-full flex flex-col md:flex-row md:justify-between md:items-center pl-[37px] pr-[91px] 
+      className="footer md:px-[204px] md:py-[58px] bg-[#193613] w-full flex  justify-between md:items-center pl-[37px] pr-[37px]
     py-[19px] items-start"
     >
-      <div className="flex">
+      {/* <div className="flex">
         <p>Crafted with</p>
         <svg
           width="34"
@@ -36,10 +36,28 @@ const Footer = () => {
         </svg>
 
         <p>in Bengaluru, India.</p>
+      </div> */}
+      <div className="flex flex-col md:gap-[22px] ">
+        <span style={{ color: "gray" }}>DOCUMENTS</span>
+        <div className="flex gap-2 py-2 md:py-0 items-center">
+          <a
+            href="https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
+            target="_blank"
+          >
+            <span>Integration Doc</span>
+          </a>
+        </div>
+        <div className="flex gap-2 py-2 md:py-0 items-center">
+          <a href="/privacy" target="_blank">
+            {" "}
+            <span>Privacy Policy</span>
+          </a>
+        </div>
       </div>
 
       <div className="flex flex-col md:gap-[22px] ">
-        <div className="flex gap-2 py-2 md:py-0">
+        <span style={{ color: "gray" }}>CONTACT US</span>
+        <div className="flex gap-2 py-2 md:py-0 items-center">
           <svg
             width="20"
             height="21"
@@ -56,7 +74,7 @@ const Footer = () => {
             <span>hello@quashbugs.com</span>
           </a>
         </div>
-        <div className="flex gap-2 py-2 md:py-0">
+        <div className="flex gap-2 py-2 md:py-0 items-center">
           <svg
             width="20"
             height="21"
