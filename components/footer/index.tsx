@@ -1,103 +1,259 @@
+import { MapPin, PaperPlaneTilt, X } from "@/lib/icons";
+import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { useState } from "react";
+import { DemoRequestForm } from "@/components/contact-form";
+import { Toaster } from "../ui/toaster";
+
+const footerNav = [
+  {
+    label: "Documentation",
+    route:
+      "https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47",
+  },
+  {
+    label: "Privacy Policy",
+    route: "/privacy",
+  },
+  // {
+  //   label: "Support",
+  //   route: "",
+  // },
+];
+
+const footerCareer = [
+  {
+    label: "Careers",
+    route: "/team",
+  },
+  {
+    label: "Contact Sales",
+    route: "",
+  },
+];
+
+const footerContact = [
+  {
+    label: "Bengaluru, India",
+    route: "",
+    icon: <MapPin size={20} color="#FFFFFF" className="opacity-50" />,
+  },
+  {
+    label: "hello@quashbugs.com",
+    route: "mailto:hello@quashbugs.com",
+    icon: <PaperPlaneTilt size={20} color="#FFFFFF" className="opacity-50" />,
+  },
+];
+
+const footerMedia = [
+  {
+    img: "/linkedIn.svg",
+    route: "https://www.linkedin.com/company/quash-bugs/",
+  },
+  {
+    img: "/product-hunt.svg",
+    route: "",
+  },
+  {
+    img: "/x-logo.svg",
+    route: "",
+  },
+];
 
 const Footer = () => {
+  const [formOpen, setFormOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleScroll = (targetId: any) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const router = useRouter();
+
   return (
-    <div
-      className="footer md:px-[204px] md:py-[58px] bg-[#193613] w-full flex  justify-between md:items-center pl-[37px] pr-[37px]
-    py-[19px] items-start"
-    >
-      {/* <div className="flex">
-        <p>Crafted with</p>
-        <svg
-          width="34"
-          height="35"
-          viewBox="0 0 34 35"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="hidden md:inline-flex"
-        >
-          <path
-            d="M15.9984 8.8599L17 9.8629L18.0016 8.86132C18.6583 8.19884 19.4394 7.6726 20.3 7.3128C21.1606 6.953 22.0838 6.76674 23.0166 6.76469C23.9494 6.76265 24.8735 6.94487 25.7357 7.3009C26.5979 7.65693 27.3812 8.17974 28.0408 8.83934C28.7004 9.49893 29.2232 10.2823 29.5793 11.1445C29.9353 12.0067 30.1175 12.9307 30.1155 13.8635C30.1134 14.7963 29.9272 15.7195 29.5674 16.5802C29.2076 17.4408 28.6813 18.2219 28.0188 18.8786L18.003 28.8958C17.8714 29.0275 17.7152 29.132 17.5432 29.2033C17.3712 29.2746 17.1869 29.3113 17.0007 29.3113C16.8145 29.3113 16.6302 29.2746 16.4582 29.2033C16.2862 29.132 16.13 29.0275 15.9984 28.8958L5.98118 18.8786C5.30969 18.224 4.77487 17.4426 4.40773 16.5797C4.04059 15.7168 3.84844 14.7896 3.84243 13.8519C3.83642 12.9141 4.01667 11.9845 4.37273 11.117C4.72878 10.2495 5.25355 9.4613 5.91659 8.79816C6.57963 8.13502 7.36775 7.61014 8.23523 7.25397C9.1027 6.89779 10.0323 6.71741 10.97 6.72328C11.9077 6.72916 12.835 6.92118 13.6979 7.28819C14.5609 7.65521 15.3423 8.18993 15.997 8.86132L15.9984 8.8599Z"
-            fill="#E3806A"
-          />
-        </svg>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="md:hidden mx-[3px]"
-        >
-          <path
-            d="M9.41093 4.62508L10.0001 5.21508L10.5893 4.62591C10.9756 4.23622 11.435 3.92667 11.9413 3.71502C12.4475 3.50338 12.9906 3.39381 13.5393 3.3926C14.088 3.3914 14.6315 3.49859 15.1387 3.70802C15.6459 3.91745 16.1067 4.22499 16.4947 4.61298C16.8827 5.00098 17.1902 5.46179 17.3997 5.96896C17.6091 6.47613 17.7163 7.01968 17.7151 7.56839C17.7139 8.11709 17.6043 8.66016 17.3927 9.16641C17.181 9.67266 16.8715 10.1321 16.4818 10.5184L10.5901 16.4109C10.5127 16.4884 10.4208 16.5499 10.3196 16.5918C10.2185 16.6337 10.11 16.6553 10.0005 16.6553C9.891 16.6553 9.78256 16.6337 9.68139 16.5918C9.58023 16.5499 9.48832 16.4884 9.41093 16.4109L3.51843 10.5184C3.12343 10.1334 2.80883 9.67372 2.59287 9.16613C2.3769 8.65855 2.26387 8.11313 2.26034 7.56153C2.25681 7.00992 2.36283 6.4631 2.57228 5.95279C2.78172 5.44248 3.09041 4.97884 3.48043 4.58876C3.87046 4.19868 4.33406 3.88993 4.84434 3.68041C5.35462 3.4709 5.90142 3.36479 6.45303 3.36825C7.00463 3.3717 7.55006 3.48465 8.05768 3.70055C8.56529 3.91644 9.02499 4.23098 9.41009 4.62591L9.41093 4.62508Z"
-            fill="#E3806A"
-          />
-        </svg>
-
-        <p>in Bengaluru, India.</p>
-      </div> */}
-      <div className="flex flex-col md:gap-[22px] ">
-        <span style={{ color: "gray" }}>DOCUMENTS</span>
-        <div className="flex gap-2 py-2 md:py-0 items-center">
-          <a
-            href="https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
-            target="_blank"
+    <div className="flex flex-col bottom-0 w-full gap-12 md:gap-16 pl-[30px] pt-[26px] pr-[122px] pb-[96px] md:pl-[122px] md:pt-[64px] md:pr-[200px] md:pb-[116px] text-[16px] font-[400] text-[#ECECEE] md:text-[24px] bg-[#0D0D0D]">
+      <Image
+        src="/logo-mobile.svg"
+        alt="Quash Logo"
+        width={95}
+        height={24}
+        priority
+        className="flex md:hidden"
+      />
+      <Image
+        src="/logo-mobile.svg"
+        alt="Quash Logo"
+        width={118}
+        height={30}
+        priority
+        className="hidden md:flex"
+      />
+      <div className="flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
+        <div className="flex flex-col gap-6 md:gap-8 justify-center items-start text-center md:justify-start">
+          {footerNav.map((nav, index) => (
+            <a key={index} href={nav.route} target="_blank">
+              {nav.label}
+            </a>
+          ))}
+          <span
+            onClick={() => {
+              setFormOpen(true);
+            }}
+            className="hover:cursor-pointer"
           >
-            <span>Integration Doc</span>
-          </a>
+            Support
+          </span>
         </div>
-        <div className="flex gap-2 py-2 md:py-0 items-center">
-          <a href="/privacy" target="_blank">
-            {" "}
-            <span>Privacy Policy</span>
+        <div className="flex flex-col gap-6 md:gap-8 justify-center md:justify-start items-start text-center">
+          {/* {footerCareer.map((nav, index) => ( */}
+          <a href={"/team"} target="_blank">
+            Careers
           </a>
+          <span
+            onClick={() => {
+              setFormOpen(true);
+            }}
+            className="hover:cursor-pointer"
+          >
+            Contact Sales
+          </span>
+          {/* ))} */}
         </div>
-      </div>
-
-      <div className="flex flex-col md:gap-[22px] ">
-        <span style={{ color: "gray" }}>CONTACT US</span>
-        <div className="flex gap-2 py-2 md:py-0 items-center">
-          <svg
-            width="20"
-            height="21"
-            viewBox="0 0 20 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.37496 3.83105C2.88665 3.83105 1.66663 5.05108 1.66663 6.53939V14.4561C1.66663 15.9444 2.88665 17.1644 4.37496 17.1644H15.625C17.1133 17.1644 18.3333 15.9444 18.3333 14.4561V6.53939C18.3333 5.05108 17.1133 3.83105 15.625 3.83105H4.37496ZM4.37496 5.08105H15.625C16.4375 5.08105 17.0833 5.72686 17.0833 6.53939V7L9.99996 10.8289L2.91663 7V6.53939C2.91663 5.72686 3.56243 5.08105 4.37496 5.08105ZM2.91663 8.4209L9.70292 12.0895C9.79417 12.1388 9.89625 12.1646 9.99996 12.1646C10.1037 12.1646 10.2057 12.1388 10.297 12.0895L17.0833 8.4209V14.4561C17.0833 15.2686 16.4375 15.9144 15.625 15.9144H4.37496C3.56243 15.9144 2.91663 15.2686 2.91663 14.4561V8.4209Z"
-              fill="white"
-            />
-          </svg>
-          <a href="mailto:hello@quashbugs.com">
-            <span>hello@quashbugs.com</span>
-          </a>
-        </div>
-        <div className="flex gap-2 py-2 md:py-0 items-center">
-          <svg
-            width="20"
-            height="21"
-            viewBox="0 0 20 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.79167 3.49756C3.53343 3.49756 2.5 4.53099 2.5 5.78923V16.2059C2.5 17.4641 3.53343 18.4976 4.79167 18.4976H15.2083C16.4666 18.4976 17.5 17.4641 17.5 16.2059V5.78923C17.5 4.53099 16.4666 3.49756 15.2083 3.49756H4.79167ZM4.79167 4.74756H15.2083C15.7909 4.74756 16.25 5.20663 16.25 5.78923V16.2059C16.25 16.7885 15.7909 17.2476 15.2083 17.2476H4.79167C4.20907 17.2476 3.75 16.7885 3.75 16.2059V5.78923C3.75 5.20663 4.20907 4.74756 4.79167 4.74756ZM6.45833 6.41423C6.18207 6.41423 5.91711 6.52397 5.72176 6.71932C5.52641 6.91467 5.41667 7.17962 5.41667 7.45589C5.41667 7.73216 5.52641 7.99711 5.72176 8.19246C5.91711 8.38781 6.18207 8.49756 6.45833 8.49756C6.7346 8.49756 6.99955 8.38781 7.1949 8.19246C7.39025 7.99711 7.5 7.73216 7.5 7.45589C7.5 7.17962 7.39025 6.91467 7.1949 6.71932C6.99955 6.52397 6.7346 6.41423 6.45833 6.41423ZM5.83333 9.33089C5.60292 9.33089 5.41667 9.51714 5.41667 9.74756V15.1642C5.41667 15.3946 5.60292 15.5809 5.83333 15.5809H7.08333C7.31375 15.5809 7.5 15.3946 7.5 15.1642V9.74756C7.5 9.51714 7.31375 9.33089 7.08333 9.33089H5.83333ZM8.75 9.33089C8.51958 9.33089 8.33333 9.51714 8.33333 9.74756V15.1642C8.33333 15.3946 8.51958 15.5809 8.75 15.5809H10C10.2304 15.5809 10.4167 15.3946 10.4167 15.1642V12.0392C10.4167 11.4646 10.8837 10.9976 11.4583 10.9976C12.0329 10.9976 12.5 11.4646 12.5 12.0392V15.1642C12.5 15.3946 12.6862 15.5809 12.9167 15.5809H14.1667C14.3971 15.5809 14.5833 15.3946 14.5833 15.1642V11.8309C14.5833 10.4521 13.4621 9.33089 12.0833 9.33089C11.4425 9.33089 10.8596 9.57507 10.4167 9.97298V9.74756C10.4167 9.51714 10.2304 9.33089 10 9.33089H8.75Z"
-              fill="white"
-            />
-          </svg>
-          <a
-            href="https://www.linkedin.com/company/quash-bugs/"
-            target="_blank"
-          >
-            {" "}
-            <span>Linkedin</span>
-          </a>
+        <div className="flex flex-col gap-6 md:gap-8 justify-center items-start md:justify-start">
+          <div className="flex gap-[22px] justify-start">
+            {footerMedia.map((media, index) => (
+              <a href={media.route} key={index} target="_blank">
+                <Image
+                  key={index}
+                  src={media.img}
+                  alt={media.img}
+                  width={48}
+                  height={48}
+                  className="ml-[-5px] flex md:hidden"
+                />
+                <Image
+                  key={index}
+                  src={media.img}
+                  alt={media.img}
+                  width={71}
+                  height={71}
+                  className="ml-[-5px] hidden md:flex"
+                />
+              </a>
+            ))}
+          </div>
+          <div className="flex flex-col gap-6 md:gap-4 justify-center items-start text-center">
+            {footerContact.map((nav, index) => (
+              <div
+                className="flex justify-start items-center gap-3"
+                key={index}
+              >
+                {nav.icon}
+                <a href={nav.route} target="_blank">
+                  {nav.label}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      {(formOpen || formSubmitted) && (
+        <AlertDialog open={formOpen}>
+          <AlertDialogContent
+            className={` border-[2px] border-solid border-gray-500 w-full ${
+              !formSubmitted ? "demo-container bg-[#E0EED5]" : "submitted"
+            }  `}
+          >
+            <AlertDialogHeader className="w-full gap-6 md:gap-[34px]">
+              {!formSubmitted && (
+                <AlertDialogTitle className="demo-title flex justify-between">
+                  Reach out to us
+                  {/* <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 34 34"
+                    fill="none"
+                    className="hover:cursor-pointer"
+                    onClick={() => {
+                      setFormOpen(false);
+                    }}
+                  >
+                    <path
+                      d="M17 14.9969L24.0125 7.98438L26.0157 9.98754L19.0032 17L26.0157 24.0125L24.0125 26.0157L17 19.0032L9.98754 26.0157L7.98438 24.0125L14.9969 17L7.98438 9.98754L9.98754 7.98438L17 14.9969Z"
+                      fill="#0E0E1A"
+                    />
+                  </svg> */}
+                  <X
+                    size={34}
+                    className="hover:cursor-pointer"
+                    onClick={() => {
+                      setFormOpen(false);
+                    }}
+                  />
+                </AlertDialogTitle>
+              )}
+              <AlertDialogDescription className="w-full">
+                {!formSubmitted ? (
+                  <DemoRequestForm setFormSubmitted={setFormSubmitted} />
+                ) : (
+                  <div className="">
+                    <div className=" flex flex-col items-center gap-6">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="88"
+                        height="88"
+                        viewBox="0 0 88 88"
+                        fill="none"
+                      >
+                        <path
+                          d="M58.7228 34.7772C58.8507 34.9049 58.9521 35.0565 59.0213 35.2235C59.0905 35.3904 59.1261 35.5693 59.1261 35.75C59.1261 35.9307 59.0905 36.1096 59.0213 36.2765C58.9521 36.4435 58.8507 36.5951 58.7228 36.7228L39.4728 55.9728C39.3451 56.1007 39.1935 56.2021 39.0266 56.2713C38.8596 56.3405 38.6807 56.3761 38.5 56.3761C38.3193 56.3761 38.1404 56.3405 37.9735 56.2713C37.8065 56.2021 37.6549 56.1007 37.5272 55.9728L29.2772 47.7228C29.0192 47.4648 28.8742 47.1149 28.8742 46.75C28.8742 46.3851 29.0192 46.0352 29.2772 45.7772C29.5352 45.5192 29.8851 45.3742 30.25 45.3742C30.6149 45.3742 30.9648 45.5192 31.2228 45.7772L38.5 53.0544L56.7772 34.7772C56.9049 34.6493 57.0565 34.5479 57.2235 34.4787C57.3904 34.4095 57.5693 34.3739 57.75 34.3739C57.9307 34.3739 58.1096 34.4095 58.2766 34.4787C58.4435 34.5479 58.5951 34.6493 58.7228 34.7772ZM78.375 44C78.375 50.7987 76.3589 57.4448 72.5818 63.0977C68.8046 68.7507 63.436 73.1566 57.1548 75.7584C50.8735 78.3601 43.9619 79.0409 37.2938 77.7145C30.6257 76.3881 24.5006 73.1142 19.6932 68.3068C14.8858 63.4994 11.6119 57.3743 10.2855 50.7062C8.95915 44.0381 9.63989 37.1265 12.2417 30.8453C14.8434 24.564 19.2493 19.1954 24.9023 15.4182C30.5552 11.6411 37.2013 9.625 44 9.625C53.1138 9.63501 61.8514 13.2599 68.2958 19.7043C74.7402 26.1487 78.365 34.8863 78.375 44ZM75.625 44C75.625 37.7452 73.7702 31.6308 70.2952 26.4301C66.8202 21.2294 61.8811 17.1759 56.1024 14.7823C50.3237 12.3887 43.9649 11.7624 37.8303 12.9827C31.6956 14.2029 26.0606 17.2149 21.6378 21.6377C17.2149 26.0606 14.2029 31.6956 12.9827 37.8303C11.7624 43.9649 12.3887 50.3236 14.7823 56.1024C17.1759 61.8811 21.2294 66.8202 26.4301 70.2952C31.6308 73.7702 37.7452 75.625 44 75.625C52.3847 75.6159 60.4233 72.2811 66.3522 66.3522C72.2811 60.4233 75.6159 52.3847 75.625 44Z"
+                          fill="#E0EED5"
+                        />
+                      </svg>
+                      <div className="flex flex-col text-center gap-3">
+                        {/* <span className="req-submitted">Reach out to us</span> */}
+                        <span className="req-desc text-white">
+                          We’ll get back to you shortly
+                        </span>
+                      </div>
+                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      className="absolute top-4 right-4 hover:cursor-pointer"
+                      onClick={() => {
+                        setFormOpen(false);
+                        setTimeout(() => {
+                          setFormSubmitted(false);
+                        }, 500);
+                      }}
+                    >
+                      <path
+                        d="M14.9999 13.2325L21.1874 7.04498L22.9549 8.81248L16.7674 15L22.9549 21.1875L21.1874 22.955L14.9999 16.7675L8.81242 22.955L7.04492 21.1875L13.2324 15L7.04492 8.81248L8.81242 7.04498L14.9999 13.2325Z"
+                        fill="#E0EED5"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+          </AlertDialogContent>
+        </AlertDialog>
+      )}
     </div>
   );
 };

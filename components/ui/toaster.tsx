@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Toast,
   ToastClose,
@@ -17,15 +15,15 @@ export function Toaster() {
     <ToastProvider>
       {toasts.map(function ({ id, title, description, action, ...props }) {
         return (
-          <Toast key={id} {...props} className="bg-black text-white">
-            <div className="grid gap-1">
+          <Toast key={id} {...props}>
+            <div className="grid gap-1 bg-white text-black">
               {title && <ToastTitle>{title}</ToastTitle>}
               {description && (
                 <ToastDescription>{description}</ToastDescription>
               )}
             </div>
             {action}
-            <ToastClose/>
+            <ToastClose />
           </Toast>
         );
       })}

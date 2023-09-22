@@ -5,7 +5,7 @@ import React from "react";
 const PrivacyPolicy = () => {
   console.log("inside privacy");
   return (
-    <div className="bg-gray-100 p-4">
+    <div className="text-white p-4 mt-[96px]">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">Privacy Policy for Quash</h1>
         {/* <p className="mb-2">Last Updated: August 25, 2023</p> */}

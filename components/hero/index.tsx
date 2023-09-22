@@ -1,80 +1,65 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
+import { Button } from "../ui/button";
+import { useRouter } from "next/router";
 
-
-const Hero = ({  setFormOpen }: any) => {
+const Hero = () => {
+  const router = useRouter();
   return (
-    <div className="h-[600px] md:h-[928px] w-full relative overflow-x-hidden">
-      <div className="flex flex-col gap-[32px] items-center md:items-start mt-[195px] md:mt-0  md:absolute md:top-[274px] md:left-[126px] md:w-[667px] md:h-[402px] md:gap-[78px]">
-        <div className="hero-text-container">
-          <div className="flex flex-col" id="hero-text">
-            <span className="text-[#418A30]">find bugs faster</span>
-            <span>fix them smarter</span>
+    <div className="relative flex flex-col md:gap-5 items-center">
+      <div className="absolute left-0 right-0 md:top-[200px] bottom-0 w-full bg-[url('/Gradient.svg')]" />
+      <div className=" pt-[132px] px-[18px] pb-[45px] md:pt-[260px] md:px-[242px] md:pb-[109px] w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px]">
+        <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center">
+          {/* <Image
+            src="/hero-image.svg"
+            alt="hero-image"
+            width={1028}
+            height={166}
+            className="hidden md:flex"
+          /> */}
+          <span className="bg-gradient-to-b px-4 from-white to-gray-500 bg-clip-text text-transparent hidden md:flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-normal">
+            Mobile Testing should not be slow and tangled
+          </span>
+          <div>
+            <span className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent  text-[32px] font-[600] md:text-[24px] text-[#ECECEE] md:font-[600] w-full text-center leading-normal md:hidden">
+              Mobile Testing
+              <br />
+              should not be slow
+              <br />
+              and tangled
+            </span>
           </div>
-          <span id="hero-sub" className="flex font-normal">
-            Create tickets directly from mobile device while testing, and get
-            all the important information auto-captured.
+
+          <span className="text-[16px] w-[252px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full">
+            We’re on a mission to make it smooth and simple
           </span>
         </div>
-        <Image
-          src="/request.svg"
-          alt="request"
-          height="60"
-          width="170"
-          className="hidden md:inline-flex hover:cursor-pointer"
+        <Button
+          className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC]"
+          variant="outline"
           onClick={() => {
-            setFormOpen(true);
+            router.push("https://optimus.quashbugs.com/signup");
           }}
-        />
+        >
+          Get Started for Free
+        </Button>
+      </div>
+      <Image
+        src="/hero.svg"
+        alt="hero"
+        width={1078}
+        height={600}
+        className="z-10 hidden md:flex"
+      />
+      <div className="w-full flex justify-end md:hidden">
         <Image
-          src="/request-button-mob.svg"
-          alt="request"
-          height="49"
-          width="140"
-          className=" md:hidden hover:cursor-pointer"
-          onClick={() => {
-            setFormOpen(true);
-          }}
+          src="/hero-mob.svg"
+          alt="hero"
+          width={345}
+          height={303}
+          className="z-10 flex md:hidden pb-[73px]"
         />
       </div>
-
-      <Image
-        src="/Illustration.svg"
-        alt="illustration"
-        height="773"
-        width="1145"
-        className="hidden md:inline-block absolute right-[-364px] top-[130px] -z-10"
-      />
-
-      <Image
-        src="/group-3.svg"
-        alt="group-3"
-        height="177"
-        width="168"
-        className="md:hidden absolute top-[60px] -z-10"
-      />
-      <Image
-        src="/group-4.svg"
-        alt="group-4"
-        height="176"
-        width="168"
-        className="md:hidden absolute top-[305px] right-0 -z-10"
-      />
-      {/* <Image
-        src="/group-2.svg"
-        alt="group-2"
-        height="176"
-        width="75"
-        className="md:hidden absolute top-[60px] right-[-28px] -z-10"
-      /> */}
-
-      <Image
-        src="/group-1.svg"
-        alt="group-1"
-        height="80"
-        width="75"
-        className="md:hidden absolute top-[301px]  -z-10"
-      />
     </div>
   );
 };
