@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { Html, Head, Main, NextScript } from "next/document";
 
-
 export default function Document() {
   return (
     <Html lang="en">
@@ -11,6 +10,7 @@ export default function Document() {
           rel="stylesheet"
         ></link>
       </Head>
+      <title>🐞 Quash - Streamlining QA Processes 🚀</title>
       <body>
         <Main />
         <NextScript />
