@@ -1,4 +1,5 @@
 import Journey from "@/components/journey";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -51,6 +52,9 @@ const mediaTeam = [
 const TeamPage = () => {
   return (
     <div>
+      <Head>
+        <title>🐞 Quash - Streamlining QA Processes 🚀</title>
+      </Head>
       <div className="relative h-full mt-[132px] md:mt-[242px] md:px-[170px] px-[18px] flex flex-col justify-center items-center text-white gap-[96px] md:gap-[176px] pb-[61px] md:pb-[115px]">
         <div className="absolute inset-0  bg-[url('/Gradient.svg')] md:h-[1154px] md:w-full md:flex hidden" />
         <div className="flex flex-col gap-4 md:gap-7 text-center  md:px-[70px]">

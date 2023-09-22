@@ -9,6 +9,7 @@ import Callback from "@/components/callback";
 import CodeSection from "@/components/code";
 import { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "🐞 Quash - Bug & Crash Reporting for Mobile Developers 🚀",
@@ -20,6 +21,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div className="h-full">
+      <Head>
+        <title>🐞 Quash - Streamlining QA Processes 🚀</title>
+      </Head>
       <Hero />
       <Comparision />
       <Reporting />
