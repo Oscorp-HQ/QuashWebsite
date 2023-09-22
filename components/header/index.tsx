@@ -73,7 +73,7 @@ const Header = () => {
             <Button
               key={index}
               className={`hover:text-gray-200 ${
-                index === 3 ? "hidden" : "flex"
+                index === 2 ? "hidden" : "flex"
               } text-[16px] font-[500] leading-[20.8px] ${
                 selected === nav.value ? "text-white" : "text-[#8A8894]"
               }`}
