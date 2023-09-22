@@ -176,7 +176,7 @@ const Footer = () => {
           >
             <AlertDialogHeader className="w-full gap-6 md:gap-[34px]">
               {!formSubmitted && (
-                <AlertDialogTitle className="demo-title flex justify-between">
+                <AlertDialogTitle className="demo-title justify-between hidden md:flex">
                   Reach out to us
                   {/* <svg
                     xmlns="http://www.w3.org/2000/svg"

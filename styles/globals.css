@@ -296,12 +296,12 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
       align-items: flex-start;
       gap: 24px !important;
       border-radius: 16px;
-      background: #e0eed5;
+      background: black;
       box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
     }
   
     .demo-title {
-      color: #000;
+      color: white;
       font-family: var(--roboto);
       font-size: 18px;
       font-style: normal;
@@ -345,7 +345,7 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
       gap: 8px;
       border-radius: 8px;
       /* background: #bdddab; */
-      color: #fff;
+      color: black;
       font-family: var(--roboto);
       font-size: 20px;
       font-style: normal;
