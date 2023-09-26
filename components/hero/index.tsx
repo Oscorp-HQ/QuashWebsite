@@ -30,7 +30,7 @@ const Hero = () => {
         </Button>
       </div>
       <Image
-        src="hero.svg"
+        src="Hero.svg"
         alt="hero"
         width={1078}
         height={600}
