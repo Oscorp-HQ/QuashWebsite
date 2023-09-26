@@ -14,7 +14,7 @@ const Hero = () => {
             Capture, Report, and Resolve Bugs in a Flash
           </span>
 
-          <span className="text-[16px] w-[290px] font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full ">
+          <span className="text-[16px] w-[290px] font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full md:px-[100px]">
             Transform your bug reporting process, ensuring rapid resolutions and
             a smoother development journey.
           </span>
