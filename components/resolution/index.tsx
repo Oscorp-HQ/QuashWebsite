@@ -29,26 +29,23 @@ const Resolution = () => {
       <span className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
         Know exactly where the bug is - and how to fix it
       </span>
-      <div className="hidden justify-center items-center gap-10 flex-col md:flex">
-        <div className="flex justify-center items-center gap-8">
-          <Image
-            src="/context.svg"
-            alt=""
-            width={620}
-            height={598}
-            className=""
-          />
-          <Image
-            src="/crash.svg"
-            alt=""
-            width={620}
-            height={598}
-            className=""
-          />
-        </div>
-        <div>
-          <Image src="/ai.svg" alt="" width={1270} height={326} className="" />
-        </div>
+      <div className="hidden justify-center items-center gap-10  md:flex flex-wrap">
+        {/* <div className="flex justify-center items-center gap-8"> */}
+        <Image
+          src="/context.svg"
+          alt="context"
+          width={620}
+          height={598}
+          className=""
+        />
+        <Image
+          src="/crash.svg"
+          alt="crash"
+          width={620}
+          height={598}
+          className=""
+        />
+        <Image src="/ai.svg" alt="ai" width={1270} height={326} className="" />
       </div>
       <Carousel
         // autoPlay

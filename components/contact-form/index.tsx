@@ -200,7 +200,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
 
         <Button
           type="submit"
-          // disabled={isEmpty}
+          disabled={isEmpty}
           onClick={() => {
             // setFormOpen(false);
           }}

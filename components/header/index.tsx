@@ -44,7 +44,7 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <div className="header fixed top-0 py-2 px-4 w-full flex justify-between items-center md:px-[120px] md:py-6 z-50">
+    <div className="header fixed top-0 py-[14px] px-4 w-full flex justify-between items-center md:px-[120px] md:py-3 z-50">
       <Image
         src="/logo-mobile.svg"
         alt="Quash Logo"
@@ -73,7 +73,7 @@ const Header = () => {
             <Button
               key={index}
               className={`hover:text-gray-200 ${
-                index === 2 ? "hidden" : "flex"
+                index === 3 ? "hidden" : "flex"
               } text-[16px] font-[500] leading-[20.8px] ${
                 selected === nav.value ? "text-white" : "text-[#8A8894]"
               }`}

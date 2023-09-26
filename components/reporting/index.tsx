@@ -28,7 +28,7 @@ const Reporting = () => {
       <span className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
         Raise comprehensive tickets with minimal effort
       </span>
-      <div className="hidden justify-center items-center gap-10 px-[116px]   md:flex">
+      <div className="hidden justify-center items-center gap-10   md:flex flex-wrap">
         {reportingMedia.map((media, index) => (
           <Image
             key={index}

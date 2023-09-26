@@ -24,7 +24,7 @@ const CodeSection = () => {
 
   return (
     <div className="relative px-4 py-[96px] md:px-[275px] md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
-      <div className="absolute inset-0  bg-[url('/Gradient.svg')] w-full -z-10 hidden md:flex" />
+      <div className="absolute inset-0  bg-[url('/Gradient.svg')] w-full -z-10 hidden md:flex bg-no-repeat" />
 
       <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute

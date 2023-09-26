@@ -18,7 +18,7 @@ const Callback = () => {
         </div>
       </div>
       <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px]">
-        <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:w-[987px]">
+        <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[987px]">
           <span className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full text-center leading-normal">
             Win the never ending battle of Quality vs Speed
           </span>
