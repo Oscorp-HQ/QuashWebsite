@@ -53,9 +53,6 @@ const CodeSection = () => {
                 {index > 0 && "(Coming Soon)"}
               </span>
             ))}
-
-            {/* <span className="text-[#ECECEE99]"></span>
-            <span className="text-[#ECECEE99]"></span> */}
           </div>
           <div
             style={codeFira.style}
