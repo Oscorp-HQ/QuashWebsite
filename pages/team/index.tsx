@@ -1,19 +1,23 @@
 import Journey from "@/components/journey";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const mediaFounders = [
   {
     img: "/ayush.png",
+    url: "https://www.linkedin.com/in/ayushshrivastavaa",
     label: "Ayush",
   },
   {
     img: "/hamza.png",
+    url: "https://www.linkedin.com/in/ameerhamzzza",
     label: "Hamza",
   },
   {
     img: "/prakhar.png",
+    url: "https://www.linkedin.com/in/prakharshakya/",
     label: "Prakhar",
   },
 ];
@@ -21,30 +25,37 @@ const mediaFounders = [
 const mediaTeam = [
   {
     img: "/ashutosh.png",
+    url: "https://www.linkedin.com/in/ashutosh-makwana-7028a5137",
     label: "Ashutosh",
   },
   {
     img: "/ira.png",
+    url: "https://www.linkedin.com/in/iraakbar",
     label: "Ira",
   },
   {
     img: "/hemanth.png",
+    url: "https://www.linkedin.com/in/hemanth-r-23a995175/",
     label: "Hemanth",
   },
   {
     img: "/prem.png",
+    url: "https://www.linkedin.com/in/prem-patel-34316174",
     label: "Prem",
   },
   {
     img: "/kirti.png",
+    url: "https://www.linkedin.com/in/kirti-v-32504a263",
     label: "Kirti",
   },
   {
     img: "/yash.png",
+    url: "https://www.linkedin.com/in/yash-gugaliya-3b45a2153",
     label: "Yash",
   },
   {
     img: "/shivam.png",
+    url: "https://www.linkedin.com/in/shivam-singh-1a9316282",
     label: "Shivam",
   },
 ];
@@ -84,11 +95,13 @@ const TeamPage = () => {
           <span className="text-[12px] md:text-[24px] text-[#ECECEE] font-[600] md:text-center w-full">
             FOUNDERS
           </span>
-          <div className="grid grid-cols-3 gap-[22px]  md:gap-8 justify-between w-full ">
+          <div className="grid grid-cols-3 gap-[22px]  md:gap-8 justify-between w-full z-10">
             {mediaFounders.map((media, index) => (
-              <div
+              <Link
                 className="flex flex-col gap-3 md:gap-6 items-start justify-start md:items-center text-start md:text-center"
                 key={index}
+                href={media.url}
+                target="_blank"
               >
                 <Image
                   src={media.img}
@@ -110,7 +123,7 @@ const TeamPage = () => {
                 <span className="text-[12px] md:text-[24px] text-[#ECECEE] font-[300]">
                   {media.label}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -120,9 +133,11 @@ const TeamPage = () => {
           </span>
           <div className="grid grid-cols-3 gap-y-6 md:gap-x-8 md:gap-y-12 justify-between ">
             {mediaTeam.map((media, index) => (
-              <div
+              <Link
                 className="flex flex-col gap-3 md:gap-6 items-start justify-start md:items-center text-start md:text-center"
                 key={index}
+                href={media.url}
+                target="_blank"
               >
                 <Image
                   src={media.img}
@@ -144,7 +159,7 @@ const TeamPage = () => {
                 <span className="text-[12px] md:text-[24px] text-[#ECECEE] font-[300]">
                   {media.label}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
