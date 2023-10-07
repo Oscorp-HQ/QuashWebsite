@@ -51,7 +51,7 @@ const Upcoming = () => {
             Modern mobile businesses are a victim of pace
           </span>
           <span className="justify-center text-[16px] items-center  font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] ">
-            In today's dynamic and fast-paced digital landscape, user
+            In today&apos;s dynamic and fast-paced digital landscape, user
             expectations evolve rapidly. This requires swift feature development
             and improvements, within compact deadlines. While businesses aspire
             to meet these user expectations, they often find themselves hindered
