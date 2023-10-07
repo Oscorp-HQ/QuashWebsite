@@ -178,22 +178,7 @@ const Footer = () => {
               {!formSubmitted && (
                 <AlertDialogTitle className="demo-title flex justify-between">
                   Reach out to us
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 34 34"
-                    fill="none"
-                    className="hover:cursor-pointer"
-                    onClick={() => {
-                      setFormOpen(false);
-                    }}
-                  >
-                    <path
-                      d="M17 14.9969L24.0125 7.98438L26.0157 9.98754L19.0032 17L26.0157 24.0125L24.0125 26.0157L17 19.0032L9.98754 26.0157L7.98438 24.0125L14.9969 17L7.98438 9.98754L9.98754 7.98438L17 14.9969Z"
-                      fill="#0E0E1A"
-                    />
-                  </svg> */}
+                  
                   <X
                     size={34}
                     className="hover:cursor-pointer"

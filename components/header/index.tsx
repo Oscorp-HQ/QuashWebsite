@@ -1,19 +1,11 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import React, { useState } from "react";
+
 import { Button } from "../ui/button";
 import { List, X } from "@/lib/icons";
 import { LoaderDialog, LoaderDialogContent } from "../ui/overlay-loader";
 import { useRouter } from "next/router";
 
-const navButtons = ["Home", "Upcoming", "Team"];
 
 const mobileNav = [
   {
@@ -21,11 +13,11 @@ const mobileNav = [
     path: "/",
     value: "home",
   },
-  // {
-  //   label: "UpComing",
-  //   path: "",
-  //   value: "upcoming",
-  // },
+  {
+    label: "UpComing",
+    path: "/upcoming",
+    value: "upcoming",
+  },
   {
     label: "Team",
     path: "/team",
@@ -73,7 +65,7 @@ const Header = () => {
             <Button
               key={index}
               className={`hover:text-gray-200 ${
-                index === 2 ? "hidden" : "flex"
+                index === 3 ? "hidden" : "flex"
               } text-[16px] font-[500] leading-[20.8px] ${
                 selected === nav.value ? "text-white" : "text-[#8A8894]"
               }`}
