@@ -14,7 +14,7 @@ const mobileNav = [
     value: "home",
   },
   {
-    label: "UpComing",
+    label: "Upcoming",
     path: "/upcoming",
     value: "upcoming",
   },
