@@ -60,12 +60,8 @@ const footerMedia = [
   },
   {
     img: "/product-hunt.svg",
-    route: "",
-  },
-  {
-    img: "/x-logo.svg",
-    route: "",
-  },
+    route: "https://twitter.com/helloquash",
+  }
 ];
 
 const Footer = () => {
