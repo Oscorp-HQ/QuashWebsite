@@ -36,6 +36,9 @@ const formSchema = z.object({
     .min(10, {
       message: "Must be a valid mobile number.",
     }),
+  feedback: z.string().min(1, {
+    message: "Must be at least 1 character.",
+  }),
 });
 
 export function DemoRequestForm({ setFormSubmitted }: any) {
@@ -43,6 +46,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const [feedback, setFeedback] = useState("");
   const [isEmpty, setIsEmpty] = useState(true);
   const [showLoader, setShowLoader] = useState(false);
   const { toast } = useToast();
@@ -62,7 +66,6 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
       if (success) setFormSubmitted(true);
       setShowLoader(false);
     } catch (e) {
-      // what to do in case of api call failure??
       toast({
         description: "Something went wrong.",
       });
@@ -71,13 +74,12 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
   };
 
   useEffect(() => {
-    if (name && email && company && number) {
+    if (name && email && company && number && feedback) {
       setIsEmpty(false);
     } else {
       setIsEmpty(true);
     }
-    console.log("states are", name, company, email, number);
-  }, [name, company, email, number]);
+  }, [name, company, email, number, feedback]);
 
   //Define your form.
   const form = useForm<z.infer<any>>({
@@ -87,6 +89,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
       companyName: "",
       email: "",
       number: "",
+      feedback: "",
     },
   });
 
@@ -99,16 +102,16 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col md:gap-[72px] gap-10"
+        className="flex flex-col gap-8"
       >
-        <div className="md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-6 flex flex-col gap-4">
+        <div className="md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-8 flex flex-col justify-start text-start gap-6">
           <FormField
             control={form.control}
             name="username"
             render={({ field }) => (
               <FormItem>
                 <FormLabel aria-required className="demo-label">
-                  Name*
+                  Your Name
                 </FormLabel>
                 <FormControl
                   onChange={(e: any) => {
@@ -118,7 +121,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
                   <Input
                     placeholder="Bruce Wayne"
                     {...field}
-                    className=" demo-input placeholder:text-black/30"
+                    className=" demo-input placeholder:text-white/30"
                   />
                 </FormControl>
 
@@ -132,7 +135,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
             render={({ field }) => (
               <FormItem>
                 <FormLabel aria-required className="demo-label">
-                  Company Name*
+                  Your Organisation
                 </FormLabel>
                 <FormControl
                   onChange={(e: any) => {
@@ -142,7 +145,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
                   <Input
                     placeholder="Quash"
                     {...field}
-                    className=" demo-input placeholder:text-black/30"
+                    className=" demo-input placeholder:text-white/30"
                   />
                 </FormControl>
 
@@ -156,7 +159,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
             render={({ field }) => (
               <FormItem>
                 <FormLabel aria-required className="demo-label">
-                  Work Email*
+                  Email
                 </FormLabel>
                 <FormControl
                   onChange={(e: any) => {
@@ -166,7 +169,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
                   <Input
                     placeholder="bruce@quash.com"
                     {...field}
-                    className=" demo-input placeholder:text-black/30"
+                    className=" demo-input placeholder:text-white/30"
                   />
                 </FormControl>
                 <FormMessage />
@@ -179,7 +182,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
             render={({ field }) => (
               <FormItem>
                 <FormLabel aria-required className="demo-label">
-                  Phone
+                  Contact Number
                 </FormLabel>
                 <FormControl
                   onChange={(e: any) => {
@@ -189,28 +192,52 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
                   <Input
                     placeholder="1234567890"
                     {...field}
-                    className=" demo-input placeholder:text-black/30"
+                    className=" demo-input placeholder:text-white/30"
                   />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
+          <div className="w-full col-span-2">
+            <FormField
+              control={form.control}
+              name="feedback"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel aria-required className="demo-label ">
+                    What can we help you with?
+                  </FormLabel>
+                  <FormControl
+                    onChange={(e: any) => {
+                      setFeedback(e.target.value);
+                    }}
+                  >
+                    <textarea
+                      // placeholder="1234567890"
+                      {...field}
+                      className=" demo-input-area placeholder:text-white/30 w-full md:max-h-[104px] max-h-[80px]"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
         </div>
-
-        <Button
-          type="submit"
-          // disabled={isEmpty}
-          onClick={() => {
-            // setFormOpen(false);
-          }}
-          className={`demo-submit disabled:bg hover:bg-gray-100 ${
-            !isEmpty ? "bg-white " : "bg-white cursor-not-allowed"
-          } `}
-        >
-          {showLoader && <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />}
-          Submit
-        </Button>
+        <div className="flex md:justify-end justify-center items-center">
+          <Button
+            type="submit"
+            disabled={isEmpty}
+            onClick={() => {}}
+            className={`demo-submit  hover:bg-gray-100 ${
+              !isEmpty ? "bg-white " : "bg-white cursor-not-allowed"
+            } `}
+          >
+            {showLoader && <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />}
+            Submit
+          </Button>
+        </div>
       </form>
     </Form>
   );

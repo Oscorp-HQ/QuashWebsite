@@ -19,7 +19,6 @@
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb)); */
   background: var(--background-rgb);
 }
 
@@ -31,7 +30,6 @@ backdrop-filter: blur(10px);
 .carousel .control-dots {
   position: absolute;
   bottom: -14px !important;
-  /* margin: 20px 0 0 0; */
   padding: 0;
   text-align: center;
   width: 100%;
@@ -76,21 +74,18 @@ filter: blur(37.2599983215332px);
 
   .grad-resolution{
     background-image: radial-gradient(#3CD0C8, black);
-    /* opacity: 0.34; */
   filter: blur(37.2599983215332px);
   }
 
 
 .resolution-gradient-line{
-  /* width: 208px; */
-  /* height: 2px; */
+ 
   flex-shrink: 0;
   border-radius: 200px;
 background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rgba(4, 1, 3, 0.00) 97%);
 }
 
 .resolution-gradient-text{
-    /* font-size: 32px; */
     background: -webkit-linear-gradient(92deg, #5FBAB5 11.68%, #FFE70D 151.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -98,21 +93,18 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
 
   .grad-collaboration{
     background-image: radial-gradient(#BAA65F, black);
-    /* opacity: 0.34; */
   filter: blur(37.2599983215332px);
   }
 
 
 .collaboration-gradient-line{
-  /* width: 208px; */
-  /* height: 2px; */
+ 
   flex-shrink: 0;
   border-radius: 200px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 8.27%, #BEAA61 54.1%, rgba(0, 0, 0, 0.00) 100.67%);
 }
 
 .collaboration-gradient-text{
-    /* font-size: 32px; */
     background: -webkit-linear-gradient(92deg, #97FF86 -23.86%, #FFE70D 29.09%, #80C392 151.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -120,21 +112,18 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
 
   .grad-callback{
     background-image: radial-gradient(#FFFFFF, black);
-    /* opacity: 0.34; */
   filter: blur(37.2599983215332px);
   }
 
 
 .callback-gradient-line{
-  /* width: 208px; */
-  /* height: 2px; */
+  
   flex-shrink: 0;
   border-radius: 200px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #FFF 52.55%, rgba(4, 1, 3, 0.00) 97%);
 }
 
 .callback-gradient-text{
-    /* font-size: 32px; */
     background: -webkit-linear-gradient(0deg, #ffffff 53.86%, #252424 51.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -143,31 +132,25 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   .quick {
     color: #fff;
     font-family: var(--fira-mono);
-    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* letter-spacing: 0.05px; */
   }
   
   .key {
     color: #f2a68c;
     font-family: var(--fira-mono);
-    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* letter-spacing: 0.05px; */
   }
   
   .value {
     color: #76f8e7;
     font-family: var(--fira-mono);
-    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* letter-spacing: 0.05px; */
   }
   
   .code-block {
@@ -181,11 +164,9 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   .numbers p {
     color: rgba(255, 255, 255, 0.5);
     font-family: var(--fira-mono);
-    /* font-size: 10px; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* letter-spacing: 0.05px; */
   }
   
   .code-divider {
@@ -198,7 +179,7 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   }
 
   .drop-item span {
-    font-family: var(--roboto);
+    /* font-family: var(--roboto); */
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -211,22 +192,20 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   }
 
   .demo-container {
-    /* width: 620px !important; */
-    padding: 42px;
+    padding: 52px 60px;
     gap: 8px;
     flex-shrink: 0;
     border-radius: 20px !important;
     border-style: solid;
     background: black;
     border-width: 2px;
-    border-color: rgb(107 114 128 / var(--tw-border-opacity));
+    border-color: rgba(255, 255, 255, 0.50);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
   }
   
   .demo-title {
-    color: white;
-    font-family: var(--roboto);
-    font-size: 24px;
+    color: #ECECEE;
+    font-size: 48px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -234,9 +213,8 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   }
   
   .demo-label {
-    color: black;
-    font-family: var(--roboto);
-    font-size: 18px;
+    color: white;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -244,27 +222,47 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   }
   
   .demo-input {
+    color: white;
     display: flex;
-    width: 260px !important;
-    height: 50px;
+    width: 100% !important;
+    height: 52px;
     padding: 10px 16px;
     align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.50);
     gap: 8px;
     border-radius: 8px;
-    background: #faf5ea;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+
+
+  .demo-input-area {
+    display: flex;
+    color: white;
+    /* width: 400px !important; */
+    height: 104px;
+    padding: 10px 16px;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.50);
+    gap: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    resize: none !important;
   }
   
   .demo-submit {
     display: flex;
-    padding: 12px 24px !important;
+    padding: 12px 16px !important;
     justify-content: center;
     align-items: center;
     gap: 8px;
     align-self: stretch !important;
-    border-radius: 8px;
-    /* background: #bdddab; */
+    border-radius: 100px;
     color: black;
-    font-family: var(--roboto);
     font-size: 24px !important;
     font-style: normal;
     font-weight: 600;
@@ -295,7 +293,7 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
     .demo-container {
       display: flex;
       width: 320px !important;
-      padding: 24px;
+      padding: 24px 16px;
       flex-direction: column;
       align-items: flex-start;
       gap: 24px !important;
@@ -305,18 +303,16 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
     }
   
     .demo-title {
-      color: white;
-      font-family: var(--roboto);
-      font-size: 18px;
+      color: #ECECEE;
+      font-size: 24px;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       line-height: normal;
       letter-spacing: 0.09px;
     }
   
     .demo-label {
-      color: #000;
-      font-family: var(--roboto);
+      color: white;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -326,31 +322,44 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   
     .demo-input {
       display: flex;
-      width: 270px;
+      color: white !important;
+      width: 300px;
       padding: 10px 16px;
       align-items: center;
       gap: 8px;
       color: #000;
-      font-family: var(--roboto);
+      /* font-family: var(--roboto); */
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 20px;
-      /* 125% */
+      letter-spacing: 0.08px;
+    }
+
+    .demo-input-area {
+      display: flex;
+      color: white !important;
+      width: 100%;
+      padding: 10px 16px;
+      align-items: center;
+      gap: 8px;
+      color: #000;
+      /* font-family: var(--roboto); */
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
       letter-spacing: 0.08px;
     }
   
     .demo-submit {
       display: flex;
-      width: 270px;
-      padding: 10px 80px;
+      /* width: 270px; */
+      padding: 12px 16px;
       justify-content: center;
       align-items: center;
       gap: 8px;
-      border-radius: 8px;
-      /* background: #bdddab; */
       color: black;
-      font-family: var(--roboto);
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

@@ -7,11 +7,9 @@ import {
   AlertDialogDescription,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
-import { Toaster } from "../ui/toaster";
 
 const footerNav = [
   {
@@ -61,19 +59,13 @@ const footerMedia = [
   {
     img: "/product-hunt.svg",
     route: "https://twitter.com/helloquash",
-  }
+  },
 ];
 
 const Footer = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleScroll = (targetId: any) => {
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   const router = useRouter();
 
   return (
@@ -170,14 +162,20 @@ const Footer = () => {
               !formSubmitted ? "demo-container bg-[#E0EED5]" : "submitted"
             }  `}
           >
-            <AlertDialogHeader className="w-full gap-6 md:gap-[34px]">
+            <AlertDialogHeader className="w-full gap-6 md:gap-[40px]">
               {!formSubmitted && (
-                <AlertDialogTitle className="demo-title flex justify-between">
-                  Reach out to us
-                  
+                <AlertDialogTitle className="demo-title flex justify-between items-center">
+                  Contact Us
                   <X
-                    size={34}
-                    className="hover:cursor-pointer"
+                    size={53}
+                    className="hover:cursor-pointer md:flex hidden"
+                    onClick={() => {
+                      setFormOpen(false);
+                    }}
+                  />
+                  <X
+                    size={26}
+                    className="hover:cursor-pointer md:hidden flex"
                     onClick={() => {
                       setFormOpen(false);
                     }}
@@ -215,7 +213,7 @@ const Footer = () => {
                       height="30"
                       viewBox="0 0 30 30"
                       fill="none"
-                      className="absolute top-4 right-4 hover:cursor-pointer"
+                      className="absolute top-4 md:right-4 right-[150px] hover:cursor-pointer "
                       onClick={() => {
                         setFormOpen(false);
                         setTimeout(() => {
