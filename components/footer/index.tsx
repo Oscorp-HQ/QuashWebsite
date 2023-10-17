@@ -233,7 +233,7 @@ const Footer = () => {
         //   </AlertDialogContent>
         // </AlertDialog>
         <AlertDialog open={formOpen}>
-          <AlertDialogContent className="flex justify-center items-center px-[100px] py-[100px] w-full max-w-[960px] h-full">
+          <AlertDialogContent className="flex justify-center items-center md:p-[100px] p-10 w-full max-w-[960px] h-full">
             <div
               className={`relative border-[2px] border-solid border-gray-500 w-full ${
                 !formSubmitted ? "demo-container bg-[#E0EED5]" : "submitted"
@@ -290,7 +290,7 @@ const Footer = () => {
                         height="30"
                         viewBox="0 0 30 30"
                         fill="none"
-                        className="absolute top-4 md:right-4 right-[150px] hover:cursor-pointer "
+                        className="absolute top-4 right-4  hover:cursor-pointer "
                         onClick={() => {
                           setFormOpen(false);
                           setTimeout(() => {

@@ -272,7 +272,7 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
   
   .submitted {
     display: flex;
-    width: 620px !important;
+    /* width: 620px !important; */
     height: 356px;
     padding: 42px;
     flex-direction: column;
