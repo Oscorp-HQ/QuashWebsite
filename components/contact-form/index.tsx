@@ -58,6 +58,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
       email: email,
       companyName: company,
       phoneNumber: number,
+      feedback: feedback,
     };
 
     try {
