@@ -20,7 +20,7 @@ const Hero = () => {
           </span>
         </div>
         <Button
-          className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] "
+          className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] "
           variant="outline"
           onClick={() => {
             router.push("https://optimus.quashbugs.com/signup");

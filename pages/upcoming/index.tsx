@@ -118,7 +118,7 @@ const Upcoming = () => {
             </span>
           </div>
           <Button
-            className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC]"
+            className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC]"
             variant="outline"
             onClick={() => {
               router.push("https://optimus.quashbugs.com/signup");

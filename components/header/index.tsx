@@ -6,7 +6,6 @@ import { List, X } from "@/lib/icons";
 import { LoaderDialog, LoaderDialogContent } from "../ui/overlay-loader";
 import { useRouter } from "next/router";
 
-
 const mobileNav = [
   {
     label: "Home",
@@ -22,6 +21,11 @@ const mobileNav = [
     label: "Team",
     path: "/team",
     value: "team",
+  },
+  {
+    label: "Pricing",
+    path: "/pricing",
+    value: "pricing",
   },
   {
     label: "Sign in",
@@ -65,7 +69,7 @@ const Header = () => {
             <Button
               key={index}
               className={`hover:text-gray-200 ${
-                index === 3 ? "hidden" : "flex"
+                index === 4 ? "hidden" : "flex"
               } text-[16px] font-[500] leading-[20.8px] ${
                 selected === nav.value ? "text-white" : "text-[#8A8894]"
               }`}
