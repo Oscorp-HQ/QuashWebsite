@@ -8,7 +8,7 @@ function TermsAndConditions() {
         <title>🐞 Quash - Terms & Conditions 🚀</title>
       </Head>
       <div className="text-white p-4 mt-[96px]">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto mb-8">
           <h1 className="text-3xl font-bold mb-4">
             Terms & Conditions for Quash
           </h1>

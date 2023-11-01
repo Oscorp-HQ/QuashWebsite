@@ -8,7 +8,7 @@ function RefundCancellationPolicy() {
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
       </Head>
       <div className="text-white p-4 mt-[96px]">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto mb-8">
           <h1 className="text-3xl font-bold mb-4">
             Refund & Cancellation Policy for Quash
           </h1>
@@ -101,7 +101,9 @@ function RefundCancellationPolicy() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-xl font-semibold mb-2">6. Contact Information</h2>
+            <h2 className="text-xl font-semibold mb-2">
+              6. Contact Information
+            </h2>
             <p>
               6.1. If you have any questions or need to initiate a cancellation
               or refund request, please contact our customer support at{" "}
