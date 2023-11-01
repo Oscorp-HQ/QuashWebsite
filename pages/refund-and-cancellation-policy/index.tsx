@@ -41,7 +41,7 @@ function RefundCancellationPolicy() {
               2.1. Quash offers a refund under specific conditions. You may be
               eligible for a refund in the following circumstances:
             </p>
-            <ul className="list-disc pl-4">
+            <ul className="pl-4 italic">
               <li>
                 a. Within the first 10 days of your initial subscription, you
                 are eligible for a full refund if you are dissatisfied with
@@ -66,7 +66,7 @@ function RefundCancellationPolicy() {
               3. No Refund in Specific Cases
             </h2>
             <p>3.1. Quash does not offer refunds in the following cases:</p>
-            <ul className="list-disc pl-4">
+            <ul className="pl-4 italic">
               <li>
                 a. If you have violated these Terms or the Quash Terms of Use.
               </li>

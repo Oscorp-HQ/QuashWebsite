@@ -139,7 +139,7 @@ function TermsAndConditions() {
           <h2 className="text-xl font-semibold mt-8 mb-2">
             No Unlawful or Prohibited Use and Intellectual Property
           </h2>
-          <p>
+          <p    >
             You are granted a non-exclusive, non-transferable, revocable license
             to access and use Quash strictly in accordance with these terms of
             use. As a condition of your use of the site, you warrant that you
@@ -149,6 +149,29 @@ function TermsAndConditions() {
             and enjoyment of the Site by any other party. You may not obtain or
             attempt to obtain any materials or information through any means not
             intentionally made available or provided for through the Site.
+          </p>
+          <p>
+            All content included as part of the Service, such as text, graphics,
+            logos, images, as well as the compilation thereof, and any software
+            used on the Site, is the property of Quash or its suppliers. It is
+            protected by copyright and other laws that protect intellectual
+            property and proprietary rights. You agree to observe and abide by
+            all copyright and other proprietary notices, legends, or other
+            restrictions contained in any such content and will not make any
+            changes thereto. You will not modify, publish, transmit, reverse
+            engineer, participate in the transfer or sale, create derivative
+            works, or in any way exploit any of the content, in whole or in
+            part, found on the Site. Quash content is not for resale. Your use
+            of the Site does not entitle you to make any unauthorized use of any
+            protected content, and in particular, you will not delete or alter
+            any proprietary rights or attribution notices in any content. You
+            will use protected content solely for your personal use and will
+            make no other use of the content without the express written
+            permission of Quash and the copyright owner. You agree that you do
+            not acquire any ownership rights in any protected content. We do not
+            grant you any licenses, express or implied, to the intellectual
+            property of Quash or our licensors except as expressly authorized by
+            these Terms.
           </p>
 
           <h2 className="text-xl font-semibold mt-8 mb-2">
