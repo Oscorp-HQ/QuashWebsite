@@ -162,7 +162,7 @@ function TermsAndConditions() {
             guidelines:
           </p>
 
-          <ul className="flex flex-col justify-center gap-2 my-2">
+          <ul className="list-disc pl-4 flex flex-col justify-center gap-2 my-2">
             <li>
               Do not engage in defamatory, abusive, harassing, stalking,
               threatening, or any other behaviour that violates the legal rights
