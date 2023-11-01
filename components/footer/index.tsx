@@ -23,13 +23,15 @@ const footerNav = [
   },
   {
     label: "Terms & Conditions",
-    route:
-      "https://bumpy-point-aa4.notion.site/Terms-Conditions-e4103a6cbaf24659b6f7c82b37332a38",
+    // route:
+    //   "https://bumpy-point-aa4.notion.site/Terms-Conditions-e4103a6cbaf24659b6f7c82b37332a38",
+    route:'/terms-and-conditions'
   },
   {
     label: "Refund & Cancellation",
-    route:
-      "https://bumpy-point-aa4.notion.site/Refund-Cancellation-Policy-53d2f1bc9abe4cf3bbc2932e15fdf742?pvs=4",
+    // route:
+    //   "https://bumpy-point-aa4.notion.site/Refund-Cancellation-Policy-53d2f1bc9abe4cf3bbc2932e15fdf742?pvs=4",
+    route: "/refund-and-cancellation-policy",
   },
 ];
 
@@ -95,9 +97,15 @@ const Footer = () => {
       <div className="flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start text-center md:justify-start">
           {footerNav.map((nav, index) => (
-            <a key={index} href={nav.route} target="_blank">
+            <div
+              key={index}
+              onClick={() => {
+                router.push(nav.route);
+              }}
+              className="hover:cursor-pointer"
+            >
               {nav.label}
-            </a>
+            </div>
           ))}
         </div>
         <div className="flex flex-col gap-6 md:gap-8 justify-center md:justify-start items-start text-center">

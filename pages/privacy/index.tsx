@@ -4,7 +4,6 @@ import Head from "next/head";
 import React from "react";
 
 const PrivacyPolicy = () => {
-  console.log("inside privacy");
   return (
     <>
       <Head>
@@ -13,9 +12,7 @@ const PrivacyPolicy = () => {
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Privacy Policy for Quash</h1>
-          {/* <p className="mb-2">Last Updated: August 25, 2023</p> */}
 
-          {/* Introduction */}
           <p className="mb-4">
             Quash (&quot;Quash&quot;, “we”, “us”, and/or “our”) knows that you
             care about how your personal data is used and shared, and we take
@@ -23,7 +20,7 @@ const PrivacyPolicy = () => {
             about our treatment of your personal data.
           </p>
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">Introduction</h2>
+            <h2 className="text-xl font-semibold mb-2">Introduction</h2>
             <p>
               By using the www.quashbugs.com or www.app.quashbugs.com website
               (“Site”), and any related services and/or features (together with
@@ -38,9 +35,8 @@ const PrivacyPolicy = () => {
             </p>
           </section>
 
-          {/* Scope */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">Scope</h2>
+            <h2 className="text-xl font-semibold mb-2">Scope</h2>
             <p>
               This Privacy Policy covers Quash’s treatment of personal data
               (&quot;Personal Data&quot;) that Quash gathers when you access or
@@ -57,7 +53,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 1 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold mb-2">
               1. What Personal Data does Quash collect?
             </h2>
             <p>
@@ -160,7 +156,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 2 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold mb-2">
               2. How does Quash use the information it collects?
             </h2>
             <p>
@@ -267,7 +263,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 3 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold mb-2">
               3. Will Quash share any of the personal data it receives?
             </h2>
             <p>
@@ -325,7 +321,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 4 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">4. Data Retention</h2>
+            <h2 className="text-xl font-semibold mb-2">4. Data Retention</h2>
             <p>
               We will keep your Personal Data for as long as reasonably
               necessary for the purposes described in this Privacy Policy, while
@@ -354,7 +350,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 5 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">5. Conditions of Use</h2>
+            <h2 className="text-xl font-semibold mb-2">5. Conditions of Use</h2>
             <p>
               If you decide to access or use the Service, such access and use
               and any possible dispute over privacy are subject to this Privacy
@@ -365,7 +361,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 6 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold mb-2">
               6. Third Party Website/Services
             </h2>
             <p>
@@ -383,7 +379,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 7 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">7. Information Security</h2>
+            <h2 className="text-xl font-semibold mb-2">7. Information Security</h2>
             <p>
               We take care to protect your Personal Data against unauthorized
               access to or unauthorized alteration, disclosure or destruction,
@@ -397,7 +393,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 8 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold mb-2">
               8. Changes to this Privacy Policy
             </h2>
             <p>
@@ -455,7 +451,7 @@ const PrivacyPolicy = () => {
 
           {/* Section 9 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold">9. Contact Us</h2>
+            <h2 className="text-xl font-semibold mb-2">9. Contact Us</h2>
             <p>
               If you have any questions or concerns regarding this Privacy
               Policy, please contact us as described below. We will make every
