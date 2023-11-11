@@ -93,7 +93,7 @@ export async function getServerSideProps({ res }: any) {
   try {
     const sitemap = generateSiteMap();
 
-    res.setHeader("Content-Type", "text/xml");
+    res.setHeader("Content-Type", "application/xml");
     res.write(sitemap);
     res.end();
   } catch (error: any) {
