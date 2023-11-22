@@ -23,6 +23,11 @@ export default function Home() {
     <div className="h-full">
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
+        <meta
+          name="description"
+          content="Bug & Crash Reporting for Mobile Developers"
+          key="desc"
+        />
       </Head>
       <Hero />
       <Comparision />

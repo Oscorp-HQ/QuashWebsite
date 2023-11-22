@@ -8,6 +8,11 @@ const PrivacyPolicy = () => {
     <>
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
+        <meta
+          name="description"
+          content="Bug & Crash Reporting for Mobile Developers"
+          key="desc"
+        />
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto">

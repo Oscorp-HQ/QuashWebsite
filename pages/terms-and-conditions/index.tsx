@@ -6,6 +6,11 @@ function TermsAndConditions() {
     <>
       <Head>
         <title>🐞 Quash - Terms & Conditions 🚀</title>
+        <meta
+          name="description"
+          content="Bug & Crash Reporting for Mobile Developers"
+          key="desc"
+        />
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">

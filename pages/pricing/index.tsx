@@ -50,6 +50,11 @@ const Pricing = () => {
     <div className="relative flex flex-col items-center">
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
+        <meta
+          name="description"
+          content="Bug & Crash Reporting for Mobile Developers"
+          key="desc"
+        />
       </Head>
       <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex" />
       <div className=" pt-[130px]  md:pt-[236px]   w-full text-center items-center justify-center flex flex-col ">
