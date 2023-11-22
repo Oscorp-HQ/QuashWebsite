@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
+import Link from "next/link";
+
 
 const footerNav = [
   {
@@ -97,22 +99,20 @@ const Footer = () => {
       <div className="flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start text-center md:justify-start">
           {footerNav.map((nav, index) => (
-            <div
+            <Link
               key={index}
-              onClick={() => {
-                router.push(nav.route);
-              }}
+              href={nav.route}
               className="hover:cursor-pointer"
             >
               {nav.label}
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex flex-col gap-6 md:gap-8 justify-center md:justify-start items-start text-center">
           {/* {footerCareer.map((nav, index) => ( */}
-          <a href={"/team"} target="_blank">
+          <Link href={"/team"} >
             Careers
-          </a>
+          </Link>
           <span
             onClick={() => {
               setFormOpen(true);
