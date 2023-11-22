@@ -29,14 +29,14 @@ const Collaboration = () => {
       <div className="flex justify-center items-center md:pb-[248px]">
         <Image
           src="/track.svg"
-          alt=""
+          alt="track tickets"
           width={328}
           height={443}
           className="flex md:hidden"
         />
         <Image
           src="/track-desk.svg"
-          alt=""
+          alt="track tickets"
           width={1106}
           height={554}
           className="md:flex hidden"

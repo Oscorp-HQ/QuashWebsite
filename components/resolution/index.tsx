@@ -3,7 +3,13 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const resoltionMedia = ["context-mob.svg", "crash-mob.svg", "ai-mob.svg"];
+
+const resoltionMedia = [
+  {src:"context-mob.svg",
+   label:"context-mob" }, {src:"crash-mob.svg",
+  label:"crash-mob"},
+  {src:"ai-mob.svg",
+  label:"ai-mob"}];
 
 const Resolution = () => {
   return (
@@ -60,8 +66,8 @@ const Resolution = () => {
         {resoltionMedia.map((media, index) => (
           <Image
             key={index}
-            src={media}
-            alt={media}
+            src={media.src}
+            alt={media.label}
             width={272}
             height={374}
             className=""

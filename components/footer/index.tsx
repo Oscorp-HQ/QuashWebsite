@@ -64,10 +64,12 @@ const footerContact = [
 const footerMedia = [
   {
     img: "/linkedIn.svg",
+    label: "linkedIn",
     route: "https://www.linkedin.com/company/quash-bugs/",
   },
   {
     img: "/product-hunt.svg",
+    label: "twitter",
     route: "https://twitter.com/helloquash",
   },
 ];
@@ -138,7 +140,7 @@ const Footer = () => {
                 <Image
                   key={index}
                   src={media.img}
-                  alt={media.img}
+                  alt={media.label}
                   width={48}
                   height={48}
                   className="ml-[-5px] flex md:hidden"
@@ -146,7 +148,7 @@ const Footer = () => {
                 <Image
                   key={index}
                   src={media.img}
-                  alt={media.img}
+                  alt={media.label}
                   width={71}
                   height={71}
                   className="ml-[-5px] hidden md:flex"
