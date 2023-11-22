@@ -41,12 +41,12 @@ const Upcoming = () => {
       <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex" />
       <div className=" pt-[112px] px-[18px]  md:pt-[220px] lg:px-[200px]  w-full text-center items-center justify-center flex flex-col ">
         <div className="flex flex-col gap-3 md:gap-6 text-center items-center justify-center w-full mb-[106px] lg:mb-[180px]">
-          <span className="justify-center text-[16px] items-center  font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] ">
+          <p className="justify-center text-[16px] items-center  font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] ">
             Our vision is to ensure that
-          </span>
-          <span className="justify-center bg-gradient-to-b  from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
+          </p>
+          <h1 className="justify-center bg-gradient-to-b  from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
             You don’t need to compromise with Pace to deliver Quality.
-          </span>
+          </h1>
         </div>
         <div className="flex flex-col gap-6 lg:gap-10 justify-center items-start text-start px-[6px] lg:px-5 pb-[72px] lg:pb-[180px]">
           <span className="justify-center text-[12px] items-center  font-[600] flex md:text-[24px] text-[#ECECEE]">

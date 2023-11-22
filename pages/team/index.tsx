@@ -74,13 +74,13 @@ const TeamPage = () => {
       <div className="relative h-full mt-[132px] md:mt-[242px] md:px-[170px] px-[18px] flex flex-col justify-center items-center text-white gap-[96px] md:gap-[176px] pb-[61px] md:pb-[115px]">
         <div className="absolute inset-0  bg-[url('/Gradient.svg')] md:h-[1154px] md:w-full md:flex hidden" />
         <div className="flex flex-col gap-4 md:gap-7 text-center  md:px-[70px]">
-          <span className="text-[12px] md:text-[24px] text-[#ECECEE] font-[600]">
+          <p className="text-[12px] md:text-[24px] text-[#ECECEE] font-[600]">
             OUR MISSION
-          </span>
-          <span className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[24px] md:text-[66px] leading-normal text-[#ECECEE] font-[700]">
+          </p>
+          <h1 className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[24px] md:text-[66px] leading-normal text-[#ECECEE] font-[700]">
             Perfecting the experience on a device that sits in everyone’s
             pockets
-          </span>
+          </h1>
         </div>
         <div className="flex flex-col gap-6 text-start justify-center items-start px-3  md:gap-10 ">
           <span className="text-[12px] md:text-[24px] text-[#ECECEE] font-[600]">
