@@ -1,6 +1,6 @@
-# Block all crawlers
+
 User-agent: *
-Disallow: /privacy
+Disallow: 
 Allow: /
 
 
