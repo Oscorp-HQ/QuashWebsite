@@ -1,9 +1,10 @@
+# Block all crawlers
 User-agent: *
+Disallow: /privacy
 
-Disallow:
-
-
-
+# Allow all crawlers
+User-agent: *
+Allow: /
 
 
 Sitemap: https://quashbugs.com/sitemap.xml
