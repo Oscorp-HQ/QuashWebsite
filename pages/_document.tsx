@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -9,6 +8,8 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
           rel="stylesheet"
         ></link>
+        <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+        <link rel='canonical' href='https://quashbugs.com/' />
       </Head>
       <title>🐞 Quash - Streamlining QA Processes 🚀</title>
       <body>

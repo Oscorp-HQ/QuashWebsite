@@ -136,7 +136,7 @@ const Footer = () => {
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start md:justify-start">
           <div className="flex gap-[22px] justify-start">
             {footerMedia.map((media, index) => (
-              <a href={media.route} key={index} target="_blank">
+              <Link href={media.route} key={index} target="_blank">
                 <Image
                   key={index}
                   src={media.img}
@@ -153,7 +153,7 @@ const Footer = () => {
                   height={71}
                   className="ml-[-5px] hidden md:flex"
                 />
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex flex-col gap-6 md:gap-4 justify-center items-start text-center">
@@ -163,9 +163,9 @@ const Footer = () => {
                 key={index}
               >
                 {nav.icon}
-                <a href={nav.route} target="_blank">
+                <Link href={nav.route} target="_blank">
                   {nav.label}
-                </a>
+                </Link>
               </div>
             ))}
           </div>

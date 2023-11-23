@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Journey = () => {
@@ -12,9 +13,9 @@ const Journey = () => {
       </span>
       <span className="text-[14px] md:text-[24px] text-[#ECECEE] font-[300] md:font-[400] z-20">
         Write to us at{" "}
-        <a href="mailto:hello@quashbugs.com" className="z-20">
+        <Link href="mailto:hello@quashbugs.com" className="z-20">
           hello@quashbugs.com
-        </a>
+        </Link>
       </span>
     </div>
   );

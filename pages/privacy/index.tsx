@@ -1,6 +1,7 @@
 "use client";
 
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 
 const PrivacyPolicy = () => {
@@ -33,9 +34,9 @@ const PrivacyPolicy = () => {
               the practices and policies outlined in this Privacy Policy. If you
               have any questions or comments about this Privacy Policy or our
               use of your data, please contact us at{" "}
-              <a href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
                 hello@quashbugs.com
-              </a>
+              </Link>
               .
             </p>
           </section>
@@ -446,9 +447,9 @@ const PrivacyPolicy = () => {
                 <strong>Delete your content or close your account:</strong> You
                 can choose to delete certain content through your account. If
                 you wish to request to close your account, please contact us at{" "}
-                <a href="mailto:hello@quashbugs.com" className="text-blue-500">
+                <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
                   hello@quashbugs.com
-                </a>
+                </Link>
                 .
               </li>
             </ul>
@@ -464,9 +465,9 @@ const PrivacyPolicy = () => {
             </p>
             <p>
               Contact:{" "}
-              <a href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
                 hello@quashbugs.com
-              </a>
+              </Link>
             </p>
           </section>
         </div>
