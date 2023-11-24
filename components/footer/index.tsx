@@ -17,7 +17,7 @@ const footerNav = [
   {
     label: "Quash Developer Guide",
     route:
-      "https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47",
+      "https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4",
   },
   {
     label: "Privacy Policy",
