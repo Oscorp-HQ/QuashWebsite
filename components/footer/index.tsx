@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const footerNav = [
   {
-    label: "Documentation",
+    label: "Quash Developer Guide",
     route:
       "https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47",
   },
