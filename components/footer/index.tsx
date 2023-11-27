@@ -16,23 +16,23 @@ import Link from "next/link";
 const footerNav = [
   {
     label: "Quash Developer Guide",
+    title: "Explore Quash SDK Developer Documentation",
     route:
       "https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4",
   },
   {
     label: "Privacy Policy",
+    title: "Privacy Policy",
     route: "/privacy",
   },
   {
     label: "Terms & Conditions",
-    // route:
-    //   "https://bumpy-point-aa4.notion.site/Terms-Conditions-e4103a6cbaf24659b6f7c82b37332a38",
+    title: "Terms & Conditions",
     route:'/terms-and-conditions'
   },
   {
     label: "Refund & Cancellation",
-    // route:
-    //   "https://bumpy-point-aa4.notion.site/Refund-Cancellation-Policy-53d2f1bc9abe4cf3bbc2932e15fdf742?pvs=4",
+    title: "Refund & Cancellation",
     route: "/refund-and-cancellation-policy",
   },
 ];
@@ -101,13 +101,11 @@ const Footer = () => {
       <div className="flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start text-center md:justify-start">
           {footerNav.map((nav, index) => (
-            <Link
-              key={index}
-              href={nav.route}
-              className="hover:cursor-pointer"
-            >
+            <Link key={index} href={nav.route} passHref={true} legacyBehavior={true}>
+            <a className="hover:cursor-pointer" title={`Visit ${nav.title} page`}>
               {nav.label}
-            </Link>
+            </a>
+          </Link>
           ))}
         </div>
         <div className="flex flex-col gap-6 md:gap-8 justify-center md:justify-start items-start text-center">
