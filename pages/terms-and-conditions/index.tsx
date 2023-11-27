@@ -1,11 +1,17 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 function TermsAndConditions() {
   return (
     <>
       <Head>
         <title>🐞 Quash - Terms & Conditions 🚀</title>
+        <meta
+          name="description"
+          content="Bug & Crash Reporting for Mobile Developers"
+          key="desc"
+        />
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">
@@ -387,9 +393,9 @@ function TermsAndConditions() {
           <p>
             Quash welcomes your questions and comments regarding these Terms of
             Service. You can contact us at{" "}
-            <a href="mailto:hello@quashbugs.com" className="text-blue-500">
+            <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
               hello@quashbugs.com
-            </a>
+            </Link>
             .
           </p>
           <p>[End of Terms of Service]</p>

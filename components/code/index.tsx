@@ -1,5 +1,6 @@
-import { ArrowRight, ClipboardText } from "@/lib/icons";
+import { ArrowRight } from "@/lib/icons";
 import { fira } from "@/pages/_app";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const codeFira = fira;
@@ -30,18 +31,10 @@ const CodeSection = () => {
         Integrate Quash SDK in less than a minute
       </span>
       <div className="relative w-full md:mt-[72px]">
-        {/* <ClipboardText
-          size={34}
-          className="
-          absolute top-2 right-2 md:top-[18px] md:right-[18px]"
-        /> */}
         <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
           <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
             {OS.map((item, index) => (
               <span
-                onClick={() => {
-                  // setIsOs(item.value);
-                }}
                 key={index}
                 className={`${
                   isOs === item.value
@@ -139,16 +132,17 @@ const CodeSection = () => {
           </div>
         </div>
       </div>
-      <a
-        href="https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
-        className="underline text-[16px] md:text-[24px]  md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px] "
-      >
-        <span>Learn more</span>
-        <ArrowRight
-          className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
-          color="#ffffff"
-        />
-      </a>
+      <Link
+  href="https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4"
+  className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
+  title="Explore Quash SDK Developer Documentation"
+>
+  <span>Explore Quash SDK Documentation</span>
+  <ArrowRight
+    className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
+    color="#ffffff"
+  />
+</Link>
     </div>
   );
 };

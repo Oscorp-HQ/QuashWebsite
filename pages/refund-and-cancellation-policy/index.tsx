@@ -1,11 +1,17 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 function RefundCancellationPolicy() {
   return (
     <>
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
+        <meta
+          name="description"
+          content="Bug & Crash Reporting for Mobile Developers"
+          key="desc"
+        />
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">
@@ -107,9 +113,9 @@ function RefundCancellationPolicy() {
             <p>
               6.1. If you have any questions or need to initiate a cancellation
               or refund request, please contact our customer support at{" "}
-              <a href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
                 hello@quashbugs.com
-              </a>
+              </Link>
               .
             </p>
           </section>

@@ -1,4 +1,7 @@
+
 User-agent: *
 Disallow:
+Allow: /
+
 
 Sitemap: https://quashbugs.com/sitemap.xml

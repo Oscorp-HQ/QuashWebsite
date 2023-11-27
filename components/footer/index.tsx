@@ -10,27 +10,29 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
+import Link from "next/link";
+
 
 const footerNav = [
   {
-    label: "Documentation",
+    label: "Quash Developer Guide",
+    title: "Explore Quash SDK Developer Documentation",
     route:
-      "https://bumpy-point-aa4.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47",
+      "https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4",
   },
   {
     label: "Privacy Policy",
+    title: "Privacy Policy",
     route: "/privacy",
   },
   {
     label: "Terms & Conditions",
-    // route:
-    //   "https://bumpy-point-aa4.notion.site/Terms-Conditions-e4103a6cbaf24659b6f7c82b37332a38",
+    title: "Terms & Conditions",
     route:'/terms-and-conditions'
   },
   {
     label: "Refund & Cancellation",
-    // route:
-    //   "https://bumpy-point-aa4.notion.site/Refund-Cancellation-Policy-53d2f1bc9abe4cf3bbc2932e15fdf742?pvs=4",
+    title: "Refund & Cancellation",
     route: "/refund-and-cancellation-policy",
   },
 ];
@@ -62,10 +64,12 @@ const footerContact = [
 const footerMedia = [
   {
     img: "/linkedIn.svg",
+    label: "linkedIn",
     route: "https://www.linkedin.com/company/quash-bugs/",
   },
   {
     img: "/product-hunt.svg",
+    label: "twitter",
     route: "https://twitter.com/helloquash",
   },
 ];
@@ -97,22 +101,18 @@ const Footer = () => {
       <div className="flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start text-center md:justify-start">
           {footerNav.map((nav, index) => (
-            <div
-              key={index}
-              onClick={() => {
-                router.push(nav.route);
-              }}
-              className="hover:cursor-pointer"
-            >
+            <Link key={index} href={nav.route} passHref={true} legacyBehavior={true}>
+            <a className="hover:cursor-pointer" title={`Visit ${nav.title} page`}>
               {nav.label}
-            </div>
+            </a>
+          </Link>
           ))}
         </div>
         <div className="flex flex-col gap-6 md:gap-8 justify-center md:justify-start items-start text-center">
           {/* {footerCareer.map((nav, index) => ( */}
-          <a href={"/team"} target="_blank">
+          <Link href={"/team"} >
             Careers
-          </a>
+          </Link>
           <span
             onClick={() => {
               setFormOpen(true);
@@ -134,11 +134,11 @@ const Footer = () => {
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start md:justify-start">
           <div className="flex gap-[22px] justify-start">
             {footerMedia.map((media, index) => (
-              <a href={media.route} key={index} target="_blank">
+              <Link href={media.route} key={index} target="_blank">
                 <Image
                   key={index}
                   src={media.img}
-                  alt={media.img}
+                  alt={media.label}
                   width={48}
                   height={48}
                   className="ml-[-5px] flex md:hidden"
@@ -146,12 +146,12 @@ const Footer = () => {
                 <Image
                   key={index}
                   src={media.img}
-                  alt={media.img}
+                  alt={media.label}
                   width={71}
                   height={71}
                   className="ml-[-5px] hidden md:flex"
                 />
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex flex-col gap-6 md:gap-4 justify-center items-start text-center">
@@ -161,9 +161,9 @@ const Footer = () => {
                 key={index}
               >
                 {nav.icon}
-                <a href={nav.route} target="_blank">
+                <Link href={nav.route} target="_blank">
                   {nav.label}
-                </a>
+                </Link>
               </div>
             ))}
           </div>
