@@ -1,61 +1,12 @@
-import { Button } from "@/components/ui/button";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
-import { DemoRequestForm } from "@/components/contact-form";
+import React from "react";
+import { client } from '@/lib/contentful/client'
+import PostCard from '@/components/blog/PostCard'
 
-import {
-  AlertDialog,
-  AlertDialogContent,
-} from "@/components/ui/alert-dialog";
-import { X } from "@/lib/icons";
-const plans = [
-  {
-    label: "Free",
-    desc: "Test up to 3 applications with unlimited bug reports",
-    benefits: [
-      "Auto-attached screenshots and session replays",
-      "Precise crash logs",
-      "Add up to 3 applications",
-      "1GB data usage every month",
-      "No limits on users",
-      "No limit on bug reports",
-    ],
-    action: "Get Started for Free",
-    path: "https://optimus.quashbugs.com/signup",
-  },
-  {
-    label: "Custom",
-    desc: "Talk to us for a subscription tailored for your needs",
-    benefits: [
-      "SSO Login",
-      "Advanced user configurations",
-      "On-demand Integrations",
-      "No limit on applications",
-      "No limits on data usage",
-    ],
-    action: "Contact Us",
-    path: "",
-  },
-  {
-    label: "Custom",
-    desc: "Talk to us for a subscription tailored for your needs",
-    benefits: [
-      "SSO Login",
-      "Advanced user configurations",
-      "On-demand Integrations",
-      "No limit on applications",
-      "No limits on data usage",
-    ],
-    action: "Contact Us",
-    path: "",
-  },
-];
 
-const Pricing = () => {
+const Blog = (posts:any) => {
   const router = useRouter();
-  const [formOpen, setFormOpen] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
   return (
     <div className="relative flex flex-col items-center">
       <Head>
@@ -73,12 +24,20 @@ const Pricing = () => {
             Blogs show up here.
           </h1>
         </div>
-        <div className="flex md:flex-row flex-col justify-center items-center lg:gap-10 gap-4 px-4">
-            <h1 className="text-white">Hello</h1>
-        </div>
       </div>
     </div>
   );
 };
+export const getStaticProps = async () => {
+    const response = await client.getEntries({ content_type: 'componentAuthor' })
 
-export default Pricing;
+    return {
+      props: {
+        posts: response.items,
+        revalidate: 60
+      }
+    }
+  }
+
+
+export default Blog;
