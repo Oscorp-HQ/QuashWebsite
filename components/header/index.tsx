@@ -28,6 +28,11 @@ const mobileNav = [
     value: "pricing",
   },
   {
+    label: "Blog",
+    path: "/blog",
+    value: "blog",
+  },
+  {
     label: "Sign in",
     path: "https://optimus.quashbugs.com",
     value: "signin",
@@ -69,7 +74,7 @@ const Header = () => {
             <Button
               key={index}
               className={`hover:text-gray-200 ${
-                index === 4 ? "hidden" : "flex"
+                index === 5 ? "hidden" : "flex"
               } text-[16px] font-[500] leading-[20.8px] ${
                 selected === nav.value ? "text-white" : "text-[#8A8894]"
               }`}

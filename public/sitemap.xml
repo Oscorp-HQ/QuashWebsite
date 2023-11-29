@@ -4,7 +4,7 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/privacy/indexx</loc>
+    <loc>https://quashbugs.com/blog/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -12,11 +12,7 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/team/indexx</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://quashbugs.com/upcoming/indexx</loc>
+    <loc>https://quashbugs.com/privacy/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -24,7 +20,15 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://quashbugs.com/team/indexx</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://quashbugs.com/terms-and-conditions/indexx</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://quashbugs.com/upcoming/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>
