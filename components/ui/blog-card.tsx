@@ -9,13 +9,13 @@ const BlogCard = ({ data }:any) => {
 
   return (
     <>
-    <li className='rounded-xl overflow-hidden shadow-md text-white  border border-white '>
+    <li className='overflow-hidden shadow-md text-white  border border-white mb-4 bg-transparent hover:bg-white hover:text-black'>
       <Link href={`/blog/${slug}`} aria-label={title}>
         <div className='pt-6'>
         <div className='mb-2 pl-6 '>
           <ContentfulImage
             alt={`Cover Image for ${title}`}
-            src={coverImage.fields.file.url}
+            src={coverImage?.fields?.file?.url}
             width={200}
             height={150}
           />
@@ -26,7 +26,7 @@ const BlogCard = ({ data }:any) => {
             <DateComponent dateString={dateAndTime} />
           </div>
           <p className='text-base mb-4'>{excerpt}</p>
-          <Avatar name={author.fields.name} picture={author.fields.picture} />
+          <Avatar name={author?.fields?.name} picture={author?.fields?.picture} />
         </div>
         </div>
       </Link>
