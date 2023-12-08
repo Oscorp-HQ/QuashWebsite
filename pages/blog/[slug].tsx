@@ -12,6 +12,7 @@ const Post = ({ post, preview, posts }: any) => {
 
   return (
     <section className="section ">
+      <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" />
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <meta
@@ -22,8 +23,8 @@ const Post = ({ post, preview, posts }: any) => {
       </Head>
       {preview}
 
-      <div className="containerBlog">
-        <article className="">
+      <div className="containerBlog ">
+        <article className="z-10">
           {router.isFallback ? (
             <div>Loading</div>
           ) : (
@@ -31,11 +32,12 @@ const Post = ({ post, preview, posts }: any) => {
               <BlogHeader post={post} />
               <BlogBody post={post} />
               <ul className="posts">
-                {posts.map((item: any) => {
-                  if (post.sys.id !== item.sys.id) {
-                    return <BlogCard key={item.fields.slug} data={item} />;
-                  }
-                })}
+                {posts
+                  .filter((item: any) => post.sys.id !== item.sys.id)
+                  .slice(0, 2)
+                  .map((item: any) => (
+                    <BlogCard key={item.fields.slug} data={item} />
+                  ))}
               </ul>
             </>
           )}

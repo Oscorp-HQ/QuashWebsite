@@ -668,3 +668,42 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+
+/* pagination */
+
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination-button:hover{
+  color: gray;
+}
+
+.pagination-button.active {
+  color: gray;
+
+}
+
+.pagination-list {
+  display: flex;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.pagination-list li {
+  margin: 0;
+  padding: 0;
+}
+
