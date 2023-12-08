@@ -69,7 +69,7 @@ const Header = () => {
             router.push("/");
           }}
         />
-        <div className="hidden md:flex gap-6 items-center">
+        <div className="hidden md:flex justify-between items-center">
           {mobileNav.map((nav, index) => (
             <Button
               key={index}

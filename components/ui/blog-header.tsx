@@ -1,31 +1,34 @@
-import Avatar from '../contentful-ui/Avatar'
-import ContentfulImage from '../contentful-ui/ContentfulImage'
-import DateComponent from '../contentful-ui/DateComponent'
+import Avatar from "../contentful-ui/Avatar";
+import ContentfulImage from "../contentful-ui/ContentfulImage";
+import DateComponent from "../contentful-ui/DateComponent";
 
-const BlogHeader = ({ post }:any) => {
-  const { title, coverImage, author, date } = post.fields
+const BlogHeader = ({ post }: any) => {
+  const { title, coverImage, author, dateAndTime, excerpt, readTime } =
+    post.fields;
 
   return (
     <>
-      <h1 className='text-white pt-24 mb-4'>{title}</h1>
-      <div className='hidden md:flex md:justify-between md:items-center md:mb-10 text-white'>
+      <div className="blogHeaderContent">
+        <div className="blogHeaderTopContent">
+          <p>Published on <DateComponent dateString={dateAndTime} className="" /></p>
+          <p>|</p>
+          <p>{readTime}</p>
+        </div>
+        <h1 className="">{title}</h1>
         <Avatar name={author.fields.name} picture={author.fields.picture} />
-        <DateComponent dateString={date} className='text-sm text-gray-400' />
       </div>
-      <div className='mb-8 md:mb-16 sm:mx-0'>
+      <div className="blogSummary">{excerpt}</div>
+      <div className="blogImageContainer ">
         <ContentfulImage
+          className="blogImageMain "
           alt={`Cover Image for ${title}`}
           src={coverImage.fields.file.url}
           width={coverImage.fields.file.details.image.width}
           height={coverImage.fields.file.details.image.height}
         />
       </div>
-      <div className='flex justify-between items-center md:hidden mb-6'>
-        <Avatar name={author.fields.name} picture={author.fields.picture} />
-        <DateComponent dateString={date} className='text-sm text-gray-400' />
-      </div>
     </>
-  )
-}
+  );
+};
 
-export default BlogHeader
+export default BlogHeader;
