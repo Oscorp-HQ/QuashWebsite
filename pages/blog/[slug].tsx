@@ -1,24 +1,12 @@
-// const Blog = () => {
-//   return (
-//     <div className='text-white'>
-//         <div className="py-56">
-//             <p>Blog</p>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Blog
-
 import BlogBody from "@/components/ui/blog-body";
+import BlogCard from "@/components/ui/blog-card";
 import BlogHeader from "@/components/ui/blog-header";
-import { Button } from "@/components/ui/button";
 import { client, previewClient } from "@/lib/contentful/client";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const Post = ({ post, preview }: any) => {
-  console.log(post);
+const Post = ({ post, preview, posts }: any) => {
+  console.log("posts", posts);
 
   const router = useRouter();
 
@@ -42,6 +30,13 @@ const Post = ({ post, preview }: any) => {
             <>
               <BlogHeader post={post} />
               <BlogBody post={post} />
+              <ul className="posts">
+                {posts.map((item: any) => {
+                  if (post.sys.id !== item.sys.id) {
+                    return <BlogCard key={item.fields.slug} data={item} />;
+                  }
+                })}
+              </ul>
             </>
           )}
         </article>
@@ -56,10 +51,15 @@ export const getStaticProps = async ({ params, preview = false }: any) => {
   const { slug } = params;
   const response = await cfClient.getEntries({
     content_type: "post",
-    "fields.slug": slug,
+    // "fields.slug": slug,
   });
 
-  if (!response?.items?.length) {
+  console.log("fetched slug file is", response);
+
+  const posts = response.items;
+  const post = response?.items?.find((p: any) => slug === p.fields.slug);
+
+  if (!post) {
     return {
       redirect: {
         destination: "/blog",
@@ -70,19 +70,18 @@ export const getStaticProps = async ({ params, preview = false }: any) => {
 
   return {
     props: {
-      post: response?.items?.[0],
+      post,
       preview,
+      posts,
       revalidate: 60,
     },
   };
 };
-
 export const getStaticPaths = async () => {
-  const response = await client.getEntries({ content_type: "post"});
+  const response = await client.getEntries({ content_type: "post" });
   const paths = response.items.map((item: any) => ({
     params: { slug: item.fields.slug },
   }));
-
   return {
     paths,
     fallback: true,
