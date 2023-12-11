@@ -25,7 +25,7 @@ const CodeSection = () => {
 
   return (
     <div className="relative px-4 py-[96px] lg:px-[275px] md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
-      <div className="absolute inset-0  bg-[url('/Gradient.svg')] w-full -z-10 hidden md:flex bg-no-repeat bg-cover" />
+      {/* <div className="absolute inset-0  bg-[url('/Gradient.svg')] w-full -z-10 hidden md:flex bg-no-repeat bg-cover" /> */}
 
       <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
@@ -133,16 +133,16 @@ const CodeSection = () => {
         </div>
       </div>
       <Link
-  href="https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4"
-  className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
-  title="Explore Quash SDK Developer Documentation"
->
-  <span>Explore Quash SDK Documentation</span>
-  <ArrowRight
-    className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
-    color="#ffffff"
-  />
-</Link>
+        href="https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4"
+        className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
+        title="Explore Quash SDK Developer Documentation"
+      >
+        <span>Explore Quash SDK Documentation</span>
+        <ArrowRight
+          className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
+          color="#ffffff"
+        />
+      </Link>
     </div>
   );
 };

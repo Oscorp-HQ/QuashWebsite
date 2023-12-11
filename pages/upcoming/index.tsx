@@ -38,10 +38,10 @@ const Upcoming = () => {
           key="desc"
         />
       </Head>
-      <div className="left-ellipse absolute top-[25rem] -left-[10rem]" />
-      <div className="left-sphere absolute top-[40rem] -left-[2rem]" />
-      <div className="right-ellipse absolute top-[33rem] -right-[25rem]" />
-      <div className="right-sphere absolute top-[44rem] right-[17rem]" />
+      <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
+      <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
+      <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
+      <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
       {/* <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex" /> */}
       <div className=" pt-[112px] px-[18px]  md:pt-[220px] lg:px-[200px]  w-full text-center items-center justify-center flex flex-col ">
         <div className="flex flex-col gap-3 md:gap-6 text-center items-center justify-center w-full mb-[106px] lg:mb-[180px]">

@@ -409,3 +409,24 @@ opacity: 0.14;
 background: #BAA65F;
 filter: blur(85.26000213623047px);
   }
+
+  .journey-right-ellipse{
+    width: 562.921px;
+height: 344.436px;
+transform: rotate(36.655deg);
+flex-shrink: 0;
+border-radius: 562.921px;
+opacity: 0.1;
+background: #E028A0;
+filter: blur(54.78843307495117px);
+  }
+
+  .journey-right-sphere{
+    width: 257.042px;
+height: 257.042px;
+flex-shrink: 0;
+border-radius: 257.042px;
+opacity: 0.14;
+background: #BAA65F;
+filter: blur(54.78843307495117px);
+  }
