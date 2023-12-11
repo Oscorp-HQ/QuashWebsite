@@ -57,7 +57,7 @@ const Blog = (props: any) => {
   };
 
   return (
-    <div className="allPosts">
+    <div className="blogSec">
       <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" />
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
@@ -75,7 +75,7 @@ const Blog = (props: any) => {
             <p>No blogs available.</p>
           )}
         </div>
-        <div className="z-10">
+        <div className="allPostsContainer">
           <ul className="posts">
             {visiblePosts.slice(startIndex, endIndex + 1).map((post: any) => (
               <BlogCard key={post.fields.slug} data={post} />

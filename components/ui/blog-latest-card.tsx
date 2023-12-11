@@ -21,8 +21,8 @@ const BlogLatestCard = ({ data }: any) => {
       : excerpt;
 
   return (
-    <div className="latestPost">
-      <ul className="">
+    <div className="latestPostContainer">
+      <div className="latestPost">
         <div className="latestPostItems">
           <div className="latestPostImage">
             <ContentfulImage
@@ -35,16 +35,19 @@ const BlogLatestCard = ({ data }: any) => {
           <div className="latestPostFields">
             <h3 className="">{truncatedTitle}</h3>
             <p className="">{truncatedSummary}</p>
-            <Link href={`/blog/${slug}`} aria-label={title}>
-              <div className="btnLatestPostMain">
-                <div className="btnLatestPost">
-                  <p>Read More</p>
+            <Link className="btnLatestPostMain" href={`/blog/${slug}`} aria-label={title}>
+              <div className="btnLatestPost">
+                  <h5>Read More</h5>
                 </div>
-              </div>
             </Link>
           </div>
+          <Link className="btnLatestPostLast" href={`/blog/${slug}`} aria-label={title}>
+              <div className="">
+                  <h5>Read More</h5>
+                </div>
+            </Link>
         </div>
-      </ul>
+      </div>
     </div>
   );
 };
