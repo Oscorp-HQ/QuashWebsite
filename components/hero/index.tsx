@@ -7,7 +7,7 @@ const Hero = () => {
   const router = useRouter();
   return (
     <div className="relative flex flex-col gap-[56px] md:gap-0 items-center">
-      <div className="absolute left-0 right-0 top-0 md:top-[200px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex" />
+      <div className="absolute left-0 right-0 top-0 md:top-[200px] bottom-0 w-full h-full bg-[url('/Gradient.svg')] bg-no-repeat bg-cover md:flex" />
       <div className=" pt-[112px] px-[18px]  md:pt-[144px] lg:px-[242px] md:pb-[112px] w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[72px]">
         <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
           <h1 className="justify-center bg-gradient-to-b px-7 from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
