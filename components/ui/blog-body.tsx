@@ -1,6 +1,6 @@
 import ContentfulImage from "../contentful-ui/ContentfulImage";
-import RichText2 from "./RichText2";
 import RichText1 from "./richText1";
+import RichText2 from "./richText2";
 import RichText3 from "./richText3";
 import RichText4 from "./richText4";
 import RichText5 from "./richText5";

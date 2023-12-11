@@ -20,19 +20,19 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/refund-and-cancellation-policy/indexx</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://quashbugs.com/team/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/terms-and-conditions/indexx</loc>
+    <loc>https://quashbugs.com/refund-and-cancellation-policy/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://quashbugs.com/upcoming/indexx</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://quashbugs.com/terms-and-conditions/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>

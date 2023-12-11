@@ -17,14 +17,18 @@ const Blog = (props: any) => {
 
   useEffect(() => {
     if (props.posts && props.posts.length > 0) {
-      const topPost = props.posts.find((post: any) => post.fields.isTopPost === true);
+      const topPost = props.posts.find(
+        (post: any) => post.fields.isTopPost === true
+      );
       if (topPost) {
         setLatestPost(topPost);
       }
     }
   }, [props.posts]);
 
-  const visiblePosts = props.posts.filter((post: any) => post.sys.id !== latestPost?.sys.id);
+  const visiblePosts = props.posts.filter(
+    (post: any) => post.sys.id !== latestPost?.sys.id
+  );
 
   const handleNextPage = () => {
     setStartIndex((prevStartIndex) => prevStartIndex + pageSize);
@@ -34,13 +38,18 @@ const Blog = (props: any) => {
 
   const handlePrevPage = () => {
     setStartIndex((prevStartIndex) => Math.max(prevStartIndex - pageSize, 0));
-    setEndIndex((prevEndIndex) => Math.max(prevEndIndex - pageSize, pageSize - 1));
+    setEndIndex((prevEndIndex) =>
+      Math.max(prevEndIndex - pageSize, pageSize - 1)
+    );
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
 
   const handlePageChange = (pageNumber: number) => {
     const newStartIndex = (pageNumber - 1) * pageSize;
-    const newEndIndex = Math.min(newStartIndex + pageSize - 1, visiblePosts.length - 1);
+    const newEndIndex = Math.min(
+      newStartIndex + pageSize - 1,
+      visiblePosts.length - 1
+    );
 
     setStartIndex(newStartIndex);
     setEndIndex(newEndIndex);
@@ -59,7 +68,7 @@ const Blog = (props: any) => {
         />
       </Head>
       <div className="section">
-        <div className="latestPostMain ">
+        <div className="latestPostMain">
           {latestPost ? (
             <BlogLatestCard data={latestPost} />
           ) : (
@@ -67,11 +76,11 @@ const Blog = (props: any) => {
           )}
         </div>
         <div className="z-10">
-        <ul className="posts">
-          {visiblePosts.slice(startIndex, endIndex + 1).map((post: any) => (
-            <BlogCard key={post.fields.slug} data={post} />
-          ))}
-        </ul>
+          <ul className="posts">
+            {visiblePosts.slice(startIndex, endIndex + 1).map((post: any) => (
+              <BlogCard key={post.fields.slug} data={post} />
+            ))}
+          </ul>
         </div>
         <div className="pagination">
           <button
@@ -82,11 +91,15 @@ const Blog = (props: any) => {
             Previous
           </button>
           <ul className="pagination-list">
-            {Array.from({ length: Math.ceil(visiblePosts.length / pageSize) }).map((_, index) => (
+            {Array.from({
+              length: Math.ceil(visiblePosts.length / pageSize),
+            }).map((_, index) => (
               <li key={index + 1}>
                 <button
                   onClick={() => handlePageChange(index + 1)}
-                  className={`pagination-button ${currentPage === index + 1 ? 'active' : ''}`}
+                  className={`pagination-button ${
+                    currentPage === index + 1 ? "active" : ""
+                  }`}
                 >
                   {index + 1}
                 </button>
@@ -95,7 +108,9 @@ const Blog = (props: any) => {
           </ul>
           <button
             onClick={handleNextPage}
-            disabled={endIndex >= visiblePosts.length - 1 || visiblePosts.length === 0}
+            disabled={
+              endIndex >= visiblePosts.length - 1 || visiblePosts.length === 0
+            }
             className="pagination-button"
           >
             Next
@@ -117,19 +132,19 @@ const Blog = (props: any) => {
 
           <span className="text-[16px] w-[252px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full">
             Accelerate your Mobile Testing Workflow with Quash
-            </span>
-          </div>
-          <Button
-            className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC] hover:text-black"
-            variant="outline"
-            onClick={() => {
-              router.push("https://optimus.quashbugs.com/signup");
-            }}
-          >
-            Get Started for Free
-          </Button>
+          </span>
         </div>
+        <Button
+          className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC] hover:text-black"
+          variant="outline"
+          onClick={() => {
+            router.push("https://optimus.quashbugs.com/signup");
+          }}
+        >
+          Get Started for Free
+        </Button>
       </div>
+    </div>
   );
 };
 
