@@ -47,7 +47,7 @@ const Pricing = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center overflow-hidden">
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <meta
@@ -56,7 +56,13 @@ const Pricing = () => {
           key="desc"
         />
       </Head>
-      <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex" />
+      <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
+      <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
+      <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
+      <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
+      {/* <div className="w-full relative pb-[100px]"> */}
+      {/* <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat bg-cover hidden md:flex" /> */}
+
       <div className=" pt-[130px]  md:pt-[236px]   w-full text-center items-center justify-center flex flex-col ">
         <div className="flex flex-col text-center items-center justify-center w-full mb-[43px] lg:mb-[180px] lg:px-[200px] px-[18px]">
           <h1 className="justify-center bg-gradient-to-b  from-white to-gray-500 bg-clip-text text-transparent flex  text-[24px] font-[700] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
@@ -71,7 +77,7 @@ const Pricing = () => {
             >
               <div className="flex flex-col lg:gap-[52px] gap-[30px]">
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
-                   <span className="lg:text-[48px] text-[24px] text-[#ECECEE] font-[600] leading-10">
+                  <span className="lg:text-[48px] text-[24px] text-[#ECECEE] font-[600] leading-10">
                     {plan.label}
                   </span>
                   <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
@@ -137,6 +143,8 @@ const Pricing = () => {
           ))}
         </div>
       </div>
+      {/* </div> */}
+
       <div className="flex px-5 pb-[112px]  md:pt-[20px] md:pb-[143px] flex-col justify-center items-center">
         <div className="relative w-full justify-center items-center flex-col overflow-hidden flex ">
           <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
