@@ -367,3 +367,45 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 6.62%, #61BEB9 52.55%, rg
       letter-spacing: 0.1px;
     }
   }
+
+  .left-ellipse{
+    width: 876px;
+height: 409px;
+transform: rotate(-28.151deg);
+flex-shrink: 0;
+border-radius: 876px;
+opacity: 0.1;
+background: #3CD0C8;
+filter: blur(85.26000213623047px);
+  }
+
+  .left-sphere{
+    width: 400px;
+height: 400px;
+flex-shrink: 0;
+border-radius: 400px;
+opacity: 0.14;
+background: #BAA65F;
+filter: blur(85.26000213623047px);
+  }
+
+  .right-ellipse{
+    width: 876px;
+height: 536px;
+transform: rotate(36.655deg);
+flex-shrink: 0;
+border-radius: 876px;
+opacity: 0.1;
+background: #E028A0;
+filter: blur(85.26000213623047px);
+  }
+
+  .right-sphere{
+    width: 400px;
+height: 400px;
+flex-shrink: 0;
+border-radius: 400px;
+opacity: 0.14;
+background: #BAA65F;
+filter: blur(85.26000213623047px);
+  }
