@@ -9,13 +9,6 @@ const BlogCard = ({ data }: any) => {
   const { title, slug, excerpt, coverImage, author, dateAndTime, readTime } =
     data?.fields;
 
-    const maxLengthTitle = 105;
-    const truncatedTitle =
-      title.length > maxLengthTitle ? `${title.substring(0, maxLengthTitle)}...` : title;
-
-      const maxLengthSummary = 168;
-      const truncatedSummary =
-      excerpt.length > maxLengthSummary ? `${excerpt.substring(0, maxLengthSummary)}...` : excerpt;
 
   return (
     <>
@@ -23,15 +16,16 @@ const BlogCard = ({ data }: any) => {
         <Link href={`/blog/${slug}`} aria-label={title}>
           <div className="postItems">
             <div className="postItemFields">
-              <h3 className="">{truncatedTitle}</h3>
-              <p className="">{truncatedSummary}</p>
+              <h3 className="titleTop">{title}</h3>
+              <p className="truncSummary">{excerpt}</p>
               <div className="postItemFieldsDown">
-               <Name name={author.fields.name} />
+               <p className="postItemFieldsDownAuthor"><Name name={author.fields.name} /></p>
                 <p className="line">|</p>
-                <DateComponent dateString={dateAndTime} />
+                <p><DateComponent dateString={dateAndTime} /></p>
                 <p className="line">|</p>
-                <p className="">{readTime}</p>
+                <p className="aa">{readTime}</p>
               </div>
+              <h3 className="titleDown">{title}</h3>
             </div>
             <div className="postItemImage">
               <ContentfulImage
@@ -41,6 +35,18 @@ const BlogCard = ({ data }: any) => {
                 height={150}
               />
             </div>
+          </div>
+
+          <div className="postItemFieldsDownSmallScreen">
+            <p className="downSummary">{excerpt}</p>
+            <div className="postItemDownSmallScreen">
+               <b><Name name={author.fields.name} /></b>
+                <p className="line">|</p>
+                <DateComponent dateString={dateAndTime} />
+                <p className="line">|</p>
+                <p className="">{readTime}</p>
+              </div>
+              <hr />
           </div>
         </Link>
       </li>

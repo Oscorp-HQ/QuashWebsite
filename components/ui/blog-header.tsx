@@ -7,27 +7,18 @@ const BlogHeader = ({ post }: any) => {
     post.fields;
 
   return (
-    <>
+    <div className="slugContainer">
       <div className="blogHeaderContent">
         <div className="blogHeaderTopContent">
           <p>Published on <DateComponent dateString={dateAndTime} className="" /></p>
-          <p>|</p>
+          <p className="lineSlug">|</p>
           <p>{readTime}</p>
         </div>
         <h1 className="">{title}</h1>
-        <Avatar name={author.fields.name} picture={author.fields.picture} />
+        <p><Avatar className="" name={author.fields.name} picture={author.fields.picture} /></p>
       </div>
       <div className="blogSummary">{excerpt}</div>
-      <div className="blogImageContainer ">
-        <ContentfulImage
-          className="blogImageMain "
-          alt={`Cover Image for ${title}`}
-          src={coverImage.fields.file.url}
-          width={coverImage.fields.file.details.image.width}
-          height={coverImage.fields.file.details.image.height}
-        />
-      </div>
-    </>
+    </div>
   );
 };
 

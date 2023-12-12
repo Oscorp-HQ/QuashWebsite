@@ -409,11 +409,32 @@ body {
   padding-left: 204px;
 }
 
+.titleDown {
+  display: none;
+}
+
+.titleTop2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncSummary2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .allPosts {
   z-index: 49;
   overflow: hidden;
   color: white;
-  margin-bottom: 120px;
   background-color: transparent;
 }
 
@@ -447,17 +468,29 @@ body {
 }
 
 .line {
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+}
+.lineSlug {
+  padding-left: 12px;
+  padding-right: 12px;
   display: flex;
   align-items: center;
 }
 
 .postItemFieldsDown {
   display: flex;
+  align-items: flex-start;
+}
+
+.postItemFieldsDownSmallScreen {
+  display: none;
 }
 
 .postItemFieldsDown p {
   display: flex;
-  margin-left: 16px;
   margin-right: 16px;
 }
 
@@ -478,12 +511,9 @@ body {
 
 @media (max-width: 1200px) {
   .posts {
+    gap: 32px;
     padding-right: 100px;
     padding-left: 100px;
-  }
-
-  .allPosts {
-    margin-bottom: 80px;
   }
 
   .postItems {
@@ -509,19 +539,46 @@ body {
 }
 
 @media (max-width: 768px) {
-  .posts {
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 80px;
-    margin-bottom: 60px;
+  .truncSummary {
+    display: none;
   }
 
-  .allPosts {
-    margin-bottom: 60px;
+  .truncSummary2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .downSummary {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .titleTop {
+    display: none;
+  }
+  .titleDown {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .posts {
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .postItems {
     flex-direction: row;
+    height: auto;
+    gap: 12px;
+    display: flex;
   }
 
   .postItemFields h3 {
@@ -534,26 +591,42 @@ body {
     margin-bottom: 16px;
   }
 
-  .postItemFieldsDown p {
-    margin: 8px 0;
+  .postItemFieldsDown {
+    display: none;
+  }
+
+  .postItemFieldsDownSmallScreen {
+    padding-top: 12px;
+    display: block;
+  }
+
+  .postItemDownSmallScreen {
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
   }
 
   .postItemImage {
-    width: 100%;
+    width: 300px;
     height: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .posts {
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 60px;
-    margin-bottom: 40px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 32px;
   }
 
-  .allPosts {
-    margin-bottom: 40px;
+  .postItems {
+    flex-direction: row;
+    height: auto;
+    gap: 12px;
+    display: flex;
   }
 
   .postItemFields h3 {
@@ -571,21 +644,17 @@ body {
   }
 
   .postItemImage {
-    width: 100%;
+    width: 200px;
     height: 120px;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .posts {
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 40px;
-    margin-bottom: 20px;
-  }
-
-  .allPosts {
-    margin-bottom: 20px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .postItemFields h3 {
@@ -603,7 +672,7 @@ body {
   }
 
   .postItemImage {
-    width: 100%;
+    width: 140px;
     height: 100px;
   }
 }
@@ -630,6 +699,16 @@ body {
   overflow: hidden;
   position: relative;
 }
+
+.latestPostImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #d9d9d9;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .latestPostItems {
   padding: 40px;
@@ -672,7 +751,24 @@ body {
 }
 
 .latestPostFields h3 {
-  padding-bottom: 40px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.latestPostFields p {
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.latestPostFields {
+  width: 656px;
+}
+
+.latestPostFields h3 {
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 1px;
@@ -693,7 +789,6 @@ body {
 }
 
 .latestPostFields h3 {
-  padding-bottom: 40px;
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 1px;
@@ -714,28 +809,6 @@ body {
 }
 
 .latestPostFields h3 {
-  padding-bottom: 40px;
-  font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 1px;
-  line-height: normal;
-  color: #fff;
-}
-
-.latestPostFields p {
-  color: #fff;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-
-.latestPostFields {
-  width: 656px;
-}
-
-.latestPostFields h3 {
-  padding-bottom: 40px;
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 1px;
@@ -773,7 +846,7 @@ body {
 
 @media (max-width: 768px) {
   .latestPostMain {
-    padding-top: 60px;
+    padding-top: 90px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -819,11 +892,55 @@ body {
   .btnLatestPost {
     order: 4;
   }
+
+  .btnLatestPostMain {
+    order: 4;
+  }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .latestPostMain {
+    padding-top: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .latestPostFields h3 {
+    font-size: 19px;
+    padding-bottom: 8px;
+  }
+
+  .latestPostFields p {
+    font-size: 13px;
+  }
+
   .latestPostItems {
     flex-direction: column;
+  }
+
+  .latestPostItems .btnLatestPost {
+    display: none;
+    width: 100%;
+    margin-top: 17px;
+  }
+
+  .btnLatestPostLast {
+    width: 145px;
+    height: 45px;
+    order: 4;
+    display: block;
+  }
+
+  .latestPostFields {
+    order: 1;
+  }
+
+  .latestPostImage {
+    order: 2;
+  }
+
+  .btnLatestPost {
+    order: 4;
   }
 
   .btnLatestPostMain {
@@ -833,7 +950,7 @@ body {
 
 @media (max-width: 480px) {
   .latestPostMain {
-    padding-top: 40px;
+    padding-top: 90px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -859,7 +976,7 @@ body {
 
 @media (max-width: 360px) {
   .latestPostMain {
-    padding-top: 20px;
+    padding-top: 90px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -886,60 +1003,35 @@ body {
 /* Opening blog page CSS */
 
 .containerBlog {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.blogImageContainer {
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 40px;
-}
-
-.blogImageMain {
-  border-radius: 24px;
-  background: #d9d9d9;
-  width: 1112px;
-  height: 523px;
-  overflow: hidden;
-  position: relative;
-}
-
-.blogImageMain img {
-  width: 100%;
-  height: 100%;
-  object-fit: fit;
+  margin: 0 auto;
 }
 
 .blogHeaderContent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  color: #fff;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  padding-left: 365px;
-  padding-right: 365px;
+  width: 100%;
+  max-width: 800px;
+  color: white;
   padding-top: 176px;
+  margin: 0 auto;
 }
 
 .blogHeaderTopContent {
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
-  gap: 16px;
+  font-size: 14px;
+}
+
+.blogHeaderTopContent p {
   color: #fff;
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
-
 .blogHeaderContent h1 {
   color: #ececee;
+  margin-top: 24px;
+  margin-bottom: 24px;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -947,53 +1039,241 @@ body {
 }
 
 .blogSummary {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: #fff;
+  color: white;
   font-size: 20px;
   font-style: italic;
-  font-weight: 400;
-  line-height: normal;
-  padding-left: 365px;
-  padding-right: 365px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
-.blogBodyContent {
-  color: #fff;
+.blogMainSummary {
+  color: white;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-left: 365px;
-  padding-right: 365px;
+  font-weight: 300;
+  line-height: 150%;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.blogImageContainer {
+  max-width: 1112px;
+  height: 523px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #d9d9d9;
+}
+
+.blogImageMain {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blogImageMain2 {
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .blogBodysubContent {
   color: #fff;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-left: 365px;
-  padding-right: 365px;
+  font-weight: 300;
+  line-height: 150%;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .blogBodysubContent h3 {
-  padding-top: 24px;
-  padding-bottom: 16px;
-  color: #fff;
+  color: white;
+  margin-bottom: 16px;
+  margin-top: 24px;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
+
 .blogBodysubContent p {
-  padding-bottom: 24px;
-  color: #fff;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  padding-top: 24px;
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .blogImageContainer {
+    height: auto;
+  }
+
+  .slugContainer {
+    padding-top: 82px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+  }
+  .slugBodyContainer {
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+  }
+
+  .blogHeaderTopContent p {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .blogHeaderContent {
+    padding-top: 0;
+  }
+  .blogHeaderContent h1 {
+    color: #ececee;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+
+  .blogMainSummary {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 16px;
+  }
+
+  .blogSummary {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .blogImageMain2,
+  .subContainer {
+    max-width: 100%;
+  }
+
+  .blogBodysubContent {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .blogBodysubContent h3 {
+    padding-top: 16px;
+    padding-bottom: 12px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .blogBodysubContent p {
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blogImageContainer {
+    height: auto;
+  }
+
+  .slugContainer {
+    padding-top: 82px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+  }
+  .slugBodyContainer {
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+  }
+
+  .blogHeaderTopContent p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+  }
+
+
+  .blogHeaderContent {
+    padding-top: 0;
+  }
+  .blogHeaderContent h1 {
+    color: #ececee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+
+  .blogMainSummary {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 16px;
+  }
+
+  .blogSummary {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .blogImageMain2,
+  .subContainer {
+    max-width: 100%;
+  }
+
+  .blogBodysubContent {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .blogBodysubContent h3 {
+    padding-top: 16px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .blogBodysubContent p {
+    padding-top: 0;
+    margin-bottom: 16px;
+  }
 }
 
 /* pagination */

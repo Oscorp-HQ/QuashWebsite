@@ -2,23 +2,13 @@ import Link from "next/link";
 import Avatar from "../contentful-ui/Avatar";
 import DateComponent from "../contentful-ui/DateComponent";
 import ContentfulImage from "../contentful-ui/ContentfulImage";
+import { ArrowRight } from "lucide-react";
 
 const BlogLatestCard = ({ data }: any) => {
   console.log(data);
   const { title, slug, excerpt, coverImage, author, dateAndTime, readTime } =
     data?.fields;
 
-  const maxLengthTitle = 85;
-  const truncatedTitle =
-    title.length > maxLengthTitle
-      ? `${title.substring(0, maxLengthTitle)}...`
-      : title;
-
-  const maxLengthSummary = 168;
-  const truncatedSummary =
-    excerpt.length > maxLengthSummary
-      ? `${excerpt.substring(0, maxLengthSummary)}...`
-      : excerpt;
 
   return (
     <div className="latestPostContainer">
@@ -33,17 +23,19 @@ const BlogLatestCard = ({ data }: any) => {
             />
           </div>
           <div className="latestPostFields">
-            <h3 className="">{truncatedTitle}</h3>
-            <p className="">{truncatedSummary}</p>
+            <h3 className="titleTop2">{title}</h3>
+            <p className="truncSummary2">{excerpt}</p>
             <Link className="btnLatestPostMain" href={`/blog/${slug}`} aria-label={title}>
               <div className="btnLatestPost">
                   <h5>Read More</h5>
+                  {/* <ArrowRight size={32} /> */}
                 </div>
             </Link>
           </div>
           <Link className="btnLatestPostLast" href={`/blog/${slug}`} aria-label={title}>
-              <div className="">
+              <div className="btnLatestPostLastSecond">
                   <h5>Read More</h5>
+                  {/* <ArrowRight size={32} /> */}
                 </div>
             </Link>
         </div>

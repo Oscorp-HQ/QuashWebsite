@@ -12,7 +12,7 @@ const Post = ({ post, preview, posts }: any) => {
 
   return (
     <section className="section ">
-      <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" />
+      {/* <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" /> */}
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <meta
