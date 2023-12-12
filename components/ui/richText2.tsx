@@ -33,7 +33,7 @@ const options = {
     },
 
     [INLINES.ENTRY_HYPERLINK]: (node:any) => {
-      if (node.data.target.sys.contentType.sys.id === 'post') {
+      if (node?.data?.target?.sys?.contentType?.sys?.id === 'post') {
         return (
           <Link href={`/posts/${node.data.target.fields.slug}`}>
             {node.data.target.fields.title}
@@ -52,7 +52,7 @@ const options = {
     },
 
     [BLOCKS.EMBEDDED_ENTRY]: (node:any) => {
-      if (node.data.target.sys.contentType.sys.id === 'videoEmbed') {
+      if (node?.data?.target?.sys?.contentType?.sys?.id === 'videoEmbed') {
         return (
           <iframe
             height='400'
