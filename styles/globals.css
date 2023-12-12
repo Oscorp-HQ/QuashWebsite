@@ -600,6 +600,11 @@ backdrop-filter: blur(6px);
 }
 
 @media (max-width: 768px) {
+
+  .blog-layout{
+    padding: 90px 16px 116px 16px;
+  }
+
   .truncSummary {
     display: none;
   }
