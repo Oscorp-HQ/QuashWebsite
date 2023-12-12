@@ -12,7 +12,7 @@ export default function Document() {
         <link rel="canonical" href="https://quashbugs.com" />
       </Head>
       <title>🐞 Quash - Streamlining QA Processes 🚀</title>
-      <body >
+      <body>
         <Main />
         <NextScript />
       </body>

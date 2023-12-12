@@ -57,8 +57,8 @@ const Blog = (props: any) => {
   };
 
   return (
-    <div className="blogSec">
-      <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" />
+    <div className="blog-layout">
+      {/* <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" /> */}
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <meta
@@ -67,55 +67,62 @@ const Blog = (props: any) => {
           key="desc"
         />
       </Head>
-      <div className="section">
-        <div className="latestPostMain">
+      <div className="blogs-container">
+        <div className="">
           {latestPost ? (
             <BlogLatestCard data={latestPost} />
           ) : (
-            <p>No blogs available.</p>
+            <p className="empty-blogs-text">No blogs available.</p>
           )}
         </div>
-        <div className="allPostsContainer">
-          <ul className="posts">
-            {visiblePosts.slice(startIndex, endIndex + 1).map((post: any) => (
-              <BlogCard key={post.fields.slug} data={post} />
-            ))}
-          </ul>
-        </div>
-        <div className="pagination">
-          <button
-            onClick={handlePrevPage}
-            disabled={startIndex === 0}
-            className="pagination-button"
-          >
-            Previous
-          </button>
-          <ul className="pagination-list">
-            {Array.from({
-              length: Math.ceil(visiblePosts.length / pageSize),
-            }).map((_, index) => (
-              <li key={index + 1}>
-                <button
-                  onClick={() => handlePageChange(index + 1)}
-                  className={`pagination-button ${
-                    currentPage === index + 1 ? "active" : ""
-                  }`}
-                >
-                  {index + 1}
-                </button>
-              </li>
-            ))}
-          </ul>
-          <button
-            onClick={handleNextPage}
-            disabled={
-              endIndex >= visiblePosts.length - 1 || visiblePosts.length === 0
-            }
-            className="pagination-button"
-          >
-            Next
-          </button>
-        </div>
+        {visiblePosts.length > 0 && (
+          <>
+            <div className="blogs-list-container">
+              <ul className="blogs-list">
+                {visiblePosts
+                  .slice(startIndex, endIndex + 1)
+                  .map((post: any) => (
+                    <BlogCard key={post.fields.slug} data={post} />
+                  ))}
+              </ul>
+            </div>
+            <div className="pagination">
+              <button
+                onClick={handlePrevPage}
+                disabled={startIndex === 0}
+                className="pagination-button"
+              >
+                Previous
+              </button>
+              <ul className="pagination-list">
+                {Array.from({
+                  length: Math.ceil(visiblePosts.length / pageSize),
+                }).map((_, index) => (
+                  <li key={index + 1}>
+                    <button
+                      onClick={() => handlePageChange(index + 1)}
+                      className={`pagination-button ${
+                        currentPage === index + 1 ? "active" : ""
+                      }`}
+                    >
+                      {index + 1}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <button
+                onClick={handleNextPage}
+                disabled={
+                  endIndex >= visiblePosts.length - 1 ||
+                  visiblePosts.length === 0
+                }
+                className="pagination-button"
+              >
+                Next
+              </button>
+            </div>
+          </>
+        )}
       </div>
       <div className="relative w-full justify-center items-center flex-col overflow-hidden flex ">
         <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>

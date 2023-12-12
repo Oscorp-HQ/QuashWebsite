@@ -397,16 +397,36 @@ body {
 
 /* landing blog page CSS */
 
-.posts {
+
+.blog-layout{
+  height: 100%;
+  width: 100%;
+  padding-top: 202px ;
+  padding-bottom: 143px;
+  padding-right: 120px;
+  padding-left: 120px;
+
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.blogs-container{
+  width: 100%;
+}
+
+.blogs-list {
   gap: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-right: 200px;
+  padding-right: 80px;
   flex-grow: 1;
-  padding-top: 122px;
-  padding-left: 204px;
+  padding-top: 120px;
+  padding-left: 80px;
 }
 
 .titleDown {
@@ -691,10 +711,77 @@ body {
   }
 }
 
-.latestPostMain {
-  padding-top: 106px;
-  padding-left: 122px;
-  padding-right: 116px;
+/* top-blog-container */
+
+.top-blog-container {
+  display: inline-flex;
+  height: 460px;
+  padding: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.top-blog-image-container{
+  min-width: 498px;
+min-height: 380px;
+border-radius: 24px;
+background: #D9D9D9;
+overflow: hidden;
+}
+
+.top-blog-content{
+  display: flex;
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+height: 100%;
+}
+
+.top-blog-title{
+  align-self: stretch;
+  color: #ECECEE;
+/* font-family: Plus Jakarta Sans; */
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+/* line-height: normal; */
+}
+
+.top-blog-summary{
+  align-self: stretch;
+  color: #FFF;
+/* font-family: Plus Jakarta Sans; */
+font-size: 24px;
+font-style: normal;
+font-weight: 300;
+/* line-height: normal; */
+}
+
+.top-blog-read-more-container{
+  display: flex;
+padding: 14px 18px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 100px;
+border: 2px solid var(--White, #FFF);
+}
+
+.top-blog-read-more-container p{
+  color: var(--White, #FFF);
+  /* font-family: Plus Jakarta Sans; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.empty-blogs-text{
+  color: white;
+  font-size: 24px;
 }
 
 .latestPostContainer {
@@ -705,6 +792,8 @@ body {
   border: 0.4px solid rgba(255, 255, 255, 0.1);
   background: rgba(217, 217, 217, 0.06);
   backdrop-filter: blur(6px);
+  width: 100%;
+  
 }
 
 .latestPostImage {
