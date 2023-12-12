@@ -58,13 +58,8 @@ const BlogLatestCard = ({ data }: any) => {
         />
       </div>
       <div className="top-blog-content">
-        <div className="h-full w-full overflow-hidden">
-          <h3 className="top-blog-title ">{title}</h3>
-        </div>
-        <div className="h-full w-full overflow-hidden">
-          <p className="top-blog-summary">{excerpt}</p>
-        </div>
-
+        <h3 className="top-blog-title ">{title}</h3>
+        <p className="top-blog-summary ">{excerpt}</p>
         <div className="top-blog-read-more-container">
           <p>Read More</p>
           <ArrowRight size={32} color="white" />
