@@ -556,6 +556,13 @@ body {
     text-overflow: ellipsis;
   }
 
+  .downSummary {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
   .titleTop {
     display: none;
   }
@@ -565,6 +572,13 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .titleDown {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 
   .posts {
@@ -708,7 +722,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 
 .latestPostItems {
   padding: 40px;
@@ -1213,9 +1226,7 @@ body {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-
   }
-
 
   .blogHeaderContent {
     padding-top: 0;
