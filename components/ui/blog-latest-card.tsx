@@ -5,7 +5,6 @@ import ContentfulImage from "../contentful-ui/ContentfulImage";
 import { ArrowRight } from "lucide-react";
 
 const BlogLatestCard = ({ data }: any) => {
-  console.log(data);
   const { title, slug, excerpt, coverImage, author, dateAndTime, readTime } =
     data?.fields;
 

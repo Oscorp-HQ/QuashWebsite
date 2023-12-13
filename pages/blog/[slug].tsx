@@ -6,7 +6,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const Post = ({ post, preview, posts }: any) => {
-  console.log("posts", posts);
 
   const router = useRouter();
 

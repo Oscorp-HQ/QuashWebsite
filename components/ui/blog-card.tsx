@@ -5,7 +5,6 @@ import ContentfulImage from "../contentful-ui/ContentfulImage";
 import Name from "../contentful-ui/Name";
 
 const BlogCard = ({ data }: any) => {
-  console.log(data);
   const { title, slug, excerpt, coverImage, author, dateAndTime, readTime } =
     data?.fields;
 

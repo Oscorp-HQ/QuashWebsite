@@ -19,8 +19,6 @@ async function generateSitemap() {
     '!pages/api',
   ]);
 
-  console.log('Pages:', pages); // Add this line to see the list of matched pages
-
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(addPage).join('\n')}
 </urlset>`;

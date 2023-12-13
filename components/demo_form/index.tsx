@@ -76,7 +76,6 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
     } else {
       setIsEmpty(true);
     }
-    console.log("states are", name, company, email, number);
   }, [name, company, email, number]);
 
   //Define your form.
