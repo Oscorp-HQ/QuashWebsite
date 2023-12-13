@@ -883,7 +883,7 @@ display: none;
   border-radius: 40px;
   border: 0.4px solid rgba(255, 255, 255, 0.10);
 background: rgba(217, 217, 217, 0.06);
-backdrop-filter: blur(6px);
+/* backdrop-filter: blur(6px); */
 }
 
 .top-blog-image-container{
@@ -1374,4 +1374,27 @@ border: 2px solid var(--White, #FFF);
   opacity: 0.14;
   background: #baa65f;
   filter: blur(54.78843307495117px);
+}
+
+.blog-left-ellipse{
+  width: 876px;
+height: 536px;
+transform: rotate(143.345deg);
+flex-shrink: 0;
+border-radius: 876px;
+opacity: 0.1;
+background: #E028A0;
+filter: blur(85.26000213623047px);
+}
+
+.blog-right-ellipse{
+  width: 876px;
+  height: 409px;
+  flex-shrink: 0;
+  border-radius: 876px;
+  transform: rotate(-143.345deg);
+
+opacity: 0.1;
+background: #3CD0C8;
+filter: blur(85.26000213623047px);
 }

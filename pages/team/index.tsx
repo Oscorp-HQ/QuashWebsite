@@ -77,7 +77,6 @@ const TeamPage = () => {
         <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
         <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
         <div className="relative h-full w-full mt-[132px] md:mt-[242px] md:px-[170px] px-[18px] flex flex-col justify-center items-center text-white gap-[96px] md:gap-[176px] pb-[61px] md:pb-[115px]">
-          {/* <div className="absolute inset-0  bg-[url('/Gradient.svg')] md:h-[1154px] md:w-full md:flex hidden bg-cover" /> */}
           <div className="flex flex-col gap-4 md:gap-7 text-center  md:px-[70px]">
             <p className="text-[12px] md:text-[24px] text-[#ECECEE] font-[600]">
               OUR MISSION

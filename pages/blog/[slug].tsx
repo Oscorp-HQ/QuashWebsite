@@ -11,7 +11,7 @@ const Post = ({ post, preview, posts }: any) => {
   const router = useRouter();
 
   return (
-    <div className="blog-details-layout z-10">
+    <div className="blog-details-layout z-10 relative overflow-hidden">
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <meta
@@ -20,6 +20,10 @@ const Post = ({ post, preview, posts }: any) => {
           key="desc"
         />
       </Head>
+      <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
+      <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
+      <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
+      <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
       {router.isFallback ? (
         <div>Loading</div>
       ) : (
@@ -36,6 +40,10 @@ const Post = ({ post, preview, posts }: any) => {
           </div>
         </>
       )}
+      <div className="blog-left-ellipse hidden md:flex absolute top-[131rem] -left-[10rem]" />
+      <div className="left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
+      <div className="blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
+      <div className="right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
     </div>
   );
 };
