@@ -30,7 +30,7 @@ const Post = ({ post, preview, posts }: any) => {
         <>
           <BlogHeader post={post} />
           <BlogBody post={post} />
-          <div className="blogs-list-slug">
+          <div className="blogs-list">
             {posts
               .filter((item: any) => post.sys.id !== item.sys.id)
               .slice(0, 2)
