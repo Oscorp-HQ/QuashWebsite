@@ -6,6 +6,7 @@ import BlogLatestCard from "@/components/ui/blog-latest-card";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import router from "next/router";
+import Callback from "@/components/callback";
 
 const pageSize = 10;
 
@@ -77,16 +78,12 @@ const Blog = (props: any) => {
         </div>
         {visiblePosts.length > 0 && (
           <>
-            <div className="blogs-list-container">
-              <ul className="blogs-list">
-                {visiblePosts
-                  .slice(startIndex, endIndex + 1)
-                  .map((post: any) => (
-                    <BlogCard key={post.fields.slug} data={post} />
-                  ))}
-              </ul>
+            <div className="blogs-list">
+              {visiblePosts.slice(startIndex, endIndex + 1).map((post: any) => (
+                <BlogCard key={post.fields.slug} data={post} />
+              ))}
             </div>
-            <div className="pagination">
+            {/* <div className="pagination">
               <button
                 onClick={handlePrevPage}
                 disabled={startIndex === 0}
@@ -120,37 +117,11 @@ const Blog = (props: any) => {
               >
                 Next
               </button>
-            </div>
+            </div> */}
           </>
         )}
       </div>
-      <div className="relative w-full justify-center items-center flex-col overflow-hidden flex ">
-        <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
-        <div className="w-full h-[115px] md:h-[200px] absolute top-0 bg-black"></div>
-        <div className="absolute top-[115px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
-          <div className="callback-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-        </div>
-      </div>
-      <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px]">
-        <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[987px]">
-          <span className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full text-center leading-normal">
-            Win the never-ending battle of Quality vs Speed
-          </span>
-
-          <span className="text-[16px] w-[252px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full">
-            Accelerate your Mobile Testing Workflow with Quash
-          </span>
-        </div>
-        <Button
-          className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC] hover:text-black"
-          variant="outline"
-          onClick={() => {
-            router.push("https://optimus.quashbugs.com/signup");
-          }}
-        >
-          Get Started for Free
-        </Button>
-      </div>
+      <Callback />
     </div>
   );
 };

@@ -61,18 +61,21 @@ const BlogLatestCard = ({ data }: any) => {
         <h3 className="top-blog-title ">{title}</h3>
         <p className="top-blog-summary ">{excerpt}</p>
         <div className="top-blog-image-container-mobile flex justify-center items-center relative">
-        <ContentfulImage
-          alt={`Cover Image for ${title}`}
-          src={coverImage?.fields?.file?.url}
-          objectFit="cover"
-          layout="fill"
-         
-        />
-      </div>
-        <div className="top-blog-read-more-container">
+          <ContentfulImage
+            alt={`Cover Image for ${title}`}
+            src={coverImage?.fields?.file?.url}
+            objectFit="cover"
+            layout="fill"
+          />
+        </div>
+        <Link
+          href={`/blog/${slug}`}
+          aria-label={title}
+          className="top-blog-read-more-container"
+        >
           <p>Read More</p>
           <ArrowRight size={32} color="white" className="read-more-icon" />
-        </div>
+        </Link>
       </div>
     </div>
   );

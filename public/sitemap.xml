@@ -4,6 +4,14 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://quashbugs.com/blog/indexx</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://quashbugs.com/blog/[slug]x</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://quashbugs.com/pricing/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -12,11 +20,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/refund-and-cancellation-policy/indexx</loc>
+    <loc>https://quashbugs.com/team/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/team/indexx</loc>
+    <loc>https://quashbugs.com/refund-and-cancellation-policy/indexx</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -25,14 +33,6 @@
   </url>
   <url>
     <loc>https://quashbugs.com/upcoming/indexx</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://quashbugs.com/blog/indexx</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://quashbugs.com/blog/[slug]x</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>

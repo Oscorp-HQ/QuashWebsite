@@ -9,50 +9,46 @@ const BlogCard = ({ data }: any) => {
   const { title, slug, excerpt, coverImage, author, dateAndTime, readTime } =
     data?.fields;
 
-
   return (
-    <>
-      <li className="allPosts">
-        <Link href={`/blog/${slug}`} aria-label={title}>
-          <div className="postItems">
-            <div className="postItemFields">
-              <h3 className="titleTop">{title}</h3>
-              <p className="truncSummary">{excerpt}</p>
-              <div className="postItemFieldsDown">
-               <p className="postItemFieldsDownAuthor"><Name name={author.fields.name} /></p>
-                <p className="line">|</p>
-                <p><DateComponent dateString={dateAndTime} /></p>
-                <p className="line">|</p>
-                <p className="aa">{readTime}</p>
-              </div>
-              <h3 className="titleDown">{title}</h3>
-            </div>
-            <div className="postItemImage">
-              <ContentfulImage
-                alt={`Cover Image for ${title}`}
-                src={coverImage?.fields?.file?.url}
-                width={200}
-                height={150}
-              />
-            </div>
+    <Link href={`/blog/${slug}`} aria-label={title} className="blog-card">
+      {/* <div className="postItems"> */}
+      <div className="blog-card-details">
+        <div className="flex items-center justify-between w-full gap-3">
+          <h3 className="blog-card-title">{title}</h3>
+          <div className="blog-card-image-container-mobile">
+            <ContentfulImage
+              alt={`Cover Image for ${title}`}
+              src={coverImage?.fields?.file?.url}
+              objectFit="cover"
+              layout="fill"
+            />
           </div>
+        </div>
 
-          <div className="postItemFieldsDownSmallScreen">
-            <p className="downSummary">{excerpt}</p>
-            <div className="postItemDownSmallScreen">
-               <b><Name name={author.fields.name} /></b>
-                <p className="line">|</p>
-                <DateComponent dateString={dateAndTime} />
-                <p className="line">|</p>
-                <p className="">{readTime}</p>
-              </div>
-              <hr />
-          </div>
-        </Link>
-      </li>
-    </>
+        <p className="blog-card-description">{excerpt}</p>
+        <div className="blog-card-meta-info">
+          <p className="postItemFieldsDownAuthor">
+            <Name name={author.fields.name} />
+          </p>
+          <p>|</p>
+          <p>
+            <DateComponent dateString={dateAndTime} />
+          </p>
+          <p>|</p>
+          <p>{readTime}</p>
+        </div>
+      </div>
+      <hr className="blog-card-divider" />
+      <div className="blog-card-image-container">
+        <ContentfulImage
+          alt={`Cover Image for ${title}`}
+          src={coverImage?.fields?.file?.url}
+          objectFit="cover"
+          layout="fill"
+        />
+      </div>
+    </Link>
   );
 };
 
 export default BlogCard;
-
