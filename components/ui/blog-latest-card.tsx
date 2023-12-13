@@ -66,11 +66,12 @@ const BlogLatestCard = ({ data }: any) => {
           src={coverImage?.fields?.file?.url}
           objectFit="cover"
           layout="fill"
+         
         />
       </div>
         <div className="top-blog-read-more-container">
           <p>Read More</p>
-          <ArrowRight size={32} color="white" />
+          <ArrowRight size={32} color="white" className="read-more-icon" />
         </div>
       </div>
     </div>
