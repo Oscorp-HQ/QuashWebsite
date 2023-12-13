@@ -29,7 +29,7 @@ const BlogBody = ({ post }: any) => {
   } = post.fields;
 
   return (
-    <div className="slugBodyContainer">
+    <div className="slugBodyContainer ">
       <div className="blogImageContainer">
         <ContentfulImage
           className="blogImageMain "
@@ -39,14 +39,15 @@ const BlogBody = ({ post }: any) => {
           height={coverImage.fields.file.details.image.height}
         />
       </div>
-      <div className="blogMainSummary">
+      <div className="blogMainSummary contentfulCMS">
         <RichText content={content} />
       </div>
       <div className="subContainer">
         {subHeading ? (
-          <div className="blogBodysubContent">
+          <div className="blogBodysubContent contentfulCMS">
             <h3>{subHeading}</h3>
-            <RichText1 subHeadingContent={subHeadingContent} />{" "}
+            <RichText1 subHeadingContent={subHeadingContent} />
+            {" "}
             {subHeadingImage?.fields?.file?.url && (
               <div className="blogImageContainer">
                 <ContentfulImage
@@ -62,7 +63,7 @@ const BlogBody = ({ post }: any) => {
         ) : null}
 
         {subHeading2 ? (
-          <div className="blogBodysubContent">
+          <div className="blogBodysubContent contentfulCMS">
             <h3>{subHeading2}</h3>
 
             <RichText2 subHeading2Content={subHeading2Content} />
@@ -82,7 +83,7 @@ const BlogBody = ({ post }: any) => {
         ) : null}
 
         {subHeading3 ? (
-          <div className="blogBodysubContent">
+          <div className="blogBodysubContent contentfulCMS">
             <h3>{subHeading3}</h3>
 
             <RichText3 subHeading3Content={subHeading3Content} />
@@ -102,7 +103,7 @@ const BlogBody = ({ post }: any) => {
         ) : null}
 
         {subHeading4 ? (
-          <div className="blogBodysubContent">
+          <div className="blogBodysubContent contentfulCMS">
             <h3>{subHeading4}</h3>
 
             <RichText4 subHeading4Content={subHeading4Content} />
@@ -120,7 +121,7 @@ const BlogBody = ({ post }: any) => {
         ) : null}
 
         {subHeading5 ? (
-          <div className="blogBodysubContent">
+          <div className="blogBodysubContent contentfulCMS">
             <h3>{subHeading5}</h3>
 
             <RichText5 subHeading5Content={subHeading5Content} />
