@@ -63,7 +63,6 @@ const Blog = (props: any) => {
       <div className="left-sphere-mobile flex md:hidden absolute top-[4rem] left-[6rem]" />
       <div className="right-ellipse-mobile flex md:hidden absolute top-[33rem] -right-[5rem]" />
       <div className="right-sphere-mobile flex md:hidden absolute top-[35rem] right-[6rem]" />
-      {/* <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" /> */}
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <meta
@@ -92,41 +91,7 @@ const Blog = (props: any) => {
                 <BlogCard key={post.fields.slug} data={post} />
               ))}
             </div>
-            {/* <div className="pagination">
-              <button
-                onClick={handlePrevPage}
-                disabled={startIndex === 0}
-                className="pagination-button"
-              >
-                Previous
-              </button>
-              <ul className="pagination-list">
-                {Array.from({
-                  length: Math.ceil(visiblePosts.length / pageSize),
-                }).map((_, index) => (
-                  <li key={index + 1}>
-                    <button
-                      onClick={() => handlePageChange(index + 1)}
-                      className={`pagination-button ${
-                        currentPage === index + 1 ? "active" : ""
-                      }`}
-                    >
-                      {index + 1}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-              <button
-                onClick={handleNextPage}
-                disabled={
-                  endIndex >= visiblePosts.length - 1 ||
-                  visiblePosts.length === 0
-                }
-                className="pagination-button"
-              >
-                Next
-              </button>
-            </div> */}
+           
           </>
         )}
       </div>

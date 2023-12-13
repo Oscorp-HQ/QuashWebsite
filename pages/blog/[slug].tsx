@@ -53,7 +53,6 @@ export const getStaticProps = async ({ params, preview = false }: any) => {
   const { slug } = params;
   const response = await cfClient.getEntries({
     content_type: "post",
-    // "fields.slug": slug,
   });
 
   const posts = response.items;
