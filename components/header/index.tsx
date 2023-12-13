@@ -57,7 +57,7 @@ const Header = () => {
           router.push("/");
         }}
       />
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center mr-4">
         <Image
           src="/logo-mobile.svg"
           alt="Quash Logo"
@@ -90,7 +90,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex gap-3 md:gap-6 items-center text-center">
+      <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
         <span
           className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
           onClick={() => {
