@@ -1,4 +1,4 @@
-import { MapPin, PaperPlaneTilt, X } from "@/lib/icons";
+import { Copyright, MapPin, PaperPlaneTilt, X } from "@/lib/icons";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import {
@@ -11,7 +11,6 @@ import {
 import { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
 import Link from "next/link";
-
 
 const footerNav = [
   {
@@ -28,7 +27,7 @@ const footerNav = [
   {
     label: "Terms & Conditions",
     title: "Terms & Conditions",
-    route:'/terms-and-conditions'
+    route: "/terms-and-conditions",
   },
   {
     label: "Refund & Cancellation",
@@ -81,7 +80,7 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col bottom-0 w-full gap-12 md:gap-16 pl-[30px] pt-[26px] pr-[122px] pb-[96px] md:pl-[122px] md:pt-[64px] md:pr-[200px] md:pb-[116px] text-[16px] font-[400] text-[#ECECEE] md:text-[24px] bg-[#0D0D0D]">
+    <div className="flex flex-col bottom-0 w-full gap-12 lg:gap-16 pl-[30px] pt-[26px] pr-[80px] pb-[96px] xl:pl-[122px] lg:pt-[64px] xl:pr-[200px] lg:pb-[116px] text-[16px] font-[400] text-[#ECECEE] lg:text-[24px] bg-[#0D0D0D] ">
       <Image
         src="/logo-mobile.svg"
         alt="Quash Logo"
@@ -101,18 +100,24 @@ const Footer = () => {
       <div className="flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start text-center md:justify-start">
           {footerNav.map((nav, index) => (
-            <Link key={index} href={nav.route} passHref={true} legacyBehavior={true}>
-            <a className="hover:cursor-pointer" title={`Visit ${nav.title} page`}>
-              {nav.label}
-            </a>
-          </Link>
+            <Link
+              key={index}
+              href={nav.route}
+              passHref={true}
+              legacyBehavior={true}
+            >
+              <a
+                className="hover:cursor-pointer"
+                title={`Visit ${nav.title} page`}
+              >
+                {nav.label}
+              </a>
+            </Link>
           ))}
         </div>
         <div className="flex flex-col gap-6 md:gap-8 justify-center md:justify-start items-start text-center">
           {/* {footerCareer.map((nav, index) => ( */}
-          <Link href={"/team"} >
-            Careers
-          </Link>
+          <Link href={"/team"}>Careers</Link>
           <span
             onClick={() => {
               setFormOpen(true);
@@ -166,6 +171,10 @@ const Footer = () => {
                 </Link>
               </div>
             ))}
+            <p className="flex justify-center items-center gap-3 ">
+              <Copyright size={20} className="text-white/50" />
+              2023, Brisk Labs Private Limited
+            </p>
           </div>
         </div>
       </div>
