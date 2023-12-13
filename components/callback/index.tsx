@@ -9,13 +9,13 @@ const Callback = () => {
   return (
     <div className=" relative flex px-5 pb-[116px] pt-[96px] md:pt-[20px] md:pb-[143px] flex-col justify-center items-center">
       <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
-        <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+        <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%] "></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
         <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
-          <div className="callback-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
+          <div className="callback-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px] z-10" />
         </div>
       </div>
-      <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px]">
+      <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px] ">
         <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[987px]">
           <span className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full text-center leading-normal">
             Win the never ending battle of Quality vs Speed

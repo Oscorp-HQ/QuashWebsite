@@ -72,10 +72,10 @@ const Blog = (props: any) => {
         />
       </Head>
 
-      <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
-      <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
-      <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
-      <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
+      <div className="z-10 left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
+      <div className="z-10 left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
+      <div className="z-10 right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
+      <div className="z-10 right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
       <div className="blogs-container">
         <div className="">
           {latestPost ? (
@@ -91,14 +91,13 @@ const Blog = (props: any) => {
                 <BlogCard key={post.fields.slug} data={post} />
               ))}
             </div>
-           
           </>
         )}
       </div>
-      <div className="blog-left-ellipse hidden md:flex absolute top-[131rem] -left-[10rem]" />
-      <div className="left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
-      <div className="blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
-      <div className="right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
+      <div className="z-10 blog-left-ellipse hidden md:flex absolute top-[131rem] -left-[10rem]" />
+      <div className="z-10 left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
+      <div className="z-10 blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
+      <div className="z-10 right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
       <Callback />
     </div>
   );
