@@ -46,9 +46,7 @@ const BlogBody = ({ post }: any) => {
         {subHeading ? (
           <div className="blogBodysubContent">
             <h3>{subHeading}</h3>
-            <p>
-              <RichText1 subHeadingContent={subHeadingContent} />{" "}
-            </p>
+            <RichText1 subHeadingContent={subHeadingContent} />{" "}
             {subHeadingImage?.fields?.file?.url && (
               <div className="blogImageContainer">
                 <ContentfulImage
@@ -66,9 +64,9 @@ const BlogBody = ({ post }: any) => {
         {subHeading2 ? (
           <div className="blogBodysubContent">
             <h3>{subHeading2}</h3>
-            <p>
-              <RichText2 subHeading2Content={subHeading2Content} />
-            </p>
+
+            <RichText2 subHeading2Content={subHeading2Content} />
+
             {subHeading2Image?.fields?.file?.url && (
               <div className="blogImageContainer">
                 <ContentfulImage
@@ -86,9 +84,9 @@ const BlogBody = ({ post }: any) => {
         {subHeading3 ? (
           <div className="blogBodysubContent">
             <h3>{subHeading3}</h3>
-            <p>
-              <RichText3 subHeading3Content={subHeading3Content} />
-            </p>
+
+            <RichText3 subHeading3Content={subHeading3Content} />
+
             {subHeading3Image?.fields?.file?.url && (
               <div className="blogImageContainer">
                 <ContentfulImage
@@ -106,9 +104,9 @@ const BlogBody = ({ post }: any) => {
         {subHeading4 ? (
           <div className="blogBodysubContent">
             <h3>{subHeading4}</h3>
-            <p>
-              <RichText4 subHeading4Content={subHeading4Content} />
-            </p>
+
+            <RichText4 subHeading4Content={subHeading4Content} />
+
             <div className="blogImageContainer">
               <ContentfulImage
                 className="blogImageMain "
@@ -124,9 +122,9 @@ const BlogBody = ({ post }: any) => {
         {subHeading5 ? (
           <div className="blogBodysubContent">
             <h3>{subHeading5}</h3>
-            <p>
-              <RichText5 subHeading5Content={subHeading5Content} />
-            </p>
+
+            <RichText5 subHeading5Content={subHeading5Content} />
+
             <div className="blogImageContainer">
               <ContentfulImage
                 className="blogImageMain "

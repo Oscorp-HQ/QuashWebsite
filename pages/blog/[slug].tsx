@@ -11,8 +11,7 @@ const Post = ({ post, preview, posts }: any) => {
   const router = useRouter();
 
   return (
-    <section className="section ">
-      {/* <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" /> */}
+    <div className="blog-details-layout z-10">
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
         <meta
@@ -21,29 +20,23 @@ const Post = ({ post, preview, posts }: any) => {
           key="desc"
         />
       </Head>
-      {preview}
-
-      <div className="containerBlog ">
-        <article className="z-10">
-          {router.isFallback ? (
-            <div>Loading</div>
-          ) : (
-            <>
-              <BlogHeader post={post} />
-              <BlogBody post={post} />
-              <ul className="posts">
-                {posts
-                  .filter((item: any) => post.sys.id !== item.sys.id)
-                  .slice(0, 2)
-                  .map((item: any) => (
-                    <BlogCard key={item.fields.slug} data={item} />
-                  ))}
-              </ul>
-            </>
-          )}
-        </article>
-      </div>
-    </section>
+      {router.isFallback ? (
+        <div>Loading</div>
+      ) : (
+        <>
+          <BlogHeader post={post} />
+          <BlogBody post={post} />
+          <div className="blogs-list-slug">
+            {posts
+              .filter((item: any) => post.sys.id !== item.sys.id)
+              .slice(0, 2)
+              .map((item: any) => (
+                <BlogCard key={item.fields.slug} data={item} />
+              ))}
+          </div>
+        </>
+      )}
+    </div>
   );
 };
 
@@ -55,8 +48,6 @@ export const getStaticProps = async ({ params, preview = false }: any) => {
     content_type: "post",
     // "fields.slug": slug,
   });
-
-  console.log("fetched slug file is", response);
 
   const posts = response.items;
   const post = response?.items?.find((p: any) => slug === p.fields.slug);
