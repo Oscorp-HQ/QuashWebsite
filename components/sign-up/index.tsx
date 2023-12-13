@@ -50,7 +50,6 @@ export function SignUpForm() {
   useEffect(() => {
     if (name && email && company) {
       setIsEmpty(false);
-      console.log(name, company, email);
     }
   }, [name, company, email]);
 
@@ -67,9 +66,7 @@ export function SignUpForm() {
 
   //Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // setFormSubmitted(true);
-    console.log(values);
+   
   }
   return (
     <Form {...form}>

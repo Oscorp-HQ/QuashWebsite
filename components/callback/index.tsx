@@ -7,8 +7,8 @@ const Callback = () => {
   const router = useRouter();
 
   return (
-    <div className="flex px-5 pb-[112px] pt-[96px] md:pt-[20px] md:pb-[228px] flex-col justify-center items-center">
-      <div className="relative w-full justify-center items-center flex-col overflow-hidden md:flex hidden">
+    <div className=" relative flex px-5 pb-[116px] pt-[96px] md:pt-[20px] md:pb-[143px] flex-col justify-center items-center">
+      <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
         <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
         <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">

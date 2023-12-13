@@ -4,7 +4,6 @@ import React from "react";
 const Journey = () => {
   return (
     <div className="relative px-[20px] py-[114px] md:px-[262px] md:py-[181px] flex flex-col items-center text-center">
-      {/* <div className="absolute inset-0  bg-[url('/journey-gradient.svg')]" /> */}
       <div className="journey-right-ellipse hidden md:flex absolute top-[20%] right-[30%] transform translate-y-[-50%]" />
       <div className="journey-right-sphere hidden md:flex absolute top-[40%] right-[60%] transform translate-y-[-50%]" />
       <span className="text-[14px] md:text-[24px] md:font-[400] text-[#ECECEE] font-[300] mb-3 md:mb-10">

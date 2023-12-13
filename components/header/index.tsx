@@ -28,6 +28,11 @@ const mobileNav = [
     value: "pricing",
   },
   {
+    label: "Blog",
+    path: "/blog",
+    value: "blog",
+  },
+  {
     label: "Sign in",
     path: "https://optimus.quashbugs.com",
     value: "signin",
@@ -52,7 +57,7 @@ const Header = () => {
           router.push("/");
         }}
       />
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center mr-4">
         <Image
           src="/logo-mobile.svg"
           alt="Quash Logo"
@@ -64,12 +69,12 @@ const Header = () => {
             router.push("/");
           }}
         />
-        <div className="hidden md:flex gap-6 items-center">
+        <div className="hidden md:flex justify-between items-center">
           {mobileNav.map((nav, index) => (
             <Button
               key={index}
               className={`hover:text-gray-200 ${
-                index === 4 ? "hidden" : "flex"
+                index === 5 ? "hidden" : "flex"
               } text-[16px] font-[500] leading-[20.8px] ${
                 selected === nav.value ? "text-white" : "text-[#8A8894]"
               }`}
@@ -85,7 +90,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex gap-3 md:gap-6 items-center text-center">
+      <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
         <span
           className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
           onClick={() => {

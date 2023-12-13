@@ -62,7 +62,6 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
       if (success) setFormSubmitted(true);
       setShowLoader(false);
     } catch (e) {
-      // what to do in case of api call failure??
       toast({
         description: "Something went wrong.",
       });
@@ -76,7 +75,6 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
     } else {
       setIsEmpty(true);
     }
-    console.log("states are", name, company, email, number);
   }, [name, company, email, number]);
 
   //Define your form.
