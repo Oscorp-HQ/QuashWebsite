@@ -59,6 +59,10 @@ const Blog = (props: any) => {
 
   return (
     <div className="blog-layout relative overflow-hidden">
+      <div className="left-ellipse-mobile flex md:hidden absolute top-[6rem] -left-[8rem]" />
+      <div className="left-sphere-mobile flex md:hidden absolute top-[4rem] left-[6rem]" />
+      <div className="right-ellipse-mobile flex md:hidden absolute top-[33rem] -right-[5rem]" />
+      <div className="right-sphere-mobile flex md:hidden absolute top-[35rem] right-[6rem]" />
       {/* <div className="absolute left-0 right-0 top-0 md:top-[300px] bottom-0 w-full bg-[url('/Gradient.svg')] bg-no-repeat hidden md:flex z-0" /> */}
       <Head>
         <title>🐞 Quash - Streamlining QA Processes 🚀</title>
@@ -68,6 +72,7 @@ const Blog = (props: any) => {
           key="desc"
         />
       </Head>
+
       <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
       <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />

@@ -1398,3 +1398,44 @@ opacity: 0.1;
 background: #3CD0C8;
 filter: blur(85.26000213623047px);
 }
+
+
+.left-ellipse-mobile{
+  width: 286.238px;
+height: 102.932px;
+transform: rotate(135.29deg);
+flex-shrink: 0;
+border-radius: 286.238px;
+opacity: 0.08;
+background: #3CD0C8;
+filter: blur(12px);
+}
+
+.left-sphere-mobile{
+  width: 71px;
+height: 71px;
+flex-shrink: 0;
+fill: #BAA65F;
+opacity: 0.1;
+filter: blur(12px);
+}
+
+.right-ellipse-mobile{
+  width: 273.528px;
+height: 129.748px;
+transform: rotate(36.655deg);
+flex-shrink: 0;
+border-radius: 273.528px;
+opacity: 0.1;
+background: #FF6DCC;
+filter: blur(15px);
+}
+
+.right-sphere-mobile{
+  width: 93px;
+height: 94px;
+flex-shrink: 0;
+fill: #BAA65F;
+opacity: 0.16;
+filter: blur(15px);
+}
