@@ -515,7 +515,15 @@ line-height: normal;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-  
+}
+
+.postItemFieldsDownAuthor{
+  color: #FFF;
+/* font-family: Plus Jakarta Sans; */
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
 
 
@@ -644,6 +652,24 @@ padding-top: 16px;
 }
 
 @media (max-width: 768px) {
+
+.postItemFieldsDownAuthor{
+  font-size: 12px;
+}
+.postItemFieldsDownDate{
+  font-size: 12px;
+}
+.postItemFieldsDownReadTime{
+  font-size: 12px;
+}
+.blog-card-meta-info-divider{
+  width: 25px;
+height: 0px;
+transform: rotate(90deg);
+stroke-width: 1px;
+stroke: var(--Grey-Grey-400, #BDBDBD);
+}
+
 
   .top-blog-container{
 display: flex;
