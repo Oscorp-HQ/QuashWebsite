@@ -35,8 +35,8 @@ const BlogBody = ({ post }: any) => {
           className="blogImageMain "
           alt={`Cover Image for ${title}`}
           src={coverImage.fields.file.url}
-          width={coverImage.fields.file.details.image.width}
-          height={coverImage.fields.file.details.image.height}
+          layout="fill"
+          objectFit="cover"
         />
       </div>
       <div className="blogMainSummary contentfulCMS">
@@ -46,16 +46,15 @@ const BlogBody = ({ post }: any) => {
         {subHeading ? (
           <div className="blogBodysubContent contentfulCMS">
             <h3>{subHeading}</h3>
-            <RichText1 subHeadingContent={subHeadingContent} />
-            {" "}
+            <RichText1 subHeadingContent={subHeadingContent} />{" "}
             {subHeadingImage?.fields?.file?.url && (
-              <div className="blogImageContainer">
+              <div className="blogImageContainer-sub">
                 <ContentfulImage
                   className="blogImageMain"
                   alt={`Cover Image for ${title}`}
                   src={subHeadingImage.fields.file.url}
-                  width={subHeadingImage.fields.file.details.image.width}
-                  height={subHeadingImage.fields.file.details.image.height}
+                  layout="fill"
+                  objectFit="cover"
                 />
               </div>
             )}
@@ -69,13 +68,13 @@ const BlogBody = ({ post }: any) => {
             <RichText2 subHeading2Content={subHeading2Content} />
 
             {subHeading2Image?.fields?.file?.url && (
-              <div className="blogImageContainer">
+              <div className="blogImageContainer-sub">
                 <ContentfulImage
                   className="blogImageMain"
                   alt={`Cover Image for ${title}`}
                   src={subHeading2Image.fields.file.url}
-                  width={subHeading2Image.fields.file.details.image.width}
-                  height={subHeading2Image.fields.file.details.image.height}
+                  layout="fill"
+                  objectFit="cover"
                 />
               </div>
             )}
@@ -89,13 +88,13 @@ const BlogBody = ({ post }: any) => {
             <RichText3 subHeading3Content={subHeading3Content} />
 
             {subHeading3Image?.fields?.file?.url && (
-              <div className="blogImageContainer">
+              <div className="blogImageContainer-sub">
                 <ContentfulImage
                   className="blogImageMain"
                   alt={`Cover Image for ${title}`}
                   src={subHeading3Image?.fields?.file.url}
-                  width={subHeading3Image?.fields?.file?.details?.image.width}
-                  height={subHeading3Image?.fields?.file?.details?.image.height}
+                  layout="fill"
+                  objectFit="cover"
                 />
               </div>
             )}
@@ -108,13 +107,13 @@ const BlogBody = ({ post }: any) => {
 
             <RichText4 subHeading4Content={subHeading4Content} />
 
-            <div className="blogImageContainer">
+            <div className="blogImageContainer-sub">
               <ContentfulImage
                 className="blogImageMain "
                 alt={`Cover Image for ${title}`}
                 src={subHeading4Image?.fields?.file.url}
-                width={subHeading4Image?.fields?.file?.details?.image.width}
-                height={subHeading4Image?.fields?.file?.details?.image.height}
+                layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>
@@ -126,13 +125,13 @@ const BlogBody = ({ post }: any) => {
 
             <RichText5 subHeading5Content={subHeading5Content} />
 
-            <div className="blogImageContainer">
+            <div className="blogImageContainer-sub">
               <ContentfulImage
                 className="blogImageMain "
                 alt={`Cover Image for ${title}`}
                 src={subHeading5Image?.fields?.file.url}
-                width={subHeading5Image?.fields?.file?.details?.image.width}
-                height={subHeading5Image?.fields?.file?.details?.image.height}
+                layout="fill"
+                objectFit="cover"
               />
             </div>
           </div>
