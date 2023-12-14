@@ -6,7 +6,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const Post = ({ post, preview, posts }: any) => {
-
   const router = useRouter();
 
   return (
@@ -72,10 +71,11 @@ export const getStaticProps = async ({ params, preview = false }: any) => {
       post,
       preview,
       posts,
-      revalidate: 60,
     },
+    revalidate: 60,
   };
 };
+
 export const getStaticPaths = async () => {
   const response = await client.getEntries({ content_type: "post" });
   const paths = response.items.map((item: any) => ({
