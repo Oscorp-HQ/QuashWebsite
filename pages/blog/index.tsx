@@ -105,6 +105,7 @@ const Blog = (props: any) => {
 
 export const getStaticProps = async () => {
   const response = await client.getEntries({ content_type: "post" });
+  console.log("Fetched posts:", response.items);
 
   return {
     props: {
