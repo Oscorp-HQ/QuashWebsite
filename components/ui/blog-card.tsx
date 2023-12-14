@@ -29,12 +29,15 @@ const BlogCard = ({ data }: any) => {
           <p className="postItemFieldsDownAuthor">
             <Name name={author.fields.name} />
           </p>
-          <p>|</p>
-          <p>
+          {/* <div className="blog-card-meta-info-divider" /> */}
+
+          <p className="postItemFieldsDownDate border-l border-[#BDBDBD] pl-4">
             <DateComponent dateString={dateAndTime} />
           </p>
-          <p>|</p>
-          <p>{readTime}</p>
+          {/* <div className="blog-card-meta-info-divider" /> */}
+          <p className="postItemFieldsDownReadTime border-l border-[#BDBDBD] pl-4">
+            {readTime}
+          </p>
         </div>
       </div>
       <hr className="blog-card-divider" />
