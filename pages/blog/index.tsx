@@ -103,16 +103,15 @@ const Blog = (props: any) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const response = await client.getEntries({ content_type: "post" });
-  console.log("Fetched posts:", response.items);
 
   return {
     props: {
       posts: response.items,
     },
-    revalidate: 60,
   };
 };
+
 
 export default Blog;
