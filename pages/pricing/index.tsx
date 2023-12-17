@@ -15,7 +15,7 @@ import { X } from "@/lib/icons";
 const plans = [
   {
     label: "Free",
-    desc: "Test up to 3 applications with unlimited bug reports",
+    desc: "Test up to 1 applications with unlimited bug reports",
     benefits: [
       "Auto-attached screenshots and session replays",
       "Precise crash logs",
@@ -56,11 +56,10 @@ const Pricing = () => {
           key="desc"
         />
       </Head>
-      <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
-      <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
-      <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
-      <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
-     
+      <div className="z-10 left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
+      <div className="z-10 left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
+      <div className="z-10 right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
+      <div className="z-10 right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
 
       <div className=" pt-[130px]  md:pt-[236px]   w-full text-center items-center justify-center flex flex-col ">
         <div className="flex flex-col text-center items-center justify-center w-full mb-[43px] lg:mb-[180px] lg:px-[200px] px-[18px]">
@@ -126,7 +125,7 @@ const Pricing = () => {
                 </div>
               </div>
               <Button
-                className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[266px] text-center"
+                className="text-[#000000] text-[16px] lg:text-[24px] font-[600] bg-[#FFFFFF] px-3 py-[12px] lg:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[266px] text-center"
                 variant="outline"
                 onClick={() => {
                   if (index === 0) {
