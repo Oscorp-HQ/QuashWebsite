@@ -4,8 +4,7 @@ import { client } from "@/lib/contentful/client";
 import BlogCard from "@/components/ui/blog-card";
 import BlogLatestCard from "@/components/ui/blog-latest-card";
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import router from "next/router";
+
 import Callback from "@/components/callback";
 
 const pageSize = 10;
