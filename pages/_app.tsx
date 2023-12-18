@@ -6,6 +6,7 @@ import {
   Source_Code_Pro,
   Fira_Mono,
 } from "@next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Layout>
       <main className={jakarta.className}>
         <Component {...pageProps} />
+        <GoogleTagManager gtmId="G-QX5GGKZ7SJ" />
       </main>
     </Layout>
   );
