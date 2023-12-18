@@ -11,31 +11,53 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { X } from "@/lib/icons";
+import { Check, X } from "@/lib/icons";
+import { TableDemo } from "@/components/pricing-table";
 const plans = [
   {
     label: "Free",
     desc: "Test up to 1 applications with unlimited bug reports",
     benefits: [
-      "Auto-attached screenshots and session replays",
-      "Precise crash logs",
-      "Add up to 3 applications",
-      "1GB data usage every month",
-      "No limits on users",
-      "No limit on bug reports",
+      "Bug Reports ✅",
+      "Crash Reports ✅",
+      "Crash Session Replays ❌",
+      "Integrations All",
+      "Apps: 1",
+      "Team Members ❌",
+      "Data Retention: 1 month",
+      "Priority Support ❌",
     ],
     action: "Get Started for Free",
     path: "https://optimus.quashbugs.com/signup",
   },
   {
+    label: "Premium",
+    desc: "Test up to 3 applications with unlimited bug reports",
+    benefits: [
+      "Bug Reports ✅",
+      "Crash Reports ✅",
+      "Crash Session Replays ✅",
+      "Integrations All",
+      "Apps: 3",
+      "Team Members: 4",
+      "Data Retention: 1 month",
+      "Priority Support ✅",
+    ],
+    action: "Contact Us",
+    path: "",
+  },
+  {
     label: "Custom",
     desc: "Talk to us for a subscription tailored for your needs",
     benefits: [
-      "SSO Login",
-      "Advanced user configurations",
-      "On-demand Integrations",
-      "No limit on applications",
-      "No limits on data usage",
+      "Bug Reports ✅",
+      "Crash Reports ✅",
+      "Crash Session Replays ✅",
+      "Integrations All",
+      "Apps: Unlimited",
+      "Team Members: Unlimited",
+      "Data Retention: Unlimited",
+      "Priority Support ✅",
     ],
     action: "Contact Us",
     path: "",
@@ -67,28 +89,28 @@ const Pricing = () => {
             Start testing your apps with Quash for free today
           </h1>
         </div>
-        <div className="flex md:flex-row flex-col justify-center items-center lg:gap-10 gap-4 px-4">
-          {plans.map((plan, index) => (
+        <div className="flex md:flex-row flex-col justify-center items-center lg:gap-10 gap-4 px-4 lg:px-20 w-full">
+          {/* {plans.map((plan, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-between lg:px-10 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid border-[#ffffff1a] bg-[#d9d9d90f] border-[0.4px] lg:h-[732px] lg:w-[534px] h-[473px] w-[328px]"
+              className="flex flex-col items-center justify-between lg:px-6 px-4 lg:pt-6 pt-6 lg:pb-6 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid border-[#ffffff1a] bg-[#d9d9d90f] border-[0.4px] lg:h-[565px] lg:w-[380px] h-[510px] w-[328px]"
             >
-              <div className="flex flex-col lg:gap-[52px] gap-[30px]">
-                <div className="flex flex-col lg:gap-3 gap-2 text-start">
-                  <span className="lg:text-[48px] text-[24px] text-[#ECECEE] font-[600] leading-10">
+              <div className="flex flex-col  gap-[30px]">
+                <div className="flex flex-col gap-2 text-start">
+                  <span className=" text-[24px] text-[#ECECEE] font-[600] leading-10">
                     {plan.label}
                   </span>
-                  <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
+                  <span className="lg:text-[18px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
                     {plan.desc}
                   </span>
                 </div>
-                <div className="flex flex-col gap-4 lg:gap-6 justify-start items-start">
+                <div className="flex flex-col gap-4 justify-start items-start">
                   {plan.benefits.map((benefit, index) => (
                     <div
                       className="flex gap-2 justify-start items-start text-start"
                       key={index}
                     >
-                      <div className="h-[32px] w-[24px] p-[3px] justify-center items-center lg:flex hidden">
+                      <div className="h-[32px] w-[24px] p-[3px] justify-center items-start lg:flex hidden">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -102,6 +124,7 @@ const Pricing = () => {
                           />
                         </svg>
                       </div>
+
                       <div className=" p-[5px] flex justify-center items-center lg:hidden ">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +140,7 @@ const Pricing = () => {
                         </svg>
                       </div>
 
-                      <span className="text-[16px] lg:text-[24px] text-[#ECECEE] font-[600]  text-start leading-[1.2]">
+                      <span className="text-[16px] lg:text-[16px] text-[#ECECEE] font-[600]  text-start leading-[1.2]">
                         {benefit}
                       </span>
                     </div>
@@ -125,7 +148,7 @@ const Pricing = () => {
                 </div>
               </div>
               <Button
-                className="text-[#000000] text-[16px] lg:text-[24px] font-[600] bg-[#FFFFFF] px-3 py-[12px] lg:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[266px] text-center"
+                className="text-[#000000] text-[16px] lg:text-[18px] font-[600] bg-[#FFFFFF] px-3 py-[12px] lg:py-[10px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[220px] text-center"
                 variant="outline"
                 onClick={() => {
                   if (index === 0) {
@@ -138,7 +161,8 @@ const Pricing = () => {
                 {plan.action}
               </Button>
             </div>
-          ))}
+          ))} */}
+          <TableDemo />
         </div>
       </div>
       {/* </div> */}
