@@ -15,27 +15,42 @@ import { X } from "@/lib/icons";
 const plans = [
   {
     label: "Free",
-    desc: "Test up to 3 applications with unlimited bug reports",
+    desc: "Test one application with unlimited bug and crash reports",
+    includedBenefit: "",
     benefits: [
-      "Auto-attached screenshots and session replays",
+      "Auto-attached screenshots",
       "Precise crash logs",
-      "Add up to 3 applications",
-      "1GB data usage every month",
-      "No limits on users",
+      "Add 1 application",
+      "1 month data retention",
+      "All Integrations",
       "No limit on bug reports",
     ],
     action: "Get Started for Free",
     path: "https://optimus.quashbugs.com/signup",
   },
   {
+    label: "Pro ($5/month)",
+    desc: "Advanced features for teams shipping regular releases",
+    includedBenefit: "All Free features, plus...",
+    benefits: [
+      "Auto-attached screen replay",
+      "On-demand Integrations",
+      "Add up to 20 users",
+      "3 months data retention",
+      "Priority support",
+    ],
+    action: "Get Quash Pro",
+    path: "",
+  },
+  {
     label: "Custom",
-    desc: "Talk to us for a subscription tailored for your needs",
+    desc: "Tailored plans and features for larger teams with custom needs",
+    includedBenefit: "All Pro features, plus...",
     benefits: [
       "SSO Login",
       "Advanced user configurations",
-      "On-demand Integrations",
       "No limit on applications",
-      "No limits on data usage",
+      "No limits on users",
     ],
     action: "Contact Us",
     path: "",
@@ -60,7 +75,6 @@ const Pricing = () => {
       <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
       <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
-     
 
       <div className=" pt-[130px]  md:pt-[236px]   w-full text-center items-center justify-center flex flex-col ">
         <div className="flex flex-col text-center items-center justify-center w-full mb-[43px] lg:mb-[180px] lg:px-[200px] px-[18px]">
@@ -72,21 +86,26 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-between lg:px-10 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid border-[#ffffff1a] bg-[#d9d9d90f] border-[0.4px] lg:h-[732px] lg:w-[534px] h-[473px] w-[328px]"
+              className="z-10 group flex flex-col items-center justify-between lg:pl-10 lg:pr-8 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid border-[#ffffff80] bg-[#d9d9d90f] border-0 hover:border lg:h-[732px] lg:w-[400px] h-[473px] w-[328px]"
             >
               <div className="flex flex-col lg:gap-[52px] gap-[30px]">
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
-                  <span className="lg:text-[48px] text-[24px] text-[#ECECEE] font-[600] leading-10">
+                  <span className="lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
                     {plan.label}
                   </span>
-                  <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
+                  <span className="lg:text-[20px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
                     {plan.desc}
                   </span>
                 </div>
                 <div className="flex flex-col gap-4 lg:gap-6 justify-start items-start">
+                  {plan?.includedBenefit && (
+                    <span className="text-[16px] lg:text-[20px] text-[#ECECEE] font-[600]  text-start leading-[1.2]">
+                      {plan.includedBenefit}
+                    </span>
+                  )}
                   {plan.benefits.map((benefit, index) => (
                     <div
-                      className="flex gap-2 justify-start items-start text-start"
+                      className="flex gap-2 justify-start items-center text-start"
                       key={index}
                     >
                       <div className="h-[32px] w-[24px] p-[3px] justify-center items-center lg:flex hidden">
@@ -118,7 +137,7 @@ const Pricing = () => {
                         </svg>
                       </div>
 
-                      <span className="text-[16px] lg:text-[24px] text-[#ECECEE] font-[600]  text-start leading-[1.2]">
+                      <span className="text-[16px] lg:text-[20px] text-[#ECECEE] font-[600]  text-start leading-[1.2]">
                         {benefit}
                       </span>
                     </div>
@@ -126,7 +145,7 @@ const Pricing = () => {
                 </div>
               </div>
               <Button
-                className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[266px] text-center"
+                className="text-white group-hover:text-[#000000] text-[16px] lg:text-[24px] font-[600] bg-[#ffffff33] group-hover:bg-[#FFFFFF] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[266px] text-center border-none"
                 variant="outline"
                 onClick={() => {
                   if (index === 0) {
