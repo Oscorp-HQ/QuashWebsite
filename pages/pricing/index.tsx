@@ -86,7 +86,9 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="z-10 group flex flex-col items-center justify-between lg:pl-10 lg:pr-8 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid border-[#ffffff80] bg-[#d9d9d90f] border-0 hover:border lg:h-[732px] lg:w-[400px] h-[473px] w-[328px]"
+              className={`z-10 flex flex-col items-center justify-between lg:pl-10 lg:pr-8 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid ${
+                index === 1 ? "border-[#ffffff80] border" : "border-0"
+              } bg-[#d9d9d90f]  lg:h-[732px] lg:w-[400px] h-[473px] w-[328px]`}
             >
               <div className="flex flex-col lg:gap-[52px] gap-[30px]">
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
@@ -145,7 +147,11 @@ const Pricing = () => {
                 </div>
               </div>
               <Button
-                className="text-white group-hover:text-[#000000] text-[16px] lg:text-[24px] font-[600] bg-[#ffffff33] group-hover:bg-[#FFFFFF] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[266px] text-center border-none"
+                className={`text-white ${
+                  index === 1 && "text-[#000000]"
+                } text-[16px] lg:text-[24px] font-[600] bg-[#ffffff33] group-hover:bg-[#FFFFFF] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal ${
+                  index === 1 && "bg-[#FFFFFFCC]"
+                } w-[186px] lg:w-[266px] text-center border-none`}
                 variant="outline"
                 onClick={() => {
                   if (index !== 2) {
