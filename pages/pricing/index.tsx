@@ -15,6 +15,7 @@ import { X } from "@/lib/icons";
 const plans = [
   {
     label: "Free",
+    cost: "",
     desc: "Test one application with unlimited bug and crash reports",
     includedBenefit: "",
     benefits: [
@@ -29,7 +30,8 @@ const plans = [
     path: "https://optimus.quashbugs.com/signup",
   },
   {
-    label: "Pro ($5/month)",
+    label: "Pro",
+    cost: "($5/month)",
     desc: "Advanced features for teams shipping regular releases",
     includedBenefit: "All Free features, plus...",
     benefits: [
@@ -44,6 +46,7 @@ const plans = [
   },
   {
     label: "Custom",
+    cost: "",
     desc: "Tailored plans and features for larger teams with custom needs",
     includedBenefit: "All Pro features, plus...",
     benefits: [
@@ -93,7 +96,12 @@ const Pricing = () => {
               <div className="flex flex-col lg:gap-[52px] gap-[30px]">
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
                   <span className="lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
-                    {plan.label}
+                    {plan.label}{" "}
+                    {plan?.cost && (
+                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
+                        {plan.cost}
+                      </span>
+                    )}
                   </span>
                   <span className="lg:text-[20px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
                     {plan.desc}
@@ -147,11 +155,11 @@ const Pricing = () => {
                 </div>
               </div>
               <Button
-                className={`text-white ${
-                  index === 1 && "text-[#000000]"
-                } text-[16px] lg:text-[24px] font-[600] bg-[#ffffff33] group-hover:bg-[#FFFFFF] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal ${
-                  index === 1 && "bg-[#FFFFFFCC]"
-                } w-[186px] lg:w-[266px] text-center border-none`}
+                className={` ${
+                  index === 1
+                    ? "text-[#000000] bg-[#FFFFFF]"
+                    : "text-white bg-[#ffffff33]"
+                } text-[16px] lg:text-[24px] font-[600]  hover:bg-[#FFFFFF] hover:text-[#000000] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal w-[186px] lg:w-[266px] text-center border-none`}
                 variant="outline"
                 onClick={() => {
                   if (index !== 2) {
