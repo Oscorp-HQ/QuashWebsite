@@ -40,7 +40,7 @@ const plans = [
       "Priority support",
     ],
     action: "Get Quash Pro",
-    path: "",
+    path: "https://optimus.quashbugs.com/signup",
   },
   {
     label: "Custom",
@@ -148,7 +148,7 @@ const Pricing = () => {
                 className="text-white group-hover:text-[#000000] text-[16px] lg:text-[24px] font-[600] bg-[#ffffff33] group-hover:bg-[#FFFFFF] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal hover:bg-[#FFFFFFCC] w-[186px] lg:w-[266px] text-center border-none"
                 variant="outline"
                 onClick={() => {
-                  if (index === 0) {
+                  if (index !== 2) {
                     router.push(plan.path);
                   } else {
                     setFormOpen(true);
