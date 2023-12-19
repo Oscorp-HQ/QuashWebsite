@@ -97,7 +97,7 @@ const Pricing = () => {
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
                   <span className="lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
                     {plan.label}{" "}
-                    {plan.cost && (
+                    {plan?.cost && (
                       <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
                         {plan.cost}
                       </span>
