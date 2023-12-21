@@ -14,6 +14,10 @@ const PrivacyPolicy = () => {
           content="Bug & Crash Reporting for Mobile Developers"
           key="desc"
         />
+        <meta property="og:image" content="https://quashbugs.com/shake.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://quashbugs.com" />
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto">
