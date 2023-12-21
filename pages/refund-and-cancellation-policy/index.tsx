@@ -12,10 +12,32 @@ function RefundCancellationPolicy() {
           content="Bug & Crash Reporting for Mobile Developers"
           key="desc"
         />
-        <meta property="og:image" content="https://quashbugs.com/shake.svg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="image" content="/open-graph.png" />
+
+        {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://quashbugs.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="🐞 Quash - Streamlining QA Processes 🚀"
+        />
+        <meta
+          property="og:description"
+          content="Bug & Crash Reporting for Mobile Developers"
+        />
+        <meta property="og:image" content="/open-graph.png" />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="🐞 Quash - Streamlining QA Processes 🚀"
+        />
+        <meta
+          name="twitter:description"
+          content="Bug & Crash Reporting for Mobile Developers"
+        />
+        <meta name="twitter:image" content="/open-graph.png" />
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">
