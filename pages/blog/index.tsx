@@ -69,6 +69,10 @@ const Blog = (props: any) => {
           content="Bug & Crash Reporting for Mobile Developers"
           key="desc"
         />
+        <meta property="og:image" content="https://quashbugs.com/shake.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://quashbugs.com" />
       </Head>
 
       <div className="z-10 left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
