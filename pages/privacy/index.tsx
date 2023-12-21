@@ -14,10 +14,32 @@ const PrivacyPolicy = () => {
           content="Bug & Crash Reporting for Mobile Developers"
           key="desc"
         />
-        <meta property="og:image" content="https://quashbugs.com/shake.svg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="image" content="/open-graph.png" />
+
+        {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://quashbugs.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="🐞 Quash - Streamlining QA Processes 🚀"
+        />
+        <meta
+          property="og:description"
+          content="Bug & Crash Reporting for Mobile Developers"
+        />
+        <meta property="og:image" content="/open-graph.png" />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="🐞 Quash - Streamlining QA Processes 🚀"
+        />
+        <meta
+          name="twitter:description"
+          content="Bug & Crash Reporting for Mobile Developers"
+        />
+        <meta name="twitter:image" content="/open-graph.png" />
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto">
@@ -389,7 +411,9 @@ const PrivacyPolicy = () => {
 
           {/* Section 7 */}
           <section className="mb-8">
-            <h2 className="text-xl font-semibold mb-2">7. Information Security</h2>
+            <h2 className="text-xl font-semibold mb-2">
+              7. Information Security
+            </h2>
             <p>
               We take care to protect your Personal Data against unauthorized
               access to or unauthorized alteration, disclosure or destruction,
@@ -451,7 +475,10 @@ const PrivacyPolicy = () => {
                 <strong>Delete your content or close your account:</strong> You
                 can choose to delete certain content through your account. If
                 you wish to request to close your account, please contact us at{" "}
-                <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+                <Link
+                  href="mailto:hello@quashbugs.com"
+                  className="text-blue-500"
+                >
                   hello@quashbugs.com
                 </Link>
                 .
