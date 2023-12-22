@@ -30,43 +30,7 @@ const Upcoming = () => {
   const router = useRouter();
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
-      <Head>
-        {/* <!-- Google / Search Engine Tags --> */}
-        <meta
-          property="name"
-          content="🐞 Quash - Streamlining QA Processes 🚀"
-        />
-        <meta
-          property="description"
-          content="Bug & Crash Reporting for Mobile Developers"
-        />
-        <meta property="image" content="/open-graph.png" />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://quashbugs.com" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="🐞 Quash - Streamlining QA Processes 🚀"
-        />
-        <meta
-          property="og:description"
-          content="Bug & Crash Reporting for Mobile Developers"
-        />
-        <meta property="og:image" content="/open-graph.png" />
-
-        {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="🐞 Quash - Streamlining QA Processes 🚀"
-        />
-        <meta
-          name="twitter:description"
-          content="Bug & Crash Reporting for Mobile Developers"
-        />
-        <meta name="twitter:image" content="/open-graph.png" />
-      </Head>
+     
       <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
       <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
