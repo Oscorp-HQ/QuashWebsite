@@ -12,40 +12,6 @@ import Head from "next/head";
 export default function Home() {
   return (
     <div className="h-full w-full overflow-hidden relative">
-      <Head>
-        <title>🐞 Quash - Streamlining QA Processes 🚀</title>
-        <meta
-          name="description"
-          content="Bug & Crash Reporting for Mobile Developers"
-          key="desc"
-        />
-        <meta property="image" content="/open-graph.png" />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://quashbugs.com" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="🐞 Quash - Streamlining QA Processes 🚀"
-        />
-        <meta
-          property="og:description"
-          content="Bug & Crash Reporting for Mobile Developers"
-        />
-        <meta property="og:image" content="/open-graph.png" />
-
-        {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="🐞 Quash - Streamlining QA Processes 🚀"
-        />
-        <meta
-          name="twitter:description"
-          content="Bug & Crash Reporting for Mobile Developers"
-        />
-        <meta name="twitter:image" content="/open-graph.png" />
-      </Head>
       <Hero />
       <Comparision />
       <Reporting />
