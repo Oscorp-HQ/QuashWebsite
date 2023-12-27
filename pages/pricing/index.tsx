@@ -22,6 +22,7 @@ const plans = [
       "Auto-attached screenshots",
       "Precise crash logs",
       "Add 1 application",
+      "Add up to 3 users",
       "1 month data retention",
       "All Integrations",
       "No limit on bug reports",
@@ -37,6 +38,7 @@ const plans = [
     benefits: [
       "Auto-attached screen replay",
       "On-demand Integrations",
+      "Add up to 3 applications",
       "Add up to 20 users",
       "3 months data retention",
       "Priority support",
@@ -66,7 +68,6 @@ const Pricing = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
-    
       <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
       <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
