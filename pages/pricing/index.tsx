@@ -85,7 +85,7 @@ const Pricing = () => {
               key={index}
               className={`z-10 flex flex-col items-center justify-between lg:pl-10 lg:pr-8 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid ${
                 index === 1 ? "border-[#ffffff80] border" : "border-0"
-              } bg-[#d9d9d90f]  lg:h-[732px] lg:w-[400px] h-[473px] w-[328px]`}
+              } bg-[#d9d9d90f]  lg:h-[732px] lg:w-[400px] h-[500px] w-[328px]`}
             >
               <div className="flex flex-col lg:gap-[52px] gap-[30px]">
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
