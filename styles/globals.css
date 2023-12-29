@@ -1494,3 +1494,46 @@ fill: #BAA65F;
 opacity: 0.16;
 filter: blur(15px);
 }
+
+
+
+
+.tab-content{
+  display: flex;
+  flex-direction: row;
+  background: #373737;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .tab {
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 20px;
+  }
+}
+
+.gradient-background {
+  z-index: 10;
+  background: linear-gradient(
+    270deg,
+    #a81eff -11.23%,
+    #ff56d0 13.63%,
+    #ff56d0 39.58%,
+    #343297 131.74%
+  );
+  border-radius: 10px;
+}
+.gradient-background-annually {
+  background: linear-gradient(
+    270deg,
+    #a81eff -11.23%,
+    #ff56d0 13.63%,
+    #ff56d0 39.58%,
+    #343297 131.74%
+  );
+  border-radius: 8px;
+}
+
+
+

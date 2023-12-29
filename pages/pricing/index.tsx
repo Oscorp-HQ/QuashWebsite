@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
   AlertDialog,
@@ -33,6 +34,7 @@ const plans = [
   {
     label: "Pro",
     cost: "($5/month)",
+    cost2: "($6/month)",
     desc: "Advanced features for teams shipping regular releases",
     includedBenefit: "All Free features, plus...",
     benefits: [
@@ -66,6 +68,8 @@ const Pricing = () => {
   const router = useRouter();
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("monthly");
+
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
@@ -84,16 +88,28 @@ const Pricing = () => {
             <div
               key={index}
               className={`z-10 flex flex-col items-center justify-between lg:pl-10 lg:pr-8 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid ${
-                index === 1 ? "border-[#ffffff80] border" : "border-0"
+                index === 1 ? "border-[#ffffff80]" : "border-0"
               } bg-[#d9d9d90f]  lg:h-[732px] lg:w-[400px] h-[500px] w-[328px]`}
             >
-              <div className="flex flex-col lg:gap-[52px] gap-[30px]">
+              <div
+                className={`flex flex-col ${
+                  index === 1 ? "lg:gap-0 gap-0" : "lg:gap-[77px] gap-[50px]"
+                }`}
+              >
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
-                  <span className="lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
+                  <span className="card-heading lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
                     {plan.label}{" "}
-                    {plan?.cost && (
-                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
+                    {index === 1 && selectedTab === "annually" && (
+                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] ">
                         {plan.cost}
+                        <span className="gradient-background-annually text-white font-inter text-[12px] font-semibold  justify-center align-middle p-[8px] mx-[12px]">
+                          - 20%
+                        </span>
+                      </span>
+                    )}
+                    {index === 1 && selectedTab === "monthly" && (
+                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
+                        {plan.cost2}
                       </span>
                     )}
                   </span>
@@ -101,6 +117,29 @@ const Pricing = () => {
                     {plan.desc}
                   </span>
                 </div>
+                {index === 1 && (
+                  <div className="tab flex pt-[24px] pb-[33px] justify-center">
+                   <div className="tab-content">
+                   <p
+                      className={`text-white font-inter font-semibold text-[10px] cursor-pointer px-[10px] py-[4px] relative z-10 ${
+                        selectedTab === "monthly" ? "gradient-background" : ""
+                      }`}
+                      onClick={() => setSelectedTab("monthly")}
+                    >
+                      Monthly
+                    </p>
+                    <p
+                      className={`text-white font-inter font-semibold text-[10px] cursor-pointer px-[10px] py-[4px] relative z-10 ${
+                        selectedTab === "annually" ? "gradient-background" : ""
+                      }`}
+                      onClick={() => setSelectedTab("annually")}
+                    >
+                      Annually
+                    </p>
+                   </div>
+                  </div>
+                )}
+
                 <div className="flex flex-col gap-4 lg:gap-6 justify-start items-start">
                   {plan?.includedBenefit && (
                     <span className="text-[16px] lg:text-[20px] text-[#ECECEE] font-[600]  text-start leading-[1.2]">
