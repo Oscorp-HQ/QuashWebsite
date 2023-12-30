@@ -1501,13 +1501,6 @@ filter: blur(15px);
   padding-bottom: 33px;
 }
 
-@media screen and (max-width:640px){
-  .tab{
-    padding-top: 12px;
-  padding-bottom: 16px;
-  }
-}
-
 .tab-content{
   width: 142px;
   display: flex;
@@ -1524,7 +1517,8 @@ filter: blur(15px);
   }
 }
 
-.active-plan-tab {
+.active-plan-tab,
+.discount-annually-plan {
   z-index: 10;
   background: linear-gradient(
     270deg,
@@ -1533,16 +1527,12 @@ filter: blur(15px);
     #ff56d0 39.58%,
     #343297 131.74%
   );
+}
+
+.active-plan-tab{
   border-radius: 10px;
 }
 .discount-annually-plan {
-  background: linear-gradient(
-    270deg,
-    #a81eff -11.23%,
-    #ff56d0 13.63%,
-    #ff56d0 39.58%,
-    #343297 131.74%
-  );
   border-radius: 8px;
 }
 

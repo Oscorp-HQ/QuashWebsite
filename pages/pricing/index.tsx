@@ -3,7 +3,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
   AlertDialog,
@@ -34,7 +33,7 @@ const plans = [
   {
     label: "Pro",
     annualCost: "($5/month)",
-    monthlyCost: "($6/month)",
+    cost: "($6/month)",
     desc: "Advanced features for teams shipping regular releases",
     includedBenefit: "All Free features, plus...",
     benefits: [
@@ -94,7 +93,7 @@ const Pricing = () => {
             >
               <div
                 className={`flex flex-col ${
-                  index === 1 ? "lg:gap-0 gap-0" : "lg:gap-[77px] gap-[50px]"
+                  index === 1 ? "lg:gap-0 gap-0" : "lg:gap-[77px] gap-[30px]"
                 }`}
               >
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
@@ -110,15 +109,15 @@ const Pricing = () => {
                   </div>
                     )}
                     {index === 1 && selectedTab === "annually" && (
-                      <div className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] flex items-center">
-                        <span className="discount-annually-plan text-white font-inter text-[12px] font-semibold p-[8px] mx-[12px] ">
-                          <p>- 20%</p>
+                      <div className="flex items-center">
+                        <span className="discount-annually-plan text-white font-inter text-[12px] font-semibold p-[8px] ml-[12px] leading-[1.2] ">
+                        - 20%
                         </span>
                       </div>
                     )}
                     {index === 1 && selectedTab === "monthly" && (
                       <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[600] leading-[1.2] pl-[10px]  text-4xl flex items-center">
-                        {plan.monthlyCost}
+                        {plan.cost}
                       </span>
                     )}
                   </div>
