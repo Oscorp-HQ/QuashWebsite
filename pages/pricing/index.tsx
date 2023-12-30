@@ -105,9 +105,11 @@ const Pricing = () => {
                     {index === 1 && (
                       <div className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] flex items-center">
                         <span className="pl-[10px] lg:text-[24px] text-[14px] text-[#FFFFFF] font-[600] leading-[1.2] text-4xl">
-                          {selectedTab === "annually"
-                            ? `($${plan.annualCost}/Month)`
-                            : `($${plan.cost}/Month)`}
+                        {`($${
+                            selectedTab === "annually"
+                              ? plan.annualCost
+                              : plan.cost
+                          }/Month)`}
                         </span>
 
                         {selectedTab === "annually" && (
