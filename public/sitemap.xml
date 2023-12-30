@@ -8,9 +8,21 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/blog/the-hidden-costs-of-inefficient-bug-reporting-in-mobile-app-development</loc>
-    <changefreq>hourly</changefreq>
-  </url>
+        <loc>https://quashbugs.com/blog/integrating-mobile-testing-frameworks-into-your-ci-cd-pipeline</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/mobile-app-testing-essentials-strategies-and-best-practices</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/the-hidden-costs-of-inefficient-bug-reporting-in-mobile-app-development</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/google-play-stores-new-app-quality-guidelines-what-developers-need-to-know</loc>
+        <changefreq>hourly</changefreq>
+      </url>
   <url>
     <loc>https://quashbugs.com/pricing</loc>
     <changefreq>hourly</changefreq>

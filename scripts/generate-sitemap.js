@@ -1,6 +1,13 @@
 const fs = require("fs");
 const globby = require("globby");
-function addPage(page) {
+const contentful = require("contentful");
+
+const client = contentful.createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+});
+
+async function addPage(page) {
   const path = page
     .replace("pages", "")
     .replace("/index.tsx", "")
@@ -11,15 +18,25 @@ function addPage(page) {
   // Handle dynamic routes (e.g., /pages/blog/[slug].tsx)
   const dynamicRouteMatch = path.match(/\[([^/]+)\]/);
   if (dynamicRouteMatch) {
-    // Replace [slug] with a sample value (you can replace this logic based on your data)
-    const sampleValue =
-      "the-hidden-costs-of-inefficient-bug-reporting-in-mobile-app-development";
-    const dynamicPath = path.replace(/\[([^/]+)\]/, sampleValue);
+    // Fetch data from Contentful
+    const response = await client.getEntries({
+      content_type: "post",
+    });
 
-    return `  <url>
-    <loc>${`${process.env.WEBSITE_URL}${dynamicPath}`}</loc>
-    <changefreq>hourly</changefreq>
-  </url>`;
+    const contentfulPages = response.items;
+
+    // Generate pages dynamically from Contentful data
+    const dynamicPages = contentfulPages.map((contentfulPage) => {
+      const sampleValue = contentfulPage.fields.slug;
+      const dynamicPath = path.replace(/\[([^/]+)\]/, sampleValue);
+
+      return `  <url>
+        <loc>${`${process.env.WEBSITE_URL}${dynamicPath}`}</loc>
+        <changefreq>hourly</changefreq>
+      </url>`;
+    });
+
+    return dynamicPages.join("\n");
   }
 
   const route = path === "/index" ? "" : path;
@@ -39,8 +56,11 @@ async function generateSitemap() {
     "!pages/api",
   ]);
 
+  const promises = pages.map(addPage);
+  const sitemapContents = await Promise.all(promises);
+
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(addPage).join("\n")}
+${sitemapContents.join("\n")}
 </urlset>`;
 
   fs.writeFileSync("public/sitemap.xml", sitemap);
