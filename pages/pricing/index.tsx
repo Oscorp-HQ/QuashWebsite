@@ -33,8 +33,8 @@ const plans = [
   },
   {
     label: "Pro",
-    cost: "($5/month)",
-    cost2: "($6/month)",
+    annualCost: "($5/month)",
+    monthlyCost: "($6/month)",
     desc: "Advanced features for teams shipping regular releases",
     includedBenefit: "All Free features, plus...",
     benefits: [
@@ -68,7 +68,8 @@ const Pricing = () => {
   const router = useRouter();
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [selectedTab, setSelectedTab] = useState("monthly");
+  const [selectedTab, setSelectedTab] = useState("annually");
+  const tabs = ["Monthly", "Annually"];
 
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
@@ -97,46 +98,52 @@ const Pricing = () => {
                 }`}
               >
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
-                  <span className="card-heading lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
-                    {plan.label}{" "}
-                    {index === 1 && selectedTab === "annually" && (
-                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] ">
-                        {plan.cost}
-                        <span className="gradient-background-annually text-white font-inter text-[12px] font-semibold  justify-center align-middle p-[8px] mx-[12px]">
-                          - 20%
+                  <div className="card-heading lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10 flex text-center">
+                  <span className="lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
+                        {plan.label}{" "}
                         </span>
+                    {index === 1 && selectedTab === "annually" && (
+                      <div className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] flex items-center">
+                      <span className="pl-[10px] lg:text-[24px] text-[14px] text-[#FFFFFF] font-[600] leading-[1.2] text-4xl">
+                          {plan.annualCost}
                       </span>
+                  </div>
+                    )}
+                    {index === 1 && selectedTab === "annually" && (
+                      <div className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] flex items-center">
+                        <span className="discount-annually-plan text-white font-inter text-[12px] font-semibold p-[8px] mx-[12px] ">
+                          <p>- 20%</p>
+                        </span>
+                      </div>
                     )}
                     {index === 1 && selectedTab === "monthly" && (
-                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
-                        {plan.cost2}
+                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[600] leading-[1.2] pl-[10px]  text-4xl flex items-center">
+                        {plan.monthlyCost}
                       </span>
                     )}
-                  </span>
+                  </div>
+
                   <span className="lg:text-[20px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
                     {plan.desc}
                   </span>
                 </div>
                 {index === 1 && (
-                  <div className="tab flex pt-[24px] pb-[33px] justify-center">
-                   <div className="tab-content">
-                   <p
-                      className={`text-white font-inter font-semibold text-[10px] cursor-pointer px-[10px] py-[4px] relative z-10 ${
-                        selectedTab === "monthly" ? "gradient-background" : ""
-                      }`}
-                      onClick={() => setSelectedTab("monthly")}
-                    >
-                      Monthly
-                    </p>
-                    <p
-                      className={`text-white font-inter font-semibold text-[10px] cursor-pointer px-[10px] py-[4px] relative z-10 ${
-                        selectedTab === "annually" ? "gradient-background" : ""
-                      }`}
-                      onClick={() => setSelectedTab("annually")}
-                    >
-                      Annually
-                    </p>
-                   </div>
+                  <div className="tab flex justify-center">
+                    <div className="tab-content">
+                      {tabs.map((tab, tabIndex) => (
+                        <p
+                          key={tabIndex}
+                          className={`text-white font-inter font-semibold text-[10px] w-[72px] h-[20px] cursor-pointer px-[10px] py-[4px] relative z-10 flex items-center justify-center ${
+                            selectedTab === tab.toLowerCase()
+                              ? "active-plan-tab"
+                              : ""
+                          }`}
+                          onClick={() => setSelectedTab(tab.toLowerCase())}
+                        >
+                          {tab}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 )}
 

@@ -1496,9 +1496,20 @@ filter: blur(15px);
 }
 
 
+.tab{
+  padding-top: 23px;
+  padding-bottom: 33px;
+}
 
+@media screen and (max-width:640px){
+  .tab{
+    padding-top: 12px;
+  padding-bottom: 16px;
+  }
+}
 
 .tab-content{
+  width: 142px;
   display: flex;
   flex-direction: row;
   background: #373737;
@@ -1509,11 +1520,11 @@ filter: blur(15px);
   .tab {
     justify-content: center;
     padding-top: 12px;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
   }
 }
 
-.gradient-background {
+.active-plan-tab {
   z-index: 10;
   background: linear-gradient(
     270deg,
@@ -1524,7 +1535,7 @@ filter: blur(15px);
   );
   border-radius: 10px;
 }
-.gradient-background-annually {
+.discount-annually-plan {
   background: linear-gradient(
     270deg,
     #a81eff -11.23%,
