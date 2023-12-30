@@ -88,7 +88,7 @@ const Pricing = () => {
             <div
               key={index}
               className={`z-10 flex flex-col items-center justify-between lg:pl-10 lg:pr-8 px-4 lg:pt-10 pt-6 lg:pb-14 pb-[34px] lg:rounded-[40px] rounded-2xl border-solid ${
-                index === 1 ? "border-[#ffffff80]" : "border-0"
+                index === 1 ? "border-[#ffffff80] border" : "border-0"
               } bg-[#d9d9d90f]  lg:h-[732px] lg:w-[400px] h-[500px] w-[328px]`}
             >
               <div
@@ -105,7 +105,7 @@ const Pricing = () => {
                     {index === 1 && (
                       <div className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] flex items-center">
                         <span className="pl-[10px] lg:text-[24px] text-[14px] text-[#FFFFFF] font-[600] leading-[1.2] text-4xl">
-                        {`($${
+                          {`($${
                             selectedTab === "annually"
                               ? plan.annualCost
                               : plan.cost
