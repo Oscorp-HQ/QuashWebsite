@@ -36,11 +36,19 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+<<<<<<< HEAD
+    <loc>https://quashbugs.com/team/indexx</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://quashbugs.com/refund-and-cancellation-policy/indexx</loc>
+=======
     <loc>https://quashbugs.com/team</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://quashbugs.com/terms-and-conditions</loc>
+>>>>>>> main
     <changefreq>hourly</changefreq>
   </url>
   <url>

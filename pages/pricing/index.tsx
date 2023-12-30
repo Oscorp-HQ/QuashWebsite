@@ -32,7 +32,8 @@ const plans = [
   },
   {
     label: "Pro",
-    cost: "($5/month)",
+    annualCost: "5",
+    cost: "6",
     desc: "Advanced features for teams shipping regular releases",
     includedBenefit: "All Free features, plus...",
     benefits: [
@@ -66,6 +67,9 @@ const Pricing = () => {
   const router = useRouter();
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("annually");
+  const tabs = ["Monthly", "Annually"];
+
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
@@ -87,20 +91,62 @@ const Pricing = () => {
                 index === 1 ? "border-[#ffffff80] border" : "border-0"
               } bg-[#d9d9d90f]  lg:h-[732px] lg:w-[400px] h-[500px] w-[328px]`}
             >
-              <div className="flex flex-col lg:gap-[52px] gap-[30px]">
+              <div
+                className={`flex flex-col ${
+                  index === 1 ? "lg:gap-0 gap-0" : "lg:gap-[77px] gap-[30px]"
+                }`}
+              >
                 <div className="flex flex-col lg:gap-3 gap-2 text-start">
-                  <span className="lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
-                    {plan.label}{" "}
-                    {plan?.cost && (
-                      <span className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
-                        {plan.cost}
-                      </span>
+                  <div className="card-heading lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10 flex text-center">
+                    <span className="lg:text-[36px] text-[24px] text-[#ECECEE] font-[600] leading-10">
+                      {plan.label}{" "}
+                    </span>
+
+                    {index === 1 && (
+                      <div className="lg:text-[24px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2] flex items-center">
+                        <span className="pl-[10px] lg:text-[24px] text-[14px] text-[#FFFFFF] font-[600] leading-[1.2] text-4xl">
+                          {`($${
+                            selectedTab === "annually"
+                              ? plan.annualCost
+                              : plan.cost
+                          }/Month)`}
+                        </span>
+
+                        {selectedTab === "annually" && (
+                          <div className="flex items-center">
+                            <span className="discount-annually-plan text-white font-inter text-[12px] font-semibold p-[8px] ml-[12px] leading-[1.2] ">
+                              - 20%
+                            </span>
+                          </div>
+                        )}
+                      </div>
                     )}
-                  </span>
+                  </div>
+
                   <span className="lg:text-[20px] text-[14px] text-[#FFFFFF] font-[300] leading-[1.2]">
                     {plan.desc}
                   </span>
                 </div>
+                {index === 1 && (
+                  <div className="tab flex justify-center">
+                    <div className="tab-content">
+                      {tabs.map((tab, tabIndex) => (
+                        <p
+                          key={tabIndex}
+                          className={`text-white font-inter font-semibold text-[10px] w-[72px] h-[20px] cursor-pointer px-[10px] py-[4px] relative z-10 flex items-center justify-center ${
+                            selectedTab === tab.toLowerCase()
+                              ? "active-plan-tab"
+                              : ""
+                          }`}
+                          onClick={() => setSelectedTab(tab.toLowerCase())}
+                        >
+                          {tab}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="flex flex-col gap-4 lg:gap-6 justify-start items-start">
                   {plan?.includedBenefit && (
                     <span className="text-[16px] lg:text-[20px] text-[#ECECEE] font-[600]  text-start leading-[1.2]">
