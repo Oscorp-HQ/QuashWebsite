@@ -127,9 +127,16 @@ const Footer = () => {
           {footerCareer.map((nav, index) => {
             return nav.label === "Careers" ||
               nav.label === "Company details" ? (
-              <Link href={nav.route}>{nav.label}</Link>
+              <Link
+                href={nav.route}
+                key={index}
+                target={nav.label === "Company details" ? "_blank" : "_self"}
+              >
+                {nav.label}
+              </Link>
             ) : (
               <span
+                key={index}
                 onClick={() => {
                   setFormOpen(true);
                 }}
