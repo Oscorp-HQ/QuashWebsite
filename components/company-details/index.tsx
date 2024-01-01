@@ -33,7 +33,7 @@ const CompanyDetails = () => {
         <li>
           <strong className="mb-4">Quash support:</strong>{" "}
           <a
-            href="support@quashbugs.com"
+            href="mailto:support@quashbugs.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mb-4"
