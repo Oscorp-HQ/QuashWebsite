@@ -63,7 +63,6 @@ const mediaTeam = [
 const TeamPage = () => {
   return (
     <div>
-   
       <div className="overflow-hidden relative overflow-x-hidden h-full w-full">
         <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
         <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />

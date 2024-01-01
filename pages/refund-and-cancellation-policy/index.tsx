@@ -5,7 +5,6 @@ import Link from "next/link";
 function RefundCancellationPolicy() {
   return (
     <>
-  
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">
           <h1 className="text-3xl font-bold mb-4">
@@ -85,7 +84,8 @@ function RefundCancellationPolicy() {
             <p>
               4.1. Refunds will be processed to the original payment method used
               for the subscription. The processing time for refunds may vary
-              depending on your payment provider.
+              from 5-15 business working days depending on your payment
+              provider.
             </p>
           </section>
 

@@ -45,6 +45,14 @@ const footerCareer = [
     label: "Contact Sales",
     route: "",
   },
+  {
+    label: "Support",
+    route: "",
+  },
+  {
+    label: "Company details",
+    route: "/company-details",
+  },
 ];
 
 const footerContact = [
@@ -116,25 +124,21 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex flex-col gap-6 md:gap-8 justify-center md:justify-start items-start text-center">
-          {/* {footerCareer.map((nav, index) => ( */}
-          <Link href={"/team"}>Careers</Link>
-          <span
-            onClick={() => {
-              setFormOpen(true);
-            }}
-            className="hover:cursor-pointer"
-          >
-            Contact Sales
-          </span>
-          <span
-            onClick={() => {
-              setFormOpen(true);
-            }}
-            className="hover:cursor-pointer"
-          >
-            Support
-          </span>
-          {/* ))} */}
+          {footerCareer.map((nav, index) => {
+            return nav.label === "Careers" ||
+              nav.label === "Company details" ? (
+              <Link href={nav.route}>{nav.label}</Link>
+            ) : (
+              <span
+                onClick={() => {
+                  setFormOpen(true);
+                }}
+                className="hover:cursor-pointer"
+              >
+                {nav.label}
+              </span>
+            );
+          })}
         </div>
         <div className="flex flex-col gap-6 md:gap-8 justify-center items-start md:justify-start">
           <div className="flex gap-[22px] justify-start">
