@@ -2,7 +2,7 @@ import React from "react";
 
 const CompanyDetails = () => {
   return (
-    <div className="">
+    <div className="p-4">
       <h1 className="text-3xl font-bold mb-4">Company Details</h1>
       <p className="text-xl font-semibold mb-4">Provider of the website:</p>
       <p className="mb-4">
