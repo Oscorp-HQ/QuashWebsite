@@ -2,6 +2,8 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Button } from "../ui/button";
 import { useRouter } from "next/router";
+import Image from "next/image";
+
 
 const Callback = () => {
   const router = useRouter();
@@ -34,6 +36,26 @@ const Callback = () => {
         >
           Get Started for Free
         </Button>
+         <div className="flex-grow flex items-center justify-center"> {/* Added */}
+          <Image
+            src="/Hero.svg" 
+            alt="Hero"
+            width={1078}
+            height={600}
+            className="z-10 hidden md:flex"
+          />
+
+          {/* Mobile Image */}
+          <div className="w-full flex justify-end md:hidden">
+            <Image
+              src="/hero-mob.svg" 
+              alt="Hero Mobile"
+              width={345}
+              height={303}
+              className="z-10 flex md:hidden pb-[73px]"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
