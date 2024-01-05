@@ -32,21 +32,19 @@ const Hero = () => {
           Get Started for Free
         </Button>
       </div>
-      <Image
-        src="Hero.svg"
-        alt="hero"
-        width={1078}
-        height={600}
-        className="z-10 hidden md:flex"
-      />
-      <div className="w-full flex justify-end md:hidden">
-        <Image
-          src="/hero-mob.svg"
-          alt="hero"
-          width={345}
-          height={303}
-          className="z-10 flex md:hidden pb-[73px]"
-        />
+    <div className="relative w-full max-w-6xl mx-auto">
+        <div className="aspect-w-16 aspect-h-9">
+          <iframe
+            className="w-full h-full"
+            style={{ aspectRatio: '16 / 9' }}
+            src="https://www.youtube.com/embed/PnwNkHzPGQk"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            title="YouTube Video"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
