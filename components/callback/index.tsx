@@ -9,7 +9,7 @@ const Callback = () => {
   const router = useRouter();
 
   return (
-    <div className=" relative flex px-5 pb-[116px] pt-[96px] md:pt-[20px] md:pb-[143px] flex-col justify-center items-center">
+    <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center">
       <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
         <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%] "></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
@@ -38,7 +38,7 @@ const Callback = () => {
         </Button>
          <div className="flex-grow flex items-center justify-center"> {/* Added */}
           <Image
-            src="/Hero.svg" 
+            src="/Hero-cropped.svg" 
             alt="Hero"
             width={1078}
             height={600}
@@ -48,11 +48,11 @@ const Callback = () => {
           {/* Mobile Image */}
           <div className="w-full flex justify-end md:hidden">
             <Image
-              src="/hero-mob.svg" 
+              src="/Hero-cropped.svg" 
               alt="Hero Mobile"
               width={345}
               height={303}
-              className="z-10 flex md:hidden pb-[73px]"
+              className="z-10 flex md:hidden"
             />
           </div>
         </div>
