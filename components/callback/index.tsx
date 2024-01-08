@@ -9,7 +9,7 @@ const Callback = () => {
   const router = useRouter();
 
   return (
-    <div className=" relative flex px-5pt-[96px] md:pt-[20px] flex-col justify-center items-center">
+    <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center">
       <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
         <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%] "></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
