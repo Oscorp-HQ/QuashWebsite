@@ -37,10 +37,10 @@ const footerNav = [
 ];
 
 const footerCareer = [
-  {
-    label: "Careers",
-    route: "/team",
-  },
+  // {
+  //   label: "Careers",
+  //   route: "/team",
+  // },
   {
     label: "Contact Sales",
     route: "",
