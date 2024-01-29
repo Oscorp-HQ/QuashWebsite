@@ -16,7 +16,7 @@ const Reporting = () => {
   return (
     <div className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
-        <div className="grad-report h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+        <div className="grad-report h-[150px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
         <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
           <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
@@ -51,7 +51,8 @@ const Reporting = () => {
         className="flex md:hidden"
       >
         {reportingMedia.map((media, index) => (
-          <Image
+          <>
+            <Image
             key={index}
             src={media.src}
             alt={media.label}
@@ -59,6 +60,9 @@ const Reporting = () => {
             height={374}
             className=""
           />
+          <br />
+          <br />
+          </>
         ))}
       </Carousel>
     </div>

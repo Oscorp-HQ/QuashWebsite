@@ -13,14 +13,9 @@ const mobileNav = [
     value: "home",
   },
   {
-    label: "Upcoming",
-    path: "/upcoming",
-    value: "upcoming",
-  },
-  {
-    label: "Team",
-    path: "/team",
-    value: "team",
+    label: "Product",
+    path: "/product",
+    value: "Product",
   },
   {
     label: "Pricing",
@@ -28,14 +23,15 @@ const mobileNav = [
     value: "pricing",
   },
   {
+    label: "Roadmap",
+    path: "/roadmap",
+    value: "Roadmap",
+  },
+ 
+  {
     label: "Blog",
     path: "/blog",
     value: "blog",
-  },
-  {
-    label: "Sign in",
-    path: "https://optimus.quashbugs.com",
-    value: "signin",
   },
 ];
 

@@ -1,0 +1,47 @@
+import Image from "next/image";
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+
+// const resoltionMedia = [
+//   {src:"context-mob.svg",
+//    label:"context-mob" }, {src:"crash-mob.svg",
+//   label:"crash-mob"},
+//   {src:"ai-mob.svg",
+//   label:"ai-mob"}];
+
+const reportingMedia = [
+  {src:"/shake.svg",
+   label:"shake" }, {src:"/logs.svg",
+  label:"logs"},
+  {src:"/notes.svg",
+  label:"notes"}];
+
+
+const Agile = () => {
+  return (
+   <>
+     <div className="flex px-4 flex-col justify-center items-center">
+      <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
+        <div className="grad-resolution h-[162px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+        <div className="w-full h-[48px] md:h-[200px]  absolute top-0 bg-black"></div>
+        <div className="absolute top-[48px]  md:top-[200px]  flex flex-col justify-center items-center gap-12 md:gap-[116px]">
+          <div className="resolution-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
+          <span className="resolution-gradient-text text-[32px] md:text-[60px] md:font-[600] leadind-normal">
+          Agile, Mobile-First Development
+          </span>
+        </div>
+      </div>
+      <div className="agile-desc-text">
+  Double your development agility with Quash's mobile-first approach. <br /> Deliver low-risk, high-quality mobile apps faster, and boost team productivity for standout performance.
+</div>
+    </div>
+    <div className="agile-image-container">
+      <img src="agile-illustration.svg" alt=""  className="agile-image w-full"/>
+    </div>
+   </>
+  );
+};
+
+export default Agile;
