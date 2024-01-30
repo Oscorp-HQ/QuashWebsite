@@ -182,7 +182,6 @@ body {
 .quick {
   font-family: var(--fira-mono);
   color: rgba(255, 255, 255, 0.8);
-  font-size: 23.155px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -192,7 +191,6 @@ body {
 .key {
   color: #cb5f58;
   font-family: var(--fira-mono);
-  font-size: 23.155px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -202,7 +200,6 @@ body {
 .value {
   color: #5fbab5;
   font-family: var(--fira-mono);
-  font-size: 23.155px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
