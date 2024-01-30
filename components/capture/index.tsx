@@ -10,6 +10,13 @@ const reportingMedia = [
   { src: "/crash.svg", label: "crash", width: 620, height: 598 },
   { src: "/context.svg", label: "context", width: 620, height: 598 },
 ];
+const reportingMediaMobile = [
+  { src: "/shake-mob.svg", label: "shake", width: 400, height: 554 },
+  { src: "/logs-new-mob.svg", label: "logs", width: 400, height: 554 },
+  { src: "/notes-mob.svg", label: "notes", width: 400, height: 554 },
+  { src: "/crash-mob.svg", label: "crash", width: 620, height: 598 },
+  { src: "/context-mob.svg", label: "context", width: 620, height: 598 },
+];
 
 const Capture = () => {
   return (
@@ -66,7 +73,7 @@ const Capture = () => {
           centerMode={true}
           className="flex md:hidden pt-10"
         >
-          {reportingMedia.map((media, index) => (
+          {reportingMediaMobile.map((media, index) => (
             <>
               <Image
                 key={index}

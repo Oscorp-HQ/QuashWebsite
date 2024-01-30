@@ -8,7 +8,7 @@ const resoltionMedia = [
   {src:"context-mob.svg",
    label:"context-mob" }, {src:"crash-mob.svg",
   label:"crash-mob"},
-  {src:"ai-new.svg",
+  {src:"ai-new-mob.svg",
   label:"ai-mob"}];
 
 const Resolution = () => {
