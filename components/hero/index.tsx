@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const Hero = () => {
   const router = useRouter();
   return (
-    <div className="relative flex flex-col gap-[56px] md:gap-0 items-center overflow-hidden">
+    <div className="relative flex flex-col gap-[56px] md:gap-0 items-center overflow-hidden pb-[41px] md:pb-[150px]">
       <div className="left-ellipse hidden md:flex absolute top-[15rem] -left-[10rem]" />
       <div className="left-sphere hidden md:flex absolute top-[30rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[36rem] -right-[25rem]" />

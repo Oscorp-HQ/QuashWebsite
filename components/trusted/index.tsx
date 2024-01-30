@@ -10,28 +10,28 @@ const trustedClients = [
 
 const Trusted = () => {
   return (
+ 
+
     <div className="trusted-container">
-      <div className="trusted-background">
-        <div className="trusted-inner-container">
-          <div className="trusted-text">Trusted by Developers at</div>
-          <div className="trusted-images-container">
-            {trustedClients.map((client, index) => (
-              <>
-                <img
-                  key={index}
-                  src={client.src}
-                  alt={client.label}
-                  className="trusted-image"
-                />
-                <img
-                  key={index}
-                  src={`/${client.label}-mob.svg`}
-                  alt={client.label}
-                  className="trusted-image-mob"
-                />
-              </>
-            ))}
-          </div>
+      <div className="trusted-items">
+        <p className="trusted-text"> Trusted by Developers at</p>
+        <div className="trusted-images-container">
+          {trustedClients.map((client, index) => (
+            <div className="trusted-images">
+              <img
+                key={index}
+                src={client.src}
+                alt={client.label}
+                className="trusted-image"
+              />
+              <img
+                key={index}
+                src={`/${client.label}-mob.svg`}
+                alt={client.label}
+                className="trusted-image-mob"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

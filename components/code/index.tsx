@@ -38,7 +38,7 @@ const CodeSection = () => {
                 className={`${
                   isOs === item.value
                     ? "text-[#ECECEE] border-b"
-                    : "text-[#ECECEE99]"
+                    : "text-[#ECECEE99] "
                 }   border-[rgba(255, 255, 255, 0.06)] mb-[-0.2px]`}
               >
                 {item.label}
@@ -60,7 +60,7 @@ const CodeSection = () => {
             <div className="border-l border-[#4A4B50]" />
             {isOs === "android" ? (
               <div className=" md:my-0 md:mx-0 flex flex-col items-start w-[370px] md:w-auto ">
-                <p className="quick md:quick-desk">{`Quash.begin (`}</p>
+                <p className="quick md:quick-desk">{`Quash.start (`}</p>
                 <div className="flex flex-col ml-[50px] md:gap-[6px]">
                   <div className="flex">
                     <p className="key md:key-desk">{`withToken: `}</p>
@@ -68,11 +68,11 @@ const CodeSection = () => {
                   </div>
                   <div className="flex">
                     <p className="key md:key-desk">{`shouldCollectCrashLogs`}</p>
-                    <p className="value md:value-desk">=true</p>
+                    <p className="value md:value-desk">=true,</p>
                   </div>
                   <div className="flex">
-                    <p className="key md:key-desk">{`triggerType`}</p>
-                    <p className="value md:value-desk">{`=[Quash.FAB, Quash.SHAKE]`}</p>
+                    <p className="key md:key-desk">{`invocationType`}</p>
+                    <p className="value md:value-desk">{`=Quash.TRIPLE_TAPS`}</p>
                   </div>
                 </div>
                 <p className="quick md:quick-desk">{`)`}</p>

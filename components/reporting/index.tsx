@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const reportingMedia = [
   {src:"/shake.svg",
-   label:"shake" }, {src:"/logs.svg",
+   label:"shake" }, {src:"/logs-new.svg",
   label:"logs"},
   {src:"/notes.svg",
   label:"notes"}];

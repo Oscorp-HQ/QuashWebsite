@@ -302,8 +302,9 @@ const Pricing = () => {
           </AlertDialog>
         )}
       </div>
-      <Benefits />
+      <Benefits/>
       <Capture />
+      <div className="pricing-page-gap"></div>
       <Trusted />
 
       <div className="flex px-5 pb-[112px]  md:pt-[20px] md:pb-[143px] flex-col justify-center items-center">

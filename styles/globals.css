@@ -144,7 +144,6 @@ body {
 .collaboration-gradient-text {
   color: #fff;
   text-align: center;
-  font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -181,27 +180,33 @@ body {
 }
 
 .quick {
-  color: #fff;
   font-family: var(--fira-mono);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 23.155px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 0.116px;
 }
 
 .key {
-  color: #f2a68c;
+  color: #cb5f58;
   font-family: var(--fira-mono);
+  font-size: 23.155px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 0.116px;
 }
 
 .value {
-  color: #76f8e7;
+  color: #5fbab5;
   font-family: var(--fira-mono);
+  font-size: 23.155px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 0.116px;
 }
 
 .code-block {
@@ -1588,11 +1593,9 @@ body {
 }
 
 /* Trusted component */
-.trusted-container {
-  padding-top: 150px;
-}
 
-.trusted-background {
+
+.trusted-container {
   background-color: #111111;
   height: 310px;
   display: flex;
@@ -1601,10 +1604,10 @@ body {
   justify-content: center;
 }
 
-.trusted-inner-container {
-  width: 100%;
-  max-width: 768px; 
-  margin: 0 auto;
+.trusted-items{
+  display: flex;
+  flex-direction: column;
+  gap: 52.5px;
 }
 
 .trusted-text {
@@ -1612,20 +1615,15 @@ body {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 30px;
 }
 
 .trusted-images-container {
-  display: flex;
+display: flex;
+  width: 1236px;
+  justify-content: space-between;
   align-items: center;
-  /* gap:30px; */
-  justify-content: center;
-  padding: 0 20px;
 }
 
-.trusted-image {
-  margin-bottom: 20px;
-}
 .trusted-image-mob {
   display: none;
 }
@@ -1639,10 +1637,14 @@ body {
 .benefits-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #111111;
   height: 310px;
+  display: flex;
+width: auto;
+/* padding: 67.5px 0px;  */
+padding: 83.5px 74.5px;
+justify-content: center;
+align-items: center; 
 }
 
 .benefits-content {
@@ -1658,6 +1660,7 @@ body {
 }
 
 .benefits-item {
+  gap: 12px;
   width: 454px;
   display: flex;
   flex-direction: column;
@@ -1682,17 +1685,21 @@ body {
 /* .agile-image-container{
   width: auto;
 } */
+ /* Streamline */
 
+ .streamline-cards {
+  padding-bottom: 190px;
+}
 /* Capture */
 
 .capture-learn-more-button-container {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 61.89%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 61.89%);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 336px;
-  margin-top: -320px;
+  margin-top: -355px;
 }
 
 .capture-learn-more-button {
@@ -1713,191 +1720,113 @@ body {
   flex-direction: row;
 }
 
-.footer-bottom-container{
-  display:none
+.footer-bottom-container {
+  display: none;
 }
 
-.footer-bottom-container-main{
-  background: #0D0D0D;
-  padding: 32px 64px ;
+.footer-bottom-container-main {
+  background: #0d0d0d;
+  padding: 32px 64px;
   flex-direction: row-reverse;
 }
 
-.product-main-mob{
+.product-main-mob {
   display: none;
 }
-@media only screen and (max-width: 1000px) {
-  .footer-bottom-container-main{
-    display: none;
-   }
- 
-   .footer-container {
-     flex-direction: column;
-     padding-left: 40px;
-     padding-right: 40px;
-     padding-top: 50px;
-     padding-bottom: 32px;
-   }
- 
-   .footer-logo-container {
-     align-items: center;
-     justify-content: center;
-     padding-bottom: 40px;
-   }
- 
-   .footer-link-container {
-     gap: 32px;
-   }
- 
-   .footer-link {
-     color: var(--Grey-Grey-500, #9e9e9e);
-     font-size: 16px;
-     font-style: normal;
-     font-weight: 500;
-     line-height: normal;
-   }
- 
-   .footer-bottom-container{
-     display: block;
-     align-items: center;
-     display: flex;
-     flex-direction: column;
-     gap: 16px;
-     margin-top: 32px;
-     width: 100%;
-   }
- 
-   .product-youtube-video {
-     display: block;
-   }
-   .product-title-image {
-     display: none;
-   }
- 
-   .product-main{
-     display: none;
-   }
- 
-   .product-main-mob{
-     display: block;
-   }
-   /* Trusted component */
-   .trusted-container {
-     padding-top: 41px;
-   }
-   .trusted-background {
-     height: auto;
-   }
- 
-   .trusted-images-container {
-     flex-wrap: wrap;
-     padding-left: 28px;
-     padding-right: 28px;
-     padding-bottom: 53px;
-   }
-   .trusted-text {
-     color: #e1e1e1;
-     padding-top: 53px;
-     padding-bottom: 40px;
-     font-size: 16px;
-     font-style: normal;
-     font-weight: 600;
-     line-height: normal;
-   }
-   .trusted-image {
-     display: none;
-   }
-   .trusted-image-mob {
-     display: block;
-   }
- 
-   /* Hero component */
- 
-   .hero-video-frame {
-     padding-left: 26px;
-     padding-right: 26px;
-   }
- 
-   .hero-video-frame-content {
-     border-radius: 9px;
-   }
- 
-   /* Streamline */
- 
-   .streamline-cards {
-     display: none;
-   }
- 
-   /* Benefits */
-   .benefits-flex-container {
-     padding: 67px 0;
-     gap: 44px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
-   .benefits-wrapper {
-     height: auto;
-   }
- 
-   .benefits-image {
-     width: 72px;
-     height: 72px;
-   }
-   .benefits-label {
-     color: #ececee;
-     font-size: 16px;
-     font-style: normal;
-     font-weight: 600;
-     line-height: normal;
-   }
-   .benefits-container {
-     color: white;
-   }
-   /* Agile */
- 
-   .agile-desc-text {
-     padding-top: 0;
-     color: #ececee;
-     text-align: center;
-     font-size: 16px;
-     font-style: normal;
-     font-weight: 400;
-     line-height: normal;
-     width: 307px;
-   }
- 
-   .agile-image-container {
-     width: 841px;
-     height: 150px;
-   }
- 
-   /* Capture  */
- 
-   .capture-learn-more-button-container {
-     margin-top: 60px;
-     margin-bottom: 140px;
-     height: auto;
-   }
- 
-   .capture-image-container {
-     padding-top: 80px;
-   }
- 
-   /* other-text-styling */
- 
-   .collaboration-gradient-text {
-     width: 309px;
-   }
- 
-   .report-gradient-text {
-     width: 315px;
-   }
+
+.pricing-page-gap{
+  display: none;
 }
 
-@media screen and (max-width: 760px) {
-  .footer-bottom-container-main{
-   display: none;
+
+@media only screen and (max-width: 1200px) {
+
+  
+  .collaboration-gradient-text{
+    font-size: 40px;
+  }
+  .report-gradient-text{
+    font-size: 40px;
+  }
+  .resolution-gradient-text{
+    font-size: 40px;
+  }
+  .agile-desc-text{
+    margin-top: -50px;
+  }
+
+  .trusted-container{
+  
+    padding-top: 53px;
+    padding-bottom: 53px;
+    height: auto;
+   }
+  
+    .trusted-images-container {
+      width: auto;
+      display: flex;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      }
+    .trusted-text {
+      color: #e1e1e1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .trusted-image {
+      display: none;
+    }
+    .trusted-image-mob {
+      display: block;
+    }
+
+      /* Benefits */
+  .benefits-flex-container {
+    width: 100%;
+    gap: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .benefits-wrapper {
+    
+    padding-top: 67px;
+    padding-bottom: 67px;
+    height: auto;
+  }
+
+  .benefits-image {
+    width: 72px;
+    height: 72px;
+  }
+  .benefits-label {
+    text-align: center;
+    color: #ececee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .benefits-container {
+    padding-top: 0px;
+    color: white;
+  }
+  
+}
+@media screen and (max-width: 770px) {
+
+  .pricing-page-gap{
+    display: block;
+    padding-top: 80px;
+  }
+  .footer-bottom-container-main {
+    display: none;
   }
 
   .footer-container {
@@ -1926,7 +1855,7 @@ body {
     line-height: normal;
   }
 
-  .footer-bottom-container{
+  .footer-bottom-container {
     display: block;
     align-items: center;
     display: flex;
@@ -1943,31 +1872,34 @@ body {
     display: none;
   }
 
-  .product-main{
+  .product-main {
     display: none;
   }
 
-  .product-main-mob{
+  .product-main-mob {
+    min-width: 323px;
     display: block;
   }
   /* Trusted component */
-  .trusted-container {
-    padding-top: 41px;
-  }
-  .trusted-background {
-    height: auto;
-  }
+ .trusted-container{
+  
+  padding-top: 53px;
+  padding-bottom: 53px;
+  height: auto;
+ }
 
   .trusted-images-container {
+    width: auto;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 24px;
     flex-wrap: wrap;
-    padding-left: 28px;
-    padding-right: 28px;
-    padding-bottom: 53px;
-  }
+    }
   .trusted-text {
     color: #e1e1e1;
-    padding-top: 53px;
-    padding-bottom: 40px;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -1979,7 +1911,6 @@ body {
   .trusted-image-mob {
     display: block;
   }
-
   /* Hero component */
 
   .hero-video-frame {
@@ -1999,13 +1930,15 @@ body {
 
   /* Benefits */
   .benefits-flex-container {
-    padding: 67px 0;
     gap: 44px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .benefits-wrapper {
+    
+    padding-top: 67px;
+    padding-bottom: 67px;
     height: auto;
   }
 
@@ -2027,7 +1960,7 @@ body {
   /* Agile */
 
   .agile-desc-text {
-    padding-top: 0;
+    padding-top: 80px;
     color: #ececee;
     text-align: center;
     font-size: 16px;
@@ -2046,7 +1979,6 @@ body {
 
   .capture-learn-more-button-container {
     margin-top: 60px;
-    margin-bottom: 140px;
     height: auto;
   }
 
@@ -2057,10 +1989,17 @@ body {
   /* other-text-styling */
 
   .collaboration-gradient-text {
-    width: 309px;
+    width: 339px;
   }
 
-  .report-gradient-text {
-    width: 315px;
+  .collaboration-gradient-text{
+    font-size: 32px;
+  }
+  .report-gradient-text{
+    font-size: 32px;
+  }
+  .resolution-gradient-text{
+    font-size: 32px;
   }
 }
+

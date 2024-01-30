@@ -47,13 +47,13 @@ const streamlineContentmob = [
 
 const Streamline = () => {
   return (
-    <div className="flex px-4 h-full flex-col justify-center items-center">
+    <div className="flex px-4 flex-col justify-center items-center">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
-        <div className="grad-report h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
-        <div className="w-full h-[48px] md:h-[134px] absolute top-0 bg-black"></div>
-        <div className="absolute top-[48px] md:top-[134px] flex flex-col justify-center items-center gap-12 md:gap-[66px]">
+        <div className="grad-report h-[162px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+        <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
+        <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
           <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-          <span className="report-gradient-text text-[32px] md:text-[56px] md:font-[600] leading-normal">
+          <span className="report-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal">
             Streamline your path to flawless app releases
           </span>
         </div>
@@ -77,7 +77,7 @@ const Streamline = () => {
         showThumbs={false}
         interval={3000}
         centerMode={true}
-        className="flex md:hidden pt-[55px] pb-[96px]"
+        className="flex md:hidden pt-[110px] pb-[96px]"
       >
         {streamlineContentmob.map((media, index) => (
           <>
