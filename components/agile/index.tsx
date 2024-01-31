@@ -22,7 +22,7 @@ const Agile = () => {
           </span>
         </div>
         <div className="agile-desc-text">
-          Double your development agility with Quash's mobile-first approach.{" "}
+          Double your development agility with Quash&apos;s mobile-first approach.{" "}
           <br /> Deliver low-risk, high-quality mobile apps faster, and boost
           team productivity for standout performance.
         </div>
