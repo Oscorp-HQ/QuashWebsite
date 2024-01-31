@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const benefits = [
@@ -14,7 +15,7 @@ const Benefits = () => {
           <div className="benefits-flex-container">
             {benefits.map((client, index) => (
               <div key={index} className="benefits-item">
-                <img src={client.src} alt={client.label}  className="benefits-image"/>
+                <Image src={client.src} alt={client.label} width={100} height={100} className="benefits-image"/>
                 <p className="benefits-label">{client.label}</p>
               </div>
             ))}

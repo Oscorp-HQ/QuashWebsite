@@ -8,31 +8,43 @@ const streamlineContent = [
     title: "Accelerated market delivery",
     desc: "Quash empowers your team to accelerate feature releases, bringing innovations to market swiftly. Our tool instills confidence for rapid and frequent updates.",
     Image: "accelerated-market-delivery.svg"    ,
+    width: 170,
+    height:170 ,
   },
   {
     title: "AI powered Bug resolution",
     desc: "Our tools not only pinpoint issues but also propose optimal solutions, streamlining your development process and enhancing code reliability.",
     Image: "ai-powered-bug-resolution.svg",
+    width: 680,
+    height:171 ,
   },
   {
     title: "Prerelease Testing assurance",
     desc: "Ensure every release is up to your high standards. Testing becomes a seamless part of your workflow, guaranteeing consistent quality.",
     Image: "pre-release.svg",
+    width: 270 ,
+    height: 170,
   },
   {
     title: "Detail-oriented success",
     desc: "We know that the little things make a big difference. Quash helps you perfect those small, crucial details that define the quality of your software.",
     Image: "detail-oriented-success.svg",
+    width: 142,
+    height:123 ,
   },
   {
     title: "Scalable Performance",
     desc: "As your mobile teams grow, Quash supports you with robust performance and stability tools that adapt to your team's expanding needs.",
     Image: "scalable-performance.svg",
+    width: 132,
+    height: 135,
   },
   {
     title: "Developer-centric Design",
     desc: "Quash is crafted with developers in mind, enhancing the coding experience with intuitive tools that understand and adapt to your needs.",
     Image: "developer-centric-design.svg",
+    width: 270,
+    height: 170,
   },
 ];
 
@@ -57,15 +69,12 @@ const Streamline = () => {
             Streamline your path to flawless app releases
           </span>
         </div>
-        <div className="streamline-cards flex flex-wrap justify-center items-center gap-8">
+        <div className="streamline-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {streamlineContent.map((content, index) => (
-            <div
-              key={index}
-              className="text-white stream-line-card w-full ]"
-            >
+           <div key={index} className="text-white stream-line-card ">
               <h3>{content.title}</h3>
               <p>{content.desc}</p>
-              <img src={content.Image} alt="" />
+              <Image src={content.Image} width={content.width} height={content.height} alt="" />
             </div>
           ))}
         </div>

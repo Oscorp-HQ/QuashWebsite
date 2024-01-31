@@ -13,8 +13,8 @@ const Hero = () => {
       <div className="right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" />
       <div className=" pt-[112px] px-[18px]  md:pt-[144px] lg:px-[242px] md:pb-[112px] w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[72px]">
         <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
-          <h1 className="justify-center bg-gradient-to-b px-7 from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
-            Mobile Testing should not be <br /> slow and tangled
+          <h1 className="justify-center max-w-[323px] md:max-w-[1024px] bg-gradient-to-b px-7 from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
+            Mobile Testing should not be slow and tangled
           </h1>
 
           <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full md:px-[100px]">

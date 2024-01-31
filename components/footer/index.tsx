@@ -38,7 +38,7 @@ const footerQuash = [
 const footerResources = [
   {
     label: "Blog",
-    route: "/Blog",
+    route: "/blog",
   },
   {
     label: "Developer guide",
@@ -255,18 +255,18 @@ const Footer = () => {
         <div className="footer-bottom-container flex justify-between align-center border-t border-[#424242]">
           <div className="text-[#747474] flex gap-3  pt-[24px]">
             {footerSocialMedia.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.route}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={item.img} alt={item.label} className="h-6 w-6" />
-              </a>
+                <Image src={item.img} alt={item.label} width={24} height={24} className="h-6 w-6" />
+              </Link>
             ))}
           </div>
           <div className="text-[#747474]">
-            <p><a href="/terms-and-conditions">Terms</a> <span className="px-[12px]">|</span> <a href="/privacy">Privacy</a></p>
+            <p><Link href="/terms-and-conditions">Terms</Link> <span className="px-[12px]">|</span> <Link href="/privacy">Privacy</Link></p>
           </div>
           <div>
             <p className="text-[#747474]">
@@ -278,14 +278,14 @@ const Footer = () => {
       <div className="footer-bottom-container-main px-[48px] flex justify-between align-center border-t border-[#424242]">
       <div className="text-[#747474] flex gap-3 ">
             {footerSocialMedia.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.route}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={item.img} alt={item.label} className="h-6 w-6" />
-              </a>
+                <Image src={item.img} alt={item.label} height={24} width={24} className="h-6 w-6" />
+              </Link>
             ))}
           </div>
           <div className="text-[#747474]">
@@ -293,7 +293,7 @@ const Footer = () => {
           </div>
           <div>
             <p className="text-[#747474]">
-            &#169; 2024 Brisk Labs, Inc. All rights reserved <span className="px-[12px]">|</span> <a href="/terms-and-conditions">Terms</a> <span className="px-[12px]">|</span> <a href="/privacy">Privacy</a>
+            &#169; 2024 Brisk Labs, Inc. All rights reserved <span className="px-[12px]">|</span> <Link href="/terms-and-conditions">Terms</Link> <span className="px-[12px]">|</span> <Link href="/privacy">Privacy</Link>
             </p>
           </div>
         </div>

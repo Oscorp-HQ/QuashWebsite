@@ -3,13 +3,6 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-// const resoltionMedia = [
-//   {src:"context-mob.svg",
-//    label:"context-mob" }, {src:"crash-mob.svg",
-//   label:"crash-mob"},
-//   {src:"ai-mob.svg",
-//   label:"ai-mob"}];
-
 const reportingMedia = [
   { src: "/shake.svg", label: "shake" },
   { src: "/logs.svg", label: "logs" },
@@ -25,20 +18,22 @@ const Agile = () => {
         <div className="absolute top-[93px] md:top-[132px] flex flex-col justify-center items-center gap-12 md:gap-[66px] z-10">
           <div className="resolution-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
           <span className="resolution-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal  text-center">
-          Agile, Mobile-First Development
+            Agile, Mobile-First Development
           </span>
         </div>
-        <div className="agile-desc-text ">
+        <div className="agile-desc-text">
           Double your development agility with Quash's mobile-first approach.{" "}
           <br /> Deliver low-risk, high-quality mobile apps faster, and boost
           team productivity for standout performance.
         </div>
       </div>
       <div className="agile-image-container">
-        <img
-          src="agile-illustration.svg"
+        <Image
+          src="/agile-illustration.svg"
           alt=""
           className="agile-image w-full"
+          width={1400}
+          height={268}
         />
       </div>
     </>

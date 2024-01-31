@@ -29,7 +29,7 @@ const CodeSection = () => {
       <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
       </span>
-      <div className="relative w-full md:mt-[72px]">
+      <div className="relative w-full md:max-w-[963px] md:mt-[72px]">
         <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
           <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
             {OS.map((item, index) => (
@@ -48,9 +48,9 @@ const CodeSection = () => {
           </div>
           <div
             style={codeFira.style}
-            className="w-full text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.116] overflow-x-scroll md:overflow-auto flex md:item-center gap-[12px] p-4 md:px-8 md:pt-10 md:pb-8"
+            className="w-full  text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.116] overflow-x-scroll md:overflow-auto flex md:item-center gap-[12px] p-4 md:px-8 md:pt-10 md:pb-8"
           >
-            <div className="numbers md:gap-[3px] text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.129] flex flex-col ">
+            <div className="numbers  md:gap-[3px] text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.129] flex flex-col ">
               <p>1</p>
               <p>2</p>
               <p>3</p>

@@ -19,6 +19,8 @@ const reportingMediaMobile = [
 ];
 
 const Capture = () => {
+  const firstRowImages = reportingMedia.slice(0, 3);
+  const secondRowImages = reportingMedia.slice(3);
   return (
     <>
       <div className="flex px-4 pb-16 md:pb-0 flex-col justify-center items-center relative">
@@ -32,11 +34,24 @@ const Capture = () => {
           </span>
         </div>
       </div>
-      
+
       <div className="capture-image-container pt-[50px] relative">
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center">
           <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
-            {reportingMedia.map((media, index) => (
+            {/* Render images for the first row */}
+            {firstRowImages.map((media, index) => (
+              <Image
+                key={index}
+                src={media.src}
+                alt={media.label}
+                width={media.width}
+                height={media.height}
+              />
+            ))}
+          </div>
+          <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
+            {/* Render images for the second row */}
+            {secondRowImages.map((media, index) => (
               <Image
                 key={index}
                 src={media.src}
@@ -47,22 +62,6 @@ const Capture = () => {
             ))}
           </div>
         </div>
-        {/* <div className="hidden justify-center items-center gap-10  md:flex flex-wrap z-10">
-          <Image
-            src="/crash.svg"
-            alt="crash"
-            width={620}
-            height={598}
-            className=""
-          />
-          <Image
-            src="/context.svg"
-            alt="context"
-            width={620}
-            height={598}
-            className=""
-          />
-        </div> */}
         <Carousel
           // autoPlay
           infiniteLoop
@@ -74,9 +73,8 @@ const Capture = () => {
           className="flex md:hidden pt-10"
         >
           {reportingMediaMobile.map((media, index) => (
-            <>
+            <div key={index}>
               <Image
-                key={index}
                 src={media.src}
                 alt={media.label}
                 width={304}
@@ -85,11 +83,16 @@ const Capture = () => {
               />
               <br />
               <br />
-            </>
+            </div>
           ))}
         </Carousel>
         <div className="capture-learn-more-button-container">
-          <a href="https://quash.notion.site/quash/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47" className="capture-learn-more-button">Learn more</a>
+          <a
+            href="https://quash.notion.site/quash/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
+            className="capture-learn-more-button"
+          >
+            Learn more
+          </a>
         </div>
       </div>
     </>
