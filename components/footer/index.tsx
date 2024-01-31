@@ -324,7 +324,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-
       {(formOpen || formSubmitted) && (
         <AlertDialog open={formOpen}>
           <AlertDialogContent className="flex justify-center items-center md:p-[100px] p-10 w-full max-w-[960px] h-full">

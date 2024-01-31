@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState } from "react";
-
 import { Button } from "../ui/button";
 import { List, X } from "@/lib/icons";
 import { LoaderDialog, LoaderDialogContent } from "../ui/overlay-loader";
@@ -85,7 +84,6 @@ const Header = () => {
           ))}
         </div>
       </div>
-
       <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
         <span
           className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"

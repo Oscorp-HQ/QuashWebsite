@@ -10,8 +10,6 @@ const reportingMedia = [
   {src:"/notes.svg",
   label:"notes"}];
 
-
-
 const Reporting = () => {
   return (
     <div className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
@@ -41,7 +39,6 @@ const Reporting = () => {
         ))}
       </div>
       <Carousel
-        // autoPlay
         infiniteLoop
         showStatus={false}
         showIndicators={true}

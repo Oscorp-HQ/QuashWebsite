@@ -79,7 +79,6 @@ const Streamline = () => {
           ))}
         </div>
         <Carousel
-        // autoPlay
         infiniteLoop
         showStatus={false}
         showIndicators={true}
@@ -89,7 +88,7 @@ const Streamline = () => {
         className="flex md:hidden pt-[110px] pb-[96px]"
       >
         {streamlineContentmob.map((media, index) => (
-          <>
+          <div>
             <Image
             key={index}
             src={media.src}
@@ -100,7 +99,7 @@ const Streamline = () => {
           />
           <br />
           <br />
-          </>
+          </div>
         ))}
       </Carousel>
       </div>

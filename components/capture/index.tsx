@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -39,7 +40,6 @@ const Capture = () => {
       <div className="capture-image-container relative">
         <div className="flex flex-col justify-center items-center">
           <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
-            {/* Render images for the first row */}
             {firstRowImages.map((media, index) => (
               <Image
                 key={index}
@@ -51,7 +51,6 @@ const Capture = () => {
             ))}
           </div>
           <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
-            {/* Render images for the second row */}
             {secondRowImages.map((media, index) => (
               <Image
                 key={index}
@@ -64,7 +63,6 @@ const Capture = () => {
           </div>
         </div>
         <Carousel
-          // autoPlay
           infiniteLoop
           showStatus={false}
           showIndicators={true}
@@ -88,12 +86,12 @@ const Capture = () => {
           ))}
         </Carousel>
         <div className="capture-learn-more-button-container">
-          <a
+          <Link
             href="https://quash.notion.site/quash/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
             className="capture-learn-more-button"
           >
             Learn more
-          </a>
+          </Link>
         </div>
       </div>
       </div>

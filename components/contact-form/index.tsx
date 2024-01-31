@@ -94,9 +94,7 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
     },
   });
 
-  //Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
     SendUserData();
   }
   return (
@@ -215,7 +213,6 @@ export function DemoRequestForm({ setFormSubmitted }: any) {
                     }}
                   >
                     <textarea
-                      // placeholder="1234567890"
                       {...field}
                       className=" demo-input-area placeholder:text-white/30 w-full md:max-h-[104px] max-h-[80px]"
                     />

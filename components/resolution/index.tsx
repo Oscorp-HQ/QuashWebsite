@@ -26,7 +26,6 @@ const Resolution = () => {
         Know exactly where the bug is - and how to fix it
       </span>
       <div className="hidden justify-center items-center gap-10  md:flex flex-wrap">
-        {/* <div className="flex justify-center items-center gap-8"> */}
         <Image
           src="/context.svg"
           alt="context"
@@ -50,7 +49,6 @@ const Resolution = () => {
         />
       </div>
       <Carousel
-        // autoPlay
         infiniteLoop
         showStatus={false}
         showIndicators={true}

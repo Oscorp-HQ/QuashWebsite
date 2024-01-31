@@ -9,9 +9,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <div className="benefits-container">
-      <div className="benefits-wrapper">
-        <div className="benefits-content">
+        <div className="benefits-wrapper">
           <div className="benefits-flex-container">
             {benefits.map((client, index) => (
               <div key={index} className="benefits-item">
@@ -21,8 +19,6 @@ const Benefits = () => {
             ))}
           </div>
         </div>
-      </div>
-    </div>
   );
 };
 
