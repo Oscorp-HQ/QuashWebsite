@@ -23,10 +23,11 @@ const Capture = () => {
   const secondRowImages = reportingMedia.slice(3);
   return (
     <>
-      <div className="flex px-4 pb-16 md:pb-0 flex-col justify-center items-center relative">
-        <div className="grad-collaboration h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
-        <div className="w-full h-[93px] md:h-[132px] absolute top-0 bg-black"></div>
-        <div className="absolute top-[93px] md:top-[132px] flex flex-col justify-center items-center gap-12 md:gap-[66px] z-10">
+      <div className="flex px-4 flex-col justify-center items-center">
+      <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
+        <div className="grad-collaboration h-[350px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+        <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
+        <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
           <div className="collaboration-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
           <span className="collaboration-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal  text-center">
             Capture the complete picture <br /> with technical detailing in
@@ -35,7 +36,7 @@ const Capture = () => {
         </div>
       </div>
 
-      <div className="capture-image-container pt-[50px] relative">
+      <div className="capture-image-container relative">
         <div className="flex flex-col justify-center items-center">
           <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
             {/* Render images for the first row */}
@@ -94,6 +95,7 @@ const Capture = () => {
             Learn more
           </a>
         </div>
+      </div>
       </div>
     </>
   );
