@@ -87,7 +87,7 @@ const Pricing = () => {
               Start testing your apps with Quash for free today
             </h1>
           </div>
-          <div className="flex md:flex-row flex-col justify-center items-center lg:gap-10 gap-4 px-4">
+          <div className="pricing-main-container  justify-center items-center lg:gap-10 gap-4 px-4">
             {plans.map((plan, index) => (
               <div
                 key={index}

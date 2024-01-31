@@ -12,20 +12,22 @@ const Integration = () => {
           Leverage the power of Integrations to optimise <br /> your dev cycles{" "}
         </span>
       </div>
-      <Image
-        src="/integration-mob.svg"
-        alt="integration-mob"
-        width={694}
-        height={673}
-        className="flex-grow md:flex hidden"
-      />
-      <Image
-        src="/integration-mob.svg"
-        alt="integration-mob"
-        width={328}
-        height={318}
-        className="flex md:hidden"
-      />
+      <div className="flex-grow md:flex hidden">
+        <Image
+          src="/integration-mob.svg"
+          alt="integration-mob"
+          width={694}
+          height={673}
+        />
+      </div>
+      <div className="flex md:hidden">
+        <Image
+          src="/integration-mob.svg"
+          alt="integration-mob"
+          width={328}
+          height={318}
+        />
+      </div>
     </div>
   );
 };

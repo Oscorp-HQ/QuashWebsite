@@ -24,12 +24,12 @@ const CodeSection = () => {
   const [isOs, setIsOs] = useState("android");
 
   return (
-    <div className="relative px-4 py-[96px] lg:px-[275px] md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
+    <div className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
 
       <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
       </span>
-      <div className="relative w-full md:max-w-[963px] md:mt-[72px]">
+      <div className="code-card relative w-full md:max-w-[963px] md:mt-[72px]">
         <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
           <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
             {OS.map((item, index) => (
