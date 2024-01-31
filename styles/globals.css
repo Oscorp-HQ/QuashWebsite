@@ -2003,7 +2003,7 @@ align-items: center;
   }
 
   .agile-image-container {
-    width: 841px;
+    width: auto;
     height: 150px;
   }
 
