@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Agile = () => {
@@ -22,14 +23,14 @@ const Agile = () => {
        
       </div>
       <div >
-          <img
+          <Image
             src="/agile-illustration-mob.svg"
             alt=""
             className="w-full pt-[32px] md:hidden"
           />
         </div>
       <div className="agile-image-container hidden md:block">
-        <img
+        <Image
           src="/agile-illustration.svg"
           alt=""
           className="w-full"

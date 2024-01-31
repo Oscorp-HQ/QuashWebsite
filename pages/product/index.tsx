@@ -5,6 +5,7 @@ import Integration from "@/components/integration";
 import Reporting from "@/components/reporting";
 import Resolution from "@/components/resolution";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import router from "next/router";
 import React from "react";
 
@@ -33,7 +34,7 @@ const Product = () => {
             </div>
           </div>{" "}
           
-          <img src="product-page-landing-image.svg" width={1337} height={701} alt="" className="" />
+          <Image src="product-page-landing-image.svg" width={1337} height={701} alt="" className="" />
         </div>
       </div>
       <div className="product-youtube-video relative w-full max-w-6xl mx-auto mb-[48px]">

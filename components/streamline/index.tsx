@@ -88,7 +88,7 @@ const Streamline = () => {
         className="flex md:hidden pt-[110px] pb-[96px]"
       >
         {streamlineContentmob.map((media, index) => (
-          <div>
+            <div key={index}>
             <Image
             key={index}
             src={media.src}
