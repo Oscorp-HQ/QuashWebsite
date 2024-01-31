@@ -27,15 +27,22 @@ const Agile = () => {
           team productivity for standout performance.
         </div>
       </div>
-      <div className="agile-image-container">
-        <Image
+      <div>
+      <img
+        src="/agile-illustration-mob.svg"
+        alt=""
+        className="w-full md:hidden" 
+      />
+      <div className="agile-image-container hidden md:block"> 
+        <img
           src="/agile-illustration.svg"
           alt=""
-          className="agile-image w-full"
+          className="w-full"
           width={1400}
           height={268}
         />
       </div>
+    </div>
     </>
   );
 };
