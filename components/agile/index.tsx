@@ -27,6 +27,8 @@ const Agile = () => {
             src="/agile-illustration-mob.svg"
             alt=""
             className="w-full pt-[32px] md:hidden"
+            width={1400}
+          height={268}
           />
         </div>
       <div className="agile-image-container hidden md:block">
