@@ -1938,11 +1938,6 @@ body {
     border-radius: 9px;
   }
 
-  /* Streamline */
-
-  .streamline-cards {
-    display: none;
-  }
 
   /* Benefits */
   .benefits-flex-container {
@@ -2011,3 +2006,13 @@ body {
     font-size: 32px;
   }
 }
+
+@media screen and (max-width: 760px) {
+  /* Streamline */
+
+  .streamline-cards {
+    display: none;
+  }
+
+}
+
