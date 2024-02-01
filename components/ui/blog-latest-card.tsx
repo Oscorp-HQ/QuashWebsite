@@ -5,48 +5,18 @@ import ContentfulImage from "../contentful-ui/ContentfulImage";
 import { ArrowRight } from "lucide-react";
 
 const BlogLatestCard = ({ data }: any) => {
-  const { title, slug, excerpt, coverImage, author, dateAndTime, readTime } =
-    data?.fields;
+  const {
+    title,
+    slug,
+    excerpt,
+    coverImage,
+    author,
+    dateAndTime,
+    readTime,
+    topicType,
+  } = data?.fields;
 
   return (
-    // <div className="latestPostContainer">
-    //   <div className="latestPost">
-    //     <div className="latestPostItems">
-    //       <div className="latestPostImage">
-    //         <ContentfulImage
-    //           alt={`Cover Image for ${title}`}
-    //           src={coverImage?.fields?.file?.url}
-    //           width={498}
-    //           height={380}
-    //         />
-    //       </div>
-    //       <div className="latestPostFields">
-    //         <h3 className="titleTop2">{title}</h3>
-    //         <p className="truncSummary2">{excerpt}</p>
-    //         <Link
-    //           className="btnLatestPostMain"
-    //           href={`/blog/${slug}`}
-    //           aria-label={title}
-    //         >
-    //           <div className="btnLatestPost">
-    //             <h5>Read More</h5>
-    //             <ArrowRight size={32} />
-    //           </div>
-    //         </Link>
-    //       </div>
-    //       <Link
-    //         className="btnLatestPostLast"
-    //         href={`/blog/${slug}`}
-    //         aria-label={title}
-    //       >
-    //         <div className="btnLatestPostLastSecond">
-    //           <h5>Read More</h5>
-    //           <ArrowRight size={32} />
-    //         </div>
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="top-blog-container">
       <div className="top-blog-image-container flex justify-center items-center relative">
         <ContentfulImage
@@ -57,9 +27,54 @@ const BlogLatestCard = ({ data }: any) => {
         />
       </div>
       <div className="top-blog-content">
-        <h3 className="top-blog-title ">{title}</h3>
-        <p className="top-blog-summary ">{excerpt}</p>
-        <div className="top-blog-image-container-mobile flex justify-center items-center relative">
+        <div className="top-blog-featured-text">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.4999 13.5C19.5018 13.8058 19.4089 14.1047 19.234 14.3555C19.059 14.6063 18.8107 14.7968 18.523 14.9006L13.6808 16.6819L11.8996 21.5203C11.7941 21.8069 11.6033 22.0542 11.3528 22.2289C11.1023 22.4036 10.8043 22.4972 10.499 22.4972C10.1936 22.4972 9.89559 22.4036 9.64513 22.2289C9.39467 22.0542 9.20383 21.8069 9.09834 21.5203L7.31241 16.6875L2.47303 14.9062C2.18646 14.8008 1.93915 14.6099 1.76445 14.3595C1.58976 14.109 1.49609 13.811 1.49609 13.5056C1.49609 13.2003 1.58976 12.9022 1.76445 12.6518C1.93915 12.4013 2.18646 12.2105 2.47303 12.105L7.31522 10.3238L9.09647 5.48531C9.20195 5.19875 9.3928 4.95143 9.64326 4.77674C9.89371 4.60204 10.1917 4.50838 10.4971 4.50838C10.8025 4.50838 11.1005 4.60204 11.3509 4.77674C11.6014 4.95143 11.7922 5.19875 11.8977 5.48531L13.679 10.3275L18.5174 12.1088C18.8046 12.2111 19.0531 12.3998 19.229 12.6488C19.4048 12.8978 19.4995 13.1951 19.4999 13.5ZM14.2499 4.5H15.7499V6C15.7499 6.19891 15.8289 6.38968 15.9696 6.53033C16.1102 6.67098 16.301 6.75 16.4999 6.75C16.6988 6.75 16.8896 6.67098 17.0302 6.53033C17.1709 6.38968 17.2499 6.19891 17.2499 6V4.5H18.7499C18.9488 4.5 19.1396 4.42098 19.2802 4.28033C19.4209 4.13968 19.4999 3.94891 19.4999 3.75C19.4999 3.55109 19.4209 3.36032 19.2802 3.21967C19.1396 3.07902 18.9488 3 18.7499 3H17.2499V1.5C17.2499 1.30109 17.1709 1.11032 17.0302 0.96967C16.8896 0.829018 16.6988 0.75 16.4999 0.75C16.301 0.75 16.1102 0.829018 15.9696 0.96967C15.8289 1.11032 15.7499 1.30109 15.7499 1.5V3H14.2499C14.051 3 13.8602 3.07902 13.7196 3.21967C13.5789 3.36032 13.4999 3.55109 13.4999 3.75C13.4999 3.94891 13.5789 4.13968 13.7196 4.28033C13.8602 4.42098 14.051 4.5 14.2499 4.5ZM22.4999 7.5H21.7499V6.75C21.7499 6.55109 21.6709 6.36032 21.5302 6.21967C21.3896 6.07902 21.1988 6 20.9999 6C20.801 6 20.6102 6.07902 20.4696 6.21967C20.3289 6.36032 20.2499 6.55109 20.2499 6.75V7.5H19.4999C19.301 7.5 19.1102 7.57902 18.9696 7.71967C18.8289 7.86032 18.7499 8.05109 18.7499 8.25C18.7499 8.44891 18.8289 8.63968 18.9696 8.78033C19.1102 8.92098 19.301 9 19.4999 9H20.2499V9.75C20.2499 9.94891 20.3289 10.1397 20.4696 10.2803C20.6102 10.421 20.801 10.5 20.9999 10.5C21.1988 10.5 21.3896 10.421 21.5302 10.2803C21.6709 10.1397 21.7499 9.94891 21.7499 9.75V9H22.4999C22.6988 9 22.8896 8.92098 23.0302 8.78033C23.1709 8.63968 23.2499 8.44891 23.2499 8.25C23.2499 8.05109 23.1709 7.86032 23.0302 7.71967C22.8896 7.57902 22.6988 7.5 22.4999 7.5Z"
+              fill="#5093EC"
+            />
+          </svg>
+          <p>Featured</p>
+        </div>
+        <div className="top-blog-info">
+          <h3 className="top-blog-topic">{topicType}</h3>
+          <h3 className="top-blog-title ">{title}</h3>
+          <p className="top-blog-summary ">{excerpt}</p>
+        </div>
+        {/* <Link
+          href={`/blog/${slug}`}
+          aria-label={title}
+          className="top-blog-read-more-container"
+        >
+          <p>Read More</p>
+          <ArrowRight size={32} color="white" className="read-more-icon" />
+        </Link> */}
+<Link
+          href={`/blog/${slug}`}
+          aria-label={title}
+          className="blog-learn-more-button-mob"
+        >
+          <p>Read More</p>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.7806 12.531L14.0306 19.281C13.8899 19.4218 13.699 19.5008 13.5 19.5008C13.301 19.5008 13.1101 19.4218 12.9694 19.281C12.8286 19.1403 12.7496 18.9494 12.7496 18.7504C12.7496 18.5514 12.8286 18.3605 12.9694 18.2198L18.4397 12.7504H3.75C3.55109 12.7504 3.36032 12.6714 3.21967 12.5307C3.07902 12.3901 3 12.1993 3 12.0004C3 11.8015 3.07902 11.6107 3.21967 11.4701C3.36032 11.3294 3.55109 11.2504 3.75 11.2504H18.4397L12.9694 5.78104C12.8286 5.64031 12.7496 5.44944 12.7496 5.25042C12.7496 5.05139 12.8286 4.86052 12.9694 4.71979C13.1101 4.57906 13.301 4.5 13.5 4.5C13.699 4.5 13.8899 4.57906 14.0306 4.71979L20.7806 11.4698C20.8504 11.5394 20.9057 11.6222 20.9434 11.7132C20.9812 11.8043 21.0006 11.9019 21.0006 12.0004C21.0006 12.099 20.9812 12.1966 20.9434 12.2876C20.9057 12.3787 20.8504 12.4614 20.7806 12.531Z"
+              fill="#FFD233"
+            />
+          </svg>
+        </Link>
+        <div className="top-blog-image-container-mobile flex justify-center items-center relative ">
           <ContentfulImage
             alt={`Cover Image for ${title}`}
             src={coverImage?.fields?.file?.url}
@@ -70,10 +85,21 @@ const BlogLatestCard = ({ data }: any) => {
         <Link
           href={`/blog/${slug}`}
           aria-label={title}
-          className="top-blog-read-more-container"
+          className="blog-learn-more-button"
         >
           <p>Read More</p>
-          <ArrowRight size={32} color="white" className="read-more-icon" />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.7806 12.531L14.0306 19.281C13.8899 19.4218 13.699 19.5008 13.5 19.5008C13.301 19.5008 13.1101 19.4218 12.9694 19.281C12.8286 19.1403 12.7496 18.9494 12.7496 18.7504C12.7496 18.5514 12.8286 18.3605 12.9694 18.2198L18.4397 12.7504H3.75C3.55109 12.7504 3.36032 12.6714 3.21967 12.5307C3.07902 12.3901 3 12.1993 3 12.0004C3 11.8015 3.07902 11.6107 3.21967 11.4701C3.36032 11.3294 3.55109 11.2504 3.75 11.2504H18.4397L12.9694 5.78104C12.8286 5.64031 12.7496 5.44944 12.7496 5.25042C12.7496 5.05139 12.8286 4.86052 12.9694 4.71979C13.1101 4.57906 13.301 4.5 13.5 4.5C13.699 4.5 13.8899 4.57906 14.0306 4.71979L20.7806 11.4698C20.8504 11.5394 20.9057 11.6222 20.9434 11.7132C20.9812 11.8043 21.0006 11.9019 21.0006 12.0004C21.0006 12.099 20.9812 12.1966 20.9434 12.2876C20.9057 12.3787 20.8504 12.4614 20.7806 12.531Z"
+              fill="#FFD233"
+            />
+          </svg>
         </Link>
       </div>
     </div>

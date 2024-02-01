@@ -59,9 +59,9 @@ const streamlineContentmob = [
 
 const Streamline = () => {
   return (
-    <div className="flex px-4 flex-col justify-center items-center">
+    <div className="flex px-4 flex-col justify-center items-center pb-[40px]">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
-        <div className="grad-report h-[162px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+        <div className="grad-report h-[240px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
         <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
           <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
@@ -79,29 +79,28 @@ const Streamline = () => {
           ))}
         </div>
         <Carousel
-        infiniteLoop
-        showStatus={false}
-        showIndicators={true}
-        showThumbs={false}
-        interval={3000}
-        centerMode={true}
-        className="flex md:hidden pt-[110px] pb-[96px]"
-      >
-        {streamlineContentmob.map((media, index) => (
+          infiniteLoop
+          showStatus={false}
+          showIndicators={true}
+          showThumbs={false}
+          interval={3000}
+          centerMode={true}
+          className="flex md:hidden pt-10"
+        >
+          {streamlineContentmob.map((media, index) => (
             <div key={index}>
-            <Image
-            key={index}
-            src={media.src}
-            alt={media.label}
-            width={272}
-            height={374}
-            className=""
-          />
-          <br />
-          <br />
-          </div>
-        ))}
-      </Carousel>
+              <Image
+                src={media.src}
+                alt={media.label}
+                width={304}
+                height={272}
+                className=""
+              />
+              <br />
+              <br />
+            </div>
+          ))}
+        </Carousel>
       </div>
     </div>
   );
