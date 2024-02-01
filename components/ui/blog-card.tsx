@@ -58,7 +58,7 @@ const BlogCard = ({ data }: any) => {
             aria-label={title}
             className="blog-learn-more-button"
           >
-            <p>Learn more</p>  
+            <p>Read More</p>  
             <ArrowRight size={24} color="#FFD233" className="" />
           </Link>
         </div>

@@ -87,7 +87,7 @@ const Capture = () => {
         </Carousel>
         <div className="capture-learn-more-button-container">
           <Link
-            href="https://quash.notion.site/quash/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47"
+            href="/product"
             className="capture-learn-more-button"
           >
             Learn more

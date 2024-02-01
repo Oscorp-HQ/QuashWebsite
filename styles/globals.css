@@ -1573,6 +1573,16 @@ line-height: 26px; /* 130% */
   flex-direction: column;
 }
 
+/* Add this to your global styles or in your component's styles */
+.link-hover {
+  transition: color 0.13s ease-in-out;
+}
+
+.link-hover:hover {
+  color: white;
+}
+
+
 /* Hero component */
 
 .hero-video-frame-content {
