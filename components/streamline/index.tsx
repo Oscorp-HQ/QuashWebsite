@@ -98,7 +98,7 @@ const Streamline = () => {
             </div>
           ))}
         </div>
-        <div className="w-full h-[500px]">
+        <div className="w-full h-[500px] md:hidden flex">
           <Carousel
             infiniteLoop
             showStatus={false}
