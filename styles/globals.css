@@ -549,7 +549,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  
+  line-height: 20px;
 }
 
 .blog-card-description {
@@ -600,7 +600,7 @@ body {
   .blog-card-meta-info {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: 16px;
     display: flex;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -682,6 +682,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
+  line-height: 20px;
 }
 
 @media (max-width: 768px) {
@@ -1918,12 +1919,15 @@ background: var(--Grey-Grey-800, #424242);
 
   .postItemFieldsDownAuthor {
     font-size: 12px;
+    line-height: 16px;
   }
   .postItemFieldsDownDate {
     font-size: 12px;
+    line-height: 16px;
   }
   .postItemFieldsDownReadTime {
     font-size: 12px;
+    line-height: 16px;
   }
 
   
