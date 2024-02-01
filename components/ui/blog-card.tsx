@@ -50,7 +50,7 @@ const BlogCard = ({ data }: any) => {
             aria-label={title}
             className="blog-learn-more-button-mob"
           >
-            <p>Learn more</p>  
+            <p>Read More</p>  
             <ArrowRight size={24} color="#FFD233" className="" />
           </Link>
           <Link
