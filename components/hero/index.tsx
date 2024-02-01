@@ -6,20 +6,19 @@ import { useRouter } from "next/router";
 const Hero = () => {
   const router = useRouter();
   return (
-    <div className="relative flex flex-col gap-[56px] md:gap-0 items-center overflow-hidden">
+    <div className="relative flex flex-col gap-[56px] md:gap-0 items-center overflow-hidden pb-[41px] md:pb-[150px]">
       <div className="left-ellipse hidden md:flex absolute top-[15rem] -left-[10rem]" />
       <div className="left-sphere hidden md:flex absolute top-[30rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[36rem] -right-[25rem]" />
       <div className="right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" />
       <div className=" pt-[112px] px-[18px]  md:pt-[144px] lg:px-[242px] md:pb-[112px] w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[72px]">
         <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
-          <h1 className="justify-center bg-gradient-to-b px-7 from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
-            Capture, Report, and Resolve Bugs in a Flash
+          <h1 className="justify-center max-w-[323px] md:max-w-[1024px] bg-gradient-to-b px-7 from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
+            Mobile Testing should not be slow and tangled
           </h1>
 
           <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full md:px-[100px]">
-            Transform your bug reporting process, ensuring rapid resolutions and
-            a smoother development journey.
+            We’re on a mission to make it smooth and simple
           </p>
         </div>
         <Button
@@ -32,12 +31,12 @@ const Hero = () => {
           Get Started for Free
         </Button>
       </div>
-    <div className="relative w-full max-w-6xl mx-auto">
-        <div className="aspect-w-16 aspect-h-9">
+      <div className="relative w-full max-w-6xl mx-auto">
+        <div className="hero-video-frame aspect-w-16 aspect-h-9 ">
           <iframe
-            className="w-full h-full"
+            className="hero-video-frame-content"
             style={{ aspectRatio: '16 / 9' }}
-            src="https://www.youtube.com/embed/PnwNkHzPGQk"
+            src="https://www.youtube.com/embed/PnwNkHzPGQk?autoplay=1&mute=1&vq=hd1080"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

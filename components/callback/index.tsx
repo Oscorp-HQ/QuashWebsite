@@ -36,7 +36,7 @@ const Callback = () => {
         >
           Get Started for Free
         </Button>
-         <div className="flex-grow flex items-center justify-center"> {/* Added */}
+         <div className="flex-grow flex items-center justify-center">
           <Image
             src="/Hero-cropped.svg" 
             alt="Hero"
@@ -44,8 +44,6 @@ const Callback = () => {
             height={600}
             className="z-10 hidden md:flex"
           />
-
-          {/* Mobile Image */}
           <div className="w-full flex justify-end md:hidden">
             <Image
               src="/Hero-cropped.svg" 

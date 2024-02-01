@@ -8,15 +8,22 @@ import Callback from "@/components/callback";
 import CodeSection from "@/components/code";
 import { Toaster } from "@/components/ui/toaster";
 import Head from "next/head";
+import Streamline from "@/components/streamline";
+import Agile from "@/components/agile";
+import Capture from "@/components/capture";
+import Trusted from "@/components/trusted";
+import Benefits from "@/components/benefits";
 
 export default function Home() {
   return (
     <div className="h-full w-full overflow-hidden relative">
       <Hero />
+      <Trusted />
+      <Streamline />
+      <Benefits />
+      <Agile />
       <Comparision />
-      <Reporting />
-      <Resolution />
-      <Collaboration />
+      <Capture />
       <Integration />
       <CodeSection />
       <div className="left-ellipse hidden md:flex absolute top-[425rem] -left-[10rem]" />

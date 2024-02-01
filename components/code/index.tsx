@@ -24,12 +24,12 @@ const CodeSection = () => {
   const [isOs, setIsOs] = useState("android");
 
   return (
-    <div className="relative px-4 py-[96px] lg:px-[275px] md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
+    <div className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
 
       <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
       </span>
-      <div className="relative w-full md:mt-[72px]">
+      <div className="code-card relative w-full md:max-w-[963px] md:mt-[72px]">
         <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
           <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
             {OS.map((item, index) => (
@@ -48,9 +48,9 @@ const CodeSection = () => {
           </div>
           <div
             style={codeFira.style}
-            className="w-full text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.116] overflow-x-scroll md:overflow-auto flex md:item-center gap-[12px] p-4 md:px-8 md:pt-10 md:pb-8"
+            className="w-full  text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.116] overflow-x-scroll md:overflow-auto flex md:item-center gap-[12px] p-4 md:px-8 md:pt-10 md:pb-8"
           >
-            <div className="numbers md:gap-[3px] text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.129] flex flex-col ">
+            <div className="numbers  md:gap-[3px] text-[10px] leading-[0.05] md:text-[24px] md:leading-[0.129] flex flex-col ">
               <p>1</p>
               <p>2</p>
               <p>3</p>
@@ -60,23 +60,23 @@ const CodeSection = () => {
             <div className="border-l border-[#4A4B50]" />
             {isOs === "android" ? (
               <div className=" md:my-0 md:mx-0 flex flex-col items-start w-[370px] md:w-auto ">
-                <p className="quick md:quick-desk">{`Quash.begin (`}</p>
-                <div className="flex flex-col ml-[50px] md:gap-[6px]">
-                  <div className="flex">
-                    <p className="key md:key-desk">{`withToken: `}</p>
-                    <p className="value md:value-desk">“YOUR_APP_TOKEN_HERE”</p>
-                  </div>
-                  <div className="flex">
-                    <p className="key md:key-desk">{`shouldCollectCrashLogs`}</p>
-                    <p className="value md:value-desk">=true</p>
-                  </div>
-                  <div className="flex">
-                    <p className="key md:key-desk">{`triggerType`}</p>
-                    <p className="value md:value-desk">{`=[Quash.FAB, Quash.SHAKE]`}</p>
-                  </div>
+              <p className="quick md:quick-desk">{`Quash.start (`}</p>
+              <div className="flex flex-col ml-[50px] md:gap-[6px]">
+                <div className="flex">
+                  <p className="key md:key-desk">{`withToken: `}</p>
+                  <p className="value md:value-desk">“YOUR_APP_TOKEN_HERE”</p>
                 </div>
-                <p className="quick md:quick-desk">{`)`}</p>
+                <div className="flex">
+                  <p className="key md:key-desk">{`shouldCollectCrashLogs`}</p>
+                  <p className="value md:value-desk">=true,</p>
+                </div>
+                <div className="flex">
+                  <p className="key md:key-desk">{`invocationType`}</p>
+                  <p className="value md:value-desk">{`=Quash.TRIPLE_TAPS`}</p>
+                </div>
               </div>
+              <p className="quick md:quick-desk">{`)`}</p>
+            </div>
             ) : isOs === "ios" ? (
               <div
                 className={` flex flex-col items-start ${
