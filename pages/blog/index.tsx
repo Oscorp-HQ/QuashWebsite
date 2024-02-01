@@ -85,7 +85,7 @@ const Blog = (props: any) => {
       <div className="z-10 left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" /> */}
       <div className="z-10 right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
       <div className="z-10 right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
-      <div className="blogs-container">
+      <div className="blogs-container z-20">
         <h1 className="justify-center bg-gradient-to-b  from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] pb-[65px] ">
           Blogs
         </h1>
@@ -113,7 +113,7 @@ const Blog = (props: any) => {
             </svg>
             <p>Topics</p>
           </div>
-          <div className="topic-filter-btn">
+          <div className="topic-filter-btn z-20">
             <button
               className={selectedTopic === "all" ? "active" : ""}
               onClick={() => handleTopicChange("all")}
