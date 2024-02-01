@@ -7,22 +7,22 @@ const streamlineContent = [
   {
     title: "Accelerated market delivery",
     desc: "Quash empowers your team to accelerate feature releases, bringing innovations to market swiftly. Our tool instills confidence for rapid and frequent updates.",
-    Image: "accelerated-market-delivery.svg"    ,
+    Image: "accelerated-market-delivery.svg",
     width: 170,
-    height:170 ,
+    height: 170,
   },
   {
     title: "AI powered Bug resolution",
     desc: "Our tools not only pinpoint issues but also propose optimal solutions, streamlining your development process and enhancing code reliability.",
     Image: "ai-powered-bug-resolution.svg",
     width: 680,
-    height:171 ,
+    height: 171,
   },
   {
     title: "Prerelease Testing assurance",
     desc: "Ensure every release is up to your high standards. Testing becomes a seamless part of your workflow, guaranteeing consistent quality.",
     Image: "pre-release.svg",
-    width: 270 ,
+    width: 270,
     height: 170,
   },
   {
@@ -30,7 +30,7 @@ const streamlineContent = [
     desc: "We know that the little things make a big difference. Quash helps you perfect those small, crucial details that define the quality of your software.",
     Image: "detail-oriented-success.svg",
     width: 142,
-    height:123 ,
+    height: 123,
   },
   {
     title: "Scalable Performance",
@@ -49,13 +49,28 @@ const streamlineContent = [
 ];
 
 const streamlineContentmob = [
-  {src:"accelerated-market-delivery-card.svg",label:"accelerated-market-delivery-card"},
-  {src:"ai-powered-bug-resolution-card.svg",label:"ai-powered-bug-resolution-card"},
-  {src:"pre-release-testing-assurance-card.svg",label:"pre-release-testing-assurance-card"},
-  {src:"detail-oriented-success-card.svg",label:"detail-oriented-success-card"},
-  {src:"scalable-performance-card.svg",label:"scalable-performance-card"},
-  {src:"developer-centric-design-card.svg",label:"developer-centric-design-card"},
-]
+  {
+    src: "accelerated-market-delivery-card.svg",
+    label: "accelerated-market-delivery-card",
+  },
+  {
+    src: "ai-powered-bug-resolution-card.svg",
+    label: "ai-powered-bug-resolution-card",
+  },
+  {
+    src: "pre-release-testing-assurance-card.svg",
+    label: "pre-release-testing-assurance-card",
+  },
+  {
+    src: "detail-oriented-success-card.svg",
+    label: "detail-oriented-success-card",
+  },
+  { src: "scalable-performance-card.svg", label: "scalable-performance-card" },
+  {
+    src: "developer-centric-design-card.svg",
+    label: "developer-centric-design-card",
+  },
+];
 
 const Streamline = () => {
   return (
@@ -71,36 +86,43 @@ const Streamline = () => {
         </div>
         <div className="streamline-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {streamlineContent.map((content, index) => (
-           <div key={index} className="text-white stream-line-card ">
+            <div key={index} className="text-white stream-line-card ">
               <h3>{content.title}</h3>
               <p>{content.desc}</p>
-              <Image src={content.Image} width={content.width} height={content.height} alt="" />
+              <Image
+                src={content.Image}
+                width={content.width}
+                height={content.height}
+                alt=""
+              />
             </div>
           ))}
         </div>
-        <Carousel
-          infiniteLoop
-          showStatus={false}
-          showIndicators={true}
-          showThumbs={false}
-          interval={3000}
-          centerMode={true}
-          className="flex md:hidden pt-10"
-        >
-          {streamlineContentmob.map((media, index) => (
-            <div key={index}>
-              <Image
-                src={media.src}
-                alt={media.label}
-                width={304}
-                height={272}
-                className=""
-              />
-              <br />
-              <br />
-            </div>
-          ))}
-        </Carousel>
+        <div className="w-full h-[500px] md:hidden ">
+          <Carousel
+            infiniteLoop
+            showStatus={false}
+            showIndicators={true}
+            showThumbs={false}
+            interval={3000}
+            centerMode={true}
+            className="flex md:hidden pt-[110px] pb-[96px] h-full"
+          >
+            {streamlineContentmob.map((media, index) => (
+              <div key={index} className="h-[272px] w-[374px]">
+                <Image
+                  key={index}
+                  src={media.src}
+                  alt={media.label}
+                  // width={272}
+                  // height={374}
+                  objectFit=""
+                  layout="fill"
+                />
+              </div>
+            ))}
+          </Carousel>
+        </div>
       </div>
     </div>
   );

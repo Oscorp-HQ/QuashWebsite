@@ -2171,11 +2171,6 @@ line-height: 26px; /* 130% */
     border-radius: 9px;
   }
 
-  /* Streamline */
-
-  .streamline-cards {
-    display: none;
-  }
 
   /* Benefits */
   .benefits-flex-container {
@@ -2244,3 +2239,13 @@ line-height: 26px; /* 130% */
     font-size: 32px;
   }
 }
+
+@media screen and (max-width: 760px) {
+  /* Streamline */
+
+  .streamline-cards {
+    display: none;
+  }
+
+}
+
