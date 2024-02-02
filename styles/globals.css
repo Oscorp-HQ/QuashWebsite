@@ -444,6 +444,7 @@ body {
 
 .blogs-container {
   width: 100%;
+  
 }
 
 .blogs-list {
@@ -1855,7 +1856,10 @@ body {
   border-radius: 5px;
 }
 .slug-blog-list-container{
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%; 
   padding-left: 40px;
   padding-right: 40px;padding-bottom: 80px;
 }

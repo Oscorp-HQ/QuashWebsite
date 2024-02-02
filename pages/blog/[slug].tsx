@@ -37,7 +37,7 @@ const Post = ({ post, preview, posts }: any) => {
         <div className="right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
       </div>
       <div className="slug-blog-list-container">
-        <div className="blogs-list">
+        <div className="blogs-list" style={{justifyContent:"center"}}>
           {visiblePosts.length > 0 &&
             visiblePosts.map((item: any) => (
               <BlogCard key={item.fields.slug} data={item} />
