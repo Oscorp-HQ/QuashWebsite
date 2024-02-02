@@ -9,7 +9,7 @@ const Post = ({ post, preview, posts }: any) => {
   const router = useRouter();
 
   const visiblePosts = posts
-  .filter((item: any) => post?.sys?.id !== item.sys.id)
+  ?.filter((item: any) => post?.sys?.id !== item.sys.id)
   .slice(0, 3);
 
   return (

@@ -1803,7 +1803,7 @@ body {
 .top-blog-featured-text {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   gap: 4px;
   color: var(--Blue-Blue-500, #5093ec);
   font-size: 16px;
