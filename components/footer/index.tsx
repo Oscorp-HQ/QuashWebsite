@@ -16,7 +16,7 @@ const footerQuash = [
   {
     label: "Home",
     title: "Quash home",
-    route: "",
+    route: "/",
   },
   {
     label: "Product",
