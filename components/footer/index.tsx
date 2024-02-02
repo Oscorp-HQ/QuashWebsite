@@ -16,7 +16,7 @@ const footerQuash = [
   {
     label: "Home",
     title: "Quash home",
-    route: "",
+    route: "/",
   },
   {
     label: "Product",
@@ -127,7 +127,7 @@ const Footer = () => {
                 legacyBehavior={true}
               >
                 <a
-                  className="hover:cursor-pointer text-[#9E9E9E]  text-base font-medium"
+                  className="hover:cursor-pointer text-[#9E9E9E]  text-base font-medium link-hover"
                   title={`Visit ${nav.title} page`}
                 >
                   {nav.label}
@@ -146,7 +146,7 @@ const Footer = () => {
                   legacyBehavior={true}
                 >
                   <a
-                    className="hover:cursor-pointer text-[#9E9E9E]  text-base font-medium"
+                    className="hover:cursor-pointer text-[#9E9E9E]  text-base font-medium link-hover"
                     title={`Visit ${nav.label} page`}
                   >
                     {nav.label}
@@ -160,7 +160,7 @@ const Footer = () => {
               <p className="text-white  font-semibold text-lg">Support</p>
 
               <Link
-                className="text-[#9E9E9E]  text-base font-medium"
+                className="text-[#9E9E9E]  text-base font-medium link-hover"
                 onClick={() => setFormOpen(true)}
                 href={""}
               >
@@ -168,7 +168,7 @@ const Footer = () => {
               </Link>
               <Link
                 href={"mailto:hello@quashbugs.com"}
-                className="text-[#9E9E9E]  text-base font-medium"
+                className="text-[#9E9E9E]  text-base font-medium link-hover"
               >
                 hello@quashbugs.com
               </Link>
@@ -273,16 +273,16 @@ const Footer = () => {
                   alt={item.label}
                   width={24}
                   height={24}
-                  className="h-6 w-6"
+                  className="h-6 w-6 "
                 />
               </Link>
             ))}
           </div>
-          <div className="text-[#747474]">
+          <div className="text-[#747474] ">
             <p>
-              <Link href="/terms-and-conditions">Terms</Link>{" "}
+              <Link href="/terms-and-conditions" className="link-hover">Terms</Link>{" "}
               <span className="px-[12px]">|</span>{" "}
-              <Link href="/privacy">Privacy</Link>
+              <Link href="/privacy" className="link-hover">Privacy</Link>
             </p>
           </div>
           <div>
@@ -306,7 +306,7 @@ const Footer = () => {
                 alt={item.label}
                 height={24}
                 width={24}
-                className="h-6 w-6"
+                className="h-6 w-6 link-hover"
               />
             </Link>
           ))}
@@ -318,9 +318,9 @@ const Footer = () => {
           <p className="text-[#747474]">
             &#169; 2024 Brisk Labs, Inc. All rights reserved{" "}
             <span className="px-[12px]">|</span>{" "}
-            <Link href="/terms-and-conditions">Terms</Link>{" "}
+            <Link href="/terms-and-conditions " className="link-hover">Terms</Link>{" "}
             <span className="px-[12px]">|</span>{" "}
-            <Link href="/privacy">Privacy</Link>
+            <Link href="/privacy" className="link-hover">Privacy</Link>
           </p>
         </div>
       </div>

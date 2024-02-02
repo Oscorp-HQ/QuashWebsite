@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { List, X } from "@/lib/icons";
 import { LoaderDialog, LoaderDialogContent } from "../ui/overlay-loader";
@@ -39,6 +39,14 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
+  useEffect(() => {
+    const currentPath = router.pathname;
+    const matchingNav = mobileNav.find((nav) => nav.path === currentPath);
+    if (matchingNav) {
+      setSelected(matchingNav.value);
+    }
+  }, [router.pathname]);
+
   return (
     <div className="header fixed top-0 py-[14px] px-4 w-full flex justify-between items-center lg:px-[120px] md:py-3 z-50">
       <Image
@@ -64,25 +72,25 @@ const Header = () => {
             router.push("/");
           }}
         />
-        <div className="hidden md:flex justify-between items-center">
-          {mobileNav.map((nav, index) => (
-            <Button
-              key={index}
-              className={`hover:text-gray-200 ${
-                index === 5 ? "hidden" : "flex"
-              } text-[16px] font-[500] leading-[20.8px] ${
-                selected === nav.value ? "text-white" : "text-[#8A8894]"
-              }`}
-              variant="ghost"
-              onClick={() => {
-                setSelected(nav.value);
-                router.push(nav.path);
-              }}
-            >
-              {nav.label}
-            </Button>
-          ))}
-        </div>
+      <div className="hidden md:flex justify-between items-center">
+        {mobileNav.map((nav, index) => (
+          <Button
+            key={index}
+            className={`hover:text-gray-200 ${
+              index === 5 ? "hidden" : "flex"
+            } text-[16px] font-[500] leading-[20.8px] ${
+              selected === nav.value ? "text-white" : "text-[#8A8894]"
+            }`}
+            variant="ghost"
+            onClick={() => {
+              setSelected(nav.value);
+              router.push(nav.path);
+            }}
+          >
+            {nav.label}
+          </Button>
+        ))}
+      </div>
       </div>
       <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
         <span
