@@ -8,6 +8,10 @@ import { useRouter } from "next/router";
 const Post = ({ post, preview, posts }: any) => {
   const router = useRouter();
 
+  const visiblePosts = posts
+  .filter((item: any) => post?.sys?.id !== item.sys.id)
+  .slice(0, 3);
+
   return (
 <div>
 <div className="blog-details-layout z-10 relative overflow-hidden">
@@ -32,12 +36,9 @@ const Post = ({ post, preview, posts }: any) => {
    </div>
       <div className="slug-blog-list-container">
       <div className="blogs-list">
-   {posts
-     .filter((item: any) => post.sys.id !== item.sys.id)
-     .slice(0, 3)
-     .map((item: any) => (
-       <BlogCard key={item.fields.slug} data={item} />
-     ))}
+      {visiblePosts.map((item: any) => (
+            <BlogCard key={item.fields.slug} data={item} />
+          ))}
  </div>
       </div>
 </div>
