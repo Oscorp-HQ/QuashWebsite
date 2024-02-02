@@ -32,15 +32,15 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/pricing</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://quashbugs.com/privacy</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://quashbugs.com/product</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://quashbugs.com/pricing</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
