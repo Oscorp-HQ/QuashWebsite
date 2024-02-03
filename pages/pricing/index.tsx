@@ -48,7 +48,7 @@ const plans = [
       "Priority support",
     ],
     action: "Get Quash Pro",
-    path: "https://optimus.quashbugs.com/signup",
+    path: "https://optimus.quashbugs.com/subscription",
   },
   {
     label: "Custom",
@@ -302,7 +302,7 @@ const Pricing = () => {
           </AlertDialog>
         )}
       </div>
-      <Benefits/>
+      <Benefits />
       <Capture />
       <div className="pricing-page-gap"></div>
       <Trusted />
