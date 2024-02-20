@@ -4,9 +4,21 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://quashbugs.com/company-details</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://quashbugs.com/blog</loc>
     <changefreq>hourly</changefreq>
   </url>
+  <url>
+        <loc>https://quashbugs.com/blog/creating-magic-animations-in-flutter</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/elevating-your-mobile-app-experience-15-strategies-for-sustainable-growth</loc>
+        <changefreq>hourly</changefreq>
+      </url>
   <url>
         <loc>https://quashbugs.com/blog/google-play-stores-new-app-quality-guidelines-what-developers-need-to-know</loc>
         <changefreq>hourly</changefreq>
@@ -28,19 +40,15 @@
         <changefreq>hourly</changefreq>
       </url>
   <url>
-    <loc>https://quashbugs.com/company-details</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://quashbugs.com/pricing</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/privacy</loc>
+    <loc>https://quashbugs.com/product</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/product</loc>
+    <loc>https://quashbugs.com/privacy</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
