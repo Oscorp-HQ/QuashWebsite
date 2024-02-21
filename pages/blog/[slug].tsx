@@ -42,7 +42,7 @@ const Post = ({ post, preview, posts }: any) => {
         <div className="blogs-list" style={{ justifyContent: "center" }}>
           {visiblePosts.length > 0 &&
             visiblePosts.map((item: any) => (
-              <div className="blog-card-display">
+              <div className="blog-card-display" key={post.fields.slug}>
                 <BlogCard key={item.fields.slug} data={item} />
               </div>
             ))}
