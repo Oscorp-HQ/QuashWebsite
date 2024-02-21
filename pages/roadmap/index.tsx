@@ -29,13 +29,13 @@ const solutions = [
 const Roadmap = () => {
   const router = useRouter();
   return (
-    <div className="relative flex flex-col items-center overflow-hidden">
+    <div className=" relative flex flex-col items-center overflow-hidden">
      
       <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
       <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
       <div className="right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
-      <div className=" pt-[112px] px-[18px]  md:pt-[220px] lg:px-[200px]  w-full text-center items-center justify-center flex flex-col ">
+      <div className="roadmap pt-[112px] px-[18px]  md:pt-[220px] lg:px-[200px]  w-full text-center items-center justify-center flex flex-col ">
         <div className="flex flex-col gap-3 md:gap-6 text-center items-center justify-center w-full mb-[106px] lg:mb-[180px]">
           <p className="justify-center text-[16px] items-center  font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] ">
             Our vision is to ensure that

@@ -27,6 +27,7 @@ const BlogCard = ({ data }: any) => {
             src={coverImage?.fields?.file?.url}
             width={408}
             height={229}
+            
           />
         </div>
         <div className="blog-card-text-container">

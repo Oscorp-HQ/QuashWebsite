@@ -75,7 +75,7 @@ const Blog = (props: any) => {
   };
 
   return (
-    <div className="blog-layout relative overflow-hidden">
+    <div className="blog-layout relative overflow-hidden ">
       <div className="left-ellipse-mobile flex md:hidden absolute top-[6rem] -left-[8rem]" />
       <div className="left-sphere-mobile flex md:hidden absolute top-[4rem] left-[6rem]" />
       <div className="right-ellipse-mobile flex md:hidden absolute top-[33rem] -right-[5rem]" />
@@ -90,7 +90,7 @@ const Blog = (props: any) => {
           Blogs
         </h1>
         
-        <div className="">
+        <div className="top-blog-card">
           {latestPost ? (
             <BlogLatestCard data={latestPost} />
           ) : (
@@ -136,20 +136,24 @@ const Blog = (props: any) => {
           </div>
         </div>
 
+        <div className="blogs-list-container">
         {filteredPosts.length > 0 && (
-          <div className="blogs-list">
-            {filteredPosts.map((post: any) => (
+        <div className="blogs-list">
+          {filteredPosts
+            .sort((a: { fields: { dateAndTime: string | number | Date; }; }, b: { fields: { dateAndTime: string | number | Date; }; }) => new Date(b.fields.dateAndTime).getTime() - new Date(a.fields.dateAndTime).getTime())
+            .map((post: any) => (
               <div className="blog-card-display" key={post.fields.slug}>
                 <BlogCard data={post} />
               </div>
             ))}
-          </div>
-        )}
+        </div>
+      )}
+        </div>
       </div>
-      <div className="z-10 blog-left-ellipse hidden md:flex absolute top-[131rem] -left-[10rem]" />
-      <div className="z-10 left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
-      <div className="z-10 blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
-      <div className="z-10 right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
+      <div className="-z-10 blog-left-ellipse hidden md:flex absolute top-[131rem] -left-[10rem]" />
+      <div className="-z-10 left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
+      <div className="-z-10 blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
+      <div className="-z-10 right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
       <Callback />
     </div>
   );
