@@ -9,7 +9,9 @@ const Post = ({ post, preview, posts }: any) => {
   const router = useRouter();
 
   if (!posts || posts.length === 0) {
-    return <div className="flex text-white min-h-[280px]">No posts available</div>;
+    return (
+      <div className="flex text-white min-h-[280px]">No posts available</div>
+    );
   }
 
   const visiblePosts = posts
@@ -37,10 +39,12 @@ const Post = ({ post, preview, posts }: any) => {
         <div className="right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
       </div>
       <div className="slug-blog-list-container">
-        <div className="blogs-list" style={{justifyContent:"center"}}>
+        <div className="blogs-list" style={{ justifyContent: "center" }}>
           {visiblePosts.length > 0 &&
             visiblePosts.map((item: any) => (
-              <BlogCard key={item.fields.slug} data={item} />
+              <div className="blog-card-display">
+                <BlogCard key={item.fields.slug} data={item} />
+              </div>
             ))}
         </div>
       </div>

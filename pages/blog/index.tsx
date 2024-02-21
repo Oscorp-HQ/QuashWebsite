@@ -150,10 +150,10 @@ const Blog = (props: any) => {
       )}
         </div>
       </div>
-      <div className="z-10 blog-left-ellipse hidden md:flex absolute top-[131rem] -left-[10rem]" />
-      <div className="z-10 left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
-      <div className="z-10 blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
-      <div className="z-10 right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
+      <div className="-z-10 blog-left-ellipse hidden md:flex absolute top-[131rem] -left-[10rem]" />
+      <div className="-z-10 left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
+      <div className="-z-10 blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
+      <div className="-z-10 right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
       <Callback />
     </div>
   );
