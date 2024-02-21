@@ -90,7 +90,7 @@ const Blog = (props: any) => {
           Blogs
         </h1>
         
-        <div className="Blog-latest-card">
+        <div className="top-blog-card">
           {latestPost ? (
             <BlogLatestCard data={latestPost} />
           ) : (
