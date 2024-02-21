@@ -4,13 +4,17 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/company-details</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://quashbugs.com/blog</loc>
     <changefreq>hourly</changefreq>
   </url>
+  <url>
+        <loc>https://quashbugs.com/blog/swiggy-is-hiring-and-firing-at-the-same-time</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/Integrating-Mobile</loc>
+        <changefreq>hourly</changefreq>
+      </url>
   <url>
         <loc>https://quashbugs.com/blog/creating-magic-animations-in-flutter</loc>
         <changefreq>hourly</changefreq>
@@ -28,10 +32,6 @@
         <changefreq>hourly</changefreq>
       </url>
   <url>
-        <loc>https://quashbugs.com/blog/integrating-mobile-testing-frameworks-into-your-ci-cd-pipeline</loc>
-        <changefreq>hourly</changefreq>
-      </url>
-  <url>
         <loc>https://quashbugs.com/blog/exploring-flutters-floor-library-for-efficient-data-persistence</loc>
         <changefreq>hourly</changefreq>
       </url>
@@ -40,15 +40,19 @@
         <changefreq>hourly</changefreq>
       </url>
   <url>
+    <loc>https://quashbugs.com/company-details</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://quashbugs.com/pricing</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/product</loc>
+    <loc>https://quashbugs.com/privacy</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/privacy</loc>
+    <loc>https://quashbugs.com/product</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
