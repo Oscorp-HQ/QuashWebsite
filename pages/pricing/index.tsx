@@ -35,8 +35,8 @@ const plans = [
   },
   {
     label: "Pro",
-    annualCost: "8",
-    cost: "10",
+    annualCost: "160",
+    cost: "200",
     desc: "Advanced features for teams shipping regular releases",
     includedBenefit: "All Free features, plus...",
     benefits: [
