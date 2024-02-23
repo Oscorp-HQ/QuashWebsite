@@ -44,7 +44,7 @@ const plans = [
       "On-demand Integrations",
       "Add up to 3 applications",
       "Add up to 20 users",
-      "3 months data retention",
+      "Unlimited data retention",
       "Priority support",
     ],
     action: "Get Quash Pro",
