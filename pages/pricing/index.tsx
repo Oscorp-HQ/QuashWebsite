@@ -44,11 +44,11 @@ const plans = [
       "On-demand Integrations",
       "Add up to 3 applications",
       "Add up to 20 users",
-      "3 months data retention",
+      "Unlimited data retention",
       "Priority support",
     ],
     action: "Get Quash Pro",
-    path: "https://optimus.quashbugs.com/signup",
+    path: "https://optimus.quashbugs.com/subscription",
   },
   {
     label: "Custom",
@@ -302,7 +302,7 @@ const Pricing = () => {
           </AlertDialog>
         )}
       </div>
-      <Benefits/>
+      <Benefits />
       <Capture />
       <div className="pricing-page-gap"></div>
       <Trusted />
