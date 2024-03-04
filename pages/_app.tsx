@@ -8,6 +8,7 @@ import {
 } from "@next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Head from "next/head";
+import router from "next/router";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -22,6 +23,8 @@ export const fira = Source_Code_Pro({
   weight: "400",
 });
 export default function App({ Component, pageProps }: AppProps) {
+
+  const canonicalUrl = process.env.NEXT_PUBLIC_CANONICAL_URL || "";
   return (
     <Layout>
       <main className={jakarta.className}>
@@ -58,6 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
             content="Bug & Crash Reporting for Mobile Developers"
           />
           <meta name="twitter:image" content="/open-graph.png" />
+          <link rel="canonical" href={canonicalUrl} />
         </Head>
         <Component {...pageProps} />
         <GoogleTagManager gtmId="G-QX5GGKZ7SJ" />

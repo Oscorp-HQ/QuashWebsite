@@ -3,8 +3,12 @@ import Head from "next/head";
 import Link from "next/link";
 
 function RefundCancellationPolicy() {
+  const canonicalUrl = "https://quashbugs.com/refund-and-cancellation-policy";
   return (
     <>
+    <Head>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">
           <h1 className="text-3xl font-bold mb-4">

@@ -61,8 +61,12 @@ const mediaTeam = [
 ];
 
 const TeamPage = () => {
+  const canonicalUrl = "https://quashbugs.com/team";
   return (
     <div>
+       <Head>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
       <div className="overflow-hidden relative overflow-x-hidden h-full w-full">
         <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
         <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />

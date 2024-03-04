@@ -5,9 +5,13 @@ import Link from "next/link";
 import React from "react";
 
 const PrivacyPolicy = () => {
+
+  const canonicalUrl = "https://quashbugs.com/privacy";
   return (
     <>
-    
+      <Head>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Privacy Policy for Quash</h1>
