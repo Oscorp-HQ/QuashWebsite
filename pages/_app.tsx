@@ -8,7 +8,6 @@ import {
 } from "@next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Head from "next/head";
-import router from "next/router";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
