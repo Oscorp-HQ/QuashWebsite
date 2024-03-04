@@ -22,6 +22,7 @@ export const fira = Source_Code_Pro({
   weight: "400",
 });
 export default function App({ Component, pageProps }: AppProps) {
+
   return (
     <Layout>
       <main className={jakarta.className}>

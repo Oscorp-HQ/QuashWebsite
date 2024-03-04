@@ -9,7 +9,6 @@ export default function Document() {
           rel="stylesheet"
         ></link>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://quashbugs.com" />
       </Head>
       <title>🐞 Quash - Streamlining QA Processes 🚀</title>
       <body>

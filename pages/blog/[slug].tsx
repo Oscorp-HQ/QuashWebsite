@@ -7,6 +7,8 @@ import { useRouter } from "next/router";
 
 const Post = ({ post, preview, posts }: any) => {
   const router = useRouter();
+  const { slug } = router.query;
+  const canonicalUrl = `https://quashbugs.com/blog/${slug}`;
 
   if (!posts || posts.length === 0) {
     return (
@@ -20,6 +22,9 @@ const Post = ({ post, preview, posts }: any) => {
 
   return (
     <div>
+       <Head>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
       <div className="blog-details-layout z-10 relative overflow-hidden">
         <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
         <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
