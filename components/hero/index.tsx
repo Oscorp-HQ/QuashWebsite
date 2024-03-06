@@ -38,12 +38,12 @@ const Hero = () => {
             style={{ aspectRatio: "16 / 9" }}
             src="https://www.youtube.com/embed/PnwNkHzPGQk?autoplay=1&mute=1&vq=hd1080"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; xframe"
             allowFullScreen
             loading="lazy"
             title="YouTube Video"
-            sandbox="allow-same-origin allow-scripts"
-          ></iframe>
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+          />
         </div>
       </div>
     </div>
