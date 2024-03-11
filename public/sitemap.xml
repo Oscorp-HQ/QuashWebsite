@@ -8,6 +8,21 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+<<<<<<< Updated upstream
+=======
+        <loc>https://quashbugs.com/blog/project-idx-shaping-the-future-of-development</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/shaadi-com-vs-google</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/integrating-mobile-testing-frameworks-into-your-ci-cd-pipeline</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+>>>>>>> Stashed changes
         <loc>https://quashbugs.com/blog/exploring-openais-sora-a-game-changer-for-filmmakers-and-vfx-wizards</loc>
         <changefreq>hourly</changefreq>
       </url>
