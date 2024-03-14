@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const footerQuash = [
   {
@@ -92,12 +93,12 @@ const Footer = () => {
 
   return (
     <>
-      <div className="footer-container bottom-0 w-full h-full justify-between  px-[112px] py-[80px] text-[16px] font-[400] text-[#ECECEE] lg:text-[24px] bg-[#0D0D0D] ">
+      <footer className="footer-container bottom-0 w-full h-full justify-between  px-[112px] py-[80px] text-[16px] font-[400] text-[#ECECEE] lg:text-[24px] bg-[#0D0D0D] ">
         <div className="footer-logo-container flex flex-col align-center justify-between">
           <div>
             <Image
               src="/Quash_logo_yellow.svg"
-              alt="Quash Logo"
+              alt="Quash Logo Mobile"
               width={95}
               height={24}
               priority
@@ -159,13 +160,12 @@ const Footer = () => {
             <div className="flex flex-col gap-[22px] justify-start">
               <p className="text-white  font-semibold text-lg">Support</p>
 
-              <Link
-                className="text-[#9E9E9E]  text-base font-medium link-hover"
+              <Button
+                className="text-[#9E9E9E] text-base font-medium link-hover"
                 onClick={() => setFormOpen(true)}
-                href={""}
               >
-                contact us
-              </Link>
+                Contact Us
+              </Button>
               <Link
                 href={"mailto:hello@quashbugs.com"}
                 className="text-[#9E9E9E]  text-base font-medium link-hover"
@@ -280,9 +280,13 @@ const Footer = () => {
           </div>
           <div className="text-[#747474] ">
             <p>
-              <Link href="/terms-and-conditions" className="link-hover">Terms</Link>{" "}
-              <span className="px-[12px]">|</span>{" "}
-              <Link href="/privacy" className="link-hover">Privacy</Link>
+              <Link href="/terms-and-conditions" passHref>
+                <a className="link-hover">Terms</a>
+              </Link>
+              <span className="px-[12px]">|</span>
+              <Link href="/privacy-policy" passHref>
+                <a className="link-hover">Privacy Policy</a>
+              </Link>
             </p>
           </div>
           <div>
@@ -291,7 +295,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </div>
+      </footer>
       <div className="footer-bottom-container-main px-[48px] flex justify-between align-center border-t border-[#424242]">
         <div className="text-[#747474] flex gap-3 ">
           {footerSocialMedia.map((item, index) => (
@@ -318,9 +322,13 @@ const Footer = () => {
           <p className="text-[#747474]">
             &#169; 2024 Brisk Labs, Inc. All rights reserved{" "}
             <span className="px-[12px]">|</span>{" "}
-            <Link href="/terms-and-conditions " className="link-hover">Terms</Link>{" "}
+            <Link href="/terms-and-conditions " className="link-hover">
+              Terms
+            </Link>{" "}
             <span className="px-[12px]">|</span>{" "}
-            <Link href="/privacy" className="link-hover">Privacy</Link>
+            <Link href="/privacy" className="link-hover">
+              Privacy
+            </Link>
           </p>
         </div>
       </div>

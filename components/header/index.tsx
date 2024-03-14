@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { List, X } from "@/lib/icons";
 import { LoaderDialog, LoaderDialogContent } from "../ui/overlay-loader";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const mobileNav = [
   {
@@ -26,7 +27,7 @@ const mobileNav = [
     path: "/roadmap",
     value: "Roadmap",
   },
- 
+
   {
     label: "Blog",
     path: "/blog",
@@ -48,7 +49,7 @@ const Header = () => {
   }, [router.pathname]);
 
   return (
-    <div className="header fixed top-0 py-[14px] px-4 w-full flex justify-between items-center lg:px-[120px] md:py-3 z-50">
+    <nav className="header fixed top-0 py-[14px] px-4 w-full flex justify-between items-center lg:px-[120px] md:py-3 z-50">
       <Image
         src="/logo-mobile.svg"
         alt="Quash Logo"
@@ -72,53 +73,40 @@ const Header = () => {
             router.push("/");
           }}
         />
-      <div className="hidden md:flex justify-between items-center">
-        {mobileNav.map((nav, index) => (
-          <Button
-            key={index}
-            className={`hover:text-gray-200 ${
-              index === 5 ? "hidden" : "flex"
-            } text-[16px] font-[500] leading-[20.8px] ${
-              selected === nav.value ? "text-white" : "text-[#8A8894]"
-            }`}
-            variant="ghost"
-            onClick={() => {
-              setSelected(nav.value);
-              router.push(nav.path);
-            }}
-          >
-            {nav.label}
-          </Button>
-        ))}
-      </div>
+        <div className="hidden md:flex justify-between items-center">
+          {mobileNav.map((nav, index) => (
+            <Link key={index} href={nav.path} passHref>
+              <a
+                className={`hover:text-gray-200 ${
+                  index === 5 ? "hidden" : "flex"
+                } text-[16px] font-[500] leading-[20.8px] ${
+                  selected === nav.value ? "text-white" : "text-[#8A8894]"
+                }`}
+                onClick={() => setSelected(nav.value)}
+                aria-current={selected === nav.value ? "page" : undefined}
+              >
+                {nav.label}
+              </a>
+            </Link>
+          ))}
+        </div>
       </div>
       <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
-        <span
-          className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
-          onClick={() => {
-            router.push("https://optimus.quashbugs.com");
-          }}
-        >
-          Sign in
-        </span>
-        <Button
-          className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
-          variant="outline"
-          onClick={() => {
-            router.push("https://optimus.quashbugs.com/signup");
-          }}
-        >
-          Get Started
-        </Button>
-        <Button
-          className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]"
-          variant="outline"
-          onClick={() => {
-            router.push("https://optimus.quashbugs.com/signup");
-          }}
-        >
-          Get Started for Free
-        </Button>
+        <Link href="https://optimus.quashbugs.com" passHref>
+          <a className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]">
+            Sign in
+          </a>
+        </Link>
+        <Link href="https://optimus.quashbugs.com/signup" passHref>
+          <a className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]">
+            Get Started
+          </a>
+        </Link>
+        <Link href="https://optimus.quashbugs.com/signup" passHref>
+          <a className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]">
+            Get Started for Free
+          </a>
+        </Link>
         <List
           size={24}
           color="#F7F8F8"
@@ -126,6 +114,7 @@ const Header = () => {
           onClick={() => {
             setOpen(true);
           }}
+          aria-label="Open menu" // Ensure it's labeled for accessibility
         />
       </div>
       {open && (
@@ -175,7 +164,7 @@ const Header = () => {
           </LoaderDialogContent>
         </LoaderDialog>
       )}
-    </div>
+    </nav>
   );
 };
 

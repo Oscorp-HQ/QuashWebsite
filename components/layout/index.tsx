@@ -5,8 +5,12 @@ import Footer from "@/components/footer";
 export default function Layout({ children }: any) {
   return (
     <div className="relative min-h-[100vh]">
-      <Header />
+      <header>
+        <Header />
+      </header>
+
       <main>{children}</main>
+
       <Footer />
     </div>
   );
