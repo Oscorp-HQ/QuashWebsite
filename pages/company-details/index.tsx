@@ -26,12 +26,7 @@ const CompanyDetailsPage = () => {
             "sameAs": [
               "https://www.linkedin.com/company/quash-bugs",
               "https://www.youtube.com/@QuashBugs",
-            ],
-            "contactPoint": [{
-              "@type": "ContactPoint",
-              "telephone": "+1-555-555-5555",
-              "contactType": "customer service"
-            }]
+            ]
           })}
         </script>
       </Head>
