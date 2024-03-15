@@ -11,11 +11,11 @@ const CompanyDetailsPage = () => {
         <title>Quash - Company Details</title>
         <meta name="description" content="Details about the company's registered entity, address, and contact details." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Company Details - Quash" />
+        <meta property="og:title" content="Quash - Company Details" />
         <meta property="og:description" content="Details about the company's registered entity, address, and contact details." />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "http://schema.org",

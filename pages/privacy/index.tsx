@@ -15,6 +15,11 @@ const PrivacyPolicy = () => {
           content="Learn how Quash respects and protects your privacy. Read our comprehensive Privacy Policy detailing how we handle your personal information."
         />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Privacy Policy" />
+        <meta property="og:description" content="Learn how Quash respects and protects your privacy. Read our comprehensive Privacy Policy detailing how we handle your personal information." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         {JSON.stringify({
           "@context": "http://schema.org",
           "@type": "Organization",

@@ -10,6 +10,11 @@ function RefundCancellationPolicy() {
         <title> Quash - Refund and Cancellation</title>
         <meta name="description" content=" Details about Quash's policy about subscription cancellation and the process of refund." />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Refund and Cancellation" />
+        <meta property="og:description" content=" Details about Quash's policy about subscription cancellation and the process of refund." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <script type="application/ld+json">
           {`
             {

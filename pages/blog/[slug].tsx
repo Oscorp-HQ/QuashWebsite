@@ -43,6 +43,11 @@ const Post = ({ post, preview, posts }: any) => {
         <title>{post.fields.title} - Quash Blog</title>
         <meta name="description" content={post.fields.description} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${post.fields.title} - Quash`} />
+        <meta property="og:description" content={post.fields.description}/>
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

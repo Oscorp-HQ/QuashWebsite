@@ -24,11 +24,11 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Quash - Streamlining QA Processes 🚀" />
         <meta property="og:description" content="Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
-        <meta property="og:image" content="/open-graph.png" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Quash - Streamlining QA Processes 🚀" />
         <meta name="twitter:description" content="Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
-        <meta name="twitter:image" content="/open-graph.png" />
+        <meta name="twitter:image" content="/Quash_Website_Blurb.jpg" />
         <link rel="canonical" href="https://quashbugs.com" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -38,7 +38,7 @@ export default function Home() {
             "description": "Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more.",
             "url": "https://quashbugs.com",
             "applicationCategory": "Developer Tools",
-            "screenshot": "/open-graph.png",
+            "screenshot": "Quash_Website_Blurb.jpg",
           })}
         </script>
       </Head>

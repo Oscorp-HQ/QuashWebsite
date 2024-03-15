@@ -84,6 +84,11 @@ const Blog = (props: any) => {
           name="description"
           content="Read original articles and opinion pieces by the team building Quash. Know more about mobile app development, testing, and best practices."
         />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Quash - Blogs published by the team" />
+        <meta property="og:description" content="Read original articles and opinion pieces by the team building Quash. Know more about mobile app development, testing, and best practices." />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -18,6 +18,11 @@ const Product = () => {
         <title>Quash - Bug Reporting Features 🐞</title>
         <meta name="description" content="Quash automates bug reporting with a simple shake. It also assists in bug resolution by auto-capturing data points and giving AI-generated solutions."/>
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Bug Reporting Features 🐞" />
+        <meta property="og:description" content="Quash automates bug reporting with a simple shake. It also assists in bug resolution by auto-capturing data points and giving AI-generated solutions." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <script type="application/ld+json">
           {`
             {
@@ -25,7 +30,7 @@ const Product = () => {
               "@type": "Product",
               "name": "Quash",
               "image": "https://quashbugs.com/_next/static/images/product-page-landing-image.svg",
-              "description": "Quash automates bug reporting with a simple shake. It also assists in bug resolution by auto-capturing data points and giving AI-generated solutions.",
+              "description": "Quash is a comprehensive mobile testing solution designed to streamline your testing workflow, improve app quality, and speed up release cycles.",
               "brand": {
                 "@type": "Brand",
                 "name": "Quash"

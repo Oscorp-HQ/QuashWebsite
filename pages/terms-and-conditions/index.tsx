@@ -13,6 +13,11 @@ function TermsAndConditions() {
           content="Read the terms and conditions governing your use of Quash, including privacy, account management, and communication services."
         />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Terms & Conditions" />
+        <meta property="og:description" content="Read the terms and conditions governing your use of Quash, including privacy, account management, and communication services." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "http://schema.org",

@@ -38,6 +38,11 @@ const Roadmap = () => {
           content="Explore the roadmap of Quash and how it aims to revolutionize mobile testing with AI-powered solutions, test case generation, and comprehensive test operations."
         />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Roadmap to the Future of Mobile Testing" />
+        <meta property="og:description" content="Explore the roadmap of Quash and how it aims to revolutionize mobile testing with AI-powered solutions, test case generation, and comprehensive test operations." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
