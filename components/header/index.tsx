@@ -52,7 +52,7 @@ const Header = () => {
     <nav className="header fixed top-0 py-[14px] px-4 w-full flex justify-between items-center lg:px-[120px] md:py-3 z-50">
       <Image
         src="/logo-mobile.svg"
-        alt="Quash Logo"
+        alt="Quash Logo mobile"
         width={63}
         height={16}
         priority
@@ -68,16 +68,16 @@ const Header = () => {
           width={118}
           height={30}
           priority
-          className="hidden md:flex"
+          className="hidden md:flex shrink-0"
           onClick={() => {
             router.push("/");
           }}
         />
-        <div className="hidden md:flex justify-between items-center">
+        <div className="hidden md:flex justify-between items-center w-full">
           {mobileNav.map((nav, index) => (
-            <Link key={index} href={nav.path} passHref>
+            <Link key={index} href={nav.path} legacyBehavior className="">
               <a
-                className={`hover:text-gray-200 ${
+                className={`mx-4 hover:text-gray-200 ${
                   index === 5 ? "hidden" : "flex"
                 } text-[16px] font-[500] leading-[20.8px] ${
                   selected === nav.value ? "text-white" : "text-[#8A8894]"
@@ -92,17 +92,17 @@ const Header = () => {
         </div>
       </div>
       <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
-        <Link href="https://optimus.quashbugs.com" passHref>
+        <Link href="https://optimus.quashbugs.com" legacyBehavior>
           <a className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]">
             Sign in
           </a>
         </Link>
-        <Link href="https://optimus.quashbugs.com/signup" passHref>
+        <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
           <a className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]">
             Get Started
           </a>
         </Link>
-        <Link href="https://optimus.quashbugs.com/signup" passHref>
+        <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
           <a className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]">
             Get Started for Free
           </a>

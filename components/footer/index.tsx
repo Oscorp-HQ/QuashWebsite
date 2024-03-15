@@ -280,11 +280,11 @@ const Footer = () => {
           </div>
           <div className="text-[#747474] ">
             <p>
-              <Link href="/terms-and-conditions" passHref>
+              <Link href="/terms-and-conditions" legacyBehavior>
                 <a className="link-hover">Terms</a>
               </Link>
               <span className="px-[12px]">|</span>
-              <Link href="/privacy-policy" passHref>
+              <Link href="/privacy-policy" legacyBehavior>
                 <a className="link-hover">Privacy Policy</a>
               </Link>
             </p>

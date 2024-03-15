@@ -23,17 +23,17 @@ const Capture = () => {
   const firstRowImages = reportingMedia.slice(0, 3);
   const secondRowImages = reportingMedia.slice(3);
   return (
-    <>
+    <section>
       <div className="flex px-4 flex-col justify-center items-center">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         <div className="grad-collaboration h-[350px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
         <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
           <div className="collaboration-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-          <span className="collaboration-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal  text-center">
+          <h3 className="collaboration-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal  text-center">
             Capture the complete picture <br /> with technical detailing in
             every report.
-          </span>
+          </h3>
         </div>
       </div>
 
@@ -75,7 +75,7 @@ const Capture = () => {
             <div key={index}>
               <Image
                 src={media.src}
-                alt={media.label}
+                alt={`Detailed view of ${media.label} feature`}
                 width={304}
                 height={272}
                 className=""
@@ -95,7 +95,7 @@ const Capture = () => {
         </div>
       </div>
       </div>
-    </>
+    </section>
   );
 };
 

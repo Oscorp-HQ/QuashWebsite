@@ -24,11 +24,11 @@ const CodeSection = () => {
   const [isOs, setIsOs] = useState("android");
 
   return (
-    <div className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
+    <section className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
 
-      <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
+      <h3 className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
-      </span>
+      </h3>
       <div className="code-card relative w-full md:max-w-[963px] md:mt-[72px]">
         <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
           <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
@@ -136,13 +136,13 @@ const CodeSection = () => {
         className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
         title="Explore Quash SDK Developer Documentation"
       >
-        <span>Explore Quash SDK Documentation</span>
+        <p>Explore Quash SDK Documentation</p>
         <ArrowRight
           className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
           color="#ffffff"
         />
       </Link>
-    </div>
+    </section>
   );
 };
 

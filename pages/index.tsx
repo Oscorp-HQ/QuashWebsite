@@ -15,11 +15,32 @@ import Trusted from "@/components/trusted";
 import Benefits from "@/components/benefits";
 
 export default function Home() {
-  const canonicalUrl = "https://quashbugs.com";
   return (
     <div>
       <Head>
-        <link rel="canonical" href={canonicalUrl} />
+        <title>🐞 Quash - Streamlining QA Processes 🚀</title>
+        <meta name="description" content="Bug & Crash Reporting for Mobile Developers" />
+        <meta property="og:url" content="https://quashbugs.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="🐞 Quash - Streamlining QA Processes 🚀" />
+        <meta property="og:description" content="Bug & Crash Reporting for Mobile Developers" />
+        <meta property="og:image" content="/open-graph.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="🐞 Quash - Streamlining QA Processes 🚀" />
+        <meta name="twitter:description" content="Bug & Crash Reporting for Mobile Developers" />
+        <meta name="twitter:image" content="/open-graph.png" />
+        <link rel="canonical" href="https://quashbugs.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Quash",
+            "description": "Streamline your QA processes with Quash. Bug & Crash Reporting for Mobile Developers.",
+            "url": "https://quashbugs.com",
+            "applicationCategory": "Developer Tools",
+            "screenshot": "/open-graph.png",
+          })}
+        </script>
       </Head>
       <div className="h-full w-full overflow-hidden relative">
         <Hero />

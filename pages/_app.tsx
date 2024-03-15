@@ -7,7 +7,6 @@ import {
   Fira_Mono,
 } from "@next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
-import Head from "next/head";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
