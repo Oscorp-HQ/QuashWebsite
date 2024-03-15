@@ -73,6 +73,7 @@ const Blog = (props: any) => {
     setEndIndex(newEndIndex);
     setCurrentPage(pageNumber);
   };
+  console.log(props.posts);
 
   const canonicalUrl = "https://quashbugs.com/blog";
 

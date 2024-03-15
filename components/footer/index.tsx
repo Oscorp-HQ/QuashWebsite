@@ -11,51 +11,46 @@ import {
 import { useState } from "react";
 import { DemoRequestForm } from "@/components/contact-form";
 import Link from "next/link";
-import { Button } from "../ui/button";
 
 const footerQuash = [
   {
-    label: "Home Page",
-    title: "Visit the Quash Home Page",
+    label: "Home",
+    title: "Quash home",
     route: "/",
   },
   {
-    label: "Our Product",
-    title: "Discover Our Product Features",
+    label: "Product",
+    title: "Product",
     route: "/product",
   },
   {
-    label: "Pricing Plans",
-    title: "View Pricing Plans",
+    label: "Pricing",
+    title: "Pricing",
     route: "/pricing",
   },
   {
-    label: "Development Roadmap",
-    title: "Explore Our Development Roadmap",
+    label: "Roadmap",
+    title: "Roadmap",
     route: "/roadmap",
   },
 ];
 
 const footerResources = [
   {
-    label: "Read Our Blog",
-    title: "Explore insightful articles on our Blog",
+    label: "Blog",
     route: "/blog",
   },
   {
-    label: "Developer Documentation",
-    title: "Access our Developer Guide for integrating Quash SDK",
+    label: "Developer guide",
     route:
       "https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4",
   },
   {
-    label: "Refund & Cancellation Policy",
-    title: "Review our Refund & Cancellation Policy",
+    label: "Refund & Cancellation",
     route: "/refund-and-cancellation-policy",
   },
   {
-    label: "About Our Company",
-    title: "Learn more about our Company details",
+    label: "Company details",
     route: "/company-details",
   },
 ];
@@ -74,17 +69,17 @@ const footerSupport = [
 const footerSocialMedia = [
   {
     img: "/linkedIn.svg",
-    label: "linkedIn logo",
+    label: "linkedIn",
     route: "https://www.linkedin.com/company/quash-bugs/",
   },
   {
     img: "/youtube.svg",
-    label: "youtube logo",
+    label: "youtube",
     route: "https://www.youtube.com/@QuashBugs",
   },
   {
     img: "/github.svg",
-    label: "github logo",
+    label: "github",
     route: "https://www.youtube.com/@QuashBugs",
   },
 ];
@@ -97,12 +92,12 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="footer-container bottom-0 w-full h-full justify-between  px-[112px] py-[80px] text-[16px] font-[400] text-[#ECECEE] lg:text-[24px] bg-[#0D0D0D] ">
+      <div className="footer-container bottom-0 w-full h-full justify-between  px-[112px] py-[80px] text-[16px] font-[400] text-[#ECECEE] lg:text-[24px] bg-[#0D0D0D] ">
         <div className="footer-logo-container flex flex-col align-center justify-between">
           <div>
             <Image
               src="/Quash_logo_yellow.svg"
-              alt="Quash Logo Mobile"
+              alt="Quash Logo"
               width={95}
               height={24}
               priority
@@ -130,11 +125,10 @@ const Footer = () => {
                 href={nav.route}
                 passHref={true}
                 legacyBehavior={true}
-                aria-label={nav.title}
               >
                 <a
                   className="hover:cursor-pointer text-[#9E9E9E]  text-base font-medium link-hover"
-                  title={nav.title}
+                  title={`Visit ${nav.title} page`}
                 >
                   {nav.label}
                 </a>
@@ -150,11 +144,10 @@ const Footer = () => {
                   href={nav.route}
                   passHref={true}
                   legacyBehavior={true}
-                  aria-label={nav.title}
                 >
                   <a
-                    className="hover:cursor-pointer text-[#9E9E9E] text-base font-medium link-hover"
-                    title={nav.title}
+                    className="hover:cursor-pointer text-[#9E9E9E]  text-base font-medium link-hover"
+                    title={`Visit ${nav.label} page`}
                   >
                     {nav.label}
                   </a>
@@ -166,16 +159,16 @@ const Footer = () => {
             <div className="flex flex-col gap-[22px] justify-start">
               <p className="text-white  font-semibold text-lg">Support</p>
 
-              <Button
-                className="text-[#9E9E9E] text-base font-medium link-hover"
+              <Link
+                className="text-[#9E9E9E]  text-base font-medium link-hover"
                 onClick={() => setFormOpen(true)}
+                href={""}
               >
-                Contact Us
-              </Button>
+                contact us
+              </Link>
               <Link
                 href={"mailto:hello@quashbugs.com"}
                 className="text-[#9E9E9E]  text-base font-medium link-hover"
-                aria-label="Quash official mail"
               >
                 hello@quashbugs.com
               </Link>
@@ -274,7 +267,7 @@ const Footer = () => {
                 href={item.route}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={item.label}
+                aria-label="Social media Links for Quash"
               >
                 <Image
                   src={item.img}
@@ -288,13 +281,9 @@ const Footer = () => {
           </div>
           <div className="text-[#747474] ">
             <p>
-              <Link href="/terms-and-conditions" aria-label="Terms & conditions in Quash" legacyBehavior>
-                <a className="link-hover">Terms</a>
-              </Link>
-              <span className="px-[12px]">|</span>
-              <Link href="/privacy-policy" aria-label="Privacy policy of Quash" legacyBehavior>
-                <a className="link-hover">Privacy Policy</a>
-              </Link>
+              <Link href="/terms-and-conditions" className="link-hover">Terms</Link>{" "}
+              <span className="px-[12px]">|</span>{" "}
+              <Link href="/privacy" className="link-hover">Privacy</Link>
             </p>
           </div>
           <div>
@@ -303,7 +292,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </footer>
+      </div>
       <div className="footer-bottom-container-main px-[48px] flex justify-between align-center border-t border-[#424242]">
         <div className="text-[#747474] flex gap-3 ">
           {footerSocialMedia.map((item, index) => (
@@ -312,7 +301,7 @@ const Footer = () => {
               href={item.route}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={item.label}
+              aria-label="Social media Links of Quash"
             >
               <Image
                 src={item.img}
@@ -331,13 +320,9 @@ const Footer = () => {
           <p className="text-[#747474]">
             &#169; 2024 Brisk Labs, Inc. All rights reserved{" "}
             <span className="px-[12px]">|</span>{" "}
-            <Link href="/terms-and-conditions " aria-label="Terms & Conditions in Quash" className="link-hover">
-              Terms
-            </Link>{" "}
+            <Link href="/terms-and-conditions " className="link-hover">Terms</Link>{" "}
             <span className="px-[12px]">|</span>{" "}
-            <Link href="/privacy" aria-label="Privacy policy of Quash" className="link-hover">
-              Privacy
-            </Link>
+            <Link href="/privacy" className="link-hover">Privacy</Link>
           </p>
         </div>
       </div>

@@ -37,6 +37,8 @@ const Post = ({ post, preview, posts }: any) => {
       description: postDescription,
     };
   
+    
+  
   return (
     <section>
       <Head>
@@ -47,7 +49,7 @@ const Post = ({ post, preview, posts }: any) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${post.fields.title} - Quash`} />
         <meta property="og:description" content={post.fields.description}/>
-        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta property="og:image" content= {`https:${post.fields.coverImage.fields.file.url}`} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
