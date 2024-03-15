@@ -18,16 +18,16 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>🐞 Quash - Streamlining QA Processes 🚀</title>
-        <meta name="description" content="Bug & Crash Reporting for Mobile Developers" />
+        <title> Quash - Streamlining QA Processes 🚀</title>
+        <meta name="description" content=" Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
         <meta property="og:url" content="https://quashbugs.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="🐞 Quash - Streamlining QA Processes 🚀" />
-        <meta property="og:description" content="Bug & Crash Reporting for Mobile Developers" />
+        <meta property="og:title" content="Quash - Streamlining QA Processes 🚀" />
+        <meta property="og:description" content="Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
         <meta property="og:image" content="/open-graph.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="🐞 Quash - Streamlining QA Processes 🚀" />
-        <meta name="twitter:description" content="Bug & Crash Reporting for Mobile Developers" />
+        <meta name="twitter:title" content="Quash - Streamlining QA Processes 🚀" />
+        <meta name="twitter:description" content="Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
         <meta name="twitter:image" content="/open-graph.png" />
         <link rel="canonical" href="https://quashbugs.com" />
         <script type="application/ld+json">
@@ -35,7 +35,7 @@ export default function Home() {
             "@context": "http://schema.org",
             "@type": "WebSite",
             "name": "Quash",
-            "description": "Streamline your QA processes with Quash. Bug & Crash Reporting for Mobile Developers.",
+            "description": "Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more.",
             "url": "https://quashbugs.com",
             "applicationCategory": "Developer Tools",
             "screenshot": "/open-graph.png",

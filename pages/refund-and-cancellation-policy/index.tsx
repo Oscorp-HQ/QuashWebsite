@@ -6,8 +6,33 @@ function RefundCancellationPolicy() {
   const canonicalUrl = "https://quashbugs.com/refund-and-cancellation-policy";
   return (
     <>
-    <Head>
+      <Head>
+        <title> Quash - Refund and Cancellation</title>
+        <meta name="description" content=" Details about Quash's policy about subscription cancellation and the process of refund." />
         <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "http://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [{
+                "@type": "Question",
+                "name": "How can I cancel my Quash subscription?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You may cancel your subscription to Quash at any time. The cancellation will take effect at the end of your current billing cycle."
+                }
+              }, {
+                "@type": "Question",
+                "name": "Am I eligible for a refund with Quash?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Quash offers a refund under specific conditions outlined in our refund and cancellation policy."
+                }
+              }]
+            }
+          `}
+        </script>
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">

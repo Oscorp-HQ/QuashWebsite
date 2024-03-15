@@ -20,10 +20,32 @@ const Post = ({ post, preview, posts }: any) => {
     ?.filter((item: any) => post?.sys?.id !== item.sys.id)
     .slice(0, 3);
 
+    const postTitle = post?.fields?.title || 'Quash Blog';
+    const postDescription = `Read our latest blog ${post?.fields?.title}` ;
+    const publishDate = post?.fields?.publishDate || new Date().toISOString();
+  
+  
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: postTitle,
+      author: {
+        "@type": "Person",
+        name: post?.fields?.author?.fields?.name || 'Quash Author',
+      },
+      datePublished: publishDate,
+      description: postDescription,
+    };
+  
   return (
-    <div>
-       <Head>
+    <section>
+      <Head>
+        <title>{post.fields.title} - Quash Blog</title>
+        <meta name="description" content={post.fields.description} />
         <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Head>
       <div className="blog-details-layout z-10 relative overflow-hidden">
         <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
@@ -53,7 +75,7 @@ const Post = ({ post, preview, posts }: any) => {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

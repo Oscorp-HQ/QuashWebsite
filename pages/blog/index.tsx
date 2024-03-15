@@ -77,9 +77,32 @@ const Blog = (props: any) => {
   const canonicalUrl = "https://quashbugs.com/blog";
 
   return (
-    <div>
+    <section>
       <Head>
+        <title>Quash - Blogs published by the team</title>
+        <meta
+          name="description"
+          content="Read original articles and opinion pieces by the team building Quash. Know more about mobile app development, testing, and best practices."
+        />
         <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            headline: "Quash Blog",
+            url: canonicalUrl,
+            description:
+              "Read original articles and opinion pieces by the team building Quash. Know more about mobile app development, testing, and best practices.",
+            publisher: {
+              "@type": "Organization",
+              name: "Quash",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": canonicalUrl,
+            },
+          })}
+        </script>
       </Head>
       <div className="blog-layout relative overflow-hidden ">
         <div className="left-ellipse-mobile flex md:hidden absolute top-[6rem] -left-[8rem]" />
@@ -169,7 +192,7 @@ const Blog = (props: any) => {
         <div className="-z-10 right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
         <Callback />
       </div>
-    </div>
+    </section>
   );
 };
 

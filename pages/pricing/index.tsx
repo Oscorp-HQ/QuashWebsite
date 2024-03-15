@@ -75,9 +75,20 @@ const Pricing = () => {
   const tabs = ["Monthly", "Annually"];
 
   return (
-    <div>
+    <section>
       <Head>
+        <title>Quash - Product Subscriptions and Pricing</title>
+        <meta name="description" content="Quash has 3 available subscription tiers: a free plan for testing a single app, a paid plan for product teams, and a customisable enterprise plan." />
         <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Pricing",
+            "name": "Quash",
+            "description": "Quash has 3 available subscription tiers: a free plan for testing a single app, a paid plan for product teams, and a customisable enterprise plan.",
+            
+          })}
+        </script>
       </Head>
       <div className="h-full w-full overflow-hidden relative">
         <div className="relative flex flex-col items-center overflow-hidden pb-[40px]">
@@ -344,7 +355,7 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

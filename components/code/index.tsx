@@ -25,7 +25,6 @@ const CodeSection = () => {
 
   return (
     <section className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
-
       <h3 className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
       </h3>
@@ -60,23 +59,23 @@ const CodeSection = () => {
             <div className="border-l border-[#4A4B50]" />
             {isOs === "android" ? (
               <div className=" md:my-0 md:mx-0 flex flex-col items-start w-[370px] md:w-auto ">
-              <p className="quick md:quick-desk">{`Quash.start (`}</p>
-              <div className="flex flex-col ml-[50px] md:gap-[6px]">
-                <div className="flex">
-                  <p className="key md:key-desk">{`withToken: `}</p>
-                  <p className="value md:value-desk">“YOUR_APP_TOKEN_HERE”</p>
+                <p className="quick md:quick-desk">{`Quash.start (`}</p>
+                <div className="flex flex-col ml-[50px] md:gap-[6px]">
+                  <div className="flex">
+                    <p className="key md:key-desk">{`withToken: `}</p>
+                    <p className="value md:value-desk">“YOUR_APP_TOKEN_HERE”</p>
+                  </div>
+                  <div className="flex">
+                    <p className="key md:key-desk">{`shouldCollectCrashLogs`}</p>
+                    <p className="value md:value-desk">=true,</p>
+                  </div>
+                  <div className="flex">
+                    <p className="key md:key-desk">{`invocationType`}</p>
+                    <p className="value md:value-desk">{`=Quash.TRIPLE_TAPS`}</p>
+                  </div>
                 </div>
-                <div className="flex">
-                  <p className="key md:key-desk">{`shouldCollectCrashLogs`}</p>
-                  <p className="value md:value-desk">=true,</p>
-                </div>
-                <div className="flex">
-                  <p className="key md:key-desk">{`invocationType`}</p>
-                  <p className="value md:value-desk">{`=Quash.TRIPLE_TAPS`}</p>
-                </div>
+                <p className="quick md:quick-desk">{`)`}</p>
               </div>
-              <p className="quick md:quick-desk">{`)`}</p>
-            </div>
             ) : isOs === "ios" ? (
               <div
                 className={` flex flex-col items-start ${
