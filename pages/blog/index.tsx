@@ -90,6 +90,7 @@ const Blog = (props: any) => {
         <meta property="og:title" content="Quash - Blogs published by the team" />
         <meta property="og:description" content="Read original articles and opinion pieces by the team building Quash. Know more about mobile app development, testing, and best practices." />
         <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify({

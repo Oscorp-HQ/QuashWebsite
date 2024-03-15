@@ -29,6 +29,7 @@ export default function Home() {
         <meta name="twitter:title" content="Quash - Streamlining QA Processes 🚀" />
         <meta name="twitter:description" content="Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
         <meta name="twitter:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
         <link rel="canonical" href="https://quashbugs.com" />
         <script type="application/ld+json">
           {JSON.stringify({

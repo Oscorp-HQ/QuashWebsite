@@ -50,6 +50,7 @@ const Post = ({ post, preview, posts }: any) => {
         <meta property="og:title" content={`${post.fields.title} - Quash`} />
         <meta property="og:description" content={post.fields.description}/>
         <meta property="og:image" content= {`https:${post.fields.coverImage.fields.file.url}`} />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
