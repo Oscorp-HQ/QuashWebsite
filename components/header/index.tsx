@@ -84,6 +84,7 @@ const Header = () => {
                 }`}
                 onClick={() => setSelected(nav.value)}
                 aria-current={selected === nav.value ? "page" : undefined}
+                aria-label={`Navigate to ${nav.label} page`}
               >
                 {nav.label}
               </a>
@@ -93,20 +94,30 @@ const Header = () => {
       </div>
       <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
         <Link href="https://optimus.quashbugs.com" legacyBehavior>
-          <a className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]">
+          <a
+            className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
+            aria-label="Sign in to Quash"
+          >
             Sign in
           </a>
         </Link>
         <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
-          <a className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]">
+          <a
+            className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
+            aria-label="Sign up for Quash"
+          >
             Get Started
           </a>
         </Link>
         <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
-          <a className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]">
+          <a
+            className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]"
+            aria-label="Sign up for Quash for free"
+          >
             Get Started for Free
           </a>
         </Link>
+
         <List
           size={24}
           color="#F7F8F8"

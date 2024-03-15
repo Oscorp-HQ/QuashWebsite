@@ -14,7 +14,7 @@ const Journey = () => {
       </span>
       <span className="text-[14px] md:text-[24px] text-[#ECECEE] font-[300] md:font-[400] z-20">
         Write to us at{" "}
-        <Link href="mailto:hello@quashbugs.com" className="z-20 underline">
+        <Link href="mailto:hello@quashbugs.com" className="z-20 underline" aria-label="Official Mail of Quash">
           hello@quashbugs.com
         </Link>
       </span>

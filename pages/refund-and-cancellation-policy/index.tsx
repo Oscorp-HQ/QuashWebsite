@@ -140,7 +140,7 @@ function RefundCancellationPolicy() {
             <p>
               6.1. If you have any questions or need to initiate a cancellation
               or refund request, please contact our customer support at{" "}
-              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
                 hello@quashbugs.com
               </Link>
               .

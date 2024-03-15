@@ -47,15 +47,8 @@ const BlogLatestCard = ({ data }: any) => {
           <h3 className="top-blog-title ">{title}</h3>
           <p className="top-blog-summary ">{excerpt}</p>
         </div>
-        {/* <Link
-          href={`/blog/${slug}`}
-          aria-label={title}
-          className="top-blog-read-more-container"
-        >
-          <p>Read More</p>
-          <ArrowRight size={32} color="white" className="read-more-icon" />
-        </Link> */}
-<Link
+
+        <Link
           href={`/blog/${slug}`}
           aria-label={title}
           className="blog-learn-more-button-mob"

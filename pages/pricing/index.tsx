@@ -80,7 +80,6 @@ const Pricing = () => {
         <title>Quash - Product Subscriptions and Pricing</title>
         <meta name="description" content="Quash has 3 available subscription tiers: a free plan for testing a single app, a paid plan for product teams, and a customisable enterprise plan." />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Quash - Product Subscriptions and Pricing" />
         <meta property="og:description" content="Quash has 3 available subscription tiers: a free plan for testing a single app, a paid plan for product teams, and a customisable enterprise plan." />
         <meta property="og:url" content={canonicalUrl} />

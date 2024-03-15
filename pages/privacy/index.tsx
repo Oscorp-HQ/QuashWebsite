@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
               the practices and policies outlined in this Privacy Policy. If you
               have any questions or comments about this Privacy Policy or our
               use of your data, please contact us at{" "}
-              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
                 hello@quashbugs.com
               </Link>
               .
@@ -469,6 +469,7 @@ const PrivacyPolicy = () => {
                 <Link
                   href="mailto:hello@quashbugs.com"
                   className="text-blue-500"
+                  aria-label="Official mail of Quash"
                 >
                   hello@quashbugs.com
                 </Link>
@@ -487,7 +488,7 @@ const PrivacyPolicy = () => {
             </p>
             <p>
               Contact:{" "}
-              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
                 hello@quashbugs.com
               </Link>
             </p>

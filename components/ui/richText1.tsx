@@ -35,7 +35,7 @@ const options = {
     [INLINES.ENTRY_HYPERLINK]: (node: any) => {
       if (node?.data?.target?.sys?.contentType?.sys?.id === "post") {
         return (
-          <Link href={`/posts/${node.data.target.fields.slug}`}>
+          <Link href={`/posts/${node.data.target.fields.slug}`} aria-label='This is a Hyperlink'>
             {node.data.target.fields.title}
           </Link>
         );

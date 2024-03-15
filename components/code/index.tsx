@@ -133,7 +133,7 @@ const CodeSection = () => {
       <Link
         href="https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4"
         className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
-        title="Explore Quash SDK Developer Documentation"
+        aria-label="Explore Quash SDK Developer Documentation"
       >
         <p>Explore Quash SDK Documentation</p>
         <ArrowRight

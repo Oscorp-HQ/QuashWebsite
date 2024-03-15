@@ -26,7 +26,7 @@ const Callback = () => {
             Accelerate your Mobile Testing Workflow with Quash
           </p>
         </div>
-        <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
+        <Link href="https://optimus.quashbugs.com/signup" aria-label="Get Quash Started for Free" legacyBehavior>
           <a className="mt-6 inline-block text-[#000] bg-[#FFF] py-3 px-4 rounded-[100px] font-semibold text-[16px] md:text-[24px] hover:bg-[#F7F7F7] transition-colors">
             Get Started for Free
           </a>

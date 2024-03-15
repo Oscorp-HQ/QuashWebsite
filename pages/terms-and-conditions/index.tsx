@@ -414,7 +414,7 @@ function TermsAndConditions() {
           <p>
             Quash welcomes your questions and comments regarding these Terms of
             Service. You can contact us at{" "}
-            <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+            <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
               hello@quashbugs.com
             </Link>
             .
