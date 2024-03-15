@@ -86,10 +86,13 @@ const Capture = () => {
             ))}
           </Carousel>
           <div className="capture-learn-more-button-container">
-            <Link href="/product" aria-label="Learn more about Quash Product Features" legacyBehavior>
-              <a aria-label="Learn more about Quash Product Features">
-                Learn more
-              </a>
+            <Link
+              href="/product"
+              className="capture-learn-more-button"
+              aria-label="Learn more about Quash Product Features."
+              aria-description="Learn more about Quash Product Features."
+            >
+              Learn more about Quash
             </Link>
           </div>
         </div>
