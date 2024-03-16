@@ -267,6 +267,7 @@ const Footer = () => {
                 href={item.route}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Social media Links for Quash"
               >
                 <Image
                   src={item.img}
@@ -300,6 +301,7 @@ const Footer = () => {
               href={item.route}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Social media Links of Quash"
             >
               <Image
                 src={item.img}

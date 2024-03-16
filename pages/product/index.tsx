@@ -13,17 +13,41 @@ import React from "react";
 const Product = () => {
   const canonicalUrl = "https://quashbugs.com/product";
   return (
-    <div>
+    <section>
       <Head>
+        <title>Quash - Bug Reporting Features 🐞</title>
+        <meta name="description" content="Quash automates bug reporting with a simple shake. It also assists in bug resolution by auto-capturing data points and giving AI-generated solutions."/>
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Bug Reporting Features 🐞" />
+        <meta property="og:description" content="Quash automates bug reporting with a simple shake. It also assists in bug resolution by auto-capturing data points and giving AI-generated solutions." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "http://schema.org/",
+              "@type": "Product",
+              "name": "Quash",
+              "image": "https://quashbugs.com/_next/static/images/product-page-landing-image.svg",
+              "description": "Quash is a comprehensive mobile testing solution designed to streamline your testing workflow, improve app quality, and speed up release cycles.",
+              "brand": {
+                "@type": "Brand",
+                "name": "Quash"
+              }
+            }
+          `}
+        </script>
       </Head>
       <div className="h-full w-full overflow-hidden relative">
         <div className="flex md:px-[88px] mx-[18px] md:w-full pb-[112px]  md:pt-[230px] md:pb-[143px] flex-col justify-center items-center">
           <div className="product-main-mob flex flex-col pt-[132px] gap-5 md:gap-[28px] text-center items-center justify-center">
-            <span className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full  leading-normal">
+            <h1 className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full  leading-normal">
               Capture the complete picture <br /> with technical detailing in
               every report.
-            </span>
+            </h1>
           </div>
           <div className="product-main w-full text-center items-center flex flex-col gap-[45px] md:gap-[120px] md:mt-[-190px]">
             <div className="relative w-full justify-center items-center flex-col overflow-hidden flex ">
@@ -98,7 +122,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

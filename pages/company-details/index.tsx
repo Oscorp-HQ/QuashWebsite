@@ -2,13 +2,35 @@ import CompanyDetails from "@/components/company-details";
 import Head from "next/head";
 import React from "react";
 
-const CompanDetailsPage = () => {
-
+const CompanyDetailsPage = () => {
   const canonicalUrl = "https://quashbugs.com/company-details";
+
   return (
     <div>
       <Head>
+        <title>Quash - Company Details</title>
+        <meta name="description" content="Details about the company's registered entity, address, and contact details." />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Company Details" />
+        <meta property="og:description" content="Details about the company's registered entity, address, and contact details." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Quash",
+            "url": canonicalUrl,
+            "logo": "https://quashbugs.com/logo.svg",
+            "sameAs": [
+              "https://www.linkedin.com/company/quash-bugs",
+              "https://www.youtube.com/@QuashBugs",
+            ]
+          })}
+        </script>
       </Head>
       <div className="h-[100vh]">
         <div className="pt-[72px] md:pt-[88px] text-white max-w-5xl m-auto h-full mb-10">
@@ -19,4 +41,4 @@ const CompanDetailsPage = () => {
   );
 };
 
-export default CompanDetailsPage;
+export default CompanyDetailsPage;

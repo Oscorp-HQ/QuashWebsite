@@ -75,9 +75,27 @@ const Pricing = () => {
   const tabs = ["Monthly", "Annually"];
 
   return (
-    <div>
+    <section>
       <Head>
+        <title>Quash - Product Subscriptions and Pricing</title>
+        <meta name="description" content="Quash has 3 available subscription tiers: a free plan for testing a single app, a paid plan for product teams, and a customisable enterprise plan." />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Product Subscriptions and Pricing" />
+        <meta property="og:description" content="Quash has 3 available subscription tiers: a free plan for testing a single app, a paid plan for product teams, and a customisable enterprise plan." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Pricing",
+            "name": "Quash",
+            "description": "Quash has 3 available subscription tiers: a free plan for testing a single app, a paid plan for product teams, and a customisable enterprise plan.",
+            
+          })}
+        </script>
       </Head>
       <div className="h-full w-full overflow-hidden relative">
         <div className="relative flex flex-col items-center overflow-hidden pb-[40px]">
@@ -344,7 +362,7 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

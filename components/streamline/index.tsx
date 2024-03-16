@@ -51,38 +51,38 @@ const streamlineContent = [
 const streamlineContentmob = [
   {
     src: "accelerated-market-delivery-card.svg",
-    label: "accelerated-market-delivery-card",
+    label: "accelerated market delivery card",
   },
   {
     src: "ai-powered-bug-resolution-card.svg",
-    label: "ai-powered-bug-resolution-card",
+    label: "ai powered bug resolution card",
   },
   {
     src: "pre-release-testing-assurance-card.svg",
-    label: "pre-release-testing-assurance-card",
+    label: "pre release testing assurance card",
   },
   {
     src: "detail-oriented-success-card.svg",
-    label: "detail-oriented-success-card",
+    label: "detail oriented success card",
   },
-  { src: "scalable-performance-card.svg", label: "scalable-performance-card" },
+  { src: "scalable-performance-card.svg", label: "scalable performance card" },
   {
     src: "developer-centric-design-card.svg",
-    label: "developer-centric-design-card",
+    label: "developer centric design card",
   },
 ];
 
 const Streamline = () => {
   return (
-    <div className="flex px-4 flex-col justify-center items-center pb-[40px]">
+    <section className="flex px-4 flex-col justify-center items-center pb-[40px]">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         <div className="grad-report h-[240px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
         <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
           <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-          <span className="report-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal">
+          <h3 className="report-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal">
             Streamline your path to flawless app releases
-          </span>
+          </h3>
         </div>
         <div className="streamline-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {streamlineContent.map((content, index) => (
@@ -93,7 +93,7 @@ const Streamline = () => {
                 src={content.Image}
                 width={content.width}
                 height={content.height}
-                alt=""
+                alt={`${content.title} illustration`}
               />
             </div>
           ))}
@@ -124,7 +124,7 @@ const Streamline = () => {
           </Carousel>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

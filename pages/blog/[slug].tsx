@@ -20,10 +20,40 @@ const Post = ({ post, preview, posts }: any) => {
     ?.filter((item: any) => post?.sys?.id !== item.sys.id)
     .slice(0, 3);
 
+    const postTitle = post?.fields?.title || 'Quash Blog';
+    const postDescription = `Read our latest blog ${post?.fields?.title}` ;
+    const publishDate = post?.fields?.publishDate || new Date().toISOString();
+  
+  
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: postTitle,
+      author: {
+        "@type": "Person",
+        name: post?.fields?.author?.fields?.name || 'Quash Author',
+      },
+      datePublished: publishDate,
+      description: postDescription,
+    };
+  
+    
+  
   return (
-    <div>
-       <Head>
+    <section>
+      <Head>
+        <title>{post.fields.title} - Quash Blog</title>
+        <meta name="description" content={post.fields.description} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${post.fields.title} - Quash`} />
+        <meta property="og:description" content={post.fields.description}/>
+        <meta property="og:image" content= {`https:${post.fields.coverImage.fields.file.url}`} />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Head>
       <div className="blog-details-layout z-10 relative overflow-hidden">
         <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
@@ -53,7 +83,7 @@ const Post = ({ post, preview, posts }: any) => {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

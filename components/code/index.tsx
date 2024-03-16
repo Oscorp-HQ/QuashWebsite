@@ -24,11 +24,10 @@ const CodeSection = () => {
   const [isOs, setIsOs] = useState("android");
 
   return (
-    <div className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
-
-      <span className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
+    <section className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
+      <h3 className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
         Integrate Quash SDK in less than a minute
-      </span>
+      </h3>
       <div className="code-card relative w-full md:max-w-[963px] md:mt-[72px]">
         <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
           <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
@@ -60,23 +59,23 @@ const CodeSection = () => {
             <div className="border-l border-[#4A4B50]" />
             {isOs === "android" ? (
               <div className=" md:my-0 md:mx-0 flex flex-col items-start w-[370px] md:w-auto ">
-              <p className="quick md:quick-desk">{`Quash.start (`}</p>
-              <div className="flex flex-col ml-[50px] md:gap-[6px]">
-                <div className="flex">
-                  <p className="key md:key-desk">{`withToken: `}</p>
-                  <p className="value md:value-desk">“YOUR_APP_TOKEN_HERE”</p>
+                <p className="quick md:quick-desk">{`Quash.start (`}</p>
+                <div className="flex flex-col ml-[50px] md:gap-[6px]">
+                  <div className="flex">
+                    <p className="key md:key-desk">{`withToken: `}</p>
+                    <p className="value md:value-desk">“YOUR_APP_TOKEN_HERE”</p>
+                  </div>
+                  <div className="flex">
+                    <p className="key md:key-desk">{`shouldCollectCrashLogs`}</p>
+                    <p className="value md:value-desk">=true,</p>
+                  </div>
+                  <div className="flex">
+                    <p className="key md:key-desk">{`invocationType`}</p>
+                    <p className="value md:value-desk">{`=Quash.TRIPLE_TAPS`}</p>
+                  </div>
                 </div>
-                <div className="flex">
-                  <p className="key md:key-desk">{`shouldCollectCrashLogs`}</p>
-                  <p className="value md:value-desk">=true,</p>
-                </div>
-                <div className="flex">
-                  <p className="key md:key-desk">{`invocationType`}</p>
-                  <p className="value md:value-desk">{`=Quash.TRIPLE_TAPS`}</p>
-                </div>
+                <p className="quick md:quick-desk">{`)`}</p>
               </div>
-              <p className="quick md:quick-desk">{`)`}</p>
-            </div>
             ) : isOs === "ios" ? (
               <div
                 className={` flex flex-col items-start ${
@@ -134,15 +133,15 @@ const CodeSection = () => {
       <Link
         href="https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4"
         className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
-        title="Explore Quash SDK Developer Documentation"
+        aria-label="Explore Quash SDK Developer Documentation"
       >
-        <span>Explore Quash SDK Documentation</span>
+        <p>Explore Quash SDK Documentation</p>
         <ArrowRight
           className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
           color="#ffffff"
         />
       </Link>
-    </div>
+    </section>
   );
 };
 

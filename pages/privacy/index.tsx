@@ -5,12 +5,34 @@ import Link from "next/link";
 import React from "react";
 
 const PrivacyPolicy = () => {
-
   const canonicalUrl = "https://quashbugs.com/privacy";
   return (
     <>
       <Head>
+        <title>Quash - Privacy Policy</title>
+        <meta
+          name="description"
+          content="Learn how Quash respects and protects your privacy. Read our comprehensive Privacy Policy detailing how we handle your personal information."
+        />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Privacy Policy" />
+        <meta property="og:description" content="Learn how Quash respects and protects your privacy. Read our comprehensive Privacy Policy detailing how we handle your personal information." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+
+        {JSON.stringify({
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          url: "https://quashbugs.com",
+          name: "Quash",
+          contactPoint: {
+            "@type": "ContactPoint",
+            email: "hello@quashbugs.com",
+            contactType: "customer support",
+          },
+        })}
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto">
@@ -31,7 +53,7 @@ const PrivacyPolicy = () => {
               the practices and policies outlined in this Privacy Policy. If you
               have any questions or comments about this Privacy Policy or our
               use of your data, please contact us at{" "}
-              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
                 hello@quashbugs.com
               </Link>
               .
@@ -449,6 +471,7 @@ const PrivacyPolicy = () => {
                 <Link
                   href="mailto:hello@quashbugs.com"
                   className="text-blue-500"
+                  aria-label="Official mail of Quash"
                 >
                   hello@quashbugs.com
                 </Link>
@@ -467,7 +490,7 @@ const PrivacyPolicy = () => {
             </p>
             <p>
               Contact:{" "}
-              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
                 hello@quashbugs.com
               </Link>
             </p>

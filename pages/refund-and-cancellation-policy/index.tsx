@@ -6,8 +6,40 @@ function RefundCancellationPolicy() {
   const canonicalUrl = "https://quashbugs.com/refund-and-cancellation-policy";
   return (
     <>
-    <Head>
+      <Head>
+        <title> Quash - Refund and Cancellation</title>
+        <meta name="description" content=" Details about Quash's policy about subscription cancellation and the process of refund." />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Refund and Cancellation" />
+        <meta property="og:description" content=" Details about Quash's policy about subscription cancellation and the process of refund." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "http://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [{
+                "@type": "Question",
+                "name": "How can I cancel my Quash subscription?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You may cancel your subscription to Quash at any time. The cancellation will take effect at the end of your current billing cycle."
+                }
+              }, {
+                "@type": "Question",
+                "name": "Am I eligible for a refund with Quash?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Quash offers a refund under specific conditions outlined in our refund and cancellation policy."
+                }
+              }]
+            }
+          `}
+        </script>
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">
@@ -110,7 +142,7 @@ function RefundCancellationPolicy() {
             <p>
               6.1. If you have any questions or need to initiate a cancellation
               or refund request, please contact our customer support at{" "}
-              <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+              <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
                 hello@quashbugs.com
               </Link>
               .

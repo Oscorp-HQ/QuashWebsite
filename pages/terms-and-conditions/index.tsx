@@ -3,12 +3,38 @@ import Head from "next/head";
 import Link from "next/link";
 
 function TermsAndConditions() {
-
   const canonicalUrl = "https://quashbugs.com/terms-and-conditions";
   return (
-    <>
-       <Head>
+    <section>
+      <Head>
+        <title>Quash - Terms & Conditions</title>
+        <meta
+          name="description"
+          content="Read the terms and conditions governing your use of Quash, including privacy, account management, and communication services."
+        />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Terms & Conditions" />
+        <meta property="og:description" content="Read the terms and conditions governing your use of Quash, including privacy, account management, and communication services." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            name: "Terms & Conditions - Quash",
+            url: canonicalUrl,
+            description:
+              "Comprehensive terms and conditions for using Quash, highlighting user privacy, account responsibilities, and our services.",
+            publisher: {
+              "@type": "Organization",
+              name: "Quash",
+              url: "https://quashbugs.com",
+            },
+          })}
+        </script>
       </Head>
       <div className="text-white p-4 mt-[96px]">
         <div className="max-w-3xl mx-auto mb-8">
@@ -390,7 +416,7 @@ function TermsAndConditions() {
           <p>
             Quash welcomes your questions and comments regarding these Terms of
             Service. You can contact us at{" "}
-            <Link href="mailto:hello@quashbugs.com" className="text-blue-500">
+            <Link href="mailto:hello@quashbugs.com" className="text-blue-500" aria-label="Official mail of Quash">
               hello@quashbugs.com
             </Link>
             .
@@ -398,7 +424,7 @@ function TermsAndConditions() {
           <p>[End of Terms of Service]</p>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

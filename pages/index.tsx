@@ -15,11 +15,33 @@ import Trusted from "@/components/trusted";
 import Benefits from "@/components/benefits";
 
 export default function Home() {
-  const canonicalUrl = "https://quashbugs.com";
   return (
     <div>
       <Head>
-        <link rel="canonical" href={canonicalUrl} />
+        <title> Quash - Streamlining QA Processes 🚀</title>
+        <meta name="description" content=" Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
+        <meta property="og:url" content="https://quashbugs.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Quash - Streamlining QA Processes 🚀" />
+        <meta property="og:description" content="Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Quash - Streamlining QA Processes 🚀" />
+        <meta name="twitter:description" content="Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more." />
+        <meta name="twitter:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+        <link rel="canonical" href="https://quashbugs.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Quash",
+            "description": "Quash is a developer tool built to automate the bug reporting process by capturing screenshots, recordings, crash logs, and more.",
+            "url": "https://quashbugs.com",
+            "applicationCategory": "Developer Tools",
+            "screenshot": "Quash_Website_Blurb.jpg",
+          })}
+        </script>
       </Head>
       <div className="h-full w-full overflow-hidden relative">
         <Hero />

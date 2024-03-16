@@ -9,16 +9,22 @@ const benefits = [
 
 const Benefits = () => {
   return (
-        <div className="benefits-wrapper">
-          <div className="benefits-flex-container">
-            {benefits.map((client, index) => (
-              <div key={index} className="benefits-item">
-                <Image src={client.src} alt={client.label} width={100} height={100} className="benefits-image"/>
-                <p className="benefits-label">{client.label}</p>
-              </div>
-            ))}
+    <section className="benefits-wrapper">
+      <div className="benefits-flex-container">
+        {benefits.map((client, index) => (
+          <div key={index} className="benefits-item">
+            <Image
+              src={client.src}
+              alt={client.label}
+              width={100}
+              height={100}
+              className="benefits-image"
+            />
+            <p className="benefits-label">{client.label}</p>
           </div>
-        </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

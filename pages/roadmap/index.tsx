@@ -30,9 +30,31 @@ const Roadmap = () => {
   const router = useRouter();
   const canonicalUrl = "https://quashbugs.com/roadmap";
   return (
-    <div>
+    <section>
       <Head>
+        <title>Quash - Roadmap to the Future of Mobile Testing</title>
+        <meta
+          name="description"
+          content="Explore the roadmap of Quash and how it aims to revolutionize mobile testing with AI-powered solutions, test case generation, and comprehensive test operations."
+        />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Quash - Roadmap to the Future of Mobile Testing" />
+        <meta property="og:description" content="Explore the roadmap of Quash and how it aims to revolutionize mobile testing with AI-powered solutions, test case generation, and comprehensive test operations." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/Quash_Website_Blurb.jpg" />
+        <meta name="keywords" content="bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Roadmap - Quash",
+            description:
+              "Discover the future of mobile testing with Quash's innovative roadmap. Explore our commitment to AI-powered bug resolution, automated test case generation, and streamlined test operations.",
+            url: canonicalUrl,
+          })}
+        </script>
       </Head>
       <div className=" relative flex flex-col items-center overflow-hidden">
         <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
@@ -49,28 +71,28 @@ const Roadmap = () => {
             </h1>
           </div>
           <div className="flex flex-col gap-6 lg:gap-10 justify-center items-start text-start px-[6px] lg:px-5 pb-[72px] lg:pb-[180px]">
-            <span className="justify-center text-[12px] items-center  font-[600] flex md:text-[24px] text-[#ECECEE]">
+            <p className="justify-center text-[12px] items-center  font-[600] flex md:text-[24px] text-[#ECECEE]">
               THE PROBLEM
-            </span>
-            <span className="justify-center text-[20px] items-center  font-[500] flex md:text-[42px] text-white md:font-[600] ">
+            </p>
+            <p className="justify-center text-[20px] items-center  font-[500] flex md:text-[42px] text-white md:font-[600] ">
               Modern mobile businesses are a victim of pace
-            </span>
-            <span className="justify-center text-[16px] items-center  font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] ">
+            </p>
+            <p className="justify-center text-[16px] items-center  font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] ">
               In today&apos;s dynamic and fast-paced digital landscape, user
               expectations evolve rapidly. This requires swift feature
               development and improvements, within compact deadlines. While
               businesses aspire to meet these user expectations, they often find
               themselves hindered by outdated and inefficient processes.
-            </span>
+            </p>
           </div>
           <div className="flex flex-col gap-6 justify-center items-start text-start px-[6px] lg:px-5 pb-[24px] lg:pb-[72px]">
-            <span className="justify-center text-[20px] items-start  font-[500] lg:font-[600] flex md:text-[42px] text-white">
+            <p className="justify-center text-[20px] items-start  font-[500] lg:font-[600] flex md:text-[42px] text-white">
               To ensure that you not only meet - but exceed - your user’s
               expectations
-            </span>
-            <span className="justify-center text-[12px] items-start  font-[600] flex lg:text-[24px] text-white lg:font-[600] ">
+            </p>
+            <p className="justify-center text-[12px] items-start  font-[600] flex lg:text-[24px] text-white lg:font-[600] ">
               We’re coming up with
-            </span>
+            </p>
           </div>
           <div className="flex flex-col gap-14 lg:gap-[72px]">
             {solutions.map((item, index) => (
@@ -114,13 +136,13 @@ const Roadmap = () => {
           </div>
           <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px]">
             <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[987px]">
-              <span className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full text-center leading-normal">
+              <h3 className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full text-center leading-normal">
                 Win the never ending battle of Quality vs Speed
-              </span>
+              </h3>
 
-              <span className="text-[16px] w-[252px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full">
+              <p className="text-[16px] w-[252px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full">
                 Accelerate your Mobile Testing Workflow with Quash
-              </span>
+              </p>
             </div>
             <Button
               className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-3 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 md:leading-normal hover:bg-[#FFFFFFCC]"
@@ -134,7 +156,7 @@ const Roadmap = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

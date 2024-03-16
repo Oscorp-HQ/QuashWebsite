@@ -12,20 +12,20 @@ const reportingMedia = [
 
 const Reporting = () => {
   return (
-    <div className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
+    <section className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         <div className="grad-report h-[150px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
         <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
           <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-          <span className="report-gradient-text text-[32px] md:text-[60px] md:font-[600] leadind-normal">
+          <h1 className="report-gradient-text text-[32px] md:text-[60px] md:font-[600] leadind-normal">
             Reporting
-          </span>
+          </h1>
         </div>
       </div>
-      <span className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
+      <p className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
         Raise comprehensive tickets with minimal effort
-      </span>
+      </p>
       <div className="hidden justify-center items-center gap-10   md:flex flex-wrap">
         {reportingMedia.map((media, index) => (
           <Image
@@ -62,7 +62,7 @@ const Reporting = () => {
           </>
         ))}
       </Carousel>
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const Hero = () => {
   const router = useRouter();
   return (
-    <div className="relative flex flex-col gap-[56px] md:gap-0 items-center overflow-hidden pb-[41px] md:pb-[150px]">
+    <section className="relative flex flex-col gap-[56px] md:gap-0 items-center overflow-hidden pb-[41px] md:pb-[150px]">
       <div className="left-ellipse hidden md:flex absolute top-[15rem] -left-[10rem]" />
       <div className="left-sphere hidden md:flex absolute top-[30rem] -left-[2rem]" />
       <div className="right-ellipse hidden md:flex absolute top-[36rem] -right-[25rem]" />
@@ -24,6 +24,7 @@ const Hero = () => {
         <Button
           className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] "
           variant="outline"
+          aria-label="Sign up for free"
           onClick={() => {
             router.push("https://optimus.quashbugs.com/signup");
           }}
@@ -35,17 +36,22 @@ const Hero = () => {
         <div className="hero-video-frame aspect-w-16 aspect-h-9 ">
           <iframe
             className="hero-video-frame-content"
-            style={{ aspectRatio: '16 / 9' }}
+            style={{ aspectRatio: "16 / 9" }}
             src="https://www.youtube.com/embed/PnwNkHzPGQk?autoplay=1&mute=1&vq=hd1080"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             loading="lazy"
-            title="YouTube Video"
+            title="Mobile Testing Overview - Quash"
           ></iframe>
+          <p className="sr-only">
+            Video description: This video provides an overview of mobile testing
+            procedures and best practices, showcasing how Quash can streamline
+            these processes for your development team.
+          </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

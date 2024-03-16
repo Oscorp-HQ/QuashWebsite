@@ -11,20 +11,20 @@ const resoltionMedia = [
 
 const Resolution = () => {
   return (
-    <div className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
+    <section className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         <div className="grad-resolution-main h-[150px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
         <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
           <div className="resolution-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-          <span className="resolution-gradient-text text-[32px] md:text-[60px] md:font-[600] leadind-normal">
+          <h1 className="resolution-gradient-text text-[32px] md:text-[60px] md:font-[600] leadind-normal">
             Resolution
-          </span>
+          </h1>
         </div>
       </div>
-      <span className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
+      <p className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
         Know exactly where the bug is - and how to fix it
-      </span>
+      </p>
       <div className="hidden justify-center items-center gap-10  md:flex flex-wrap">
         <Image
           src="/context.svg"
@@ -72,7 +72,7 @@ const Resolution = () => {
           </>
         ))}
       </Carousel>
-    </div>
+    </section>
   );
 };
 
