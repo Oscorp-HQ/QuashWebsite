@@ -7,7 +7,7 @@ const streamlineContent = [
   {
     title: "Accelerated market delivery",
     desc: "Quash empowers your team to accelerate feature releases, bringing innovations to market swiftly. Our tool instills confidence for rapid and frequent updates.",
-    Image: "accelerated-market-delivery.svg",
+    Image: "accelerated-market-delivery-streamline.svg",
     width: 170,
     height: 170,
   },
@@ -21,7 +21,7 @@ const streamlineContent = [
   {
     title: "Prerelease Testing assurance",
     desc: "Ensure every release is up to your high standards. Testing becomes a seamless part of your workflow, guaranteeing consistent quality.",
-    Image: "pre-release.svg",
+    Image: "Pre-release-Testing-assurance-streamline.svg",
     width: 270,
     height: 170,
   },

@@ -2322,17 +2322,39 @@ body {
   animation: upAndDown 1.5s ease-in-out infinite;
 } */
 
-.test-everything-card{
+
+
+.watson-banner{
+  width: 100%;
+  background: linear-gradient(95deg, #353397 -4.62%, #A81EFF 80.47%, #FF57D0 109.6%);
+ 
+}
+
+.watson-banner-content{
   display: flex;
-  flex-direction: column;
-  width: 480px;
-  gap: 12px;
+justify-content: space-between;
+align-items: flex-end;
+flex-shrink: 0;
 }
 
-.test-everything-cards-container{
-  padding-top: 149px;
-  padding-bottom: 96px;
+.watson-heading-text{
+  color: #FFF;
+font-style: normal;
+font-weight: 300;
+line-height: 130%;
+}
+.watson-heading-text-main{
+  color: #FFF;
+font-style: normal;
+font-weight:500;
+line-height: 130%;
 }
 
-
+.sub-heading-watson{
+  color: rgba(255, 255, 255, 0.80);
+font-style: normal;
+font-weight: 300;
+line-height: 110%;
+letter-spacing: -0.24px;
+}
 
