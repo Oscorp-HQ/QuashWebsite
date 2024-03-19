@@ -5,8 +5,6 @@ import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Agile from "@/components/agile";
-import Callback from "@/components/callback";
-import Integration from "@/components/integration";
 
 const Watson = () => {
   const router = useRouter();
@@ -84,15 +82,16 @@ const Watson = () => {
             costs and time to market.
           </p>
           <Button
-            className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] "
-            variant="outline"
-            aria-label="Sign up for free"
-            onClick={() => {
-              router.push("https://optimus.quashbugs.com/signup");
-            }}
-          >
-            Get Early Access
-          </Button>
+    className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] text-center"
+    variant="outline"
+    aria-label="Sign up for free"
+    onClick={() => {
+        router.push("/");
+    }}
+>
+    Get Early Access
+</Button>
+
         </div>
         <div>
           <Image
@@ -481,15 +480,16 @@ const Watson = () => {
             </p>
 
             <Button
-            className="text-[#000000] text-[16px]  md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] "
-            variant="outline"
-            aria-label="Sign up for free"
-            onClick={() => {
-              router.push("https://optimus.quashbugs.com/signup");
-            }}
-          >
-            Get Early Access
-          </Button>
+    className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] text-center"
+    variant="outline"
+    aria-label="Sign up for free"
+    onClick={() => {
+        router.push("/");
+    }}
+>
+    Get Early Access
+</Button>
+
           </div>
         </div>
       </div>

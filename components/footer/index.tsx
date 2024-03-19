@@ -29,9 +29,9 @@ const footerQuash = [
     route: "/pricing",
   },
   {
-    label: "Roadmap",
-    title: "Roadmap",
-    route: "/roadmap",
+    label: "Watson",
+    title: "Watson",
+    route: "/watson",
   },
 ];
 
