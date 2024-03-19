@@ -23,9 +23,9 @@ const mobileNav = [
     value: "pricing",
   },
   {
-    label: "Roadmap",
-    path: "/roadmap",
-    value: "Roadmap",
+    label: "Watson",
+    path: "/watson",
+    value: "Watson",
   },
 
   {

@@ -102,6 +102,12 @@ body {
   filter: blur(37.2599983215332px);
 }
 
+.grad-resolution-watson {
+  height: 250px;
+  background-image: radial-gradient(#3cd0c8, black);
+  filter: blur(37.2599983215332px);
+}
+
 .resolution-gradient-line {
   flex-shrink: 0;
   border-radius: 200px;
@@ -2293,6 +2299,8 @@ body {
   }
 }
 
+/* Watson */
+
 @media screen and (max-width: 760px) {
   /* Streamline */
 
@@ -2300,3 +2308,31 @@ body {
     display: none;
   }
 }
+
+/* @keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-upAndDown {
+  animation: upAndDown 1.5s ease-in-out infinite;
+} */
+
+.test-everything-card{
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  gap: 12px;
+}
+
+.test-everything-cards-container{
+  padding-top: 149px;
+  padding-bottom: 96px;
+}
+
+
+
