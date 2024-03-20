@@ -4,13 +4,13 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/company-details</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://quashbugs.com/blog</loc>
     <changefreq>hourly</changefreq>
   </url>
+  <url>
+        <loc>https://quashbugs.com/blog/apples-usd20-billion-venture-unleashing-googles-ai-power-on-iphones</loc>
+        <changefreq>hourly</changefreq>
+      </url>
   <url>
         <loc>https://quashbugs.com/blog/optimizing-your-mobile-experience-for-success</loc>
         <changefreq>hourly</changefreq>
@@ -80,6 +80,10 @@
         <changefreq>hourly</changefreq>
       </url>
   <url>
+    <loc>https://quashbugs.com/company-details</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://quashbugs.com/pricing</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -88,11 +92,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/refund-and-cancellation-policy</loc>
+    <loc>https://quashbugs.com/product</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/product</loc>
+    <loc>https://quashbugs.com/refund-and-cancellation-policy</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>

@@ -13,19 +13,19 @@ const mobileNav = [
     value: "home",
   },
   {
-    label: "Product",
+    label: "Sherlock",
     path: "/product",
     value: "Product",
-  },
-  {
-    label: "Pricing",
-    path: "/pricing",
-    value: "pricing",
   },
   {
     label: "Watson",
     path: "/watson",
     value: "Watson",
+  },
+  {
+    label: "Pricing",
+    path: "/pricing",
+    value: "pricing",
   },
 
   {
@@ -61,7 +61,7 @@ const Header = () => {
           router.push("/");
         }}
       />
-      <div className="flex gap-6 items-center mr-4">
+      <div className="flex lg:gap-6 gap-2 items-center mr-4">
         <Image
           src="/logo-mobile.svg"
           alt="Quash Logo"
@@ -77,7 +77,7 @@ const Header = () => {
           {mobileNav.map((nav, index) => (
             <Link key={index} href={nav.path} legacyBehavior className="">
               <a
-                className={`mx-4 hover:text-gray-200 ${
+                className={`mx-2 lg:mx-4 hover:text-gray-200 ${
                   index === 5 ? "hidden" : "flex"
                 } text-[16px] font-[500] leading-[20.8px] ${
                   selected === nav.value ? "text-white" : "text-[#8A8894]"

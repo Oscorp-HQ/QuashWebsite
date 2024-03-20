@@ -28,7 +28,7 @@ body {
       rgba(255, 255, 255, 0.06) 0%,
       rgba(255, 255, 255, 0.06) 100%
     ),
-    rgba(0, 0, 0, 0.5);
+    rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(10px);
 }
 
@@ -271,7 +271,7 @@ body {
   letter-spacing: 0.12px;
 }
 .watson-title {
-  color: #ECECEE;
+  color: #ececee;
   font-size: 42px;
   font-style: normal;
   font-weight: 600;
@@ -287,7 +287,7 @@ body {
   letter-spacing: 0.09px;
 }
 .watson-label {
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
@@ -450,14 +450,12 @@ body {
   margin: 0px;
 }
 
-
 .blog-layout {
   height: 100%;
   width: 100%;
   padding-top: 149px;
   padding-right: 118px;
   padding-left: 118px;
-
 }
 .top-blog-card,
 .blogs-list-container {
@@ -466,8 +464,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-
 
 .blogs-list {
   gap: 24px;
@@ -478,7 +474,6 @@ body {
   justify-content: flex-start;
   flex-grow: 1;
   padding-top: 64px;
-  
 }
 
 .blog-card-display {
@@ -490,8 +485,6 @@ body {
   transform: scale(1.01); /* Scale on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
-
-
 
 .blog-details-layout {
   padding: 176px 200px 10px 200px;
@@ -622,8 +615,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-
-
 
 @media (max-width: 1100px) {
   .blog-card-meta-info {
@@ -1654,13 +1645,13 @@ body {
   align-items: center;
   width: 100%;
 }
-.integration-component{
+.integration-component {
   max-width: 1280px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-.roadmap{
+.roadmap {
   max-width: 1580px;
   width: 100%;
   margin-left: auto;
@@ -1906,36 +1897,32 @@ body {
   background: #ffd233;
   border-radius: 5px;
 }
-.slug-blog-list-container{
+.slug-blog-list-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; 
+  height: 100%;
   padding-left: 40px;
-  padding-right: 40px;padding-bottom: 80px;
+  padding-right: 40px;
+  padding-bottom: 80px;
 }
-
 
 @media only screen and (min-width: 1360px) {
   .blog-layout {
     padding-left: 40px;
     padding-right: 40px;
   }
-
 }
 @media only screen and (max-width: 1360px) {
-
   .blogs-list-container {
     width: 100%;
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
 @media only screen and (max-width: 1200px) {
-
   .blogs-list-container {
     width: 100%;
     max-width: 850px;
@@ -1943,7 +1930,7 @@ body {
     margin-right: auto;
   }
 
-  .slug-blog-list-container{
+  .slug-blog-list-container {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -1951,7 +1938,6 @@ body {
   .blogs-list {
     padding-top: 40px;
   }
-
 
   .topic-filter-btn {
     width: auto;
@@ -2118,18 +2104,16 @@ body {
   }
 }
 @media screen and (max-width: 990px) {
- .blogs-list {
-  gap: 24px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  padding-top: 40px;
-}
-
-
+  .blogs-list {
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding-top: 40px;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -2336,75 +2320,99 @@ body {
   animation: upAndDown 1.5s ease-in-out infinite;
 } */
 
-
-
-.watson-banner{
+.watson-banner {
   width: 100%;
-  background: linear-gradient(95deg, #353397 -4.62%, #A81EFF 80.47%, #FF57D0 109.6%);
- 
+  background: linear-gradient(
+    95deg,
+    #353397 -4.62%,
+    #a81eff 80.47%,
+    #ff57d0 109.6%
+  );
 }
 
-.watson-banner-content{
+.watson-banner-content {
   display: flex;
-justify-content: space-between;
-align-items: flex-end;
-flex-shrink: 0;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-shrink: 0;
 }
 
-.watson-heading-text{
-  color: #FFF;
-font-style: normal;
-font-weight: 300;
-line-height: 130%;
+.watson-heading-text {
+  color: #fff;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%;
 }
-.watson-heading-text-main{
-  color: #FFF;
-font-style: normal;
-font-weight:500;
-line-height: 130%;
-}
-
-.watson-text{
-  color: #FFF;
-font-style: italic;
-font-weight: 800;
-line-height: normal;
-text-transform: uppercase;
-}
-.sub-heading-watson{
-  color: rgba(255, 255, 255, 0.80);
-font-style: normal;
-font-weight: 300;
-line-height: 110%;
-letter-spacing: -0.24px;
+.watson-heading-text-main {
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
 }
 
-.watson-gradient-text{
-  background: linear-gradient(92deg, #5FBAB5 11.68%, #FFE70D 151.44%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.watson-text {
+  color: #fff;
+  font-style: italic;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
-.watson-gradient-text-less{
-  background: linear-gradient(270deg, #1EFFF1 -11.23%, #FFE456 13.63%, #FCFF56 45.61%, #328597 131.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.join-the-waitlist {
+  letter-spacing: 1px;
 }
-.watson-gradient-text-test{
-  background: linear-gradient(270deg, #A81EFF -11.23%, #FF56D0 13.63%, #FF56D0 45.61%, #343297 131.74%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.sub-heading-watson {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%;
+  letter-spacing: -0.24px;
 }
-.watson-gradient-text-agile{
-  background: linear-gradient(92deg, #5FBAB5 11.68%, #FFE70D 151.44%);
+
+.watson-gradient-text {
+  background: linear-gradient(92deg, #5fbab5 11.68%, #ffe70d 151.44%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.watson-hero-background{
-  background: linear-gradient(54deg, #353397 40.88%, #A81EFF 104.07%, #FF57D0 125.7%);
+.watson-gradient-text-less {
+  background: linear-gradient(
+    270deg,
+    #1efff1 -11.23%,
+    #ffe456 13.63%,
+    #fcff56 45.61%,
+    #328597 131.74%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.watson-gradient-text-test {
+  background: linear-gradient(
+    270deg,
+    #a81eff -11.23%,
+    #ff56d0 13.63%,
+    #ff56d0 45.61%,
+    #343297 131.74%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.watson-gradient-text-agile {
+  background: linear-gradient(92deg, #5fbab5 11.68%, #ffe70d 151.44%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.watson-hero-background {
+  background: linear-gradient(
+    54deg,
+    #353397 40.88%,
+    #a81eff 104.07%,
+    #ff57d0 125.7%
+  );
 }
