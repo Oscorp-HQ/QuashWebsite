@@ -8,6 +8,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+        <loc>https://quashbugs.com/blog/apples-usd20-billion-venture-unleashing-googles-ai-power-on-iphones</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
         <loc>https://quashbugs.com/blog/optimizing-your-mobile-experience-for-success</loc>
         <changefreq>hourly</changefreq>
       </url>
@@ -80,6 +84,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://quashbugs.com/pricing</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://quashbugs.com/privacy</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -93,10 +101,6 @@
   </url>
   <url>
     <loc>https://quashbugs.com/roadmap</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://quashbugs.com/pricing</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>

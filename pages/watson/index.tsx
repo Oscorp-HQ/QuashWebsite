@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { X } from "lucide-react";
 import Head from "next/head";
 import { AlertDialog, AlertDialogContent } from "@/components/ui/alert-dialog";
 import { EarlyAccessForm } from "@/components/early-access-form";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Watson = () => {
   const [formOpen, setFormOpen] = useState(false);
@@ -69,7 +77,7 @@ const Watson = () => {
   const canonicalUrl = "https://quashbugs.com/watson";
 
   return (
-    <section className="relative flex flex-col md:gap-0 items-center overflow-hidden md:pt-[72px] pt-[56px]">
+    <section className="relative flex flex-col md:gap-0 items-center overflow-hidden ">
       <Head>
         <title>Watson by Quash - AI Driven Testing</title>
         <meta
@@ -108,7 +116,7 @@ const Watson = () => {
       <div className="z-[-1] right-ellipse hidden md:flex  absolute top-[36rem] -right-[25rem]" />
       <div className="z-[-1] right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" /> */}
 
-      <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[80px] ">
+      <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[40px] ">
         <div className="">
           <p className=" text-center text-[20px] md:text-[40px]">
             <span className="text-white opacity-70 font-[800] ">
@@ -118,11 +126,11 @@ const Watson = () => {
           </p>
         </div>
         <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
-          <h1 className="justify-center max-w-[332px] md:max-w-[1212px] text-white bg-clip-text text-transparent flex  text-[32px] font-[700] md:text-[66px]  md:font-[600] w-full text-center leading-[1.25] ">
+          <h1 className="justify-center max-w-[332px] md:max-w-[1212px] text-white bg-clip-text text-transparent flex  text-[32px] font-[700] md:text-[56px]  md:font-[600] w-full text-center leading-[1.25] ">
             Supercharge Your Mobile App Development with AI-Driven Testing
           </h1>
 
-          <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[32px] text-[#ECECEE] md:font-[400] md:w-[888px]  md:pb-[40px] pb-[6px]">
+          <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[28px] text-[#ECECEE] md:font-[400] md:w-[888px]  md:pb-[40px] pb-[6px]">
             Empower your team to deliver exceptional apps faster, while reducing
             costs and time to market.
           </p>
@@ -154,19 +162,22 @@ const Watson = () => {
           />
         </div>
       </div>
-      <div className="h-[264px] w-full justify-center items-center flex">
-        <p className="max-w-[870px] text-white text-[40px] font-[400]">
+      <div className="md:h-[264px] w-full justify-center items-center flex h-[200px]">
+        <p className="max-w-[870px] text-white text-[24px]  lg:text-[40px] font-[400] lg:mx-0 mx-4 md:mx-8 text-center lg:text-start ">
           Test your app's functionality, APIs, processes, user interface, and
           beyond using Watson AI.
         </p>
       </div>
-      <div className="md:hidden">
+      <div className="md:hidden flex h-[200px] w-full relative">
         <Image
           src="/agile-illustration-mob.svg"
           alt="Illustration of agile development process"
-          className="w-full pt-[32px] md:hidden"
-          width={1400}
-          height={268}
+          // className="w-full pt-[32px] md:hidden"
+          // width={1400}
+          // height={268}
+          layout="fill"
+          objectFit="contain"
+          className="flex"
         />
       </div>
       <div className="h-[260px] w-full hidden md:flex relative">
@@ -368,7 +379,7 @@ const Watson = () => {
               className="md:flex hidden"
             />
           ))}
-          <Carousel
+          {/* <Carousel
             infiniteLoop
             showStatus={false}
             showIndicators={true}
@@ -392,6 +403,37 @@ const Watson = () => {
                 <br />
               </div>
             ))}
+          </Carousel> */}
+          <Carousel className="w-full max-w-xs md:hidden">
+            <CarouselContent>
+              {lessResourcesMediaMobile.map((media, index) => (
+                <CarouselItem
+                  key={index}
+                  className="w-full justify-center flex"
+                >
+                  {/* <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">
+                          {index + 1}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </div> */}
+                  {/* <div key={index}> */}
+                  <Image
+                    src={media.src}
+                    alt={`Detailed view of ${media.label} feature`}
+                    width={272}
+                    height={348}
+                    className=""
+                  />
+                  {/* </div> */}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 border-white" />
+            <CarouselNext className="-right-4 border-white" />
           </Carousel>
         </div>
       </div>
