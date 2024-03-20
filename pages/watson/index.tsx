@@ -371,7 +371,7 @@ const Watson = () => {
 
       <div className="h-full w-full overflow-hidden relative flex  flex-col justify-center items-center">
         <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
-          <div className="grad-resolution-watson w-[192px] md:h-[290px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+          <div className="grad-resolution-watson w-[192px] md:h-[310px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
             <div className="resolution-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
@@ -481,7 +481,7 @@ const Watson = () => {
               All your app metrics in a single place
             </h3>
 
-            <p className="text-[16px] w-[294px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full md:pb-[42px] pb-[28px]">
+            <p className="text-[16px] w-[294px] font-[300] md:text-[32px] text-[#ECECEE] md:font-[400] md:w-full md:pb-[42px] pb-[28px]">
               Track everything from testing progress to production analytics.
             </p>
             <div className="md:pt-[105px] pt-[53px] md:pb-[70px] pb-[0px] ">
@@ -500,7 +500,7 @@ const Watson = () => {
 
       <div className="h-full w-full overflow-hidden relative flex px-4  flex-col justify-center items-center">
         <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
-          <div className="grad-resolution-watson w-[192px] md:h-[290px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
+          <div className="grad-resolution-watson w-[192px] md:h-[310px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
             <div className="resolution-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
