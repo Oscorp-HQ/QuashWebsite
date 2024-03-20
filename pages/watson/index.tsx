@@ -197,7 +197,7 @@ const Watson = () => {
           className="flex"
         />
       </div>
-      <div className="h-[260px] w-full hidden md:flex relative">
+      <div className="h-[260px] w-full hidden md:flex relative mb-[70px]">
         <Image
           src="/agile-illustration.svg"
           alt="Illustration of agile development process"
@@ -207,7 +207,7 @@ const Watson = () => {
         />
       </div>
 
-      <div className="h-full w-full overflow-hidden relative flex px-4 flex-col justify-center items-center pb-[46px] md:pb-[100px]">
+      <div className="h-full w-full overflow-hidden relative flex px-4 flex-col justify-center items-center pb-[46px] md:pb-[75px]">
         <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
           <div className="grad-report h-[250px] w-[192px] md:h-[290px] md:w-[400px] opacity-[30%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[83px]  absolute top-0 bg-black"></div>
@@ -217,7 +217,7 @@ const Watson = () => {
               Test everything, automatically
             </h3>
           </div>
-          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[808px] md:w-[495px]  w-[300px]">
+          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[808px] sm:w-[400px]  w-[300px]">
             Watson can take over all your testing requirements, leveraging
             specially trained AI-models to automate the whole process.
           </p>
@@ -351,7 +351,7 @@ const Watson = () => {
         </div>
       </div>
 
-      <div className="md:w-full w-[359px] px-[24px] pb-[40px] md:pb-[123px] pt-[48px] md:pt-[100px]">
+      <div className="md:w-full w-[359px] px-[24px] pb-[40px] md:pb-[18px] pt-[48px] md:pt-[75px]">
         <div className="flex flex-col w-full md:gap-12 gap-[32px] text-center justify-center items-center">
           <h3 className="lg:text-[42px] md:text-[34px] text-[20px] text-[#FFFFFF] font-[500] leading-normal">
             All you need is Watson
@@ -385,7 +385,7 @@ const Watson = () => {
           </p>
         </div>
 
-        <div className="md:pt-[119px] pt-[53px] pb-[55px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="md:pt-[119px] pt-[53px] pb-[18px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
           {lessResourcesMedia.map((media, index) => (
             <Image
               key={index}
@@ -470,7 +470,7 @@ const Watson = () => {
             ensuring that the testing is accurate and efficient.
           </p>
 
-          <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[188px] pt-[32px] md:pb-[0px] pb-[62px] ">
+          <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[150px] pt-[32px] md:pb-[0px] pb-[62px] ">
             <div className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]">
               <div className="inline-flex flex-col items-start gap-[12px] md:gap-[40px] md:w-[586px]">
                 <div className="flex md:flex-col gap-2 md:gap-0">
@@ -556,8 +556,8 @@ const Watson = () => {
       <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center ">
         <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
           <div className="grad-report h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[30%] md:opacity-[20%] "></div>
-          <div className=" w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
-          <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
+          <div className=" w-full h-[48px] md:h-[150px] absolute top-0 bg-black"></div>
+          <div className="absolute top-[48px] md:top-[150px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
             <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px] z-10" />
           </div>
         </div>
@@ -570,7 +570,7 @@ const Watson = () => {
             <p className="text-[16px] w-[294px] font-[300] md:text-[32px] text-[#ECECEE] md:font-[400] md:w-full md:pb-[42px] pb-[28px]">
               Track everything from testing progress to production analytics.
             </p>
-            <div className="md:pt-[105px] pt-[53px] md:pb-[70px] pb-[0px] ">
+            <div className="md:pt-[105px] pt-[53px] md:pb-[18px] pb-[0px] ">
               <Image
                 src={"/app-metrics.svg"}
                 alt={
@@ -651,8 +651,8 @@ const Watson = () => {
       <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center md:pb-[150px] pb-[90px]">
         <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
           <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%] "></div>
-          <div className="-z-20 w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
-          <div className="absolute top-[48px] md:top-[200px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
+          <div className="-z-20 w-full h-[48px] md:h-[150px] absolute top-0 bg-black"></div>
+          <div className="absolute top-[48px] md:top-[150px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
             <div className="callback-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px] z-10" />
           </div>
         </div>
