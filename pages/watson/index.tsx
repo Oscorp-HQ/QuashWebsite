@@ -164,7 +164,7 @@ const Watson = () => {
       </div>
       <div className="md:h-[264px] w-full justify-center items-center flex h-[200px]">
         <p className="max-w-[870px] text-white text-[24px]  lg:text-[40px] font-[400] lg:mx-0 mx-4 md:mx-8 text-center lg:text-start ">
-          Test your app's functionality, APIs, processes, user interface, and
+          Test your app&apos;s functionality, APIs, processes, user interface, and
           beyond using Watson AI.
         </p>
       </div>
