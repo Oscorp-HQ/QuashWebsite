@@ -99,13 +99,15 @@ const Watson = () => {
             content="watson , watson ai ,bug reporting in software testing, bug reporting tools, bug reporting tool, bug reporting, bug reporting template, jira bug reporting, bug reporting in Jira, iphone bug reporting, bug reporting tools in software testing, bug reporting software, Performance monitoring, bug report in software testing"
           />
 
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org/",
-              "@type": "Pricing",
-              name: "Quash",
-            })}
-          </script>
+<script type="application/ld+json">
+        {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Watson by Quash",
+            "applicationCategory": "DeveloperSoftware",
+            "operatingSystem": "ANY",
+        })}
+    </script>
         </Head>
         <div className="z-[-1] left-ellipse hidden md:flex  absolute top-[15rem] -left-[10rem]" />
         <div className="z-[-1] left-sphere hidden md:flex absolute top-[30rem] -left-[2rem]" />
