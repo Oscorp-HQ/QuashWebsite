@@ -4,11 +4,21 @@ import BlogHeader from "@/components/ui/blog-header";
 import { client, previewClient } from "@/lib/contentful/client";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const Post = ({ post, preview, posts }: any) => {
   const router = useRouter();
   const { slug } = router.query;
   const canonicalUrl = `https://quashbugs.com/blog/${slug}`;
+  const [visiblePosts, setVisiblePosts] = useState<any[]>([]);
+
+  useEffect(() => {
+    const filteredPosts = posts
+      ?.filter((item: any) => post?.sys?.id !== item.sys.id)
+      .slice(0, 3);
+    setVisiblePosts(filteredPosts);
+  }, [posts, post, slug]);
+
 
   if (!posts || posts.length === 0) {
     return (
@@ -16,9 +26,8 @@ const Post = ({ post, preview, posts }: any) => {
     );
   }
 
-  const visiblePosts = posts
-    ?.filter((item: any) => post?.sys?.id !== item.sys.id)
-    .slice(0, 3);
+
+
 
     const postTitle = post?.fields?.title || 'Quash Blog';
     const postDescription = `Read our latest blog ${post?.fields?.title}` ;
@@ -74,11 +83,12 @@ const Post = ({ post, preview, posts }: any) => {
         <div className="right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
       </div>
       <div className="slug-blog-list-container">
-        <div className="blogs-list" style={{ justifyContent: "center" }}>
+      <div className="blogs-list" style={{ justifyContent: "center" }}>
           {visiblePosts.length > 0 &&
             visiblePosts.map((item: any) => (
-              <div className="blog-card-display" key={post.fields.slug}>
-                <BlogCard key={item.fields.slug} data={item} />
+              // Ensure the key is unique and correctly placed
+              <div className="blog-card-display" key={item.sys.id}>
+                <BlogCard data={item} />
               </div>
             ))}
         </div>

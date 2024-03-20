@@ -12,6 +12,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+        <loc>https://quashbugs.com/blog/optimizing-your-mobile-experience-for-success</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
         <loc>https://quashbugs.com/blog/the-dawn-of-ai-driven-software-engineering</loc>
         <changefreq>hourly</changefreq>
       </url>
@@ -84,11 +88,11 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/product</loc>
+    <loc>https://quashbugs.com/refund-and-cancellation-policy</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/refund-and-cancellation-policy</loc>
+    <loc>https://quashbugs.com/product</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -105,6 +109,10 @@
   </url>
   <url>
     <loc>https://quashbugs.com/upcoming</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://quashbugs.com/watson</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>
