@@ -351,7 +351,7 @@ const Watson = () => {
         </div>
       </div>
 
-      <div className="md:w-full w-[359px] px-[24px] pb-[40px] md:pb-[18px] pt-[48px] md:pt-[75px]">
+      <div className="md:w-full w-[359px] px-[24px]  md:pb-[18px] pt-[48px] md:pt-[75px]">
         <div className="flex flex-col w-full md:gap-12 gap-[32px] text-center justify-center items-center">
           <h3 className="lg:text-[42px] md:text-[34px] text-[20px] text-[#FFFFFF] font-[500] leading-normal">
             All you need is Watson
@@ -470,7 +470,7 @@ const Watson = () => {
             ensuring that the testing is accurate and efficient.
           </p>
 
-          <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[150px] pt-[32px] md:pb-[0px] pb-[62px] ">
+          <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[150px] pt-[32px] md:pb-[0px] pb-[45px] ">
             <div className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]">
               <div className="inline-flex flex-col items-start gap-[12px] md:gap-[40px] md:w-[586px]">
                 <div className="flex md:flex-col gap-2 md:gap-0">
@@ -638,7 +638,7 @@ const Watson = () => {
             height={673}
           />
         </div>
-        <div className="flex md:hidden">
+        <div className="flex md:hidden mb-10">
           <Image
             src="/watson-integration.svg"
             alt="Workflow management tool integration"
