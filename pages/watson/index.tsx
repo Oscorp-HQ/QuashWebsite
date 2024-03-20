@@ -119,7 +119,7 @@ const Watson = () => {
       <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[40px] ">
         <div className="">
           <p className=" text-center text-[20px] md:text-[40px]">
-            <span className="text-white opacity-70 font-[800] ">
+            <span className="text-white opacity-70 font-[800]">
               SAY HELLO TO
             </span>
             <span className="watson-text text-white">Watson.</span>
@@ -135,14 +135,14 @@ const Watson = () => {
             costs and time to market.
           </p>
           <Button
-            className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] text-center"
+            className="join-the-waitlist text-[#000000] text-[16px] md:text-[20px] font-[600] bg-[#FFFFFF] px-6 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] text-center"
             variant="outline"
             aria-label="Get Early Access To Watson"
             onClick={() => {
               setFormOpen(true);
             }}
           >
-            Get Early Access
+            Join the Waitlist
           </Button>
         </div>
         <div>
@@ -164,8 +164,8 @@ const Watson = () => {
       </div>
       <div className="md:h-[264px] w-full justify-center items-center flex h-[200px]">
         <p className="max-w-[870px] text-white text-[24px]  lg:text-[40px] font-[400] lg:mx-0 mx-4 md:mx-8 text-center lg:text-start ">
-          Test your app&apos;s functionality, APIs, processes, user interface, and
-          beyond using Watson AI.
+          Test your app&apos;s functionality, APIs, processes, user interface,
+          and beyond using Watson AI.
         </p>
       </div>
       <div className="md:hidden flex h-[200px] w-full relative">
