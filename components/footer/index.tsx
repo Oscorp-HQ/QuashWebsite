@@ -164,7 +164,7 @@ const Footer = () => {
                 onClick={() => setFormOpen(true)}
                 href={""}
               >
-                contact us
+                Contact us
               </Link>
               <Link
                 href={"mailto:hello@quashbugs.com"}

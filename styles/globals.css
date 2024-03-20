@@ -270,6 +270,13 @@ body {
   line-height: normal;
   letter-spacing: 0.12px;
 }
+.watson-title {
+  color: #ECECEE;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 
 .demo-label {
   color: white;
@@ -278,6 +285,13 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.09px;
+}
+.watson-label {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .demo-input {

@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { DemoRequestForm } from "@/components/contact-form";
 import { X } from "lucide-react";
 import Head from "next/head";
 import { AlertDialog, AlertDialogContent } from "@/components/ui/alert-dialog";
+import { EarlyAccessForm } from "@/components/early-access-form";
 
 const Watson = () => {
   const [formOpen, setFormOpen] = useState(false);
@@ -605,8 +605,8 @@ const Watson = () => {
             >
               <div className="w-full gap-6 md:gap-[40px]">
                 {!formSubmitted && (
-                  <div className="demo-title flex justify-between items-center">
-                    Contact Us
+                  <div className="watson-title flex justify-between items-center">
+                    Get Early Access to Watson
                     <X
                       size={53}
                       className="hover:cursor-pointer md:flex hidden"
@@ -625,7 +625,7 @@ const Watson = () => {
                 )}
                 <div className="w-full mt-8">
                   {!formSubmitted ? (
-                    <DemoRequestForm setFormSubmitted={setFormSubmitted} />
+                    <EarlyAccessForm setFormSubmitted={setFormSubmitted} />
                   ) : (
                     <div className="">
                       <div className=" flex flex-col items-center gap-6">
