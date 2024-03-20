@@ -15,8 +15,9 @@ const Agile = () => {
             </h3>
           </div>
           <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[938px] md:w-[653px] w-[307px]">
-          Double your development agility with Quash's mobile-first approach. Deliver low-risk, high-quality mobile apps faster, and boost team productivity for standout performance.
-          </p>
+  Double your development agility with Quash&apos;s mobile-first approach. Deliver low-risk, high-quality mobile apps faster, and boost team productivity for standout performance.
+</p>
+
         </div>
       <div >
           <Image

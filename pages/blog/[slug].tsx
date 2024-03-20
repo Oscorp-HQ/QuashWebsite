@@ -12,19 +12,20 @@ const Post = ({ post, preview, posts }: any) => {
   const canonicalUrl = `https://quashbugs.com/blog/${slug}`;
   const [visiblePosts, setVisiblePosts] = useState<any[]>([]);
 
+  useEffect(() => {
+    const filteredPosts = posts
+      ?.filter((item: any) => post?.sys?.id !== item.sys.id)
+      .slice(0, 3);
+    setVisiblePosts(filteredPosts);
+  }, [posts, post, slug]);
+
+
   if (!posts || posts.length === 0) {
     return (
       <div className="flex text-white min-h-[280px]">No posts available</div>
     );
   }
 
-  useEffect(() => {
-    // Filter and set visible posts whenever the posts or current post changes
-    const filteredPosts = posts
-      ?.filter((item: any) => post?.sys?.id !== item.sys.id)
-      .slice(0, 3);
-    setVisiblePosts(filteredPosts);
-  }, [posts, post, slug]);
 
 
 

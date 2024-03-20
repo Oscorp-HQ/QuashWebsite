@@ -510,7 +510,7 @@ const Watson = () => {
             </h3>
           </div>
           <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[1064px] md:w-[653px] w-[352px]">
-            Double your development agility with Watson's mobile-first AI-driven
+            Double your development agility with Watson&apos;s mobile-first AI-driven
             testing approach. Deliver low-risk, high-quality mobile apps faster,
             and boost team productivity for standout performance.
           </p>
