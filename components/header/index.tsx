@@ -13,19 +13,19 @@ const mobileNav = [
     value: "home",
   },
   {
-    label: "Product",
+    label: "Sherlock",
     path: "/product",
     value: "Product",
-  },
-  {
-    label: "Pricing",
-    path: "/pricing",
-    value: "pricing",
   },
   {
     label: "Watson",
     path: "/watson",
     value: "Watson",
+  },
+  {
+    label: "Pricing",
+    path: "/pricing",
+    value: "pricing",
   },
 
   {

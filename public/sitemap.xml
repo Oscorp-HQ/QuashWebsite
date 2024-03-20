@@ -4,10 +4,6 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/company-details</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://quashbugs.com/blog</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -80,7 +76,7 @@
         <changefreq>hourly</changefreq>
       </url>
   <url>
-    <loc>https://quashbugs.com/pricing</loc>
+    <loc>https://quashbugs.com/company-details</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -88,15 +84,19 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://quashbugs.com/refund-and-cancellation-policy</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://quashbugs.com/product</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://quashbugs.com/refund-and-cancellation-policy</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://quashbugs.com/roadmap</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://quashbugs.com/pricing</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>

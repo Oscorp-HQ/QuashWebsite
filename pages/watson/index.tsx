@@ -111,7 +111,10 @@ const Watson = () => {
       <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[80px] ">
         <div className="">
           <p className=" text-center text-[20px] md:text-[40px]">
-            <span className="text-white opacity-70 font-[800] ">SAY HELLO TO</span><span className="watson-text text-white">Watson.</span>
+            <span className="text-white opacity-70 font-[800] ">
+              SAY HELLO TO
+            </span>
+            <span className="watson-text text-white">Watson.</span>
           </p>
         </div>
         <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
@@ -150,6 +153,30 @@ const Watson = () => {
             className="flex md:hidden rounded-[4px] animate-upAndDown"
           />
         </div>
+      </div>
+      <div className="h-[264px] w-full justify-center items-center flex">
+        <p className="max-w-[870px] text-white text-[40px] font-[400]">
+          Test your app's functionality, APIs, processes, user interface, and
+          beyond using Watson AI.
+        </p>
+      </div>
+      <div className="md:hidden">
+        <Image
+          src="/agile-illustration-mob.svg"
+          alt="Illustration of agile development process"
+          className="w-full pt-[32px] md:hidden"
+          width={1400}
+          height={268}
+        />
+      </div>
+      <div className="h-[260px] w-full hidden md:flex relative">
+        <Image
+          src="/agile-illustration.svg"
+          alt="Illustration of agile development process"
+          layout="fill"
+          objectFit="cover"
+          className="flex"
+        />
       </div>
 
       <div className="h-full w-full overflow-hidden relative flex px-4 flex-col justify-center items-center pb-[46px] md:pb-[100px]">
@@ -224,7 +251,7 @@ const Watson = () => {
                   Intelligent UI Testing
                 </h2>
                 <p className="text-[#9B9B9B] text-[16px] md:text-[28px]">
-                  Watson smartly imports your Figma designs to check for UI bugs
+                  Watson smartly imports your design files to check for UI bugs
                   and design inconsistencies in your app.
                 </p>
               </div>
@@ -509,9 +536,9 @@ const Watson = () => {
             </h3>
           </div>
           <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[1064px] md:w-[653px] w-[352px]">
-            Double your development agility with Watson&apos;s mobile-first AI-driven
-            testing approach. Deliver low-risk, high-quality mobile apps faster,
-            and boost team productivity for standout performance.
+            Double your development agility with Watson&apos;s mobile-first
+            AI-driven testing approach. Deliver low-risk, high-quality mobile
+            apps faster, and boost team productivity for standout performance.
           </p>
         </div>
         <div>
