@@ -119,7 +119,7 @@ const Watson = () => {
             Supercharge Your Mobile App Development with AI-Driven Testing
           </h1>
 
-          <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[32px] text-[#ECECEE] md:font-[400] md:w-[888px]  md:pb-[40px]">
+          <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[32px] text-[#ECECEE] md:font-[400] md:w-[888px]  md:pb-[40px] pb-[6px]">
             Empower your team to deliver exceptional apps faster, while reducing
             costs and time to market.
           </p>
@@ -172,7 +172,7 @@ const Watson = () => {
           <div className="grid grid-cols-1">
             <div className="flex lg:flex-row flex-col lg:gap-[150px] gap-[32px]">
               {/* Field 1 */}
-              <div className="flex flex-col max-w-[311px] md:max-w-[479px] gap-3 ">
+              <div className="flex flex-col max-w-[400px] md:max-w-[479px] gap-3 ">
                 <Image
                   src={"/test.svg"}
                   alt={
@@ -201,7 +201,7 @@ const Watson = () => {
               </div>
 
               {/* Field 2 */}
-              <div className="flex flex-col max-w-[311px]  md:max-w-[518px] gap-3 lg:ml-10 ml-0">
+              <div className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3 lg:ml-10 ml-0">
                 <Image
                   src={"/intelligent.svg"}
                   alt={
@@ -232,7 +232,7 @@ const Watson = () => {
 
             <div className="flex lg:flex-row flex-col lg:gap-[150px] gap-[32px] lg:pt-[81px] pt-[32px]">
               {/* Field 3 */}
-              <div className="flex flex-col max-w-[311px]  md:max-w-[518px] gap-3">
+              <div className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3">
                 <Image
                   src={"/automated.svg"}
                   alt={
@@ -264,7 +264,7 @@ const Watson = () => {
               </div>
 
               {/* Field 4 */}
-              <div className="flex flex-col max-w-[311px]  md:max-w-[518px] gap-3">
+              <div className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3">
                 <Image
                   src={"/ai-frame.svg"}
                   alt={
