@@ -297,7 +297,7 @@ const Watson = () => {
         </div>
       </div>
 
-      <div className="md:w-full w-[359px] px-[24px] pb-[40px]">
+      <div className="md:w-full w-[359px] px-[24px] pb-[70px] pt-[100px]">
         <div className="flex flex-col w-full md:gap-12 gap-[32px] text-center justify-center items-center">
           <h3 className="lg:text-[42px] md:text-[34px] text-[20px] text-[#FFFFFF] font-[500] leading-normal">
             All you need is Watson
@@ -385,7 +385,7 @@ const Watson = () => {
             ensuring that the testing is accurate and efficient.
           </p>
 
-          <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[188px] pt-[32px] md:pb-[228px] pb-[62px] ">
+          <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[188px] pt-[32px] md:pb-[0px] pb-[62px] ">
             <div className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]">
               <div className="inline-flex flex-col items-start gap-[12px] md:gap-[40px] md:w-[586px]">
                 <div className="flex md:flex-col gap-2 md:gap-0">
@@ -485,7 +485,7 @@ const Watson = () => {
             <p className="text-[16px] w-[294px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full md:pb-[42px] pb-[28px]">
               Track everything from testing progress to production analytics.
             </p>
-            <div className="md:pt-[105px] pt-[53px] pb-[96px] ">
+            <div className="md:pt-[105px] pt-[53px] md:pb-[70px] pb-[0px] ">
               <Image
                 src={"/app-metrics.svg"}
                 alt={
@@ -535,7 +535,7 @@ const Watson = () => {
         </div>
       </div>
 
-      <div className="integration-component px-4 pt-[96px] md:py-[114px] pb-[80px] gap-12 flex flex-col md:grid md:grid-cols-2 md:gap-[26px] justify-center items-center md:items-start">
+      <div className="integration-component px-4 pt-[96px] md:pt-[114px] gap-12 flex flex-col md:grid md:grid-cols-2 md:gap-[26px] justify-center items-center md:items-start">
         <div className="flex text-start gap-6 md:gap-10 flex-col px-3  md:pr-2 md:pl-0 md:mt-[65px] lg:w-[586px]">
           <h3 className="text-[24px] md:text-[42px] text-[#FFFFFF] font-[500]">
             Watson syncs with your <br /> entire tech stack
@@ -563,7 +563,7 @@ const Watson = () => {
         </div>
       </div>
 
-      <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center pb-[228px]">
+      <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center md:pb-[150px] pb-[90px]">
         <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
           <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%] "></div>
           <div className="-z-20 w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
