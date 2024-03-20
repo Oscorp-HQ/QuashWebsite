@@ -2358,3 +2358,29 @@ line-height: 110%;
 letter-spacing: -0.24px;
 }
 
+.watson-gradient-text{
+  background: linear-gradient(92deg, #5FBAB5 11.68%, #FFE70D 151.44%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.watson-gradient-text-less{
+  background: linear-gradient(270deg, #1EFFF1 -11.23%, #FFE456 13.63%, #FCFF56 45.61%, #328597 131.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.watson-gradient-text-test{
+  background: linear-gradient(270deg, #A81EFF -11.23%, #FF56D0 13.63%, #FF56D0 45.61%, #343297 131.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.watson-gradient-text-agile{
+  background: linear-gradient(92deg, #5FBAB5 11.68%, #FFE70D 151.44%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
