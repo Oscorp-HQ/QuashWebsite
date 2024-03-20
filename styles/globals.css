@@ -2364,6 +2364,13 @@ font-weight:500;
 line-height: 130%;
 }
 
+.watson-text{
+  color: #FFF;
+font-style: italic;
+font-weight: 800;
+line-height: normal;
+text-transform: uppercase;
+}
 .sub-heading-watson{
   color: rgba(255, 255, 255, 0.80);
 font-style: normal;
@@ -2398,3 +2405,6 @@ background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.watson-hero-background{
+  background: linear-gradient(54deg, #353397 40.88%, #A81EFF 104.07%, #FF57D0 125.7%);
+}

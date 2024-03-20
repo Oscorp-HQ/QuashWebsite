@@ -12,7 +12,6 @@ import { EarlyAccessForm } from "@/components/early-access-form";
 const Watson = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const router = useRouter();
 
   const lessResourcesMedia = [
     {
@@ -70,7 +69,7 @@ const Watson = () => {
   const canonicalUrl = "https://quashbugs.com/watson";
 
   return (
-    <section className="relative flex flex-col md:gap-0 items-center overflow-hidden ">
+    <section className="relative flex flex-col md:gap-0 items-center overflow-hidden md:pt-[72px] pt-[56px]">
       <Head>
         <title>Watson by Quash - AI Driven Testing</title>
         <meta
@@ -104,23 +103,23 @@ const Watson = () => {
           })}
         </script>
       </Head>
-      <div className="z-[-1] left-ellipse hidden md:flex  absolute top-[15rem] -left-[10rem]" />
+      {/* <div className="z-[-1] left-ellipse hidden md:flex  absolute top-[15rem] -left-[10rem]" />
       <div className="z-[-1] left-sphere hidden md:flex absolute top-[30rem] -left-[2rem]" />
       <div className="z-[-1] right-ellipse hidden md:flex  absolute top-[36rem] -right-[25rem]" />
-      <div className="z-[-1] right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" />
+      <div className="z-[-1] right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" /> */}
 
-      <div className=" pt-[112px] px-[18px]  md:pt-[210px] lg:px-[242px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[122px] ">
+      <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[122px] ">
         <div className="">
-          <p className="text-[#7B7B7B] text-center font-semibold text-[20px] md:text-[40px]">
-            Say hello to <span className="text-white">Watson.</span>
+          <p className=" text-center text-[20px] md:text-[40px]">
+            <span className="text-white opacity-70 font-[800] ">SAY HELLO TO</span><span className="watson-text text-white">Watson.</span>
           </p>
         </div>
         <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
-          <h1 className="justify-center max-w-[332px] md:max-w-[1212px] bg-gradient-to-b  from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
+          <h1 className="justify-center max-w-[332px] md:max-w-[1212px] text-white bg-clip-text text-transparent flex  text-[32px] font-[700] md:text-[66px]  md:font-[600] w-full text-center leading-[1.25] ">
             Supercharge Your Mobile App Development with AI-Driven Testing
           </h1>
 
-          <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] md:w-[888px] md:px-[100px] md:pb-[40px]">
+          <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[32px] text-[#ECECEE] md:font-[400] md:w-[888px]  md:pb-[40px]">
             Empower your team to deliver exceptional apps faster, while reducing
             costs and time to market.
           </p>
@@ -153,11 +152,11 @@ const Watson = () => {
         </div>
       </div>
 
-      <div className="h-full w-full overflow-hidden relative flex px-4 flex-col justify-center items-center">
+      <div className="h-full w-full overflow-hidden relative flex px-4 flex-col justify-center items-center pb-[46px] md:pb-[100px]">
         <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
           <div className="grad-report h-[250px] w-[192px] md:h-[290px] md:w-[400px] opacity-[30%] md:opacity-[20%]"></div>
-          <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
-          <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
+          <div className="w-full h-[93px] md:h-[83px]  absolute top-0 bg-black"></div>
+          <div className="absolute top-[93px]  md:top-[79px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
             <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
             <h3 className="watson-gradient-text-test text-[32px] md:text-[40px] lg:text-[60px] font-[600] leading-normal  text-center">
               Test everything, automatically
@@ -169,7 +168,7 @@ const Watson = () => {
           </p>
         </div>
 
-        <div className="md:pt-[149px] pt-[53px] pb-[96px]">
+        <div className="md:pt-[149px] pt-[53px] ">
           <div className="grid grid-cols-1">
             <div className="flex lg:flex-row flex-col lg:gap-[150px] gap-[32px]">
               {/* Field 1 */}
@@ -297,7 +296,7 @@ const Watson = () => {
         </div>
       </div>
 
-      <div className="md:w-full w-[359px] px-[24px] pb-[70px] pt-[100px]">
+      <div className="md:w-full w-[359px] px-[24px] pb-[40px] md:pb-[123px] pt-[48px] md:pt-[100px]">
         <div className="flex flex-col w-full md:gap-12 gap-[32px] text-center justify-center items-center">
           <h3 className="lg:text-[42px] md:text-[34px] text-[20px] text-[#FFFFFF] font-[500] leading-normal">
             All you need is Watson
@@ -331,7 +330,7 @@ const Watson = () => {
           </p>
         </div>
 
-        <div className="md:pt-[119px] pt-[53px] pb-[96px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="md:pt-[119px] pt-[53px] pb-[55px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
           {lessResourcesMedia.map((media, index) => (
             <Image
               key={index}
