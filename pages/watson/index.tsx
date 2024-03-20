@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 // import { Carousel } from "react-responsive-carousel";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { X } from "lucide-react";
+import { Link, X } from "lucide-react";
 import Head from "next/head";
 import { AlertDialog, AlertDialogContent } from "@/components/ui/alert-dialog";
 import { EarlyAccessForm } from "@/components/early-access-form";
@@ -76,6 +76,17 @@ const Watson = () => {
 
   const canonicalUrl = "https://quashbugs.com/watson";
 
+  useEffect(() => {
+    // Function to dynamically load the form script
+    const loadFormScript = () => {
+      const script = document.createElement("script");
+      script.src = "https://server.fillout.com/embed/v1/";
+      script.async = true;
+      document.body.appendChild(script);
+    };
+    if (formOpen) loadFormScript();
+  }, [formOpen]);
+
   return (
     <section className="relative flex flex-col md:gap-0 items-center overflow-hidden ">
       <Head>
@@ -116,12 +127,12 @@ const Watson = () => {
       <div className="z-[-1] right-ellipse hidden md:flex  absolute top-[36rem] -right-[25rem]" />
       <div className="z-[-1] right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" /> */}
 
-      <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[40px] ">
-        <div className="">
+      <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[40px]  ">
+        <div className="mt-10 md:mt-0">
           <p className=" text-center text-[20px] md:text-[40px]">
             <span className="text-white opacity-70 font-[800]">
               SAY HELLO TO
-            </span>
+            </span>{" "}
             <span className="watson-text text-white">Watson.</span>
           </p>
         </div>
@@ -130,7 +141,7 @@ const Watson = () => {
             Supercharge Your Mobile App Development with AI-Driven Testing
           </h1>
 
-          <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[28px] text-[#ECECEE] md:font-[400] md:w-[888px]  md:pb-[40px] pb-[6px]">
+          <p className="justify-center text-[16px] w-full font-[300] flex md:text-[28px] text-[#ECECEE] md:font-[400] lg:w-[888px]  md:pb-[40px] pb-[6px]">
             Empower your team to deliver exceptional apps faster, while reducing
             costs and time to market.
           </p>
@@ -142,7 +153,13 @@ const Watson = () => {
               setFormOpen(true);
             }}
           >
-            Join the Waitlist
+            <a
+              href="https://forms.fillout.com/t/as917en3Caus"
+              target="_blank"
+              aria-label="join the waitlist form"
+            >
+              Join the Waitlist
+            </a>
           </Button>
         </div>
         <div>
@@ -162,13 +179,13 @@ const Watson = () => {
           />
         </div>
       </div>
-      <div className="md:h-[264px] w-full justify-center items-center flex h-[200px]">
-        <p className="max-w-[870px] text-white text-[24px]  lg:text-[40px] font-[400] lg:mx-0 mx-4 md:mx-8 text-center lg:text-start ">
+      <div className="md:h-[264px] w-full justify-center items-center flex h-[100px] mt-5 md:mt-0">
+        <p className="max-w-[870px] text-white text-[16px] md:text-[24px]  lg:text-[40px] font-[400] lg:mx-0 mx-4 md:mx-8 text-center lg:text-start ">
           Test your app&apos;s functionality, APIs, processes, user interface,
           and beyond using Watson AI.
         </p>
       </div>
-      <div className="md:hidden flex h-[200px] w-full relative">
+      <div className="md:hidden flex md:h-[200px] h-[100px] w-full relative mt-5">
         <Image
           src="/agile-illustration-mob.svg"
           alt="Illustration of agile development process"
@@ -176,7 +193,7 @@ const Watson = () => {
           // width={1400}
           // height={268}
           layout="fill"
-          objectFit="contain"
+          objectFit="fill"
           className="flex"
         />
       </div>
@@ -651,98 +668,35 @@ const Watson = () => {
             </p>
 
             <Button
-              className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] text-center"
+              className="join-the-waitlist text-[#000000] text-[16px] md:text-[20px] font-[600] bg-[#FFFFFF] px-6 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] text-center"
               variant="outline"
               aria-label="Get Early Access To Watson"
               onClick={() => {
                 setFormOpen(true);
               }}
             >
-              Get Early Access
+              <a
+                href="https://forms.fillout.com/t/as917en3Caus"
+                target="_blank"
+                aria-label="join the waitlist form"
+              >
+                Join the Waitlist
+              </a>
             </Button>
           </div>
         </div>
       </div>
-      {(formOpen || formSubmitted) && (
-        <AlertDialog open={formOpen}>
-          <AlertDialogContent className=" flex justify-center items-center md:p-[100px] p-10 w-full max-w-[960px] h-full">
-            <div
-              className={`relative border-[2px] border-solid border-gray-500 w-full ${
-                !formSubmitted ? "demo-container bg-[#E0EED5]" : "submitted"
-              }  `}
-            >
-              <div className="w-full gap-6 md:gap-[40px]">
-                {!formSubmitted && (
-                  <div className="watson-title flex justify-between items-center">
-                    Get Early Access to Watson
-                    <X
-                      size={53}
-                      className="hover:cursor-pointer md:flex hidden"
-                      onClick={() => {
-                        setFormOpen(false);
-                      }}
-                    />
-                    <X
-                      size={26}
-                      className="hover:cursor-pointer md:hidden flex"
-                      onClick={() => {
-                        setFormOpen(false);
-                      }}
-                    />
-                  </div>
-                )}
-                <div className="w-full mt-8">
-                  {!formSubmitted ? (
-                    <EarlyAccessForm setFormSubmitted={setFormSubmitted} />
-                  ) : (
-                    <div className="">
-                      <div className=" flex flex-col items-center gap-6">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="88"
-                          height="88"
-                          viewBox="0 0 88 88"
-                          fill="none"
-                        >
-                          <path
-                            d="M58.7228 34.7772C58.8507 34.9049 58.9521 35.0565 59.0213 35.2235C59.0905 35.3904 59.1261 35.5693 59.1261 35.75C59.1261 35.9307 59.0905 36.1096 59.0213 36.2765C58.9521 36.4435 58.8507 36.5951 58.7228 36.7228L39.4728 55.9728C39.3451 56.1007 39.1935 56.2021 39.0266 56.2713C38.8596 56.3405 38.6807 56.3761 38.5 56.3761C38.3193 56.3761 38.1404 56.3405 37.9735 56.2713C37.8065 56.2021 37.6549 56.1007 37.5272 55.9728L29.2772 47.7228C29.0192 47.4648 28.8742 47.1149 28.8742 46.75C28.8742 46.3851 29.0192 46.0352 29.2772 45.7772C29.5352 45.5192 29.8851 45.3742 30.25 45.3742C30.6149 45.3742 30.9648 45.5192 31.2228 45.7772L38.5 53.0544L56.7772 34.7772C56.9049 34.6493 57.0565 34.5479 57.2235 34.4787C57.3904 34.4095 57.5693 34.3739 57.75 34.3739C57.9307 34.3739 58.1096 34.4095 58.2766 34.4787C58.4435 34.5479 58.5951 34.6493 58.7228 34.7772ZM78.375 44C78.375 50.7987 76.3589 57.4448 72.5818 63.0977C68.8046 68.7507 63.436 73.1566 57.1548 75.7584C50.8735 78.3601 43.9619 79.0409 37.2938 77.7145C30.6257 76.3881 24.5006 73.1142 19.6932 68.3068C14.8858 63.4994 11.6119 57.3743 10.2855 50.7062C8.95915 44.0381 9.63989 37.1265 12.2417 30.8453C14.8434 24.564 19.2493 19.1954 24.9023 15.4182C30.5552 11.6411 37.2013 9.625 44 9.625C53.1138 9.63501 61.8514 13.2599 68.2958 19.7043C74.7402 26.1487 78.365 34.8863 78.375 44ZM75.625 44C75.625 37.7452 73.7702 31.6308 70.2952 26.4301C66.8202 21.2294 61.8811 17.1759 56.1024 14.7823C50.3237 12.3887 43.9649 11.7624 37.8303 12.9827C31.6956 14.2029 26.0606 17.2149 21.6378 21.6377C17.2149 26.0606 14.2029 31.6956 12.9827 37.8303C11.7624 43.9649 12.3887 50.3236 14.7823 56.1024C17.1759 61.8811 21.2294 66.8202 26.4301 70.2952C31.6308 73.7702 37.7452 75.625 44 75.625C52.3847 75.6159 60.4233 72.2811 66.3522 66.3522C72.2811 60.4233 75.6159 52.3847 75.625 44Z"
-                            fill="#E0EED5"
-                          />
-                        </svg>
-                        <div className="flex flex-col text-center gap-3">
-                          {/* <span className="req-submitted">Reach out to us</span> */}
-                          <span className="req-desc text-white">
-                            We’ll get back to you shortly
-                          </span>
-                        </div>
-                      </div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        className="absolute top-4 right-4  hover:cursor-pointer "
-                        onClick={() => {
-                          setFormOpen(false);
-                          setTimeout(() => {
-                            setFormSubmitted(false);
-                          }, 500);
-                        }}
-                      >
-                        <path
-                          d="M14.9999 13.2325L21.1874 7.04498L22.9549 8.81248L16.7674 15L22.9549 21.1875L21.1874 22.955L14.9999 16.7675L8.81242 22.955L7.04492 21.1875L13.2324 15L7.04492 8.81248L8.81242 7.04498L14.9999 13.2325Z"
-                          fill="#E0EED5"
-                        />
-                      </svg>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </AlertDialogContent>
-        </AlertDialog>
-      )}
+
+      {/* {formOpen && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 z-50">
+          <div
+            data-fillout-id="as917en3Caus"
+            data-fillout-embed-type="fullscreen"
+            className="w-full h-full"
+            data-fillout-inherit-parameters
+          ></div>
+        </div>
+      )} */}
     </section>
   );
 };
