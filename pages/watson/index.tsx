@@ -108,7 +108,7 @@ const Watson = () => {
       <div className="z-[-1] right-ellipse hidden md:flex  absolute top-[36rem] -right-[25rem]" />
       <div className="z-[-1] right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" /> */}
 
-      <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[122px] ">
+      <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[80px] ">
         <div className="">
           <p className=" text-center text-[20px] md:text-[40px]">
             <span className="text-white opacity-70 font-[800] ">SAY HELLO TO</span><span className="watson-text text-white">Watson.</span>
