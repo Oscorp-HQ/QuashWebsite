@@ -531,7 +531,7 @@ const Watson = () => {
                 </div>
                 <p className="md:text-[32px] text-[16px] font-normal text-white pl-[26px] md:pl-[0px]">
                   Watson will automatically run all the test cases on your app.
-                  For every bug, crash, and UI issue that is reported, Watson
+                  For every bug, crash, and UI issue that is found, Watson
                   provides a solution with it.
                 </p>
               </div>
