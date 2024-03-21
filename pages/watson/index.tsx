@@ -217,7 +217,7 @@ const Watson = () => {
               Test everything, automatically
             </h3>
           </div>
-          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[808px] sm:w-[400px]  w-[300px]">
+          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white md:max-w-[808px] max-w-[300px]">
             Watson can take over all your testing requirements, leveraging
             specially trained AI-models to automate the whole process.
           </p>
@@ -361,7 +361,7 @@ const Watson = () => {
             alt="Image for comparision"
             width={889}
             height={100}
-            className=" bg-transparent"
+            className="bg-transparent"
           />
           <p className=" lg:text-[42px] md:text-[26px] text-[20px] text-[#FFFFFF] font-[500] leading-normal md:w-[1270px] w-[311px]">
             Test your app’s logic, APIs, flows, UI, and more with AI
@@ -461,11 +461,11 @@ const Watson = () => {
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
             <div className="resolution-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-            <h3 className="watson-gradient-text text-[32px] md:text-[40px] lg:text-[60px] font-[600] leading-normal w-[338px] md:w-[1082px]  text-center">
+            <h3 className="watson-gradient-text text-[32px] md:text-[40px] lg:text-[60px] font-[600] leading-normal max-w-[338px] md:max-w-[1082px]  text-center">
               3 simple steps to test your app with AI
             </h3>
           </div>
-          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[938px] md:w-[653px] w-[307px]">
+          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white md:max-w-[938px] max-w-[307px]">
             Watson’s AI models interact with each other in a structured manner,
             ensuring that the testing is accurate and efficient.
           </p>
@@ -567,7 +567,7 @@ const Watson = () => {
               All your app metrics in a single place
             </h3>
 
-            <p className="text-[16px] w-[294px] font-[300] md:text-[32px] text-[#ECECEE] md:font-[400] md:w-full md:pb-[42px] pb-[28px]">
+            <p className="text-[16px] max-w-[294px] font-[300] md:text-[32px] text-[#ECECEE] md:font-[400] md:max-w-full md:pb-[42px] pb-[28px]">
               Track everything from testing progress to production analytics.
             </p>
             <div className="md:pt-[105px] pt-[53px] md:pb-[18px] pb-[0px] ">
@@ -590,11 +590,11 @@ const Watson = () => {
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
             <div className="resolution-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
-            <h3 className="watson-gradient-text-agile text-[32px] md:text-[40px] lg:text-[60px] font-[600] leading-normal w-[338px] md:w-[1082px]  text-center">
+            <h3 className="watson-gradient-text-agile text-[32px] md:text-[40px] lg:text-[60px] font-[600] leading-normal max-w-[338px] md:max-w-[1082px]  text-center">
               Agile, Mobile-First Development
             </h3>
           </div>
-          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:w-[1064px] md:w-[653px] w-[352px]">
+          <p className="text-center text text-[16px] md:text-[24px] lg:text-[32px] text-white lg:max-w-[1064px] md:max-w-[653px] max-w-[352px]">
             Double your development agility with Watson&apos;s mobile-first
             AI-driven testing approach. Deliver low-risk, high-quality mobile
             apps faster, and boost team productivity for standout performance.

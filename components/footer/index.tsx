@@ -19,19 +19,19 @@ const footerQuash = [
     route: "/",
   },
   {
-    label: "Product",
-    title: "Product",
+    label: "Sherlock",
+    title: "Sherlock",
     route: "/product",
-  },
-  {
-    label: "Pricing",
-    title: "Pricing",
-    route: "/pricing",
   },
   {
     label: "Watson",
     title: "Watson",
     route: "/watson",
+  },
+  {
+    label: "Pricing",
+    title: "Pricing",
+    route: "/pricing",
   },
 ];
 
