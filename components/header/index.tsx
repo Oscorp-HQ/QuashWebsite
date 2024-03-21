@@ -45,6 +45,8 @@ const Header = () => {
     const matchingNav = mobileNav.find((nav) => nav.path === currentPath);
     if (matchingNav) {
       setSelected(matchingNav.value);
+    } else {
+      setSelected("");
     }
   }, [router.pathname]);
 
