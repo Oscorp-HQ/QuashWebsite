@@ -509,6 +509,7 @@ const Watson = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
+              key={index}
             >
               <Image
                 key={index}
