@@ -610,7 +610,7 @@ const Watson = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0.0, x: 70 }}
+              initial={{ opacity: 0.0, x: -70 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
     
