@@ -27,7 +27,6 @@ const mobileNav = [
     path: "/pricing",
     value: "pricing",
   },
-
   {
     label: "Blog",
     path: "/blog",
@@ -38,6 +37,7 @@ const mobileNav = [
 const Header = () => {
   const [selected, setSelected] = useState("Home");
   const [open, setOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false); // State to manage form opening
   const router = useRouter();
 
   useEffect(() => {
@@ -45,6 +45,8 @@ const Header = () => {
     const matchingNav = mobileNav.find((nav) => nav.path === currentPath);
     if (matchingNav) {
       setSelected(matchingNav.value);
+    } else {
+      setSelected("");
     }
   }, [router.pathname]);
 
@@ -93,30 +95,69 @@ const Header = () => {
         </div>
       </div>
       <div className="flex gap-3 md:gap-6 items-center text-center shrink-0">
-        <Link href="https://optimus.quashbugs.com" legacyBehavior>
-          <a
-            className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
-            aria-label="Sign in to Quash"
-          >
-            Sign in
-          </a>
-        </Link>
-        <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
-          <a
-            className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
-            aria-label="Sign up for Quash"
-          >
-            Get Started
-          </a>
-        </Link>
-        <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
-          <a
-            className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]"
-            aria-label="Sign up for Quash for free"
-          >
-            Get Started for Free
-          </a>
-        </Link>
+        {router.pathname === "/watson" ? ( // Check if current page is "Watson"
+          <>
+            <Button
+              className="text-[#000000] md:text-[16px] text-[12px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]"
+              // variant="outline"
+              aria-label="Get Early Access To Watson"
+              onClick={() => {
+                setFormOpen(true);
+              }}
+            >
+              <a
+                href="https://forms.fillout.com/t/as917en3Caus"
+                target="_blank"
+                aria-label="join the waitlist form"
+              >
+                Join the Waitlist
+              </a>
+            </Button>
+            <Button
+              className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
+              // variant="outline"
+              aria-label="Get Early Access To Watson"
+              onClick={() => {
+                setFormOpen(true);
+              }}
+            >
+              <a
+                href="https://forms.fillout.com/t/as917en3Caus"
+                target="_blank"
+                aria-label="join the waitlist form"
+              >
+                Join the Waitlist
+              </a>
+            </Button>
+          </>
+        ) : (
+          <>
+            <Link href="https://optimus.quashbugs.com" legacyBehavior>
+              <a
+                className="text-[12px] md:text-[16px] text-[#FFFFFF] font-[600] leading-[15px] md:leading-5 hover:cursor-pointer hover:text-[#FFFFFFCC]"
+                aria-label="Sign in to Quash"
+              >
+                Sign in
+              </a>
+            </Link>
+            <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
+              <a
+                className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
+                aria-label="Sign up for Quash"
+              >
+                Get Started
+              </a>
+            </Link>
+            <Link href="https://optimus.quashbugs.com/signup" legacyBehavior>
+              <a
+                className="text-[#000000] text-[16px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]"
+                aria-label="Sign up for Quash for free"
+              >
+                Get Started for Free
+              </a>
+            </Link>
+          </>
+        )}
 
         <List
           size={24}
@@ -161,6 +202,44 @@ const Header = () => {
                 </div>
               ))}
               <div className="flex justify-between items-center p-2">
+                {router.pathname === "/watson" ? ( // Check if current page is "Watson"
+                  <>
+                    <Button
+                      className="text-[#000000] md:text-[16px] text-[12px] font-[600] leading-[20px] bg-[#FFFFFF] hidden px-4 py-[14px] rounded-[100px] h-[48px] md:flex hover:bg-[#FFFFFFCC]"
+                      // variant="outline"
+                      aria-label="Get Early Access To Watson"
+                      onClick={() => {
+                        setFormOpen(true);
+                      }}
+                    >
+                      <a
+                        href="https://forms.fillout.com/t/as917en3Caus"
+                        target="_blank"
+                        aria-label="join the waitlist form"
+                      >
+                        Join the Waitlist
+                      </a>
+                    </Button>
+                    <Button
+                      className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
+                      // variant="outline"
+                      aria-label="Get Early Access To Watson"
+                      onClick={() => {
+                        setFormOpen(true);
+                      }}
+                    >
+                      <a
+                        href="https://forms.fillout.com/t/as917en3Caus"
+                        target="_blank"
+                        aria-label="join the waitlist form"
+                      >
+                        Join the Waitlist
+                      </a>
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                  
                 <Button
                   className="text-[#000000] text-[12px] font-[600] leading-[15px] bg-[#FFFFFF] px-2 py-[6px] rounded-[100px] h-[28px] md:hidden hover:bg-[#FFFFFFCC]"
                   variant="outline"
@@ -170,6 +249,8 @@ const Header = () => {
                 >
                   Get Started for free
                 </Button>
+                </>
+                )}
               </div>
             </div>
           </LoaderDialogContent>

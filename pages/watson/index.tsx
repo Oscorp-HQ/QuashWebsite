@@ -16,6 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const Watson = () => {
   const [formOpen, setFormOpen] = useState(false);
@@ -128,15 +129,32 @@ const Watson = () => {
       <div className="z-[-1] right-sphere hidden md:flex absolute top-[34rem] right-[17rem]" /> */}
 
       <div className="watson-hero-background pt-[50px] px-[18px]  md:pt-[120px] lg:px-[120px]  w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[40px]  ">
-        <div className="mt-10 md:mt-0">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="mt-10 md:mt-0"
+        >
           <p className=" text-center text-[20px] md:text-[40px]">
             <span className="text-white opacity-70 font-[800]">
               SAY HELLO TO
             </span>{" "}
             <span className="watson-text text-white">Watson.</span>
           </p>
-        </div>
-        <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full"
+        >
           <h1 className="justify-center max-w-[332px] md:max-w-[1212px] text-white bg-clip-text text-transparent flex  text-[32px] font-[700] md:text-[56px]  md:font-[600] w-full text-center leading-[1.25] ">
             Supercharge Your Mobile App Development with AI-Driven Testing
           </h1>
@@ -161,8 +179,16 @@ const Watson = () => {
               Join the Waitlist
             </a>
           </Button>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+        >
           <Image
             src="/phone-watson.svg"
             alt="Cover image for Device model for Watson"
@@ -177,15 +203,31 @@ const Watson = () => {
             height={327}
             className="flex md:hidden rounded-[4px] animate-upAndDown"
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="md:h-[264px] w-full justify-center items-center flex h-[100px] mt-5 md:mt-0">
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
+        className="md:h-[264px] w-full justify-center items-center flex h-[100px] mt-5 md:mt-0"
+      >
         <p className="max-w-[870px] text-white text-[16px] md:text-[24px]  lg:text-[40px] font-[400] lg:mx-0 mx-4 md:mx-8 text-center lg:text-start ">
           Test your app&apos;s functionality, APIs, processes, user interface,
           and beyond using Watson AI.
         </p>
-      </div>
-      <div className="md:hidden flex md:h-[200px] h-[100px] w-full relative mt-5">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
+        className="md:hidden flex md:h-[200px] h-[100px] w-full relative mt-5"
+      >
         <Image
           src="/agile-illustration-mob.svg"
           alt="Illustration of agile development process"
@@ -196,8 +238,16 @@ const Watson = () => {
           objectFit="fill"
           className="flex"
         />
-      </div>
-      <div className="h-[260px] w-full hidden md:flex relative mb-[70px]">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
+        className="h-[260px] w-full hidden md:flex relative mb-[70px]"
+      >
         <Image
           src="/agile-illustration.svg"
           alt="Illustration of agile development process"
@@ -205,10 +255,19 @@ const Watson = () => {
           objectFit="cover"
           className="flex"
         />
-      </div>
+      </motion.div>
 
       <div className="h-full w-full overflow-hidden relative flex px-4 flex-col justify-center items-center pb-[46px] md:pb-[75px]">
-        <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="relative w-full flex justify-center items-center flex-col overflow-hidden"
+        >
           <div className="grad-report h-[250px] w-[192px] md:h-[290px] md:w-[400px] opacity-[30%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[83px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[79px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
@@ -221,13 +280,22 @@ const Watson = () => {
             Watson can take over all your testing requirements, leveraging
             specially trained AI-models to automate the whole process.
           </p>
-        </div>
+        </motion.div>
 
         <div className="md:pt-[149px] pt-[53px] ">
           <div className="grid grid-cols-1">
             <div className="flex lg:flex-row flex-col lg:gap-[150px] gap-[32px]">
               {/* Field 1 */}
-              <div className="flex flex-col max-w-[400px] md:max-w-[479px] gap-3 ">
+              <motion.div
+                initial={{ opacity: 0.0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+      
+                  duration: 0.3,
+                  ease: "easeInOut",
+                }}
+                className="flex flex-col max-w-[400px] md:max-w-[479px] gap-3 "
+              >
                 <Image
                   src={"/test.svg"}
                   alt={
@@ -253,10 +321,19 @@ const Watson = () => {
                   Watson generates extensive test cases by reading your Product
                   Requirements Document (PRD).
                 </p>
-              </div>
+              </motion.div>
 
               {/* Field 2 */}
-              <div className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3 lg:ml-10 ml-0">
+              <motion.div
+                initial={{ opacity: 0.0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+      
+                  duration: 0.3,
+                  ease: "easeInOut",
+                }}
+                className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3 lg:ml-10 ml-0"
+              >
                 <Image
                   src={"/intelligent.svg"}
                   alt={
@@ -282,12 +359,21 @@ const Watson = () => {
                   Watson smartly imports your design files to check for UI bugs
                   and design inconsistencies in your app.
                 </p>
-              </div>
+              </motion.div>
             </div>
 
             <div className="flex lg:flex-row flex-col lg:gap-[150px] gap-[32px] lg:pt-[81px] pt-[32px]">
               {/* Field 3 */}
-              <div className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3">
+              <motion.div
+                initial={{ opacity: 0.0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+      
+                  duration: 0.3,
+                  ease: "easeInOut",
+                }}
+                className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3"
+              >
                 <Image
                   src={"/automated.svg"}
                   alt={
@@ -316,10 +402,19 @@ const Watson = () => {
                   Automatically runs all test cases and reports all bugs, UI
                   mismatches, and crashes with zero manual input.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Field 4 */}
-              <div className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3">
+              <motion.div
+                initial={{ opacity: 0.0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+      
+                  duration: 0.3,
+                  ease: "easeInOut",
+                }}
+                className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3"
+              >
                 <Image
                   src={"/ai-frame.svg"}
                   alt={
@@ -345,13 +440,21 @@ const Watson = () => {
                   For every bug, crash, and UI issue found, Watson provides
                   actionable solutions to fix it.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="md:w-full w-[359px] px-[24px]  md:pb-[18px] pt-[48px] md:pt-[75px]">
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
+        className="md:w-full w-[359px] px-[24px]  md:pb-[18px] pt-[48px] md:pt-[75px]"
+      >
         <div className="flex flex-col w-full md:gap-12 gap-[32px] text-center justify-center items-center">
           <h3 className="lg:text-[42px] md:text-[34px] text-[20px] text-[#FFFFFF] font-[500] leading-normal">
             All you need is Watson
@@ -364,10 +467,19 @@ const Watson = () => {
             className="bg-transparent"
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className="h-full w-full overflow-hidden relative flex md:px-4 px-0  flex-col justify-center items-center">
-        <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="relative w-full flex justify-center items-center flex-col overflow-hidden"
+        >
           <div className="grad-collaboration h-[250px] w-[192px] md:h-[290px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
@@ -380,44 +492,31 @@ const Watson = () => {
             With AI-driven automation, Watson will help you cut down your costs
             while delivering exceptional experiences to your users.
           </p>
-        </div>
+        </motion.div>
 
         <div className="md:pt-[119px] pt-[53px] pb-[18px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
           {lessResourcesMedia.map((media, index) => (
-            <Image
+            <motion.div
+              initial={{ opacity: 0.0, x: index % 2 === 0 ? -40 : 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+    
+                duration: 0.3,
+                ease: "easeInOut",
+              }}
               key={index}
-              src={media.src}
-              alt={`Detailed view of ${media.label} feature`}
-              width={612}
-              height={348}
-              className="md:flex hidden"
-            />
+            >
+              <Image
+                key={index}
+                src={media.src}
+                alt={`Detailed view of ${media.label} feature`}
+                width={612}
+                height={348}
+                className="md:flex hidden"
+              />
+            </motion.div>
           ))}
-          {/* <Carousel
-            infiniteLoop
-            showStatus={false}
-            showIndicators={true}
-            showThumbs={false}
-            interval={3000}
-            centerMode={true}
-            className="flex md:hidden pt-10"
-          >
-            {lessResourcesMediaMobile.map((media, index) => (
-              <div key={index}>
-                <Image
-                  src={media.src}
-                  alt={`Detailed view of ${media.label} feature`}
-                  width={272}
-                  height={348}
-                  className=""
-                />
-                <br />
-                <br />
-                <br />
-                <br />
-              </div>
-            ))}
-          </Carousel> */}
+
           <Carousel className="w-full max-w-xs md:hidden">
             <CarouselContent>
               {lessResourcesMediaMobile.map((media, index) => (
@@ -453,7 +552,14 @@ const Watson = () => {
       </div>
 
       <div className="h-full w-full overflow-hidden relative flex  flex-col justify-center items-center">
-        <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
+      <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }} className="relative w-full flex justify-center items-center flex-col overflow-hidden">
           <div className="grad-resolution-watson w-[192px] md:h-[310px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
@@ -468,7 +574,16 @@ const Watson = () => {
           </p>
 
           <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[150px] pt-[32px] md:pb-[0px] pb-[45px] ">
-            <div className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]">
+            <motion.div
+              initial={{ opacity: 0.0, x: -70 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+    
+                duration: 0.4,
+                ease: "easeInOut",
+              }}
+              className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]"
+            >
               <div className="inline-flex flex-col items-start gap-[12px] md:gap-[40px] md:w-[586px]">
                 <div className="flex md:flex-col gap-2 md:gap-0">
                   <h3 className="text-white opacity-20 md:text-[120px] text-[24px] font-medium leading-normal">
@@ -492,20 +607,30 @@ const Watson = () => {
                   height={632}
                 ></Image>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]">
+            <motion.div
+              initial={{ opacity: 0.0, x: 70 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+    
+                duration: 0.4,
+                ease: "easeInOut",
+              }}
+              className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]"
+            >
               <div className="inline-flex flex-col items-start gap-[12px] md:gap-[40px] md:w-[586px]">
                 <div className="flex md:flex-col gap-2 md:gap-0">
                   <h3 className="text-white opacity-20 md:text-[120px] text-[24px] font-medium leading-normal">
                     2.
                   </h3>
                   <h3 className="md:text-[42px] text-[24px] font-medium leading-normal">
-                  Link your design files
+                    Link your design files
                   </h3>
                 </div>
                 <p className="md:text-[32px] text-[16px] font-normal text-white pl-[26px] md:pl-[0px]">
-                Watson will smartly identify your UI flows, and test for any inconsistencies.
+                  Watson will smartly identify your UI flows, and test for any
+                  inconsistencies.
                 </p>
               </div>
 
@@ -517,9 +642,18 @@ const Watson = () => {
                   height={632}
                 ></Image>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]">
+            <motion.div
+              initial={{ opacity: 0.0, x: -70 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+    
+                duration: 0.4,
+                ease: "easeInOut",
+              }}
+              className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]"
+            >
               <div className="inline-flex flex-col items-start gap-[12px] md:gap-[40px] md:w-[586px]">
                 <div className="flex md:flex-col gap-2 md:gap-0">
                   <h3 className="text-white opacity-20 md:text-[120px] text-[24px] font-medium leading-normal">
@@ -544,29 +678,57 @@ const Watson = () => {
                   height={632}
                 ></Image>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center ">
-        <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex"
+        >
           <div className="grad-report h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[30%] md:opacity-[20%] "></div>
           <div className=" w-full h-[48px] md:h-[150px] absolute top-0 bg-black"></div>
           <div className="absolute top-[48px] md:top-[150px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
             <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px] z-10" />
           </div>
-        </div>
+        </motion.div>
         <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px] ">
           <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[1109px]">
-            <h3 className="watson-gradient-text-test bg-clip-text text-transparent text-[32px] md:text-[40px] lg:text-[60px] font-[600] w-full text-center leading-normal">
-              All your app metrics in a single place
-            </h3>
+            <motion.div
+              initial={{ opacity: 0.0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+    
+                duration: 0.3,
+                ease: "easeInOut",
+              }}
+            >
+              <h3 className="watson-gradient-text-test bg-clip-text text-transparent text-[32px] md:text-[40px] lg:text-[60px] font-[600] w-full text-center leading-normal">
+                All your app metrics in a single place
+              </h3>
 
-            <p className="text-[16px] max-w-[294px] font-[300] md:text-[32px] text-[#ECECEE] md:font-[400] md:max-w-full md:pb-[42px] pb-[28px]">
-              Track everything from testing progress to production analytics.
-            </p>
-            <div className="md:pt-[105px] pt-[53px] md:pb-[18px] pb-[0px] ">
+              <p className="text-[16px] max-w-[294px] font-[300] md:text-[32px] text-[#ECECEE] md:font-[400] md:max-w-full md:pb-[42px] pb-[28px]">
+                Track everything from testing progress to production analytics.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0.0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+    
+                duration: 0.3,
+                ease: "easeInOut",
+              }}
+              className="md:pt-[105px] pt-[53px] md:pb-[18px] pb-[0px] "
+            >
               <Image
                 src={"/app-metrics.svg"}
                 alt={
@@ -575,13 +737,22 @@ const Watson = () => {
                 width={968}
                 height={632}
               ></Image>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
       <div className="h-full w-full overflow-hidden relative flex px-4  flex-col justify-center items-center">
-        <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="relative w-full flex justify-center items-center flex-col overflow-hidden"
+        >
           <div className="grad-resolution-watson w-[192px] md:h-[310px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
           <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
@@ -595,8 +766,16 @@ const Watson = () => {
             AI-driven testing approach. Deliver low-risk, high-quality mobile
             apps faster, and boost team productivity for standout performance.
           </p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+        >
           <Image
             src="/agile-illustration-mob.svg"
             alt="Illustration of agile development process"
@@ -604,8 +783,17 @@ const Watson = () => {
             width={1400}
             height={268}
           />
-        </div>
-        <div className="agile-image-container hidden md:block">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="agile-image-container hidden md:block"
+        >
           <Image
             src="/agile-illustration.svg"
             alt="Illustration of agile development process"
@@ -613,47 +801,101 @@ const Watson = () => {
             width={1400}
             height={268}
           />
-        </div>
+        </motion.div>
       </div>
 
       <div className="integration-component px-4 pt-[96px] md:pt-[114px] gap-12 flex flex-col md:grid md:grid-cols-2 md:gap-[26px] justify-center items-center md:items-start">
-        <div className="flex text-start gap-6 md:gap-10 flex-col px-3  md:pr-2 md:pl-0 md:mt-[65px] lg:w-[586px]">
-          <h3 className="text-[24px] md:text-[42px] text-[#FFFFFF] font-[500]">
+        <motion.div className="flex text-start gap-6 md:gap-10 flex-col px-3  md:pr-2 md:pl-0 md:mt-[65px] lg:w-[586px]">
+          <motion.h3
+            initial={{ opacity: 0.0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+  
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="text-[24px] md:text-[42px] text-[#FFFFFF] font-[500]"
+          >
             Watson syncs with your <br /> entire tech stack
-          </h3>
-          <p className="text-[16px] md:text-[24px] text-[#ECECEE] font-[300] md:font-[400]">
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0.0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+  
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="text-[16px] md:text-[24px] text-[#ECECEE] font-[300] md:font-[400]"
+          >
             Leverage the power of Integrations to optimise <br /> your dev
             cycles.
-          </p>
-        </div>
-        <div className="flex-grow md:flex hidden">
+          </motion.p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="flex-grow md:flex hidden"
+        >
           <Image
             src="/watson-integration.svg"
             alt="Workflow management tool integration"
             width={694}
             height={673}
           />
-        </div>
-        <div className="flex md:hidden mb-10">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="flex md:hidden mb-10"
+        >
           <Image
             src="/watson-integration.svg"
             alt="Workflow management tool integration"
             width={328}
             height={318}
           />
-        </div>
+        </motion.div>
       </div>
 
       <div className=" relative flex px-5 pt-[96px] md:pt-[20px] flex-col justify-center items-center md:pb-[150px] pb-[90px]">
-        <div className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex"
+        >
           <div className="grad-callback h-[192px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%] "></div>
           <div className="-z-20 w-full h-[48px] md:h-[150px] absolute top-0 bg-black"></div>
           <div className="absolute top-[48px] md:top-[150px] flex flex-col justify-center items-center gap-12 md:gap-[116px]">
             <div className="callback-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px] z-10" />
           </div>
-        </div>
+        </motion.div>
         <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px] ">
-          <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[1109px]">
+          <motion.div
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+  
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[1109px]"
+          >
             <h3 className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full text-center leading-normal">
               When we say Watson will take care of everything, we mean{" "}
               <span className="italic">everything.</span>
@@ -679,7 +921,7 @@ const Watson = () => {
                 Join the Waitlist
               </a>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
