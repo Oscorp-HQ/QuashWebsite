@@ -243,7 +243,7 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 0.8,
+          duration: 0.3,
           ease: "easeInOut",
         }}
         className="h-[260px] w-full hidden md:flex relative mb-[70px]"
@@ -579,7 +579,7 @@ const Watson = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
     
-                duration: 0.3,
+                duration: 0.4,
                 ease: "easeInOut",
               }}
               className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]"
@@ -614,7 +614,7 @@ const Watson = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
     
-                duration: 0.3,
+                duration: 0.4,
                 ease: "easeInOut",
               }}
               className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]"
@@ -649,7 +649,7 @@ const Watson = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
     
-                duration: 0.3,
+                duration: 0.4,
                 ease: "easeInOut",
               }}
               className="text-white flex lg:flex-row flex-col md:gap-[77px] gap-[40px]"
