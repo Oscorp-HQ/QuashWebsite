@@ -133,7 +133,6 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -150,7 +149,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -185,7 +184,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -210,7 +209,6 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.3,
           duration: 0.3,
           ease: "easeInOut",
         }}
@@ -225,7 +223,6 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.3,
           duration: 0.3,
           ease: "easeInOut",
         }}
@@ -246,7 +243,6 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.3,
           duration: 0.8,
           ease: "easeInOut",
         }}
@@ -266,7 +262,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -294,7 +290,7 @@ const Watson = () => {
                 initial={{ opacity: 0.0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
-                  delay: 0.3,
+      
                   duration: 0.3,
                   ease: "easeInOut",
                 }}
@@ -332,7 +328,7 @@ const Watson = () => {
                 initial={{ opacity: 0.0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
-                  delay: 0.3,
+      
                   duration: 0.3,
                   ease: "easeInOut",
                 }}
@@ -372,7 +368,7 @@ const Watson = () => {
                 initial={{ opacity: 0.0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
-                  delay: 0.3,
+      
                   duration: 0.3,
                   ease: "easeInOut",
                 }}
@@ -413,7 +409,7 @@ const Watson = () => {
                 initial={{ opacity: 0.0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
-                  delay: 0.3,
+      
                   duration: 0.3,
                   ease: "easeInOut",
                 }}
@@ -454,7 +450,6 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.3,
           duration: 0.3,
           ease: "easeInOut",
         }}
@@ -479,7 +474,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -505,7 +500,7 @@ const Watson = () => {
               initial={{ opacity: 0.0, x: index % 2 === 0 ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                delay: 0.3,
+    
                 duration: 0.3,
                 ease: "easeInOut",
               }}
@@ -561,7 +556,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }} className="relative w-full flex justify-center items-center flex-col overflow-hidden">
@@ -580,10 +575,10 @@ const Watson = () => {
 
           <div className="w-full flex flex-col px-6 justify-center items-center md:gap-36 gap-[60px] md:pt-[150px] pt-[32px] md:pb-[0px] pb-[45px] ">
             <motion.div
-              initial={{ opacity: 0.0, x: -40 }}
+              initial={{ opacity: 0.0, x: -70 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                delay: 0.3,
+    
                 duration: 0.3,
                 ease: "easeInOut",
               }}
@@ -615,10 +610,10 @@ const Watson = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0.0, x: 40 }}
+              initial={{ opacity: 0.0, x: 70 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                delay: 0.3,
+    
                 duration: 0.3,
                 ease: "easeInOut",
               }}
@@ -650,10 +645,10 @@ const Watson = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0.0, x: -40 }}
+              initial={{ opacity: 0.0, x: -70 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                delay: 0.3,
+    
                 duration: 0.3,
                 ease: "easeInOut",
               }}
@@ -693,7 +688,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -711,7 +706,7 @@ const Watson = () => {
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.3,
+    
                 duration: 0.3,
                 ease: "easeInOut",
               }}
@@ -728,7 +723,7 @@ const Watson = () => {
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.3,
+    
                 duration: 0.3,
                 ease: "easeInOut",
               }}
@@ -752,7 +747,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -776,7 +771,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -793,7 +788,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -815,7 +810,7 @@ const Watson = () => {
             initial={{ opacity: 0.0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
-              delay: 0.3,
+  
               duration: 0.3,
               ease: "easeInOut",
             }}
@@ -827,7 +822,7 @@ const Watson = () => {
             initial={{ opacity: 0.0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
-              delay: 0.3,
+  
               duration: 0.3,
               ease: "easeInOut",
             }}
@@ -841,7 +836,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -858,7 +853,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -878,7 +873,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+
             duration: 0.3,
             ease: "easeInOut",
           }}
@@ -895,7 +890,7 @@ const Watson = () => {
             initial={{ opacity: 0.0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 0.3,
+  
               duration: 0.3,
               ease: "easeInOut",
             }}
