@@ -313,7 +313,7 @@ const Watson = () => {
                   Auto Test Execution
                 </h2>
                 <p className="text-[#9B9B9B] text-[16px] md:text-[28px]">
-                  Automatically runs all test cases and reports all bugs, ui
+                  Automatically runs all test cases and reports all bugs, UI
                   mismatches, and crashes with zero manual input.
                 </p>
               </div>
@@ -363,9 +363,6 @@ const Watson = () => {
             height={100}
             className="bg-transparent"
           />
-          <p className=" lg:text-[42px] md:text-[26px] text-[20px] text-[#FFFFFF] font-[500] leading-normal md:w-[1270px] w-[311px]">
-            Test your app’s logic, APIs, flows, UI, and more with AI
-          </p>
         </div>
       </div>
 
@@ -504,12 +501,11 @@ const Watson = () => {
                     2.
                   </h3>
                   <h3 className="md:text-[42px] text-[24px] font-medium leading-normal">
-                    Link your Figma handoff project files
+                  Link your design files
                   </h3>
                 </div>
                 <p className="md:text-[32px] text-[16px] font-normal text-white pl-[26px] md:pl-[0px]">
-                  Watson will smartly identify your UI flows in Figma, and test
-                  for any inconsistencies.
+                Watson will smartly identify your UI flows, and test for any inconsistencies.
                 </p>
               </div>
 
@@ -627,7 +623,7 @@ const Watson = () => {
           </h3>
           <p className="text-[16px] md:text-[24px] text-[#ECECEE] font-[300] md:font-[400]">
             Leverage the power of Integrations to optimise <br /> your dev
-            cycles{" "}
+            cycles.
           </p>
         </div>
         <div className="flex-grow md:flex hidden">
@@ -659,12 +655,12 @@ const Watson = () => {
         <div className=" w-full text-center items-center flex flex-col gap-[45px] md:gap-[72px] md:mt-[-120px] ">
           <div className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[1109px]">
             <h3 className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full text-center leading-normal">
-              When we say Watson will take care of everything, we mean
-              everything.
+              When we say Watson will take care of everything, we mean{" "}
+              <span className="italic">everything.</span>
             </h3>
 
             <p className="text-[16px] w-[252px] font-[300] md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full md:pb-[42px] pb-[28px]">
-              Focus of building, and leave the testing to Watson.
+              Focus on building, and leave the testing to Watson.
             </p>
 
             <Button
