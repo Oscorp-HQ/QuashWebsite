@@ -41,7 +41,7 @@ const footerResources = [
     route: "/blog",
   },
   {
-    label: "Developer guide",
+    label: "Developer Guide",
     route:
       "https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4",
   },
@@ -50,7 +50,7 @@ const footerResources = [
     route: "/refund-and-cancellation-policy",
   },
   {
-    label: "Company details",
+    label: "Company Details",
     route: "/company-details",
   },
 ];
@@ -164,7 +164,7 @@ const Footer = () => {
                 onClick={() => setFormOpen(true)}
                 href={""}
               >
-                Contact us
+                Contact Us
               </Link>
               <Link
                 href={"mailto:hello@quashbugs.com"}
