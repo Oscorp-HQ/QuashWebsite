@@ -103,7 +103,7 @@ body {
 }
 
 .grad-resolution-watson {
-  height: 250px;
+  height: 280px;
   background-image: radial-gradient(#3cd0c8, black);
   filter: blur(37.2599983215332px);
 }

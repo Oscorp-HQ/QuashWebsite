@@ -19,19 +19,19 @@ const footerQuash = [
     route: "/",
   },
   {
-    label: "Product",
-    title: "Product",
+    label: "Sherlock",
+    title: "Sherlock",
     route: "/product",
-  },
-  {
-    label: "Pricing",
-    title: "Pricing",
-    route: "/pricing",
   },
   {
     label: "Watson",
     title: "Watson",
     route: "/watson",
+  },
+  {
+    label: "Pricing",
+    title: "Pricing",
+    route: "/pricing",
   },
 ];
 
@@ -156,7 +156,7 @@ const Footer = () => {
             })}
           </div>
           <div className="footer-link flex flex-col gap-6 md:gap-8 justify-center items-start md:justify-start">
-            <div className="flex flex-col gap-[22px] justify-start">
+            <div className="flex flex-col gap-6 md:gap-8 justify-start">
               <p className="text-white  font-semibold text-lg">Support</p>
 
               <Link
