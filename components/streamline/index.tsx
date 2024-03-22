@@ -1,7 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from "react-responsive-carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const streamlineContent = [
   {
@@ -98,8 +105,8 @@ const Streamline = () => {
             </div>
           ))}
         </div>
-        <div className="w-full h-[500px] md:hidden ">
-          <Carousel
+        <div className="relative pt-[20px] pb-[18px] ">
+          {/* <Carousel
             infiniteLoop
             showStatus={false}
             showIndicators={true}
@@ -121,9 +128,40 @@ const Streamline = () => {
                 />
               </div>
             ))}
-          </Carousel>
+          </Carousel> */}
         </div>
       </div>
+      <Carousel className="w-full max-w-xs md:hidden">
+            <CarouselContent>
+              {streamlineContentmob.map((media, index) => (
+                <CarouselItem
+                  key={index}
+                  className="w-full justify-center flex"
+                >
+                  {/* <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">
+                          {index + 1}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </div> */}
+                  {/* <div key={index}> */}
+                  <Image
+                    src={media.src}
+                    alt={`Detailed view of ${media.label} feature`}
+                    width={272}
+                    height={348}
+                    className=""
+                  />
+                  {/* </div> */}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 border-white" />
+            <CarouselNext className="-right-4 border-white" />
+          </Carousel>
     </section>
   );
 };

@@ -8,6 +8,14 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+        <loc>https://quashbugs.com/blog/the-potential-of-text-to-test-and-virtual-qa-with-ai</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
+        <loc>https://quashbugs.com/blog/the-hidden-costs-of-inefficient-bug-reporting-in-mobile-app-development</loc>
+        <changefreq>hourly</changefreq>
+      </url>
+  <url>
         <loc>https://quashbugs.com/blog/apples-usd20-billion-venture-unleashing-googles-ai-power-on-iphones</loc>
         <changefreq>hourly</changefreq>
       </url>
@@ -73,10 +81,6 @@
       </url>
   <url>
         <loc>https://quashbugs.com/blog/exploring-flutters-floor-library-for-efficient-data-persistence</loc>
-        <changefreq>hourly</changefreq>
-      </url>
-  <url>
-        <loc>https://quashbugs.com/blog/the-hidden-costs-of-inefficient-bug-reporting-in-mobile-app-development</loc>
         <changefreq>hourly</changefreq>
       </url>
   <url>
