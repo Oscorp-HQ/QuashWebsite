@@ -58,6 +58,7 @@ const Capture = () => {
             <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
               {firstRowImages.map((media, index) => (
                 <motion.div
+                key={index}
                   initial={{
                     opacity: 0.0,
                     x: index === 0 ? -40 : 0 || index === 2 ? 40 : 0,
