@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const resoltionMedia = [
   { src: "context-resolution-mob.svg", label: "context-mob" },
@@ -33,6 +34,13 @@ const Resolution = () => {
         Know exactly where the bug is - and how to fix it
       </p>
       <div className="hidden justify-center items-center gap-10  md:flex flex-wrap">
+      <motion.div
+          initial={{ opacity: 0.0, x: -40}}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} >
         <Image
           src="/context.svg"
           alt="context"
@@ -40,20 +48,34 @@ const Resolution = () => {
           height={598}
           className=""
         />
-        <Image
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, x: 40}}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} ><Image
           src="/crash.svg"
           alt="crash"
           width={620}
           height={598}
           className=""
-        />
-        <Image
+        /></motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40}}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} ><Image
           src="/ai-new.svg"
           alt="ai"
           width={1270}
           height={326}
           className=""
-        />
+        /></motion.div>
+        
       </div>
       {/* <Carousel
         infiniteLoop

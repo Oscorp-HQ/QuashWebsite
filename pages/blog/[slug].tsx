@@ -2,6 +2,7 @@ import BlogBody from "@/components/ui/blog-body";
 import BlogCard from "@/components/ui/blog-card";
 import BlogHeader from "@/components/ui/blog-header";
 import { client, previewClient } from "@/lib/contentful/client";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -64,7 +65,16 @@ const Post = ({ post, preview, posts }: any) => {
           {JSON.stringify(structuredData)}
         </script>
       </Head>
-      <div className="blog-details-layout z-10 relative overflow-hidden">
+      <motion.div 
+      initial={{
+        opacity: 0.0,
+        y: 40,
+      }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeInOut",
+      }} className="blog-details-layout z-10 relative overflow-hidden">
         <div className="left-ellipse hidden md:flex absolute top-[25rem] -left-[10rem]" />
         <div className="left-sphere hidden md:flex absolute top-[40rem] -left-[2rem]" />
         <div className="right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
@@ -81,15 +91,21 @@ const Post = ({ post, preview, posts }: any) => {
         <div className="left-sphere hidden md:flex absolute top-[132rem] left-[25rem]" />
         <div className="blog-right-ellipse hidden md:flex absolute top-[116rem] -right-[15rem]" />
         <div className="right-sphere hidden md:flex absolute top-[130rem] -right-[2rem]" />
-      </div>
+      </motion.div>
       <div className="slug-blog-list-container">
       <div className="blogs-list" style={{ justifyContent: "center" }}>
           {visiblePosts.length > 0 &&
-            visiblePosts.map((item: any) => (
+            visiblePosts.map((item: any,index) => (
               // Ensure the key is unique and correctly placed
-              <div className="blog-card-display" key={item.sys.id}>
+              <motion.div
+              initial={{ opacity: 0.0, x: index === 0 ? -40 : 0 ||  index === 2 ? 40 : 0  }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+              }} className="blog-card-display" key={item.sys.id}>
                 <BlogCard data={item} />
-              </div>
+              </motion.div>
             ))}
         </div>
       </div>

@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const reportingMedia = [
   {src:"/shake.svg",
@@ -35,7 +36,14 @@ const Reporting = () => {
       </p>
       <div className="hidden justify-center items-center gap-10   md:flex flex-wrap">
         {reportingMedia.map((media, index) => (
-          <Image
+          <motion.div
+          initial={{ opacity: 0.0, x: index === 0 ? -40 : 0 ||  index === 2 ? 40 : 0  }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} key={index}>
+             <Image
             key={index}
             src={media.src}
             alt={media.label}
@@ -43,6 +51,7 @@ const Reporting = () => {
             height={554}
             className=""
           />
+          </motion.div>
         ))}
       </div>
       {/* <Carousel
