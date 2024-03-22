@@ -133,7 +133,7 @@ const Watson = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="mt-10 md:mt-0"
@@ -150,7 +150,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full"
@@ -185,7 +185,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
         >
@@ -209,7 +209,7 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 0.3,
+          duration: 0.6,
           ease: "easeInOut",
         }}
         className="md:h-[264px] w-full justify-center items-center flex h-[100px] mt-5 md:mt-0"
@@ -223,7 +223,7 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 0.3,
+          duration: 0.6,
           ease: "easeInOut",
         }}
         className="md:hidden flex md:h-[200px] h-[100px] w-full relative mt-5"
@@ -243,7 +243,7 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 0.3,
+          duration: 0.6,
           ease: "easeInOut",
         }}
         className="h-[260px] w-full hidden md:flex relative mb-[70px]"
@@ -263,7 +263,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="relative w-full flex justify-center items-center flex-col overflow-hidden"
@@ -291,7 +291,7 @@ const Watson = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
       
-                  duration: 0.3,
+                  duration: 0.6,
                   ease: "easeInOut",
                 }}
                 className="flex flex-col max-w-[400px] md:max-w-[479px] gap-3 "
@@ -329,7 +329,7 @@ const Watson = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
       
-                  duration: 0.3,
+                  duration: 0.6,
                   ease: "easeInOut",
                 }}
                 className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3 lg:ml-10 ml-0"
@@ -369,7 +369,7 @@ const Watson = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
       
-                  duration: 0.3,
+                  duration: 0.6,
                   ease: "easeInOut",
                 }}
                 className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3"
@@ -410,7 +410,7 @@ const Watson = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
       
-                  duration: 0.3,
+                  duration: 0.6,
                   ease: "easeInOut",
                 }}
                 className="flex flex-col max-w-[400px]  md:max-w-[518px] gap-3"
@@ -450,7 +450,7 @@ const Watson = () => {
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 0.3,
+          duration: 0.6,
           ease: "easeInOut",
         }}
         className="md:w-full w-[359px] px-[24px]  md:pb-[18px] pt-[48px] md:pt-[75px]"
@@ -475,7 +475,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="relative w-full flex justify-center items-center flex-col overflow-hidden"
@@ -501,7 +501,7 @@ const Watson = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
     
-                duration: 0.3,
+                duration: 0.6,
                 ease: "easeInOut",
               }}
               key={index}
@@ -557,7 +557,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }} className="relative w-full flex justify-center items-center flex-col overflow-hidden">
           <div className="grad-resolution-watson w-[192px] md:h-[310px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
@@ -689,7 +689,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex"
@@ -707,7 +707,7 @@ const Watson = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
     
-                duration: 0.3,
+                duration: 0.6,
                 ease: "easeInOut",
               }}
             >
@@ -724,7 +724,7 @@ const Watson = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
     
-                duration: 0.3,
+                duration: 0.6,
                 ease: "easeInOut",
               }}
               className="md:pt-[105px] pt-[53px] md:pb-[18px] pb-[0px] "
@@ -748,7 +748,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="relative w-full flex justify-center items-center flex-col overflow-hidden"
@@ -772,7 +772,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
         >
@@ -789,7 +789,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="agile-image-container hidden md:block"
@@ -811,7 +811,7 @@ const Watson = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
   
-              duration: 0.3,
+              duration: 0.6,
               ease: "easeInOut",
             }}
             className="text-[24px] md:text-[42px] text-[#FFFFFF] font-[500]"
@@ -823,7 +823,7 @@ const Watson = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
   
-              duration: 0.3,
+              duration: 0.6,
               ease: "easeInOut",
             }}
             className="text-[16px] md:text-[24px] text-[#ECECEE] font-[300] md:font-[400]"
@@ -837,7 +837,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="flex-grow md:flex hidden"
@@ -854,7 +854,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="flex md:hidden mb-10"
@@ -874,7 +874,7 @@ const Watson = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
 
-            duration: 0.3,
+            duration: 0.6,
             ease: "easeInOut",
           }}
           className="absolute top-0 md:relative  w-full justify-center items-center flex-col overflow-hidden flex"
@@ -891,7 +891,7 @@ const Watson = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
   
-              duration: 0.3,
+              duration: 0.6,
               ease: "easeInOut",
             }}
             className="flex flex-col gap-5 md:gap-[28px] text-center items-center md:max-w-[1109px]"
