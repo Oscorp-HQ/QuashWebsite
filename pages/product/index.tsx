@@ -48,11 +48,11 @@ const Product = () => {
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.6,
+            duration: 0.5,
             ease: "easeInOut",
           }} className="flex md:px-[88px] mx-[18px] md:w-full pb-[112px]  md:pt-[230px] md:pb-[143px] flex-col justify-center items-center">
           <div className="product-main-mob flex flex-col pt-[132px] gap-5 md:gap-[28px] text-center items-center justify-center">
-            <h1 className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full  leading-normal">
+            <h1  className="bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent text-[32px] font-[600] md:text-[60px] text-[#ECECEE] w-full  leading-normal">
               Capture the complete picture <br /> with technical detailing in
               every report.
             </h1>
