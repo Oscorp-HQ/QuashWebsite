@@ -1,8 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const reportingMedia = [
   { src: "/shake.svg", label: "shake", width: 400, height: 554 },
@@ -62,7 +69,7 @@ const Capture = () => {
               ))}
             </div>
           </div>
-          <Carousel
+          {/* <Carousel
             infiniteLoop
             showStatus={false}
             showIndicators={true}
@@ -84,6 +91,37 @@ const Capture = () => {
                 <br />
               </div>
             ))}
+          </Carousel> */}
+          <Carousel className="w-full max-w-xs md:hidden">
+            <CarouselContent>
+              {reportingMediaMobile.map((media, index) => (
+                <CarouselItem
+                  key={index}
+                  className="w-full justify-center flex"
+                >
+                  {/* <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">
+                          {index + 1}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </div> */}
+                  {/* <div key={index}> */}
+                  <Image
+                    src={media.src}
+                    alt={`Detailed view of ${media.label} feature`}
+                    width={272}
+                    height={348}
+                    className=""
+                  />
+                  {/* </div> */}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 border-white" />
+            <CarouselNext className="-right-4 border-white" />
           </Carousel>
           <div className="capture-learn-more-button-container">
             <Link

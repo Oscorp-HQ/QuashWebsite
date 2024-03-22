@@ -494,7 +494,7 @@ const Watson = () => {
           </p>
         </motion.div>
 
-        <div className="md:pt-[119px] pt-[53px] pb-[18px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="md:pt-[119px] pt-[53px] pb-[18px] grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:gap-10 gap-0">
           {lessResourcesMedia.map((media, index) => (
             <motion.div
               initial={{ opacity: 0.0, x: index % 2 === 0 ? -40 : 40 }}
