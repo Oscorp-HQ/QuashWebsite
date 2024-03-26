@@ -81,13 +81,26 @@ const Capture = () => {
             </div>
             <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
               {secondRowImages.map((media, index) => (
-                <Image
+                <motion.div
+                key={index}
+                  initial={{
+                    opacity: 0.0,
+                    x: index === 0 ? -40 : 40 ,
+                  }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeInOut",
+                  }}>
+                  <Image
                   key={index}
                   src={media.src}
                   alt={media.label}
                   width={media.width}
                   height={media.height}
                 />
+                </motion.div>
+                
               ))}
             </div>
           </div>
@@ -145,7 +158,14 @@ const Capture = () => {
             <CarouselPrevious className="-left-4 border-white" />
             <CarouselNext className="-right-4 border-white" />
           </Carousel>
-          <div className="capture-learn-more-button-container">
+          <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.6,
+            ease: "easeInOut",
+          }} className="capture-learn-more-button-container">
             <Link
               href="/product"
               className="capture-learn-more-button"
@@ -154,7 +174,7 @@ const Capture = () => {
             >
               Learn more about Quash
             </Link>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>

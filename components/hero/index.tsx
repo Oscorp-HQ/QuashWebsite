@@ -85,16 +85,16 @@ const Hero = () => {
         </Link>
       </div>
 
-      <motion.div
+      <div
+        className=" pt-[11px] px-[19px]  md:pt-[144px] lg:px-[242px] md:pb-[112px] w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[72px]"
+      >
+        <motion.div 
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.6,
           ease: "easeInOut",
-        }}
-        className=" pt-[11px] px-[19px]  md:pt-[144px] lg:px-[242px] md:pb-[112px] w-full text-center items-center justify-center flex flex-col gap-[32px] md:gap-[72px]"
-      >
-        <div className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
+        }} className="flex flex-col gap-8 md:gap-[28px] text-center items-center justify-center w-full">
           <h1 className="justify-center max-w-[323px] md:max-w-[1024px] bg-gradient-to-b px-7 from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] ">
             Mobile Testing should not be slow and tangled
           </h1>
@@ -102,8 +102,15 @@ const Hero = () => {
           <p className="justify-center text-[16px] w-[290px] font-[300] flex md:text-[24px] text-[#ECECEE] md:font-[400] md:w-full md:px-[100px]">
             We’re on a mission to make it smooth and simple
           </p>
-        </div>
-        <Button
+        </motion.div>
+        <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: "easeInOut",
+        }}>
+          <Button
           className="text-[#000000] text-[16px] md:text-[24px] font-[600] bg-[#FFFFFF] px-4 py-2 md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-none md:leading-normal hover:bg-[#FFFFFFCC] "
           variant="outline"
           aria-label="Sign up for free"
@@ -113,7 +120,8 @@ const Hero = () => {
         >
           Get Started for Free
         </Button>
-      </motion.div>
+        </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}

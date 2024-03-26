@@ -254,23 +254,36 @@ const Pricing = () => {
                       ))}
                     </div>
                   </div>
-                  <Button
-                    className={` ${
-                      index === 1
-                        ? "text-[#000000] bg-[#FFFFFF]"
-                        : "text-white bg-[#ffffff33]"
-                    } text-[16px] lg:text-[24px] font-[600]  hover:bg-[#FFFFFF] hover:text-[#000000] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal w-[186px] lg:w-[266px] text-center border-none`}
-                    variant="outline"
-                    onClick={() => {
-                      if (index !== 2) {
-                        router.push(plan.path);
-                      } else {
-                        setFormOpen(true);
-                      }
+                  <motion.div
+                    key={index}
+                    initial={{
+                      opacity: 0.0,
+                      y: index === 0 ? 40 : 0 || index === 1 ? 70 : 0 || index === 2 ? 40 : 0 ,
+                    }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: "easeInOut",
                     }}
                   >
-                    {plan.action}
-                  </Button>
+                    <Button
+                      className={` ${
+                        index === 1
+                          ? "text-[#000000] bg-[#FFFFFF]"
+                          : "text-white bg-[#ffffff33]"
+                      } text-[16px] lg:text-[24px] font-[600]  hover:bg-[#FFFFFF] hover:text-[#000000] px-3 py-[12px] md:py-[14px] rounded-[100px] lg:h-[58px] flex z-10 leading-5 lg:leading-normal w-[186px] lg:w-[266px] text-center border-none`}
+                      variant="outline"
+                      onClick={() => {
+                        if (index !== 2) {
+                          router.push(plan.path);
+                        } else {
+                          setFormOpen(true);
+                        }
+                      }}
+                    >
+                      {plan.action}
+                    </Button>
+                  </motion.div>
                 </motion.div>
               ))}
             </div>
