@@ -42,13 +42,18 @@ const Header = () => {
 
   useEffect(() => {
     const currentPath = router.pathname;
-    const matchingNav = mobileNav.find((nav) => nav.path === currentPath);
-    if (matchingNav) {
-      setSelected(matchingNav.value);
+    let selectedValue = "";
+    if (currentPath.includes("/blog")) {
+      selectedValue = "blog";
     } else {
-      setSelected("");
+      const matchingNav = mobileNav.find((nav) => nav.path === currentPath);
+      if (matchingNav) {
+        selectedValue = matchingNav.value;
+      }
     }
+    setSelected(selectedValue);
   }, [router.pathname]);
+
 
   return (
     <nav className="header fixed top-0 py-[14px] px-4 w-full flex justify-between items-center lg:px-[120px] md:py-3 z-50">

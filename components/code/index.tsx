@@ -1,5 +1,6 @@
 import { ArrowRight } from "@/lib/icons";
 import { fira } from "@/pages/_app";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -25,11 +26,27 @@ const CodeSection = () => {
 
   return (
     <section className="code-main-container relative px-4  py-[96px]  md:py-[128px] flex flex-col gap-8 md:gap-0 justify-center items-center text-center">
-      <h3 className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal">
+      <motion.h3
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: "easeInOut",
+        }}
+        className="w-[282px] text-[18px] md:text-[42px] md:w-full text-[#FFFFFF] font-[500] leading-normal"
+      >
         Integrate Quash SDK in less than a minute
-      </h3>
+      </motion.h3>
       <div className="code-card relative w-full md:max-w-[963px] md:mt-[72px]">
-        <div className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }}
+          className="w-full  rounded-2xl md:rounded-3xl bg-[#0D0D0D]"
+        >
           <div className="px-4 md:px-8 pt-[6px] md:pt-[10px] gap-3 md:gap-4 flex justify-start items-center border-b border-[#4A4B50] text-[12px] md:text-[24px] font-[400] md:font-[600] hover:cursor-pointer">
             {OS.map((item, index) => (
               <span
@@ -128,19 +145,27 @@ const CodeSection = () => {
               )
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
-      <Link
-        href="https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4"
-        className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
-        aria-label="Explore Quash SDK Developer Documentation"
-      >
-        <p>Explore Quash SDK Documentation</p>
-        <ArrowRight
-          className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
-          color="#ffffff"
-        />
-      </Link>
+      <motion.div
+      initial={{ opacity: 0.0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeInOut",
+      }} >
+        <Link
+          href="https://quash.notion.site/Quash-SDK-Developer-Documentation-534ebd4c995040b2ae536dd139609d47?pvs=4"
+          className="underline text-[16px] md:text-[24px] md:font-[400] text-center font-[300] text-white flex gap-1 md:gap-2 justify-center items-center md:mt-[40px]"
+          aria-label="Explore Quash SDK Developer Documentation"
+        >
+          <p>Explore Quash SDK Documentation</p>
+          <ArrowRight
+            className="h-6 w-6 pt-1 md:pt-2 md:h-8 md:w-8"
+            color="#ffffff"
+          />
+        </Link>
+      </motion.div>
     </section>
   );
 };

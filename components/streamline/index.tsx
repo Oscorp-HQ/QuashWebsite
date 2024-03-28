@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const streamlineContent = [
@@ -84,16 +85,42 @@ const Streamline = () => {
     <section className="flex px-4 flex-col justify-center items-center pb-[40px]">
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         <div className="grad-report h-[240px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
-        <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
-        <div className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }}
+          className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"
+        ></motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }}
+          className="absolute top-[93px]  md:top-[132px]  flex flex-col justify-center items-center gap-12 md:gap-[70px]"
+        >
           <div className="report-gradient-line h-[2px] w-[208px] md:h-[4px] md:w-[400px]" />
           <h3 className="report-gradient-text text-[32px] lg:text-[56px] md:font-[600] leading-normal">
             Streamline your path to flawless app releases
           </h3>
-        </div>
+        </motion.div>
         <div className="streamline-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {streamlineContent.map((content, index) => (
-            <div key={index} className="text-white stream-line-card ">
+            <motion.div
+            initial={{ opacity: 0.0, x: index === 0 ? -40 : 0 ||  index === 2 ? 40 : 0 || index === 3 ? -40 : 0 ||  index === 5 ? 40 : 0   }}
+          whileInView={{ opacity: 1, x: 0 ,y:0}}
+            transition={{
+                duration: 0.6,
+                ease: "easeInOut",
+            }}
+            key={index}
+            className="text-white stream-line-card"
+        >
+        
               <h3>{content.title}</h3>
               <p>{content.desc}</p>
               <Image
@@ -102,7 +129,7 @@ const Streamline = () => {
                 height={content.height}
                 alt={`${content.title} illustration`}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className="relative pt-[20px] pb-[18px] ">
@@ -132,36 +159,33 @@ const Streamline = () => {
         </div>
       </div>
       <Carousel className="w-full max-w-xs md:hidden">
-            <CarouselContent>
-              {streamlineContentmob.map((media, index) => (
-                <CarouselItem
-                  key={index}
-                  className="w-full justify-center flex"
-                >
-                  {/* <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-4xl font-semibold">
-                          {index + 1}
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </div> */}
-                  {/* <div key={index}> */}
-                  <Image
-                    src={media.src}
-                    alt={`Detailed view of ${media.label} feature`}
-                    width={272}
-                    height={348}
-                    className=""
-                  />
-                  {/* </div> */}
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="-left-4 border-white" />
-            <CarouselNext className="-right-4 border-white" />
-          </Carousel>
+        <CarouselContent>
+          {streamlineContentmob.map((media, index) => (
+            <CarouselItem key={index} className="w-full justify-center flex">
+              {/* <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <span className="text-4xl font-semibold">
+                        {index + 1}
+                      </span>
+                    </CardContent>
+                  </Card>
+                </div> */}
+              {/* <div key={index}> */}
+              <Image
+                src={media.src}
+                alt={`Detailed view of ${media.label} feature`}
+                width={272}
+                height={348}
+                className=""
+              />
+              {/* </div> */}
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="-left-4 border-white" />
+        <CarouselNext className="-right-4 border-white" />
+      </Carousel>
     </section>
   );
 };

@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const resoltionMedia = [
   { src: "context-resolution-mob.svg", label: "context-mob" },
@@ -19,6 +20,13 @@ const resoltionMedia = [
 const Resolution = () => {
   return (
     <section className="flex px-4 pb-16 md:pb-12  flex-col justify-center items-center">
+      <motion.div
+      initial={{ opacity: 0.0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeInOut",
+      }}>
       <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
         <div className="grad-resolution-main h-[150px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
         <div className="w-full h-[48px] md:h-[200px] absolute top-0 bg-black"></div>
@@ -32,7 +40,15 @@ const Resolution = () => {
       <p className="text-[#ECECEE] text-[16px] font-[300] md:text-[24px] md:mt-5 md:font-[400] w-[236px] text-center leading-normal pb-20 md:pb-[170px] md:w-full">
         Know exactly where the bug is - and how to fix it
       </p>
+      </motion.div>
       <div className="hidden justify-center items-center gap-10  md:flex flex-wrap">
+      <motion.div
+          initial={{ opacity: 0.0, x: -40}}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} >
         <Image
           src="/context.svg"
           alt="context"
@@ -40,20 +56,34 @@ const Resolution = () => {
           height={598}
           className=""
         />
-        <Image
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, x: 40}}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} ><Image
           src="/crash.svg"
           alt="crash"
           width={620}
           height={598}
           className=""
-        />
-        <Image
+        /></motion.div>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40}}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} ><Image
           src="/ai-new.svg"
           alt="ai"
           width={1270}
           height={326}
           className=""
-        />
+        /></motion.div>
+        
       </div>
       {/* <Carousel
         infiniteLoop

@@ -6,6 +6,7 @@ import BlogLatestCard from "@/components/ui/blog-latest-card";
 import { useState, useEffect } from "react";
 
 import Callback from "@/components/callback";
+import { motion } from "framer-motion";
 
 const pageSize = 10;
 
@@ -122,19 +123,46 @@ const Blog = (props: any) => {
         <div className="z-10 right-ellipse hidden md:flex absolute top-[46rem] -right-[25rem]" />
         <div className="z-10 right-sphere hidden md:flex absolute top-[44rem] right-[17rem]" />
         <div className="blogs-container z-20">
-          <h1 className="justify-center bg-gradient-to-r  from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] pb-[65px] ">
+          <motion.h1
+          initial={{
+            opacity: 0.0,
+            y: 40,
+          }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} className="justify-center bg-gradient-to-r  from-white to-gray-500 bg-clip-text text-transparent flex  text-[32px] font-[600] md:text-[66px] text-[#ECECEE] md:font-[600] w-full text-center leading-[1.25] pb-[65px] ">
             Blogs
-          </h1>
+          </motion.h1>
 
-          <div className="top-blog-card">
+          <motion.div
+           initial={{
+            opacity: 0.0,
+            y: 40,
+          }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} className="top-blog-card">
             {latestPost ? (
               <BlogLatestCard data={latestPost} />
             ) : (
               <p className="empty-blogs-text">No blogs available.</p>
             )}
-          </div>
+          </motion.div>
 
-          <div className="filter-container">
+          <motion.div
+          initial={{
+            opacity: 0.0,
+            y: 40,
+          }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} className="filter-container">
             <div className="filter-heading">
               <svg
                 width="32"
@@ -170,7 +198,7 @@ const Blog = (props: any) => {
                 </button>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           <div className="blogs-list-container">
             {filteredPosts.length > 0 && (
@@ -185,9 +213,18 @@ const Blog = (props: any) => {
                       new Date(a.fields.dateAndTime).getTime()
                   )
                   .map((post: any) => (
-                    <div className="blog-card-display" key={post.fields.slug}>
+                    <motion.div 
+                    initial={{
+                      opacity: 0.0,
+                      y: 20,
+                    }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: "easeInOut",
+                    }} className="blog-card-display" key={post.fields.slug}>
                       <BlogCard data={post} />
-                    </div>
+                    </motion.div>
                   ))}
               </div>
             )}

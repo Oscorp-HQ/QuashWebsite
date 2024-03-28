@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const benefits = [
   { src: "/quick-setup.svg", label: "Quick setup and integration" },
@@ -10,9 +11,17 @@ const benefits = [
 const Benefits = () => {
   return (
     <section className="benefits-wrapper">
-      <div className="benefits-flex-container">
+      <div
+        className="benefits-flex-container"
+      >
         {benefits.map((client, index) => (
-          <div key={index} className="benefits-item">
+          <motion.div
+          initial={{ opacity: 0.0, x: index === 0 ? -40 : 0 ||  index === 2 ? 40 : 0  }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+          }} key={index} className="benefits-item">
             <Image
               src={client.src}
               alt={client.label}
@@ -21,7 +30,7 @@ const Benefits = () => {
               className="benefits-image"
             />
             <p className="benefits-label">{client.label}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

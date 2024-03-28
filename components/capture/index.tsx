@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const reportingMedia = [
   { src: "/shake.svg", label: "shake", width: 400, height: 554 },
@@ -31,7 +32,15 @@ const Capture = () => {
   const secondRowImages = reportingMedia.slice(3);
   return (
     <section>
-      <div className="flex px-4 flex-col justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: "easeInOut",
+        }}
+        className="flex px-4 flex-col justify-center items-center"
+      >
         <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
           <div className="grad-collaboration h-[350px] w-[192px] md:h-[400px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
@@ -48,24 +57,50 @@ const Capture = () => {
           <div className="flex flex-col justify-center items-center">
             <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
               {firstRowImages.map((media, index) => (
-                <Image
-                  key={index}
-                  src={media.src}
-                  alt={media.label}
-                  width={media.width}
-                  height={media.height}
-                />
+                <motion.div
+                key={index}
+                  initial={{
+                    opacity: 0.0,
+                    x: index === 0 ? -40 : 0 || index === 2 ? 40 : 0,
+                  }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Image
+                    key={index}
+                    src={media.src}
+                    alt={media.label}
+                    width={media.width}
+                    height={media.height}
+                  />
+                </motion.div>
               ))}
             </div>
             <div className="hidden justify-center items-center gap-10 md:flex flex-wrap mb-[40px]">
               {secondRowImages.map((media, index) => (
-                <Image
+                <motion.div
+                key={index}
+                  initial={{
+                    opacity: 0.0,
+                    x: index === 0 ? -40 : 40 ,
+                  }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeInOut",
+                  }}>
+                  <Image
                   key={index}
                   src={media.src}
                   alt={media.label}
                   width={media.width}
                   height={media.height}
                 />
+                </motion.div>
+                
               ))}
             </div>
           </div>
@@ -123,7 +158,14 @@ const Capture = () => {
             <CarouselPrevious className="-left-4 border-white" />
             <CarouselNext className="-right-4 border-white" />
           </Carousel>
-          <div className="capture-learn-more-button-container">
+          <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+
+            duration: 0.6,
+            ease: "easeInOut",
+          }} className="capture-learn-more-button-container">
             <Link
               href="/product"
               className="capture-learn-more-button"
@@ -132,9 +174,9 @@ const Capture = () => {
             >
               Learn more about Quash
             </Link>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

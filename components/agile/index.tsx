@@ -1,10 +1,18 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Agile = () => {
   return (
     <section>
-      <div className="h-full w-full overflow-hidden relative flex  flex-col justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: "easeInOut",
+        }}
+       className="h-full w-full overflow-hidden relative flex  flex-col justify-center items-center">
         <div className="relative w-full flex justify-center items-center flex-col overflow-hidden">
           <div className="grad-resolution-watson w-[192px] md:h-[290px] md:w-[400px] opacity-[34%] md:opacity-[20%]"></div>
           <div className="w-full h-[93px] md:h-[132px]  absolute top-0 bg-black"></div>
@@ -37,7 +45,7 @@ const Agile = () => {
           height={268}
         />
       </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
